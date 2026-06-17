@@ -1,0 +1,209 @@
+---
+/**
+ * ComoFuncionaSteps — stepper horizontal "Cómo Funciona": eyebrow + título,
+ * fila de 4 nodos numerados conectados por una línea + 4 tarjetas de detalle
+ * y CTA central. En móvil se apila en vertical (número + tarjeta por fila).
+ * Reutiliza Eyebrow, Card y Button.
+ */
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import Button from '@components/primitives/Button.astro';
+import { comoFunciona } from '@lib/content';
+const { eyebrow, title, subtitle, steps, cta } = comoFunciona.flow;
+const num = (i: number) => String(i + 1).padStart(2, '0');
+---
+
+<section class="cf mc-section">
+  <div class="cf__inner mc-container">
+    <div class="cf__head" data-gsap="fade-up">
+      <Eyebrow align="center">{eyebrow}</Eyebrow>
+      <h2 class="cf__title">{title}</h2>
+      <p class="cf__subtitle">{subtitle}</p>
+    </div>
+
+    {/* Línea de nodos numerados (solo desktop) */}
+    <div class="cf__rail" aria-hidden="true">
+      {
+        steps.map((s, i) => (
+          <div class="cf__node">
+            <span class="cf__dot">{num(i)}</span>
+            <span class="cf__label">{s.label}</span>
+          </div>
+        ))
+      }
+    </div>
+
+    {/* Tarjetas de detalle */}
+    <div class="cf__cards" data-gsap-group>
+      {
+        steps.map((s, i) => (
+          <div class="cf__card" data-gsap-child>
+            {/* En móvil mostramos el número dentro de la tarjeta */}
+            <span class="cf__card-num">{num(i)}</span>
+            <h3 class="cf__card-title">{s.title}</h3>
+            <ul class="cf__list">
+              {s.items.map((it) => (
+                <li>{it}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="cf__cta"><Button href="#postular">{cta}</Button></div>
+  </div>
+</section>
+
+<style>
+  .cf {
+    background: var(--surface-subtle);
+  }
+  .cf__head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: var(--content-max);
+    margin: 0 auto 48px;
+  }
+  .cf__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    color: var(--text-strong);
+  }
+  .cf__subtitle {
+    margin: 0;
+    font-size: var(--fs-body-lg);
+    color: var(--text-muted);
+  }
+
+  /* Rail de nodos: 4 columnas con línea conectora */
+  .cf__rail {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+    margin-bottom: 32px;
+  }
+  /* línea horizontal detrás de los dots */
+  .cf__rail::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 2px;
+    background: var(--border-subtle);
+    z-index: 0;
+  }
+  .cf__node {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .cf__dot {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-pill);
+    background: var(--ink-700);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-weight: var(--fw-bold);
+    font-size: 16px;
+    box-shadow: 0 0 0 6px var(--surface-subtle);
+  }
+  .cf__label {
+    font-family: var(--font-sans);
+    font-weight: var(--fw-semibold);
+    font-size: 14px;
+    color: var(--text-strong);
+  }
+
+  .cf__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+  .cf__card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    border-top: 3px solid transparent;
+  }
+  .cf__card:first-child {
+    border-top-color: var(--amber-500);
+  }
+  /* número dentro de la tarjeta: oculto en desktop (está en el rail) */
+  .cf__card-num {
+    display: none;
+    font-family: var(--font-sans);
+    font-weight: var(--fw-bold);
+    font-size: 14px;
+    color: var(--text-accent);
+  }
+  .cf__card-title {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-body-lg);
+    color: var(--text-accent);
+  }
+  .cf__list {
+    margin: 0;
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .cf__list li {
+    font-size: var(--fs-small);
+    line-height: 1.55;
+    color: var(--text-body);
+  }
+  .cf__cta {
+    text-align: center;
+    margin-top: 44px;
+  }
+
+  /* ---- Responsive: bajo 900px el rail se oculta y las tarjetas pasan a
+     CARRUSEL (scroll-snap horizontal, una ~85% por vista), mostrando el
+     número dentro de cada tarjeta. ---- */
+  @media (max-width: 900px) {
+    .cf__rail {
+      display: none;
+    }
+    .cf__cards {
+      display: flex;
+      grid-template-columns: none;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 12px;
+      margin-inline: calc(-1 * var(--page-gutter));
+      padding-inline: var(--page-gutter);
+      scrollbar-width: none;
+    }
+    .cf__cards::-webkit-scrollbar {
+      display: none;
+    }
+    .cf__card {
+      flex: 0 0 85%;
+      scroll-snap-align: center;
+    }
+    .cf__card-num {
+      display: block;
+    }
+  }
+</style>

@@ -1,0 +1,107 @@
+---
+/**
+ * FortalezasModelo — "Fortalezas de Nuestro Modelo": auto en vista superior
+ * al centro, con 3 FeatureItem a cada lado. Fondo claro con streaks suaves.
+ * Reutiliza Eyebrow, FeatureItem, Streaks y Placeholder.
+ * En móvil: título → auto → features en una columna.
+ */
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import FeatureItem from '@components/cards/FeatureItem.astro';
+import Streaks from '@components/decor/Streaks.astro';
+import Placeholder from '@components/primitives/Placeholder.astro';
+import { fortalezas } from '@lib/content';
+
+const left = fortalezas.items.slice(0, 3);
+const right = fortalezas.items.slice(3, 6);
+---
+
+<section class="fm">
+  <Streaks color="var(--amber-200)" opacity={0.3} parallax />
+  <div class="fm__inner mc-container">
+    <div class="fm__head" data-gsap="fade-up">
+      <Eyebrow align="center">{fortalezas.eyebrow}</Eyebrow>
+      <h2 class="fm__title">{fortalezas.title}</h2>
+    </div>
+
+    <div class="fm__grid">
+      <div class="fm__col fm__col--left" data-gsap="fade-right">
+        {
+          left.map((f) => (
+            <FeatureItem icon={`fa-solid ${f.icon}`} title={f.title}>
+              {f.body}
+            </FeatureItem>
+          ))
+        }
+      </div>
+
+      <div class="fm__car" data-gsap="scale-in">
+        <Placeholder src={fortalezas.carImage.src} alt={fortalezas.carImage.alt} ratio="3/5" fit="contain" rounded="0" />
+      </div>
+
+      <div class="fm__col fm__col--right" data-gsap="fade-left">
+        {
+          right.map((f) => (
+            <FeatureItem icon={`fa-solid ${f.icon}`} title={f.title}>
+              {f.body}
+            </FeatureItem>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .fm {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface-subtle);
+    padding-block: var(--space-section);
+  }
+  .fm__inner {
+    position: relative;
+  }
+  .fm__head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .fm__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    color: var(--text-strong);
+  }
+  .fm__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .fm__col {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .fm__car {
+    display: flex;
+    justify-content: center;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  @media (max-width: 900px) {
+    .fm__grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+    .fm__car {
+      order: -1;
+      max-width: 280px;
+    }
+    .fm__col {
+      gap: 28px;
+    }
+  }
+</style>

@@ -1,0 +1,119 @@
+---
+/**
+ * PorqueHero — hero de /como-funciona: foto de conductor a sangre completa,
+ * motion-streaks, scrim oscuro a la izquierda, título, subtítulo, 2 CTAs y
+ * los 3 bullets de confianza. Reutiliza Button, Streaks y Placeholder.
+ * Usa data-anim/data-gsap para la coreografía existente (timeline del hero).
+ */
+import Button from '@components/primitives/Button.astro';
+import Streaks from '@components/decor/Streaks.astro';
+import Placeholder from '@components/primitives/Placeholder.astro';
+import { comoFunciona } from '@lib/content';
+const { title, subtitle, ctaPrimary, ctaSecondary, bullets, image } = comoFunciona.hero;
+---
+
+<header class="ph2" data-anim="hero">
+  {/* Foto de fondo (placeholder en dev; real con PUBLIC_USE_REAL_IMAGES) */}
+  <div class="ph2__bg" aria-hidden="true">
+    <Placeholder src={image.src} alt={image.alt} ratio="auto" fit="cover" rounded="0" />
+  </div>
+  <Streaks opacity={0.5} />
+  <div class="ph2__scrim" aria-hidden="true"></div>
+
+  <div class="ph2__inner mc-container">
+    <div class="ph2__copy">
+      <h1 class="ph2__title" data-gsap="hero-title">{title}</h1>
+      <p class="ph2__subtitle" data-gsap="hero-subtitle">{subtitle}</p>
+      <div class="ph2__cta" data-gsap="hero-cta">
+        <Button size="lg" href="#postular">{ctaPrimary}</Button>
+        <Button size="lg" variant="light" href="#como-funciona">{ctaSecondary}</Button>
+      </div>
+      <div class="ph2__bullets">
+        {
+          bullets.map((t) => (
+            <span class="ph2__bullet" data-gsap="hero-bullet">
+              <i class="fa-solid fa-circle-check" style="color:var(--amber-500)" />
+              {t}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .ph2 {
+    position: relative;
+    background: var(--ink-700);
+    overflow: hidden;
+  }
+  .ph2__bg {
+    position: absolute;
+    inset: 0;
+  }
+  .ph2__bg :global(div),
+  .ph2__bg :global(img) {
+    width: 100%;
+    height: 100%;
+  }
+  .ph2__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(34, 34, 34, 0.92) 0%,
+      rgba(34, 34, 34, 0.7) 45%,
+      rgba(34, 34, 34, 0.2) 100%
+    );
+  }
+  .ph2__inner {
+    position: relative;
+    padding-block: 96px;
+  }
+  .ph2__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 520px;
+  }
+  .ph2__title {
+    margin: 0;
+    font-size: var(--fs-display);
+    line-height: 1.08;
+    color: var(--white);
+  }
+  .ph2__subtitle {
+    margin: 0;
+    font-size: var(--fs-lead);
+    line-height: 1.55;
+    color: var(--white-a85);
+  }
+  .ph2__cta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .ph2__bullets {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .ph2__bullet {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--white-a85);
+  }
+  @media (max-width: 768px) {
+    .ph2__inner {
+      padding-block: 64px;
+    }
+    .ph2__bullets {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+</style>

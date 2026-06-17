@@ -133,6 +133,7 @@ export const testimonios = {
 export const fortalezas = {
   eyebrow: 'Súbete al futuro y al compromiso con el planeta',
   title: 'Fortalezas de Nuestro Modelo',
+  carImage: { src: 'vehicles/top-view.png', alt: 'Vista superior del modelo Movecar' },
   items: [
     { icon: 'fa-bolt', title: 'Bono Electricidad', body: 'Bono por Movecar sobre el 50% de tus gastos mensuales.' },
     {
@@ -155,6 +156,46 @@ export const fortalezas = {
       icon: 'fa-rotate',
       title: 'Auto Reemplazo',
       body: 'Si el tuyo falla, te entregamos uno de reemplazo antes de 24 horas.',
+    },
+  ],
+};
+
+/* Ventajas de Movecar — 5 tarjetas (en móvil se comportan como carrusel). */
+export const ventajasMovecar = {
+  eyebrow: 'Ventajas de Movecar',
+  title: 'Muévete al futuro de la Electromovilidad',
+  subtitle: 'Maximiza tus ganancias con nuestra flota y asegura un sueldo real, hoy, sin sorpresas ni letra chica.',
+  cta: 'Comenzar ahora',
+  items: [
+    {
+      icon: 'fa-sack-dollar',
+      title: 'Mejor ingreso del mercado',
+      body: 'Maximiza tus ganancias con nuestra flota y olvídate de los gastos imprevistos.',
+      bullets: ['Hasta $500.000 semanales', 'Promedio $450.000'],
+    },
+    {
+      icon: 'fa-arrow-trend-up',
+      title: 'Capitaliza tu esfuerzo',
+      body: 'A fin de mes puedes optar a comprar tu auto y capitalizar tu trabajo.',
+      bullets: [],
+    },
+    {
+      icon: 'fa-leaf',
+      title: 'Costos operativos más bajos',
+      body: 'Seguro, mantenciones y descuentos exclusivos para conductores.',
+      bullets: [],
+    },
+    {
+      icon: 'fa-mobile-screen',
+      title: 'App más completa del mercado',
+      body: 'Monitorea en tiempo real tus ingresos y gastos, con apoyo 24/7.',
+      bullets: [],
+    },
+    {
+      icon: 'fa-bolt',
+      title: 'Ingresa hoy, sin sorpresas',
+      body: 'Sin pagos comerciales ni costos de localización: recibes pagos que se adaptan a tu flujo.',
+      bullets: [],
     },
   ],
 };
@@ -236,6 +277,58 @@ export const comoFunciona = {
     subtitle:
       'Un proceso simple, online y sin costos de entrada. Te acompañamos en cada paso hasta que recibes tu vehículo y empiezas a generar.',
   },
+  // Hero de la página (foto de conductor + streaks).
+  hero: {
+    title: '¿Porqué MOVECAR es tu mejor opción?',
+    subtitle:
+      'Movecar combina tecnología, soporte humano y una flota preparada para que puedas enfocarte en tus ganancias.',
+    ctaPrimary: 'Quiero postular',
+    ctaSecondary: 'Cómo funciona',
+    bullets: ['Sin pagos iniciales', 'Monitoreo de ganancias online', 'Soporte 24/7'],
+    image: { src: 'lifestyle/driver-wheel.png', alt: 'Conductor Movecar al volante' },
+  },
+  // Stepper horizontal "Cómo Funciona".
+  flow: {
+    eyebrow: 'Ingreso a Movecar',
+    title: 'Cómo Funciona',
+    subtitle: 'Maximiza tus ganancias con una flota lista para trabajar y olvídate de los gastos imprevistos.',
+    cta: 'Quiero postular',
+    steps: [
+      {
+        label: 'Elección de Plan',
+        title: 'Elige el plan que más te acomode',
+        items: [
+          'Simula tus ganancias según tus horas trabajadas y tu zona con la calculadora. Referencias basadas en el promedio de Movedrivers.',
+          'Información clara, transparente y sin letra chica.',
+        ],
+      },
+      {
+        label: 'Preaprobación',
+        title: 'Tu perfil preaprobado en 24 horas',
+        items: [
+          'Postula desde tu computador o celular, sin filas ni trámites innecesarios.',
+          'Nuestro equipo revisa tu solicitud y te acompaña directamente por WhatsApp.',
+        ],
+      },
+      {
+        label: 'Información Firma',
+        title: 'Conoce exacto lo que vas a pagar antes de firmar',
+        items: [
+          'Seguro, mantenciones, impuestos y costos operacionales completamente desglosados.',
+          'Toda la información disponible en la liquidación semanal y en MoveCar Copilot.',
+          'Sin costos ocultos ni sorpresas.',
+        ],
+      },
+      {
+        label: 'Retiro Auto',
+        title: 'Retira tu auto y empieza a generar ganancias',
+        items: [
+          'Nosotros nos encargamos de la operación: mantenciones, seguros, permisos, soporte y todo lo que necesitas.',
+          'Tú solo te preocupas de manejar.',
+        ],
+      },
+    ],
+  },
   faqEyebrow: 'Preguntas frecuentes',
   faqTitle: 'Resolvemos tus dudas',
   faqs: [
@@ -266,64 +359,118 @@ export const comoFunciona = {
 /* ============================================================
    PÁGINA: PRECIOS / PLANES
    ============================================================ */
+// Features incluidas en todos los planes (precio semanal "todo incluido").
+const PLAN_FEATURES = [
+  'Vehículo habilitado y configurado para Uber',
+  'Seguro vehicular completo con gestión de siniestros',
+  'Mantenciones preventivas programadas',
+  'Soporte 24/7 con mesa de ayuda y monitoreo GPS',
+  'Liquidación semanal detallada',
+];
+
 export const pricing = {
   header: {
-    eyebrow: 'Precios / Planes',
-    title: 'Un plan semanal, todo incluido',
+    eyebrow: 'Planes',
+    title: 'Los planes más completos del mercado',
     subtitle:
-      'Sin pagos iniciales ni sorpresas. Eliges el plan, nosotros ponemos el vehículo, el seguro, la mantención y la carga.',
+      'Elige el turno que mejor se adapta a ti. El precio semanal lo incluye todo: vehículo, seguro, mantención y soporte. Sin pagos iniciales.',
   },
-  plans: [
+  // 4 planes en 2 grupos. En desktop son tarjetas; en móvil, acordeones.
+  groups: [
     {
-      name: 'MoveElectric AM',
-      price: '$110.000',
-      description: 'Ideal para quienes manejan en jornada de mañana.',
-      features: [
-        'Vehículo eléctrico full equipo',
-        'Seguro full cobertura',
-        'Mantención incluida',
-        'Carga en red Movecar',
-        'Soporte 24/7',
+      label: 'Planes MoveElectric',
+      fuel: 'ev' as const,
+      plans: [
+        {
+          id: 'electric-am',
+          name: 'MoveElectric AM',
+          schedule: 'Diurno · 06:00 a 18:00 · 8,5 hrs productivas',
+          price: '$242.500',
+          period: 'semanal',
+          features: PLAN_FEATURES,
+          cta: 'Quiero postular',
+        },
+        {
+          id: 'electric-pm',
+          name: 'MoveElectric PM',
+          schedule: 'Nocturno · 18:00 a 06:00 · 10 hrs productivas',
+          price: '$343.375',
+          period: 'semanal',
+          badge: 'Mayor ingreso',
+          featured: true,
+          features: PLAN_FEATURES,
+          cta: 'Quiero postular',
+        },
       ],
-      cta: 'Quiero postular',
     },
     {
-      name: 'MoveElectric Full',
-      price: '$160.000',
-      description: 'El plan más elegido. Disponibilidad completa, máximo ingreso.',
-      badge: 'Más popular',
-      featured: true,
-      features: [
-        'Todo lo del plan AM',
-        'Disponibilidad 7 días',
-        'Bono electricidad sobre el 50%',
-        'Auto de reemplazo < 24 h',
-        'Prioridad en soporte',
+      label: 'Planes MoveGas',
+      fuel: 'gas' as const,
+      plans: [
+        {
+          id: 'gas-am',
+          name: 'MoveGas AM',
+          schedule: 'Diurno · 06:00 a 18:00 · 8,5 hrs productivas',
+          price: '$242.500',
+          period: 'semanal',
+          features: PLAN_FEATURES,
+          cta: 'Quiero postular',
+        },
+        {
+          id: 'gas-pm',
+          name: 'MoveGas PM',
+          schedule: 'Nocturno · 18:00 a 06:00 · 10 hrs productivas',
+          price: '$343.375',
+          period: 'semanal',
+          features: PLAN_FEATURES,
+          cta: 'Quiero postular',
+        },
       ],
-      cta: 'Quiero postular',
-    },
-    {
-      name: 'Plan Bencina',
-      price: '$140.000',
-      description: 'Para quienes prefieren un vehículo a combustión.',
-      features: [
-        'Vehículo a combustión full equipo',
-        'Seguro full cobertura',
-        'Mantención incluida',
-        'Soporte 24/7',
-        'Cambio a eléctrico cuando quieras',
-      ],
-      cta: 'Quiero postular',
     },
   ],
-  incluye: {
-    eyebrow: 'Siempre incluido',
-    title: 'Todos los planes vienen con',
+  // Franja reasegura ("Rápido, Transparente y Seguro").
+  reassurance: {
+    title: 'Rápido, Transparente y Seguro',
+    body: 'Elige el plan que más te acomode. Te acompañamos desde el primer día.',
     items: [
-      { icon: 'fa-shield-halved', title: 'Seguro Full Cobertura', body: 'El mejor seguro del mercado, con deducibles bajos.' },
-      { icon: 'fa-wrench', title: 'Mantención', body: 'Mantención preventiva y correctiva sin costo adicional.' },
-      { icon: 'fa-charging-station', title: 'Red de Carga', body: 'Carga libre en la red Movecar, sin filas ni esperas.' },
-      { icon: 'fa-rotate', title: 'Auto Reemplazo', body: 'Si el tuyo falla, te entregamos otro antes de 24 horas.' },
+      { icon: 'fa-bolt', title: 'Rápido', body: 'Proceso 100% online y ágil: en pocos días estás generando.' },
+      { icon: 'fa-receipt', title: 'Transparente', body: 'Cuentas claras, sin letra chica: todo en tu liquidación semanal.' },
+      { icon: 'fa-shield-halved', title: 'Seguro', body: 'Seguro full cobertura y soporte 24/7 en cada turno.' },
     ],
+  },
+  // Tabla comparativa. En móvil: primera columna fija + scroll (2 visibles).
+  compare: {
+    eyebrow: 'Compara',
+    title: 'Asegura el mejor plan para lo que necesitas',
+    subtitle:
+      'Todos los planes incluyen lo esencial. Revisa las diferencias y elige según tu turno y motorización.',
+    plans: [
+      { name: 'MoveElectric AM', fuel: 'ev' as const },
+      { name: 'MoveElectric PM', fuel: 'ev' as const },
+      { name: 'MoveGas AM', fuel: 'gas' as const },
+      { name: 'MoveGas PM', fuel: 'gas' as const },
+    ],
+    rows: [
+      { label: 'Horario del turno', values: ['06:00–18:00', '18:00–06:00', '06:00–18:00', '18:00–06:00'] },
+      { label: 'Horas productivas', values: ['8,5 hrs', '10 hrs', '8,5 hrs', '10 hrs'] },
+      { label: 'Precio semanal', values: ['$242.500', '$343.375', '$242.500', '$343.375'] },
+      { label: 'Vehículo habilitado para Uber', values: [true, true, true, true] },
+      { label: 'Seguro full cobertura', values: [true, true, true, true] },
+      { label: 'Mantenciones preventivas', values: [true, true, true, true] },
+      { label: 'Soporte 24/7 + monitoreo GPS', values: [true, true, true, true] },
+      { label: 'Liquidación semanal detallada', values: [true, true, true, true] },
+      { label: 'Comisión de administración (1%)', values: [true, true, true, true] },
+      { label: 'Garantía $350.000 (en cuotas)', values: [true, true, true, true] },
+      { label: 'Kilometraje ilimitado', values: [true, true, true, true] },
+      { label: 'App MoveCar Copilot', values: [true, true, true, true] },
+      { label: 'Opción de compra (200/250 sem)', values: [true, true, true, true] },
+      { label: 'Bono electricidad', values: [true, true, false, false] },
+      { label: 'Cero emisiones', values: [true, true, false, false] },
+    ],
+  },
+  help: {
+    title: '¿Todavía con dudas?',
+    body: 'Contacta a nuestro equipo de ventas y resolvemos todo antes de que postules.',
+    cta: 'Contactar',
   },
 };

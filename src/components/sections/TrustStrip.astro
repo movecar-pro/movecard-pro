@@ -1,0 +1,41 @@
+---
+/**
+ * TrustStrip — tarjeta de stats que "flota" superpuesta al hero (margin
+ * negativo). Los números animan de 0 al valor con GSAP (data-count).
+ */
+import Card from '@components/primitives/Card.astro';
+import StatBlock from '@components/cards/StatBlock.astro';
+import { trustStats } from '@lib/content';
+
+// Parseo simple para alimentar el contador animado donde aplica.
+const enriched = trustStats.map((s) => {
+  const num = Number(s.value.replace(/[^0-9]/g, ''));
+  const suffix = s.value.replace(/[0-9.]/g, '');
+  return { ...s, count: Number.isFinite(num) && num > 0 ? num : undefined, suffix };
+});
+---
+
+<div class="trust mc-container">
+  <Card radius="xl" pad="lg" elevation="lg" style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px">
+    {
+      enriched.map((s) => (
+        <div data-gsap-child>
+          <StatBlock value={s.value} label={s.label} count={s.count} countSuffix={s.suffix} />
+        </div>
+      ))
+    }
+  </Card>
+</div>
+
+<style>
+  .trust {
+    margin-top: -56px;
+    position: relative;
+    z-index: 2;
+  }
+</style>
+
+<script>
+  // Marca el grupo para el stagger de GSAP (ver choreography.ts bloque 3).
+  document.querySelector('.trust > *')?.setAttribute('data-gsap-group', '');
+</script>

@@ -1,0 +1,120 @@
+{
+  "order": 10,
+  "name": "Geely Coolray 2026",
+  "badge": "Bencina",
+  "fuel": "gas",
+  "tags": [
+    "2026",
+    "Turbo",
+    "SUV"
+  ],
+  "image": "vehicles/geely-coolray.png",
+  "detail": {
+    "description": "SUV dinámico y tecnológico que combina eficiencia, espacio y una experiencia superior de conducción.",
+    "images": [
+      {
+        "src": "vehicles/geely-coolray-front.png",
+        "alt": "Geely Coolray 2026 vista frontal"
+      },
+      {
+        "src": "vehicles/geely-coolray-rear.png",
+        "alt": "Geely Coolray 2026 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Motor turbo de última generación.",
+          "Excelente equilibrio entre potencia y consumo.",
+          "Ideal para uso intensivo en ciudad y carretera."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Consumo combinado aproximado: 15,0 km/l.",
+          "Estanque de combustible: 45 litros.",
+          "Autonomía estimada: 675 km.",
+          "Excelente rendimiento para recorridos urbanos y carretera."
+        ]
+      },
+      {
+        "icon": "fa-gas-pump",
+        "title": "Reabastecimiento simple",
+        "items": [
+          "Reabastecimiento completo en pocos minutos.",
+          "Amplia disponibilidad de estaciones de servicio.",
+          "Operación continua durante toda la jornada."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Posición de manejo elevada.",
+          "Excelente visibilidad y ergonomía.",
+          "Conducción suave y estable."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Cabina amplia y moderna.",
+          "Excelente espacio para pasajeros traseros.",
+          "Viajes más cómodos y agradables."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Capacidad para 5 pasajeros.",
+          "Amplio maletero para equipaje.",
+          "Ideal para traslados diarios y aeropuerto."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Múltiples airbags.",
+          "Control electrónico de estabilidad.",
+          "Frenos ABS con EBD."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara 360°.",
+          "Sensores delanteros y traseros.",
+          "Asistencias avanzadas según versión."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Pantalla multimedia de gran formato.",
+          "Apple CarPlay y Android Auto.",
+          "Conectividad Bluetooth y USB."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Mecánica moderna y eficiente.",
+          "Red de servicio y repuestos disponible.",
+          "Mantenciones programadas simples y predecibles."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+---
+/**
+ * Card — superficie genérica: blanca, radio suave, sombra difusa.
+ * Portado del DS (components/cards/Card.jsx).
+ */
+interface Props {
+  elevation?: 'none' | 'xs' | 'sm' | 'md' | 'lg';
+  radius?: 'sm' | 'md' | 'lg' | 'xl';
+  pad?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
+  tone?: 'light' | 'subtle' | 'eco' | 'dark';
+  class?: string;
+  style?: string;
+}
+const { elevation = 'md', radius = 'lg', pad = 'lg', tone = 'light', class: className, style: extra = '' } = Astro.props;
+
+const radii = { sm: 'var(--radius-sm)', md: 'var(--radius-md)', lg: 'var(--radius-lg)', xl: 'var(--radius-xl)' };
+const pads = { none: '0', sm: 'var(--space-4)', md: 'var(--space-5)', lg: 'var(--space-6)', xl: 'var(--space-7)' };
+const shadows = { none: 'none', xs: 'var(--shadow-xs)', sm: 'var(--shadow-sm)', md: 'var(--shadow-md)', lg: 'var(--shadow-lg)' };
+const tones: Record<string, string> = {
+  light: 'background:var(--surface-card);color:var(--text-body);',
+  subtle: 'background:var(--surface-subtle);color:var(--text-body);',
+  eco: 'background:var(--surface-eco);color:var(--green-700);',
+  dark: 'background:var(--ink-700);color:var(--white);',
+};
+const style = [
+  `border-radius:${radii[radius]}`,
+  `padding:${pads[pad]}`,
+  `box-shadow:${tone === 'dark' ? 'none' : shadows[elevation]}`,
+  `border:${tone === 'subtle' ? '1px solid var(--border-subtle)' : 'none'}`,
+  tones[tone],
+  extra,
+].join(';');
+---
+
+<div class={className} style={style}><slot /></div>

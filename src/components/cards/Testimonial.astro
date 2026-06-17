@@ -1,0 +1,54 @@
+---
+/**
+ * Testimonial — rating de estrellas, cita, avatar inicial, nombre/rol y
+ * chip de ingreso. Portado del DS (components/cards/Testimonial.jsx).
+ */
+interface Props {
+  rating?: number;
+  quote: string;
+  name: string;
+  role?: string;
+  income?: string;
+  class?: string;
+}
+const { rating = 5, quote, name, role, income, class: className } = Astro.props;
+const initial = (name || '?').trim().charAt(0).toUpperCase();
+const wrap =
+  'display:flex;flex-direction:column;gap:var(--space-4);background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);height:100%;box-sizing:border-box;';
+---
+
+<div class={className} style={wrap}>
+  <div style="display:flex;gap:3px;font-size:14px" aria-label={`${rating} de 5`}>
+    {
+      Array.from({ length: 5 }).map((_, i) => (
+        <i class="fa-solid fa-star" style={`color:${i < rating ? 'var(--amber-500)' : 'var(--grey-200)'}`} />
+      ))
+    }
+  </div>
+  <p
+    style="margin:0;font-family:var(--font-sans);font-size:var(--fs-body);line-height:var(--lh-body);color:var(--text-body);flex:1"
+  >
+    “{quote}”
+  </p>
+  <div
+    style="display:flex;align-items:center;gap:var(--space-3);padding-top:var(--space-3);border-top:1px solid var(--border-subtle)"
+  >
+    <span
+      style="width:40px;height:40px;border-radius:var(--radius-pill);background:var(--green-700);color:var(--white);display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-sans);font-weight:var(--fw-semibold);font-size:16px"
+      >{initial}</span
+    >
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <span style="font-family:var(--font-sans);font-weight:var(--fw-semibold);font-size:14px;color:var(--text-strong)"
+        >{name}</span
+      >
+      {role && <span style="font-family:var(--font-sans);font-size:13px;color:var(--text-muted)">{role}</span>}
+    </div>
+    {
+      income && (
+        <span style="margin-left:auto;font-family:var(--font-sans);font-weight:var(--fw-semibold);font-size:12px;color:var(--green-700);background:var(--green-50);padding:5px 10px;border-radius:var(--radius-xs);white-space:nowrap">
+          {income}
+        </span>
+      )
+    }
+  </div>
+</div>

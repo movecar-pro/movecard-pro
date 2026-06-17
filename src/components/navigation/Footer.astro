@@ -1,0 +1,119 @@
+---
+/**
+ * Footer — pie oscuro: logo, columnas de links, contacto.
+ * Portado del DS (components/navigation/Footer.jsx).
+ */
+import Logo from '@components/primitives/Logo.astro';
+import { footer } from '@lib/content';
+const { columns, tagline } = footer;
+---
+
+<footer class="mc-footer">
+  <div class="mc-footer__inner">
+    <div class="mc-footer__top">
+      <div class="mc-footer__brand">
+        <Logo color="var(--white)" height={28} />
+        <p>{tagline}</p>
+      </div>
+      <div class="mc-footer__cols">
+        {
+          columns.map((col) => (
+            <div class="mc-footer__col">
+              <span class="mc-footer__col-title">{col.title}</span>
+              {col.links.map((l) => (
+                <a href="#">{l}</a>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="mc-footer__bottom">
+      <span>© 2026 Movecar. Todos los derechos reservados.</span>
+      <span class="mc-footer__legal">
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de Privacidad</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .mc-footer {
+    background: var(--surface-footer);
+    color: var(--white-a70);
+    padding: var(--space-9) var(--page-gutter) var(--space-7);
+  }
+  .mc-footer__inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+  .mc-footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    justify-content: space-between;
+  }
+  .mc-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-width: 280px;
+  }
+  .mc-footer__brand p {
+    margin: 0;
+    font-size: 14px;
+    line-height: var(--lh-body);
+    color: var(--white-a50);
+  }
+  .mc-footer__cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+  }
+  .mc-footer__col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    min-width: 140px;
+  }
+  .mc-footer__col-title {
+    font-weight: var(--fw-semibold);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--white);
+  }
+  .mc-footer__col a {
+    font-size: 14px;
+    color: var(--white-a70);
+    text-decoration: none;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+  .mc-footer__col a:hover {
+    color: var(--amber-400);
+  }
+  .mc-footer__bottom {
+    border-top: 1px solid var(--white-a10);
+    padding-top: var(--space-5);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--white-a50);
+  }
+  .mc-footer__legal {
+    display: flex;
+    gap: var(--space-5);
+  }
+  .mc-footer__legal a {
+    color: var(--white-a50);
+    text-decoration: none;
+  }
+  .mc-footer__legal a:hover {
+    color: var(--white-a70);
+  }
+</style>

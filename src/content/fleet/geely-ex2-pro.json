@@ -1,0 +1,117 @@
+{
+  "order": 4,
+  "name": "Geely EX2 Pro 2026",
+  "badge": "100% Eléctrico",
+  "fuel": "ev",
+  "tags": [
+    "2026",
+    "320 km",
+    "SUV"
+  ],
+  "image": "vehicles/geely-ex2-pro.png",
+  "detail": {
+    "description": "SUV eléctrico eficiente y práctico para conductores que buscan maximizar sus ingresos.",
+    "images": [
+      {
+        "src": "vehicles/geely-ex2-pro-front.png",
+        "alt": "Geely EX2 Pro 2026 vista frontal"
+      },
+      {
+        "src": "vehicles/geely-ex2-pro-rear.png",
+        "alt": "Geely EX2 Pro 2026 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Operación 100% eléctrica.",
+          "Batería LFP de 39,4 kWh.",
+          "Menor costo de energía y mantenimiento."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Hasta 320 km de autonomía.",
+          "Ideal para jornadas urbanas.",
+          "Excelente equilibrio entre autonomía y costo."
+        ]
+      },
+      {
+        "icon": "fa-charging-station",
+        "title": "Carga rápida",
+        "items": [
+          "30% a 80% en aproximadamente 21 minutos.",
+          "Carga completa residencial en 6 a 7 horas.",
+          "Compatible con carga rápida DC."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Posición elevada de manejo.",
+          "Excelente visibilidad.",
+          "Conducción silenciosa."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Distancia entre ejes de 2.650 mm.",
+          "Espacio cómodo para cinco ocupantes.",
+          "Viajes agradables y silenciosos."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "375 litros de maletero.",
+          "Capacidad para 5 pasajeros.",
+          "Ideal para aeropuerto."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Control de estabilidad.",
+          "Frenos ABS.",
+          "Airbags."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara 360°.",
+          "Sensores de estacionamiento."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Apple CarPlay.",
+          "Android Auto.",
+          "Pantalla multimedia."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Menos piezas móviles.",
+          "Menor desgaste mecánico."
+        ]
+      }
+    ]
+  }
+}

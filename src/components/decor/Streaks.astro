@@ -1,0 +1,19 @@
+---
+/**
+ * Streaks — el "motion-streak motif" de la marca: franjas amber diagonales
+ * (skew -4°) que evocan las tres líneas de velocidad del isotipo.
+ * Se monta dentro de una sección position:relative. Decorativo (aria-hidden).
+ *
+ * `parallax`: si true, añade [data-parallax] para que GSAP lo mueva al hacer
+ * scroll (ver lib/animations/choreography.ts, bloque 4).
+ */
+interface Props {
+  color?: string;
+  opacity?: number;
+  parallax?: boolean;
+}
+const { color = 'var(--amber-500)', opacity = 0.9, parallax = false } = Astro.props;
+const style = `position:absolute;inset:-20% -10%;background:repeating-linear-gradient(115deg, ${color} 0 30px, transparent 30px 104px);opacity:${opacity};transform:skewX(-4deg);pointer-events:none;`;
+---
+
+<div aria-hidden="true" style={style} data-parallax={parallax ? '' : undefined}></div>

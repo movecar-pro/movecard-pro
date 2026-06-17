@@ -1,0 +1,32 @@
+---
+/**
+ * Tag — píldora pequeña de specs ("2026", "320 km", "SUV").
+ * Portado del DS (components/core/Tag.jsx).
+ */
+interface Props {
+  tone?: 'neutral' | 'eco' | 'amber' | 'dark';
+  class?: string;
+}
+const { tone = 'neutral', class: className } = Astro.props;
+
+const tones: Record<string, string> = {
+  neutral: 'background:var(--grey-100);color:var(--text-body);',
+  eco: 'background:var(--green-50);color:var(--green-700);',
+  amber: 'background:var(--amber-50);color:var(--amber-700);',
+  dark: 'background:var(--ink-700);color:var(--white);',
+};
+const style = [
+  'display:inline-flex',
+  'align-items:center',
+  'gap:6px',
+  'padding:5px 11px',
+  'font-family:var(--font-sans)',
+  'font-weight:var(--fw-medium)',
+  'font-size:13px',
+  'line-height:1',
+  'border-radius:var(--radius-xs)',
+  tones[tone],
+].join(';');
+---
+
+<span class={className} style={style}><slot /></span>

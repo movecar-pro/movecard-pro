@@ -1,0 +1,90 @@
+---
+/**
+ * FinalCTA — cierre charcoal con streaks, titular fuerte y CTAs.
+ * id="postular" → ancla destino de todos los CTAs "Quiero postular".
+ */
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import Button from '@components/primitives/Button.astro';
+import Streaks from '@components/decor/Streaks.astro';
+import { finalCta } from '@lib/content';
+---
+
+<section class="final" id="postular">
+  <Streaks opacity={0.85} parallax />
+  <div class="final__scrim" aria-hidden="true"></div>
+  <div class="final__inner" data-gsap="fade-up">
+    <Eyebrow tone="onDark">{finalCta.eyebrow}</Eyebrow>
+    <h2 class="final__title">{finalCta.title}</h2>
+    <p class="final__body">{finalCta.body}</p>
+    <div class="final__cta">
+      <Button size="lg" href="#postular">{finalCta.ctaPrimary}</Button>
+      <Button size="lg" variant="light" href="#contacto">{finalCta.ctaSecondary}</Button>
+    </div>
+    <div class="final__bullets">
+      {
+        finalCta.bullets.map((t) => (
+          <span class="final__bullet">
+            <i class="fa-solid fa-circle-check" style="color:var(--amber-500)" />
+            {t}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .final {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink-600);
+    padding-block: 88px;
+    text-align: center;
+  }
+  .final__scrim {
+    position: absolute;
+    inset: 0;
+    background: rgba(51, 51, 51, 0.5);
+  }
+  .final__inner {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+    padding-inline: var(--page-gutter);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .final__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    line-height: 1.1;
+    color: var(--white);
+  }
+  .final__body {
+    margin: 0;
+    font-size: var(--fs-body-lg);
+    color: var(--white-a70);
+  }
+  .final__cta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .final__bullets {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 6px;
+  }
+  .final__bullet {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--white-a85);
+  }
+</style>

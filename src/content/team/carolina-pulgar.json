@@ -1,0 +1,31 @@
+{
+  "order": 3,
+  "name": "Carolina Pulgar",
+  "role": "Tech Leader",
+  "roleShort": "Tech Leader",
+  "photo": "team/carolina-pulgar.png",
+  "bioShort": "Ingeniera en Informática con experiencia en el desarrollo de plataformas digitales, liderazgo de equipos tecnológicos y gestión de operaciones.",
+  "linkedin": "https://www.linkedin.com/",
+  "location": "Chile",
+  "credentials": [
+    { "icon": "fa-graduation-cap", "text": "Ingeniera en Informática" },
+    { "icon": "fa-code", "text": "Plataformas digitales y liderazgo técnico" },
+    { "icon": "fa-location-dot", "text": "Chile" }
+  ],
+  "sections": [
+    {
+      "icon": "fa-graduation-cap",
+      "title": "Formación y especialización",
+      "paragraphs": [
+        "Ingeniera en Informática con experiencia en el desarrollo de plataformas digitales, liderazgo de equipos tecnológicos y gestión de operaciones. Combina visión técnica y de producto para construir soluciones confiables y escalables."
+      ]
+    },
+    {
+      "icon": "fa-laptop-code",
+      "title": "Tecnología y producto",
+      "paragraphs": [
+        "Lidera el desarrollo de la plataforma y la app Copilot de Movecar, asegurando que la tecnología esté siempre al servicio del movedriver: monitoreo de ganancias, gestión y soporte en línea, simples y disponibles 24/7."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+---
+/**
+ * PageHeader — cabecera reutilizable para subpáginas (Nosotros, Cómo
+ * Funciona, Precios). Banda charcoal con motion-streaks. El contenido
+ * (eyebrow/título/subtítulo) llega por props para que cada página la
+ * personalice sin duplicar markup.
+ */
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import Streaks from '@components/decor/Streaks.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+}
+const { eyebrow, title, subtitle } = Astro.props;
+---
+
+<header class="ph" data-anim="hero">
+  <Streaks opacity={0.7} />
+  <div class="ph__scrim" aria-hidden="true"></div>
+  <div class="ph__inner mc-container">
+    <Eyebrow tone="onDark" data-gsap="hero-eyebrow">{eyebrow}</Eyebrow>
+    <h1 class="ph__title" data-gsap="hero-title">{title}</h1>
+    {subtitle && <p class="ph__subtitle" data-gsap="hero-subtitle">{subtitle}</p>}
+  </div>
+</header>
+
+<style>
+  .ph {
+    position: relative;
+    background: var(--ink-600);
+    overflow: hidden;
+  }
+  .ph__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(51, 51, 51, 0.92) 0%, rgba(51, 51, 51, 0.6) 100%);
+  }
+  .ph__inner {
+    position: relative;
+    padding-block: 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: var(--content-max);
+  }
+  .ph__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    line-height: 1.12;
+    color: var(--white);
+  }
+  .ph__subtitle {
+    margin: 0;
+    font-size: var(--fs-lead);
+    line-height: 1.55;
+    color: var(--white-a70);
+    max-width: var(--content-narrow);
+  }
+</style>

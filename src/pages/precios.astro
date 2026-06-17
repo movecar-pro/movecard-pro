@@ -1,0 +1,144 @@
+---
+/**
+ * /precios — planes con PlanCard (una variante destacada) + lo siempre
+ * incluido + FAQ reutilizado + FinalCTA.
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PageHeader from '@components/sections/PageHeader.astro';
+import FinalCTA from '@components/sections/FinalCTA.astro';
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import PlanCard from '@components/cards/PlanCard.astro';
+import FeatureItem from '@components/cards/FeatureItem.astro';
+import PlanAccordion from '@components/islands/PlanAccordion.tsx';
+import { pricing, comoFunciona } from '@lib/content';
+---
+
+<BaseLayout
+  title="Precios y planes — Move Card Pro"
+  description={pricing.header.subtitle}
+  active="Precios / Planes"
+>
+  <main>
+    <PageHeader {...pricing.header} />
+
+    {/* Planes */}
+    <section class="mc-section" style="background:var(--grey-50)">
+      <div class="mc-container">
+        <div class="plans__grid" data-gsap-group>
+          {
+            pricing.plans.map((p) => (
+              <div data-gsap-child style="display:flex">
+                <PlanCard
+                  name={p.name}
+                  price={p.price}
+                  description={p.description}
+                  features={p.features}
+                  badge={p.badge}
+                  featured={p.featured}
+                  cta={p.cta}
+                  class="plans__card"
+                />
+              </div>
+            ))
+          }
+        </div>
+        <p class="plans__note" data-gsap="fade-up">
+          Precios referenciales por semana. Sin pagos iniciales. Proceso 100% online.
+        </p>
+      </div>
+    </section>
+
+    {/* Siempre incluido */}
+    <section class="mc-section" style="background:var(--white)">
+      <div class="mc-container">
+        <div class="incl__head" data-gsap="fade-up">
+          <Eyebrow align="center">{pricing.incluye.eyebrow}</Eyebrow>
+          <h2 class="incl__title">{pricing.incluye.title}</h2>
+        </div>
+        <div class="incl__grid" data-gsap-group>
+          {
+            pricing.incluye.items.map((f) => (
+              <div data-gsap-child>
+                <FeatureItem icon={`fa-solid ${f.icon}`} title={f.title} layout="stack">
+                  {f.body}
+                </FeatureItem>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* FAQ reutilizado desde el contenido de cómo-funciona */}
+    <section class="mc-section" style="background:var(--grey-50)">
+      <div class="mc-container" style="max-width:var(--content-max)">
+        <div class="incl__head" data-gsap="fade-up">
+          <Eyebrow align="center">Preguntas frecuentes</Eyebrow>
+          <h2 class="incl__title">Sobre los planes</h2>
+        </div>
+        <div data-gsap="fade-up">
+          <PlanAccordion client:visible items={comoFunciona.faqs} />
+        </div>
+      </div>
+    </section>
+
+    <FinalCTA />
+  </main>
+</BaseLayout>
+
+<script>
+  import { initHomeChoreography } from '@lib/animations/choreography';
+  initHomeChoreography();
+</script>
+
+<style>
+  .plans__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+  /* La tarjeta ocupa todo el alto de su celda para alinear los CTA. */
+  .plans__card {
+    width: 100%;
+  }
+  .plans__note {
+    text-align: center;
+    margin: 32px 0 0;
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+  }
+  .incl__head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 44px;
+  }
+  .incl__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    color: var(--text-strong);
+  }
+  .incl__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 900px) {
+    .plans__grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin-inline: auto;
+    }
+    .incl__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+  }
+  @media (max-width: 480px) {
+    .incl__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

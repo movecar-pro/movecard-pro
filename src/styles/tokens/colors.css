@@ -1,0 +1,86 @@
+/* ============================================================
+   MOVECAR — COLOR TOKENS
+   Warm amber primary · charcoal ink · deep forest-green eco accent.
+   Base palette first, then semantic aliases.
+   (Copiado 1:1 desde el Movecar Design System — fuente de verdad.)
+   ============================================================ */
+:root {
+  /* ---- Brand: Amber (primary) ---- */
+  --amber-50: #fff6e6;
+  --amber-100: #ffe9cc;
+  --amber-200: #ffdfb7;
+  --amber-300: #fbe1b9;
+  --amber-400: #ffa056;
+  --amber-500: #fe9307; /* PRIMARY brand orange */
+  --amber-600: #e8810a; /* hover */
+  --amber-700: #c55300; /* pressed / dark-on-light */
+  --amber-shadow: rgba(254, 147, 7, 0.3);
+
+  /* ---- Ink / charcoal (secondary) ---- */
+  --ink-900: #000000;
+  --ink-800: #111111;
+  --ink-700: #222222;
+  --ink-600: #333333; /* SECONDARY brand color */
+  --ink-500: #444444; /* dark section surface */
+  --ink-400: #424843;
+
+  /* ---- Eco green (electromovilidad accent) ---- */
+  --green-900: #0f1a14;
+  --green-800: #0f2e1f;
+  --green-700: #0f3e18; /* deep forest — primary green */
+  --green-600: #28332e;
+  --green-100: #e1f3df;
+  --green-50: #f0fcf4;
+  --chartreuse: #a4c639;
+
+  /* ---- Neutrals / greys ---- */
+  --white: #ffffff;
+  --grey-50: #fafaf8;
+  --grey-100: #f4f4f2;
+  --grey-200: #dddddd;
+  --grey-300: #c2c8c1;
+  --grey-400: #999999;
+  --grey-500: #757575;
+  --grey-600: #5b5f5a;
+
+  /* ---- Alpha helpers ---- */
+  --ink-a05: rgba(0, 0, 0, 0.05);
+  --ink-a10: rgba(0, 0, 0, 0.1);
+  --ink-a25: rgba(0, 0, 0, 0.25);
+  --white-a10: rgba(255, 255, 255, 0.1);
+  --white-a50: rgba(255, 255, 255, 0.5);
+  --white-a70: rgba(255, 255, 255, 0.7);
+  --white-a85: rgba(255, 255, 255, 0.85);
+
+  /* ============ SEMANTIC ALIASES ============ */
+  --color-primary: var(--amber-500);
+  --color-primary-hover: var(--amber-600);
+  --color-primary-press: var(--amber-700);
+  --color-on-primary: var(--white);
+
+  /* Surfaces */
+  --surface-page: var(--white);
+  --surface-subtle: var(--grey-50);
+  --surface-card: var(--white);
+  --surface-eco: var(--green-50);
+  --surface-dark: var(--ink-600);
+  --surface-darker: var(--ink-800);
+  --surface-footer: var(--ink-800);
+
+  /* Text */
+  --text-strong: var(--ink-600);
+  --text-body: var(--ink-500);
+  --text-muted: var(--grey-500);
+  --text-on-dark: var(--white);
+  --text-on-dark-muted: var(--white-a70);
+  --text-accent: var(--amber-500);
+
+  /* Lines & borders */
+  --border-subtle: var(--grey-200);
+  --border-strong: var(--ink-600);
+  --border-on-dark: var(--white-a10);
+
+  /* Status */
+  --color-success: var(--green-700);
+  --color-success-surface: var(--green-50);
+}

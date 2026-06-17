@@ -1,0 +1,38 @@
+---
+/**
+ * Badge — píldora para destacados ("Mejor ingreso del mercado").
+ * Portado del DS (components/core/Badge.jsx).
+ */
+interface Props {
+  tone?: 'amber' | 'amberSoft' | 'eco' | 'ecoSoft' | 'dark';
+  icon?: string;
+  class?: string;
+}
+const { tone = 'amber', icon, class: className } = Astro.props;
+
+const tones: Record<string, string> = {
+  amber: 'background:var(--amber-500);color:var(--white);',
+  amberSoft: 'background:var(--amber-50);color:var(--amber-700);',
+  eco: 'background:var(--green-700);color:var(--white);',
+  ecoSoft: 'background:var(--green-50);color:var(--green-700);',
+  dark: 'background:var(--ink-600);color:var(--white);',
+};
+const style = [
+  'display:inline-flex',
+  'align-items:center',
+  'gap:6px',
+  'padding:6px 13px',
+  'font-family:var(--font-sans)',
+  'font-weight:var(--fw-semibold)',
+  'font-size:12px',
+  'line-height:1',
+  'letter-spacing:0.02em',
+  'border-radius:var(--radius-pill)',
+  tones[tone],
+].join(';');
+---
+
+<span class={className} style={style}>
+  {icon && <i class={icon} aria-hidden="true" style="font-size:12px"></i>}
+  <slot />
+</span>

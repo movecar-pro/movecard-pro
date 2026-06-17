@@ -1,0 +1,63 @@
+---
+/**
+ * Fortalezas — banda oscura (ink-800) con grilla de FeatureItem en tono dark.
+ */
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import FeatureItem from '@components/cards/FeatureItem.astro';
+import { fortalezas } from '@lib/content';
+---
+
+<section class="forts">
+  <div class="forts__inner mc-container">
+    <div class="forts__head" data-gsap="fade-up">
+      <Eyebrow tone="onDark" align="center">{fortalezas.eyebrow}</Eyebrow>
+      <h2 class="forts__title">{fortalezas.title}</h2>
+    </div>
+
+    <div class="forts__grid" data-gsap-group>
+      {
+        fortalezas.items.map((f) => (
+          <div data-gsap-child>
+            <FeatureItem icon={`fa-solid ${f.icon}`} title={f.title} tone="dark">
+              {f.body}
+            </FeatureItem>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .forts {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink-800);
+    padding-block: var(--space-section);
+  }
+  .forts__inner {
+    position: relative;
+  }
+  .forts__head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .forts__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    color: var(--white);
+  }
+  .forts__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 900px) {
+    .forts__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

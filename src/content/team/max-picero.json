@@ -1,0 +1,62 @@
+{
+  "order": 1,
+  "name": "Max Picero",
+  "role": "CEO - Chief Executive Officer",
+  "roleShort": "CEO & Founder",
+  "photo": "team/max-picero.png",
+  "bioShort": "Ejecutivo C-Level, MBA de la Universidad Adolfo Ibáñez, certificado internacional Lean/Kaizen Practitioner y Six Sigma Green Belt del Kaizen Institute de Japón.",
+  "linkedin": "https://www.linkedin.com/",
+  "meta": ["15+ años", "7 países", "LATAM & USA", "MBA UAI"],
+  "location": "Chile",
+  "credentials": [
+    { "icon": "fa-graduation-cap", "text": "MBA, Universidad Adolfo Ibáñez" },
+    { "icon": "fa-globe", "text": "Lean/Kaizen Practitioner" },
+    { "icon": "fa-stopwatch", "text": "Six Sigma Green Belt (Kaizen Institute, Japón)" },
+    { "icon": "fa-globe", "text": "Experiencia en 7 países de LATAM y USA" },
+    { "icon": "fa-location-dot", "text": "Chile" }
+  ],
+  "sections": [
+    {
+      "icon": "fa-graduation-cap",
+      "title": "Formación y especialización",
+      "paragraphs": [
+        "Ejecutivo C-Level, MBA de la Universidad Adolfo Ibáñez, certificado internacional Lean/Kaizen Practitioner y Six Sigma Green Belt del Kaizen Institute de Japón. Su formación combina estrategia, crecimiento, experiencia de cliente, liderazgo y excelencia operacional, incluyendo especializaciones como Disney Experience Certificate y programas en Growth, Retail, Personas y Customer Experience."
+      ]
+    },
+    {
+      "icon": "fa-globe",
+      "title": "Experiencia regional",
+      "paragraphs": [
+        "Durante más de 15 años ha liderado procesos de transformación, crecimiento y escalamiento en organizaciones corporativas, compañías en expansión y startups de alto potencial. Ha trabajado en siete países de Latinoamérica y Estados Unidos, participando en la construcción y evolución de modelos de negocio para industrias como retail, salud, seguros, recursos humanos y servicios digitales."
+      ]
+    },
+    {
+      "icon": "fa-rocket",
+      "title": "Estrategia, crecimiento e innovación",
+      "paragraphs": [
+        "Su experiencia se ha desarrollado principalmente en estrategia y crecimiento, desarrollo comercial y de producto, así como en la construcción de capacidades operacionales y tecnológicas para modelos de negocio escalables y sostenibles. Ha participado en procesos de expansión internacional, levantamiento de capital, integración de compañías, transformación digital, inteligencia artificial y desarrollo de ecosistemas digitales de alto impacto."
+      ]
+    },
+    {
+      "icon": "fa-trophy",
+      "title": "Advisor y liderazgo ejecutivo",
+      "paragraphs": [
+        "A lo largo de su trayectoria ha desempeñado roles ejecutivos en compañías líderes de la región y ha acompañado como advisor a compañías de retail de alcance internacional y startups en sus procesos de crecimiento, diseño estratégico y desarrollo de ventajas competitivas sostenibles.",
+        "Asimismo, ha participado en iniciativas y proyectos reconocidos a nivel regional por su innovación, crecimiento, impacto y excelencia operacional, liderando equipos y organizaciones en etapas de expansión, transformación y consolidación."
+      ]
+    },
+    {
+      "icon": "fa-lightbulb",
+      "title": "Lo que lo mueve",
+      "paragraphs": [
+        "Le apasiona identificar problemas relevantes y transformarlos en soluciones capaces de generar impacto real. Disfruta especialmente los desafíos de llevar organizaciones y proyectos del cero al uno, combinando pensamiento estratégico, diseño comercial, desarrollo de producto y una ejecución rigurosa.",
+        "Está convencido de que los resultados extraordinarios nacen de equipos extraordinarios. Gran parte de su energía está puesta en la construcción de equipos de alto desempeño, el desarrollo de talento, la mejora continua y la creación de culturas con ADN emprendedor capaces de combinar velocidad, colaboración y foco permanente en la generación de valor."
+      ]
+    }
+  ],
+  "funFacts": [
+    "Max es papá de Florencia, baterista obsesivo, entusiasta de los autos clásicos y defensor permanente de que su próximo proyecto automotriz será el último (afirmación que hasta ahora nunca ha resultado cierta).",
+    "Participa en bandas tributo y una banda de covers ochenteros y noventeros, actividades que considera perfectamente compatibles con hablar de estrategia, crecimiento y startups.",
+    "Tiene una relación especial con el mar, especialmente con Pichilemu y Punta de Lobos, lugares donde suele encontrar las mejores ideas, las conversaciones más importantes y, ocasionalmente, algo de descanso."
+  ]
+}

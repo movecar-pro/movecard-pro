@@ -1,0 +1,174 @@
+/* ============================================================
+   MOVE CARD PRO — ENTRY CSS GLOBAL
+   Orden importa:
+   1. Tailwind v4 (genera utilidades a partir del @theme de abajo).
+   2. Tokens del Design System (definen las CSS vars — fuente de verdad).
+   3. @theme: puente que expone los tokens DS como utilidades Tailwind.
+   4. Base/reset y helpers de animación.
+   ============================================================ */
+@import 'tailwindcss';
+
+/* --- Tokens del Movecar Design System (no editar valores aquí: ver tokens/) --- */
+@import './tokens/fonts.css';
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+
+/* ============================================================
+   @theme — PUENTE DESIGN SYSTEM → TAILWIND v4
+   Referenciamos las vars del DS (no duplicamos hex) para que existan
+   como utilidades: bg-amber-500, text-ink-600, rounded-lg, etc.
+   Así puedes usar clases Tailwind O var(--token) indistintamente.
+   ============================================================ */
+@theme {
+  /* Colores de marca */
+  --color-amber-50: var(--amber-50);
+  --color-amber-100: var(--amber-100);
+  --color-amber-200: var(--amber-200);
+  --color-amber-300: var(--amber-300);
+  --color-amber-400: var(--amber-400);
+  --color-amber-500: var(--amber-500);
+  --color-amber-600: var(--amber-600);
+  --color-amber-700: var(--amber-700);
+
+  --color-ink-400: var(--ink-400);
+  --color-ink-500: var(--ink-500);
+  --color-ink-600: var(--ink-600);
+  --color-ink-700: var(--ink-700);
+  --color-ink-800: var(--ink-800);
+  --color-ink-900: var(--ink-900);
+
+  --color-green-50: var(--green-50);
+  --color-green-100: var(--green-100);
+  --color-green-600: var(--green-600);
+  --color-green-700: var(--green-700);
+  --color-green-800: var(--green-800);
+  --color-green-900: var(--green-900);
+
+  --color-grey-50: var(--grey-50);
+  --color-grey-100: var(--grey-100);
+  --color-grey-200: var(--grey-200);
+  --color-grey-300: var(--grey-300);
+  --color-grey-400: var(--grey-400);
+  --color-grey-500: var(--grey-500);
+  --color-grey-600: var(--grey-600);
+
+  /* Tipografías */
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+
+  /* Radios */
+  --radius-xs: var(--radius-xs);
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  /* Sombras */
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-amber: var(--shadow-amber);
+
+  /* Easings de marca (utilidades ease-*) */
+  --ease-out: var(--ease-out);
+  --ease-in-out: var(--ease-in-out);
+
+  /* Breakpoints alineados a la guía (desktop / tablet / mobile-first) */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+/* ============================================================
+   BASE / RESET LIGERO
+   ============================================================ */
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--surface-page);
+  color: var(--text-body);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-semibold);
+  color: var(--text-strong);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Foco accesible y visible sobre cualquier control. */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--amber-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-xs);
+}
+
+/* ============================================================
+   CONTENEDOR DE PÁGINA — ancho máximo + gutters de marca.
+   Úsalo en cualquier sección nueva: <div class="mc-container">…</div>
+   ============================================================ */
+.mc-container {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+.mc-section {
+  padding-block: var(--space-section);
+}
+
+/* ============================================================
+   HELPERS DE ANIMACIÓN GSAP
+   - .gsap-reveal: estado inicial de elementos que GSAP animará al
+     entrar en viewport. Si JS falla o GSAP no carga, un fallback
+     los hace visibles igualmente (progressive enhancement).
+   - Respetamos prefers-reduced-motion: sin animación, todo visible.
+   ============================================================ */
+[data-gsap] {
+  /* Estado inicial controlado por GSAP. Sin JS quedan visibles (ver fallback). */
+  will-change: transform, opacity;
+}
+
+/* Fallback: si por alguna razón GSAP no inicializa en 1.5s, mostramos todo. */
+.gsap-ready [data-gsap] {
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  /* La coreografía detecta esto en JS y no oculta nada. */
+  [data-gsap] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "order": 2,
+  "name": "Osvaldo Cádiz",
+  "role": "COO - Chief Operational Officer",
+  "roleShort": "COO",
+  "photo": "team/osvaldo-cadiz.png",
+  "bioShort": "Ejecutivo formado en la Universidad de Chile, con Diplomado en Control de Gestión Gerencial de la Facultad de Economía y Negocios. Cuenta con amplia experiencia en operaciones y gestión.",
+  "linkedin": "https://www.linkedin.com/",
+  "location": "Chile",
+  "credentials": [
+    { "icon": "fa-graduation-cap", "text": "Universidad de Chile" },
+    { "icon": "fa-chart-line", "text": "Diplomado en Control de Gestión Gerencial (FEN)" },
+    { "icon": "fa-location-dot", "text": "Chile" }
+  ],
+  "sections": [
+    {
+      "icon": "fa-graduation-cap",
+      "title": "Formación y especialización",
+      "paragraphs": [
+        "Ejecutivo formado en la Universidad de Chile, con Diplomado en Control de Gestión Gerencial de la Facultad de Economía y Negocios. Su formación está orientada a la eficiencia operacional, el control de gestión y la toma de decisiones basada en datos."
+      ]
+    },
+    {
+      "icon": "fa-gears",
+      "title": "Operaciones y gestión",
+      "paragraphs": [
+        "Lidera la operación de Movecar asegurando que cada movedriver reciba un servicio confiable de punta a punta: flota, mantención, carga y soporte. Su foco está en construir procesos escalables y sostenibles que mantengan altos niveles de servicio a medida que la compañía crece."
+      ]
+    }
+  ]
+}

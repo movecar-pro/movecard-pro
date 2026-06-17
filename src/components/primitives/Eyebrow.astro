@@ -1,0 +1,31 @@
+---
+/**
+ * Eyebrow — etiqueta de sección en MAYÚSCULAS con tracking amber.
+ * Portado del DS (components/core/Eyebrow.jsx).
+ */
+interface Props {
+  tone?: 'amber' | 'dark' | 'muted' | 'onDark';
+  align?: 'left' | 'center' | 'right';
+  class?: string;
+}
+const { tone = 'amber', align = 'left', class: className } = Astro.props;
+
+const colors: Record<string, string> = {
+  amber: 'var(--text-accent)',
+  dark: 'var(--text-strong)',
+  muted: 'var(--text-muted)',
+  onDark: 'var(--amber-400)',
+};
+const style = [
+  'display:block',
+  'font-family:var(--font-sans)',
+  'font-weight:var(--fw-semibold)',
+  'font-size:var(--fs-eyebrow)',
+  'letter-spacing:var(--ls-eyebrow)',
+  'text-transform:uppercase',
+  `color:${colors[tone]}`,
+  `text-align:${align}`,
+].join(';');
+---
+
+<span class={className} style={style}><slot /></span>

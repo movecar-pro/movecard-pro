@@ -1,0 +1,103 @@
+---
+/**
+ * ============================================================
+ * BaseLayout — esqueleto de página compartido por todas las rutas.
+ * Incluye <head> (SEO/OG), webfonts, Font Awesome, Navbar y Footer.
+ * El contenido de cada página va en el <slot />.
+ * ============================================================
+ */
+import '@styles/global.css';
+import Navbar from '@components/navigation/Navbar.astro';
+import Footer from '@components/navigation/Footer.astro';
+import { SITE, GA_MEASUREMENT_ID } from '@lib/config';
+
+interface Props {
+  title?: string;
+  description?: string;
+  active?: string; // link activo en el navbar
+}
+const {
+  title = SITE.defaultTitle,
+  description = SITE.defaultDescription,
+  active = 'Inicio',
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+---
+
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    {/* Open Graph / social */}
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={SITE.locale} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(SITE.ogImage, SITE.url).href} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {/* Webfonts de marca — Playfair Display + Inter (Google Fonts). */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    />
+
+    {/*
+      ICONOGRAFÍA — Font Awesome 6 Free (Solid + Brands), vía CDN.
+      El DS lo exige (readme → ICONOGRAPHY). Si tienes un kit Pro, cambia
+      este href por el de tu kit.
+    */}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    {/*
+      ============================================================
+      📊 ANALÍTICA / TRACKING — punto de inserción.
+      ------------------------------------------------------------
+      Pega tu ID GA4 en .env (PUBLIC_GA_ID=G-XXXXXXX). Si está vacío,
+      no se inyecta nada (dev/preview quedan limpios).
+      Para otros proveedores (Plausible, GTM, Meta Pixel...), añade aquí
+      su <script> con el mismo patrón condicional.
+      Para medir clics en CTAs concretos, agrega data-attrs en los
+      botones (ej. data-ga-event="cta_postular") y un listener global.
+      ============================================================
+    */}
+    {
+      GA_MEASUREMENT_ID && (
+        <>
+          <script
+            is:inline
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          />
+          <script is:inline define:vars={{ id: GA_MEASUREMENT_ID }}>
+            // Snippet oficial gtag.js (usa el objeto `arguments` a propósito).
+            window.dataLayer = window.dataLayer || [];
+            // eslint-disable-next-line prefer-rest-params
+            function gtag() { window.dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', id);
+          </script>
+        </>
+      )
+    }
+  </head>
+  <body>
+    <Navbar active={active} />
+    <slot />
+    <Footer />
+  </body>
+</html>

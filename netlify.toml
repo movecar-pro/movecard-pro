@@ -1,0 +1,26 @@
+# ============================================================
+# Netlify — build + Decap CMS (ex Netlify CMS).
+# ============================================================
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# El panel de administración del CMS se sirve estáticamente en /admin.
+# Ver public/admin/ (index.html + config.yml).
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# ------------------------------------------------------------
+# 🔌 INTEGRAR DECAP CMS — pasos:
+#   1. En la UI de Netlify: Identity → Enable, y Git Gateway → Enable.
+#   2. Invita usuarios desde Identity (los editores).
+#   3. Edita public/admin/config.yml con tus colecciones (ej. "home").
+#   4. Conecta el contenido editado (src/content/) a las secciones
+#      reemplazando los imports de src/lib/content.ts por getEntry()
+#      del Content Layer de Astro. La forma de los datos ya está modelada.
+# ------------------------------------------------------------

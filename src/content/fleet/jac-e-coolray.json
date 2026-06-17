@@ -1,0 +1,119 @@
+{
+  "order": 1,
+  "name": "JAC E-Coolray 2025",
+  "badge": "100% Eléctrico",
+  "fuel": "ev",
+  "tags": [
+    "2025",
+    "+400 km",
+    "SUV"
+  ],
+  "image": "vehicles/jac-e-coolray.png",
+  "detail": {
+    "description": "SUV eléctrico moderno y espacioso, pensado para maximizar tu comodidad y reducir tus costos operativos.",
+    "images": [
+      {
+        "src": "vehicles/jac-e-coolray-front.png",
+        "alt": "JAC E-Coolray 2025 vista frontal"
+      },
+      {
+        "src": "vehicles/jac-e-coolray-rear.png",
+        "alt": "JAC E-Coolray 2025 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Operación 100% eléctrica.",
+          "Menor costo de energía y mantenimiento.",
+          "Más ahorro por kilómetro recorrido."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Autonomía superior a 400 km por carga.",
+          "Ideal para jornadas completas de trabajo.",
+          "Menos interrupciones durante el día."
+        ]
+      },
+      {
+        "icon": "fa-charging-station",
+        "title": "Carga rápida",
+        "items": [
+          "Compatible con carga rápida DC.",
+          "Carga domiciliaria durante la noche.",
+          "Operación simple para el día a día."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Posición de manejo elevada.",
+          "Excelente visibilidad.",
+          "Conducción silenciosa y confortable."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Cabina amplia para cinco ocupantes.",
+          "Buen espacio para piernas y hombros.",
+          "Viajes más cómodos y agradables."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Capacidad para 5 pasajeros.",
+          "Amplio maletero.",
+          "Ideal para aeropuerto y viajes."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Múltiples airbags.",
+          "Control de estabilidad.",
+          "Frenos ABS con EBD."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara de retroceso.",
+          "Sensores de estacionamiento.",
+          "Asistencias activas según versión."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Pantalla multimedia.",
+          "Apple CarPlay y Android Auto.",
+          "Conectividad Bluetooth."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Menos piezas móviles.",
+          "Menor desgaste mecánico.",
+          "Más tiempo generando ingresos."
+        ]
+      }
+    ]
+  }
+}

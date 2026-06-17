@@ -1,0 +1,60 @@
+---
+/**
+ * Testimonios — grilla de 3 reseñas con stagger.
+ */
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import Testimonial from '@components/cards/Testimonial.astro';
+import { testimonios } from '@lib/content';
+---
+
+<section class="mc-section" style="background:var(--grey-50)">
+  <div class="mc-container">
+    <div class="tst__head" data-gsap="fade-up">
+      <Eyebrow align="center">{testimonios.eyebrow}</Eyebrow>
+      <h2 class="tst__title">{testimonios.title}</h2>
+      <p class="tst__body">{testimonios.body}</p>
+    </div>
+
+    <div class="tst__grid" data-gsap-group>
+      {
+        testimonios.items.map((t) => (
+          <div data-gsap-child>
+            <Testimonial rating={t.rating} quote={t.quote} name={t.name} role={t.role} income={t.income} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .tst__head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 44px;
+  }
+  .tst__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    color: var(--text-strong);
+  }
+  .tst__body {
+    margin: 0;
+    font-size: var(--fs-body-lg);
+    color: var(--text-muted);
+  }
+  .tst__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 900px) {
+    .tst__grid {
+      grid-template-columns: 1fr;
+      max-width: 480px;
+      margin-inline: auto;
+    }
+  }
+</style>

@@ -1,0 +1,120 @@
+{
+  "order": 8,
+  "name": "JAC JS3 2024",
+  "badge": "Bencina",
+  "fuel": "gas",
+  "tags": [
+    "2024",
+    "Bencina",
+    "SUV"
+  ],
+  "image": "vehicles/jac-js3.png",
+  "detail": {
+    "description": "SUV compacto y versátil, ideal para conductores que buscan economía, comodidad y practicidad.",
+    "images": [
+      {
+        "src": "vehicles/jac-js3-front.png",
+        "alt": "JAC JS3 2024 vista frontal"
+      },
+      {
+        "src": "vehicles/jac-js3-rear.png",
+        "alt": "JAC JS3 2024 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Motor bencinero eficiente para el uso diario.",
+          "Excelente relación entre consumo y desempeño.",
+          "Costos operativos contenidos."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Consumo combinado aproximado: 14,0 km/l.",
+          "Estanque de combustible: 45 litros.",
+          "Autonomía estimada: 630 km.",
+          "Excelente rendimiento para jornadas completas de trabajo."
+        ]
+      },
+      {
+        "icon": "fa-gas-pump",
+        "title": "Reabastecimiento simple",
+        "items": [
+          "Carga de combustible rápida y sencilla.",
+          "Amplia disponibilidad de estaciones de servicio.",
+          "Operación continua durante toda la jornada."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Posición de manejo cómoda y elevada.",
+          "Buena visibilidad para conducción urbana.",
+          "Suspensión orientada al confort."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Espacio cómodo para cinco pasajeros.",
+          "Acceso fácil a plazas traseras.",
+          "Excelente experiencia en recorridos urbanos."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Capacidad para 5 pasajeros.",
+          "Maletero amplio para su categoría.",
+          "Ideal para equipaje y uso diario."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Airbags frontales.",
+          "Frenos ABS.",
+          "Control electrónico de estabilidad."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara de retroceso.",
+          "Sensores de estacionamiento.",
+          "Asistencia de partida en pendiente."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Pantalla multimedia táctil.",
+          "Apple CarPlay y Android Auto.",
+          "Bluetooth y conectividad USB."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Mecánica simple y confiable.",
+          "Repuestos accesibles.",
+          "Costos de mantención competitivos."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "order": 5,
+  "name": "Renault Kwid E-Tech EV 2025",
+  "badge": "100% Eléctrico",
+  "fuel": "ev",
+  "tags": [
+    "2025",
+    "298 km",
+    "Compacto"
+  ],
+  "image": "vehicles/renault-kwid-etech.png",
+  "detail": {
+    "description": "El eléctrico más compacto y económico para maximizar la rentabilidad en ciudad.",
+    "images": [
+      {
+        "src": "vehicles/renault-kwid-etech-front.png",
+        "alt": "Renault Kwid E-Tech EV 2025 vista frontal"
+      },
+      {
+        "src": "vehicles/renault-kwid-etech-rear.png",
+        "alt": "Renault Kwid E-Tech EV 2025 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Operación 100% eléctrica.",
+          "Excelente eficiencia energética.",
+          "Bajísimo costo por kilómetro."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Hasta 298 km de autonomía urbana aproximada.",
+          "Ideal para recorridos urbanos.",
+          "Excelente rendimiento diario."
+        ]
+      },
+      {
+        "icon": "fa-charging-station",
+        "title": "Carga rápida",
+        "items": [
+          "Compatible con carga rápida DC.",
+          "Carga domiciliaria simple.",
+          "Operación económica y eficiente."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Fácil de estacionar.",
+          "Gran visibilidad.",
+          "Excelente maniobrabilidad."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Espacio optimizado para ciudad.",
+          "Acceso cómodo a plazas traseras."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Capacidad para 5 pasajeros.",
+          "Maletero cercano a 290 litros."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Airbags.",
+          "Control de estabilidad.",
+          "Frenos ABS."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara de retroceso.",
+          "Sensores traseros."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Pantalla multimedia.",
+          "Apple CarPlay y Android Auto."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Muy bajo costo de mantención.",
+          "Excelente disponibilidad operativa."
+        ]
+      }
+    ]
+  }
+}

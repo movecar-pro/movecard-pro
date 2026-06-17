@@ -1,0 +1,93 @@
+---
+/**
+ * Ventajas — bloque 2 columnas: copy a la izquierda, card de beneficios a
+ * la derecha. Entrada on-scroll (fade-right / fade-left).
+ */
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import Button from '@components/primitives/Button.astro';
+import Badge from '@components/primitives/Badge.astro';
+import Card from '@components/primitives/Card.astro';
+import { ventajas } from '@lib/content';
+---
+
+<section class="mc-section" style="background:var(--white);padding-top:110px">
+  <div class="ventajas mc-container">
+    <div class="ventajas__copy" data-gsap="fade-right">
+      <Eyebrow>{ventajas.eyebrow}</Eyebrow>
+      <h2 class="ventajas__title">{ventajas.title}</h2>
+      <p class="ventajas__body">{ventajas.body}</p>
+      <div><Button href="#postular">{ventajas.cta}</Button></div>
+    </div>
+
+    <Card
+      tone="subtle"
+      radius="lg"
+      pad="lg"
+      style="display:flex;flex-direction:column;gap:18px"
+      data-gsap="fade-left"
+    >
+      <span class="ventajas__icon"><i class="fa-solid fa-sack-dollar"></i></span>
+      <Badge tone="amberSoft">{ventajas.badge}</Badge>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        {
+          ventajas.highlights.map((t) => (
+            <span class="ventajas__hl">
+              <i class="fa-solid fa-check" style="color:var(--green-700)" />
+              {t}
+            </span>
+          ))
+        }
+      </div>
+    </Card>
+  </div>
+</section>
+
+<style>
+  .ventajas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .ventajas__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ventajas__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    line-height: 1.12;
+    color: var(--text-strong);
+  }
+  .ventajas__body {
+    margin: 0;
+    font-size: var(--fs-body-lg);
+    line-height: var(--lh-body);
+    color: var(--text-muted);
+  }
+  .ventajas__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    background: var(--amber-50);
+    color: var(--amber-600);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  .ventajas__hl {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: var(--text-body);
+  }
+  @media (max-width: 900px) {
+    .ventajas {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+</style>

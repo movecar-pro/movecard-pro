@@ -1,0 +1,64 @@
+/* ============================================================
+   MOVECAR — TYPOGRAPHY TOKENS
+   Display: Playfair Display (serif, 600/700) for headlines.
+   UI/Body: Inter for everything else. Eyebrows are uppercase Inter.
+   (Copiado 1:1 desde el Movecar Design System.)
+   ============================================================ */
+:root {
+  /* Families */
+  --font-display: 'Playfair Display', ui-serif, Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial,
+    sans-serif;
+
+  /* Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* Type scale (desktop) — px values, see line-heights below */
+  --fs-display: 56px; /* H1 hero */
+  --fs-h1: 48px; /* H2 section */
+  --fs-h2: 40px;
+  --fs-h3: 32px; /* H4 */
+  --fs-h4: 24px;
+  --fs-h5: 20px; /* H6 */
+  --fs-lead: 20px; /* large body */
+  --fs-body: 16px; /* regular */
+  --fs-body-lg: 18px; /* medium */
+  --fs-small: 14px;
+  --fs-eyebrow: 12px;
+
+  /* Line heights */
+  --lh-tight: 1.1;
+  --lh-snug: 1.2;
+  --lh-normal: 1.4;
+  --lh-body: 1.6;
+
+  /* Letter spacing */
+  --ls-eyebrow: 0.12em;
+  --ls-tight: -0.01em;
+}
+
+/* ------------------------------------------------------------------
+   Escala móvil. El DS la expone vía [data-mode="mobile"]; aquí además
+   la aplicamos por media query para que sea responsiva automáticamente.
+   ------------------------------------------------------------------ */
+:root[data-mode='mobile'] {
+  --fs-display: 40px;
+  --fs-h1: 36px;
+  --fs-h2: 32px;
+  --fs-h3: 24px;
+  --fs-lead: 18px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-display: 40px;
+    --fs-h1: 36px;
+    --fs-h2: 32px;
+    --fs-h3: 24px;
+    --fs-lead: 18px;
+  }
+}

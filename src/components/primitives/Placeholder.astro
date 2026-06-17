@@ -1,0 +1,67 @@
+---
+/**
+ * ============================================================
+ * Placeholder — SISTEMA DE IMÁGENES CONFIGURABLE (requisito del brief)
+ * ------------------------------------------------------------
+ * En desarrollo NO usamos imágenes reales: este componente pinta un
+ * bloque marcador que muestra la ruta esperada del asset y su ratio.
+ *
+ * Cuando tengas los assets reales:
+ *   1. Colócalos en /public/assets/images/<src>.
+ *   2. Define PUBLIC_USE_REAL_IMAGES=true en tu .env (ver src/lib/config.ts).
+ *   → Entonces este componente renderiza un <img> real automáticamente.
+ *
+ * Uso: <Placeholder src="vehicles/vehicle-mg-zs.png" alt="MG ZS" ratio="4/3" />
+ * ============================================================
+ */
+import { USE_REAL_IMAGES, IMAGE_BASE } from '@lib/config';
+
+interface Props {
+  src: string; // ruta relativa dentro de /assets/images
+  alt: string;
+  ratio?: string; // ej. "16/9", "4/3", "1/1"
+  fit?: 'cover' | 'contain';
+  rounded?: string; // var() de radio, ej. "var(--radius-lg)"
+  class?: string;
+  style?: string;
+}
+const {
+  src,
+  alt,
+  ratio = '4/3',
+  fit = 'contain',
+  rounded = 'var(--radius-md)',
+  class: className,
+  style: extra = '',
+} = Astro.props;
+
+const fullSrc = `${IMAGE_BASE}/${src}`;
+const wrapStyle = `aspect-ratio:${ratio};border-radius:${rounded};overflow:hidden;${extra}`;
+---
+
+{
+  USE_REAL_IMAGES ? (
+    <img
+      src={fullSrc}
+      alt={alt}
+      loading="lazy"
+      decoding="async"
+      class={className}
+      style={`width:100%;height:100%;object-fit:${fit};${wrapStyle}`}
+    />
+  ) : (
+    <div
+      class={className}
+      style={`display:flex;align-items:center;justify-content:center;text-align:center;background:repeating-linear-gradient(135deg,var(--grey-100) 0 12px,var(--grey-50) 12px 24px);border:1px dashed var(--grey-300);color:var(--grey-500);font-family:var(--font-sans);font-size:12px;padding:16px;${wrapStyle}`}
+      role="img"
+      aria-label={alt}
+    >
+      <span>
+        <i class="fa-regular fa-image" style="font-size:22px;display:block;margin-bottom:8px;color:var(--grey-400)"></i>
+        <strong style="color:var(--grey-600)">{alt}</strong>
+        <br />
+        <code style="font-size:11px">/{src}</code>
+      </span>
+    </div>
+  )
+}

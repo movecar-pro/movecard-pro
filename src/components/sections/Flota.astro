@@ -1,0 +1,82 @@
+---
+/**
+ * Flota — carrusel de modelos (isla FleetCarousel) que abre el VehicleModal.
+ * Los vehículos vienen del Content Layer (colección `fleet`); el microcopy
+ * de la sección sigue en lib/content.ts.
+ */
+import { getCollection } from 'astro:content';
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import Button from '@components/primitives/Button.astro';
+import Streaks from '@components/decor/Streaks.astro';
+import FleetCarousel from '@components/islands/FleetCarousel.tsx';
+import { flota } from '@lib/content';
+
+const vehicles = (await getCollection('fleet'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((v) => ({ id: v.id, ...v.data }));
+---
+
+<section class="flota" id="flota">
+  <Streaks color="var(--amber-200)" opacity={0.6} />
+  <div class="flota__inner mc-container">
+    <div class="flota__head" data-gsap="fade-up">
+      <Eyebrow align="center">{flota.eyebrow}</Eyebrow>
+      <h2 class="flota__title">{flota.title}</h2>
+      <p class="flota__body">{flota.body}</p>
+    </div>
+
+    {/* 🏝️ Carrusel interactivo: clic en una tarjeta abre el modal del auto.
+         client:idle → hidrata al quedar el navegador ocioso (no depende del
+         viewport). Para diferir hasta el scroll, cambia a client:visible. */}
+    <div data-gsap="fade-up">
+      <FleetCarousel client:idle vehicles={vehicles} />
+    </div>
+
+    <div class="flota__cta"><Button href="#postular">{flota.cta}</Button></div>
+  </div>
+</section>
+
+<style>
+  .flota {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--space-section);
+    background: var(--grey-50);
+  }
+  .flota__inner {
+    position: relative;
+  }
+  .flota__head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 44px;
+  }
+  .flota__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    color: var(--text-strong);
+  }
+  .flota__body {
+    margin: 0;
+    font-size: var(--fs-body-lg);
+    color: var(--text-muted);
+  }
+  .flota__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .flota__cta {
+    text-align: center;
+    margin-top: 40px;
+  }
+  @media (max-width: 900px) {
+    .flota__grid {
+      grid-template-columns: 1fr;
+      max-width: 420px;
+      margin-inline: auto;
+    }
+  }
+</style>

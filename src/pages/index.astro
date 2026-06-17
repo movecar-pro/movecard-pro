@@ -1,0 +1,52 @@
+---
+/**
+ * ============================================================
+ * HOME — Move Card Pro (prueba de concepto con GSAP)
+ * ------------------------------------------------------------
+ * Compone las secciones en el orden del diseño de referencia:
+ *   Hero → TrustStrip → Ventajas → Simulador → Flota → Pasos →
+ *   Testimonios → Fortalezas → AppPromo → FinalCTA.
+ *
+ * La coreografía de animación se inicializa al final, en un <script>
+ * de cliente que importa lib/animations/choreography.ts. Astro bundlea
+ * ese script automáticamente (GSAP solo se envía al cliente aquí).
+ * ============================================================
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/sections/Hero.astro';
+import TrustStrip from '@components/sections/TrustStrip.astro';
+import Ventajas from '@components/sections/Ventajas.astro';
+import Simulador from '@components/sections/Simulador.astro';
+import Flota from '@components/sections/Flota.astro';
+import Pasos from '@components/sections/Pasos.astro';
+import Testimonios from '@components/sections/Testimonios.astro';
+import Fortalezas from '@components/sections/Fortalezas.astro';
+import AppPromo from '@components/sections/AppPromo.astro';
+import FinalCTA from '@components/sections/FinalCTA.astro';
+---
+
+<BaseLayout active="Inicio">
+  <main>
+    <Hero />
+    <TrustStrip />
+    <Ventajas />
+    <Simulador />
+    <Flota />
+    <Pasos />
+    <Testimonios />
+    <Fortalezas />
+    <AppPromo />
+    <FinalCTA />
+  </main>
+</BaseLayout>
+
+{/*
+  COREOGRAFÍA GSAP — se ejecuta solo en cliente.
+  Para añadir animaciones a NUEVAS secciones no necesitas tocar este
+  script: basta con marcar elementos con data-gsap="fade-up" (etc.) o
+  envolver grupos en data-gsap-group. Ver lib/animations/choreography.ts.
+*/}
+<script>
+  import { initHomeChoreography } from '@lib/animations/choreography';
+  initHomeChoreography();
+</script>

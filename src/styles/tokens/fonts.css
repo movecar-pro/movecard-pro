@@ -1,0 +1,9 @@
+/* Movecar webfonts — Playfair Display (display) + Inter (UI/body).
+   ------------------------------------------------------------------
+   Las fuentes se cargan vía <link> en src/layouts/BaseLayout.astro
+   (con preconnect), no por @import: así evitamos el encadenamiento de
+   @import sobre el bundle de Tailwind, que bloquea el render.
+
+   ⚙️  ALTERNATIVA SELF-HOSTED: descarga los .woff2 a /public/assets/fonts/
+   y declara aquí reglas @font-face locales (este archivo es el lugar
+   canónico para la tipografía). */

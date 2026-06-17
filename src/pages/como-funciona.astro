@@ -1,0 +1,66 @@
+---
+/**
+ * /como-funciona — reutiliza secciones ya construidas para la home
+ * (Pasos, Simulador, Fortalezas) y añade un FAQ con la isla PlanAccordion.
+ * Demuestra cómo recomponer secciones existentes en una página nueva.
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PageHeader from '@components/sections/PageHeader.astro';
+import Pasos from '@components/sections/Pasos.astro';
+import Simulador from '@components/sections/Simulador.astro';
+import Fortalezas from '@components/sections/Fortalezas.astro';
+import FinalCTA from '@components/sections/FinalCTA.astro';
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import PlanAccordion from '@components/islands/PlanAccordion.tsx';
+import { comoFunciona } from '@lib/content';
+---
+
+<BaseLayout
+  title="Cómo funciona — Move Card Pro"
+  description={comoFunciona.header.subtitle}
+  active="Cómo Funciona"
+>
+  <main>
+    <PageHeader {...comoFunciona.header} />
+
+    {/* Reutilización directa de secciones de la home */}
+    <Pasos />
+    <Simulador />
+    <Fortalezas />
+
+    {/* FAQ — isla React hidratada al entrar en viewport */}
+    <section class="mc-section" style="background:var(--white)">
+      <div class="mc-container" style="max-width:var(--content-max)">
+        <div class="faq__head" data-gsap="fade-up">
+          <Eyebrow align="center">{comoFunciona.faqEyebrow}</Eyebrow>
+          <h2 class="faq__title">{comoFunciona.faqTitle}</h2>
+        </div>
+        <div data-gsap="fade-up">
+          <PlanAccordion client:visible items={comoFunciona.faqs} />
+        </div>
+      </div>
+    </section>
+
+    <FinalCTA />
+  </main>
+</BaseLayout>
+
+<script>
+  import { initHomeChoreography } from '@lib/animations/choreography';
+  initHomeChoreography();
+</script>
+
+<style>
+  .faq__head {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .faq__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    color: var(--text-strong);
+  }
+</style>

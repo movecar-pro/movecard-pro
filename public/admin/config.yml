@@ -1,0 +1,30 @@
+# ============================================================
+# Decap CMS — configuración de ejemplo.
+# Modela la home como un "file collection" cuyo JSON puede mapearse 1:1
+# a src/lib/content.ts (o migrarse a src/content/ con el Content Layer).
+# Amplía con nuevas colecciones para /nosotros, /precios, blog, etc.
+# ============================================================
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/assets/images/uploads
+public_folder: /assets/images/uploads
+
+locale: es
+
+collections:
+  - name: home
+    label: 'Página de inicio'
+    files:
+      - name: hero
+        label: 'Hero'
+        file: src/content/home/hero.json
+        fields:
+          - { name: eyebrow, label: 'Eyebrow', widget: string }
+          - { name: titleLead, label: 'Título (inicio)', widget: string }
+          - { name: titleHighlight, label: 'Título (destacado amber)', widget: string }
+          - { name: titleRest, label: 'Título (resto)', widget: string }
+          - { name: subtitle, label: 'Subtítulo', widget: text }
+          - { name: ctaPrimary, label: 'CTA primaria', widget: string }
+          - { name: ctaSecondary, label: 'CTA secundaria', widget: string }

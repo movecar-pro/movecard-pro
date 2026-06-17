@@ -1,0 +1,120 @@
+{
+  "order": 7,
+  "name": "MG ZX 2026",
+  "badge": "Bencina",
+  "fuel": "gas",
+  "tags": [
+    "2026",
+    "Bencina",
+    "SUV"
+  ],
+  "image": "vehicles/mg-zx.png",
+  "detail": {
+    "description": "SUV moderno y espacioso, diseñado para conductores que buscan comodidad, tecnología y una excelente experiencia para sus pasajeros.",
+    "images": [
+      {
+        "src": "vehicles/mg-zx-front.png",
+        "alt": "MG ZX 2026 vista frontal"
+      },
+      {
+        "src": "vehicles/mg-zx-rear.png",
+        "alt": "MG ZX 2026 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Motor bencinero eficiente para uso urbano y carretera.",
+          "Excelente equilibrio entre rendimiento y desempeño.",
+          "Menor costo operativo gracias a su mecánica moderna."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Consumo combinado aproximado: 12,5 km/l.",
+          "Estanque de combustible: 55 litros.",
+          "Autonomía estimada: 690 km.",
+          "Ideal para jornadas extensas con pocas detenciones para repostar."
+        ]
+      },
+      {
+        "icon": "fa-gas-pump",
+        "title": "Reabastecimiento simple",
+        "items": [
+          "Reabastecimiento completo en pocos minutos.",
+          "Amplia disponibilidad de estaciones de servicio.",
+          "Siempre listo para volver a operar."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Posición de manejo elevada.",
+          "Excelente visibilidad del entorno.",
+          "Suspensión confortable para largas jornadas."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Amplia cabina para cinco ocupantes.",
+          "Buen espacio para piernas y hombros.",
+          "Viajes cómodos tanto en ciudad como carretera."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Capacidad para 5 pasajeros.",
+          "Amplio maletero para equipaje y compras.",
+          "Ideal para traslados al aeropuerto."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Múltiples airbags.",
+          "Frenos ABS con EBD.",
+          "Control electrónico de estabilidad."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara de retroceso.",
+          "Sensores de estacionamiento.",
+          "Control crucero según versión."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Pantalla multimedia de gran tamaño.",
+          "Apple CarPlay y Android Auto.",
+          "Bluetooth y puertos USB."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Mecánica ampliamente conocida.",
+          "Repuestos disponibles en el mercado nacional.",
+          "Mantenciones simples y accesibles."
+        ]
+      }
+    ]
+  }
+}

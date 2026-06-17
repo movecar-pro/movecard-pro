@@ -1,0 +1,31 @@
+{
+  "order": 4,
+  "name": "Sofía Valdivia",
+  "role": "People Leader",
+  "roleShort": "People Leader",
+  "photo": "team/sofia-valdivia.png",
+  "bioShort": "Psicóloga con experiencia en Psicología Laboral y Psicología Clínica, orientada al desarrollo de personas, construcción de equipos y cultura organizacional.",
+  "linkedin": "https://www.linkedin.com/",
+  "location": "Chile",
+  "credentials": [
+    { "icon": "fa-graduation-cap", "text": "Psicóloga" },
+    { "icon": "fa-people-group", "text": "Psicología Laboral y Clínica" },
+    { "icon": "fa-location-dot", "text": "Chile" }
+  ],
+  "sections": [
+    {
+      "icon": "fa-graduation-cap",
+      "title": "Formación y especialización",
+      "paragraphs": [
+        "Psicóloga con experiencia en Psicología Laboral y Psicología Clínica, orientada al desarrollo de personas, construcción de equipos y cultura organizacional."
+      ]
+    },
+    {
+      "icon": "fa-heart",
+      "title": "Personas y cultura",
+      "paragraphs": [
+        "Acompaña el crecimiento del equipo de Movecar y de su comunidad de movedrivers, cuidando que la cultura combine cercanía, alto desempeño y un genuino foco en las personas."
+      ]
+    }
+  ]
+}

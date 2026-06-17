@@ -1,0 +1,115 @@
+{
+  "order": 6,
+  "name": "Dongfeng Nammi 2026",
+  "badge": "100% Eléctrico",
+  "fuel": "ev",
+  "tags": [
+    "2026",
+    "430 km",
+    "Urbano"
+  ],
+  "image": "vehicles/dongfeng-nammi.png",
+  "detail": {
+    "description": "Uno de los eléctricos urbanos más modernos y eficientes de su categoría.",
+    "images": [
+      {
+        "src": "vehicles/dongfeng-nammi-front.png",
+        "alt": "Dongfeng Nammi 2026 vista frontal"
+      },
+      {
+        "src": "vehicles/dongfeng-nammi-rear.png",
+        "alt": "Dongfeng Nammi 2026 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Operación 100% eléctrica.",
+          "Batería LFP de hasta 42,3 kWh.",
+          "Consumo extremadamente eficiente."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Hasta 430 km de autonomía.",
+          "Ideal para jornadas largas.",
+          "Excelente rendimiento urbano."
+        ]
+      },
+      {
+        "icon": "fa-charging-station",
+        "title": "Carga rápida",
+        "items": [
+          "Carga rápida DC 30% a 80% en aproximadamente 30 minutos.",
+          "Carga AC completa cercana a 7 horas."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Conducción muy suave.",
+          "Excelente visibilidad.",
+          "Fácil maniobrabilidad urbana."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Distancia entre ejes de 2.660 mm.",
+          "Excelente espacio interior para su tamaño."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Maletero de hasta 326 litros.",
+          "Capacidad para 5 pasajeros."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Airbags.",
+          "Control de estabilidad.",
+          "Estructura reforzada."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara 540°.",
+          "ADAS según versión.",
+          "Sensores delanteros y traseros."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Pantalla de 12,8\".",
+          "Conectividad móvil.",
+          "Sistema multimedia avanzado."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Menos desgaste mecánico.",
+          "Más tiempo operando."
+        ]
+      }
+    ]
+  }
+}

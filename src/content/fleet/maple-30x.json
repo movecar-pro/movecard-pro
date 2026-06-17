@@ -1,0 +1,117 @@
+{
+  "order": 3,
+  "name": "Maple 30X 2022",
+  "badge": "100% Eléctrico",
+  "fuel": "ev",
+  "tags": [
+    "2022",
+    "300 km",
+    "SUV"
+  ],
+  "image": "vehicles/maple-30x.png",
+  "detail": {
+    "description": "SUV eléctrico compacto diseñado para maximizar la rentabilidad en ciudad.",
+    "images": [
+      {
+        "src": "vehicles/maple-30x-front.png",
+        "alt": "Maple 30X 2022 vista frontal"
+      },
+      {
+        "src": "vehicles/maple-30x-rear.png",
+        "alt": "Maple 30X 2022 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Operación 100% eléctrica.",
+          "Excelente eficiencia energética.",
+          "Menor costo operativo diario."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Hasta 300 km de autonomía aproximada.",
+          "Ideal para operación urbana.",
+          "Excelente rendimiento para aplicaciones."
+        ]
+      },
+      {
+        "icon": "fa-charging-station",
+        "title": "Carga rápida",
+        "items": [
+          "Compatible con carga rápida.",
+          "Carga domiciliaria simple.",
+          "Fácil integración con infraestructura pública."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Conducción suave.",
+          "Posición elevada de manejo.",
+          "Excelente maniobrabilidad."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Espacio interior bien aprovechado.",
+          "Cabina silenciosa.",
+          "Buen confort urbano."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Capacidad para 5 pasajeros.",
+          "Maletero amplio para su tamaño.",
+          "Ideal para traslados diarios."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Airbags.",
+          "ABS.",
+          "Control electrónico de estabilidad."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara de retroceso.",
+          "Sensores de estacionamiento."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Pantalla multimedia.",
+          "Bluetooth.",
+          "Puertos USB."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Menos desgaste mecánico.",
+          "Más tiempo operando."
+        ]
+      }
+    ]
+  }
+}

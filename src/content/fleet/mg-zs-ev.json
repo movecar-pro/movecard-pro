@@ -1,0 +1,119 @@
+{
+  "order": 2,
+  "name": "MG ZS EV Full Equipo 2022",
+  "badge": "100% Eléctrico",
+  "fuel": "ev",
+  "tags": [
+    "2022",
+    "320 km",
+    "SUV"
+  ],
+  "image": "vehicles/mg-zs-ev.png",
+  "detail": {
+    "description": "SUV eléctrico ampliamente probado en plataformas de transporte y uso urbano intensivo.",
+    "images": [
+      {
+        "src": "vehicles/mg-zs-ev-front.png",
+        "alt": "MG ZS EV Full Equipo 2022 vista frontal"
+      },
+      {
+        "src": "vehicles/mg-zs-ev-rear.png",
+        "alt": "MG ZS EV Full Equipo 2022 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Operación 100% eléctrica.",
+          "Menor costo de energía que un vehículo bencinero.",
+          "Menor costo de mantenimiento."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Hasta 320 km de autonomía aproximada.",
+          "Ideal para recorridos urbanos diarios.",
+          "Excelente equilibrio entre autonomía y eficiencia."
+        ]
+      },
+      {
+        "icon": "fa-charging-station",
+        "title": "Carga rápida",
+        "items": [
+          "Compatible con carga rápida DC.",
+          "Carga residencial durante la noche.",
+          "Fácil acceso a redes de carga pública."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Posición de manejo SUV.",
+          "Excelente visibilidad.",
+          "Conducción suave y silenciosa."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Amplio espacio trasero.",
+          "Cabina silenciosa.",
+          "Viajes más agradables."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Capacidad para 5 pasajeros.",
+          "Maletero cercano a 450 litros.",
+          "Excelente para equipaje."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "6 airbags.",
+          "ESP.",
+          "Frenos ABS."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara de retroceso.",
+          "Sensores de estacionamiento.",
+          "Control crucero."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Apple CarPlay.",
+          "Android Auto.",
+          "Pantalla multimedia."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Menos componentes mecánicos.",
+          "Menos visitas al taller.",
+          "Mayor disponibilidad operativa."
+        ]
+      }
+    ]
+  }
+}

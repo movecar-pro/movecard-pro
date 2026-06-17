@@ -1,0 +1,60 @@
+/* ============================================================
+   MOVECAR — SPACING, RADII, SHADOWS, LAYOUT
+   8pt-based spacing scale. Soft generous radii on cards (32),
+   tight radii on controls (8). Diffuse low-opacity shadows.
+   (Copiado 1:1 desde el Movecar Design System.)
+   ============================================================ */
+:root {
+  /* Spacing scale (8pt base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 80px;
+  --space-section: 112px; /* large vertical section padding (desktop) */
+  --page-gutter: 64px; /* desktop horizontal gutter */
+  --page-gutter-mobile: 20px;
+
+  /* Radii */
+  --radius-xs: 4px; /* small controls, tags */
+  --radius-sm: 8px; /* buttons, inputs, nav CTA */
+  --radius-md: 16px; /* media, smaller cards */
+  --radius-lg: 24px; /* cards */
+  --radius-xl: 32px; /* feature panels, simulator */
+  --radius-pill: 999px;
+
+  /* Borders */
+  --border-width: 1px;
+
+  /* Shadows — soft, diffuse, low-opacity */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.12);
+  --shadow-amber: 0 8px 24px rgba(254, 147, 7, 0.3); /* glow on primary CTA */
+
+  /* Layout */
+  --container-max: 1280px;
+  --container-wide: 1200px;
+  --content-max: 768px;
+  --content-narrow: 560px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 240ms;
+  --dur-slow: 400ms;
+}
+
+/* Gutter responsivo: en móvil reducimos el padding lateral de página. */
+@media (max-width: 768px) {
+  :root {
+    --page-gutter: 20px;
+    --space-section: 72px;
+  }
+}

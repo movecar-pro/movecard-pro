@@ -1,0 +1,29 @@
+---
+/**
+ * StatBlock — número grande Playfair + label en mayúsculas.
+ * Portado del DS (components/cards/StatBlock.jsx).
+ * `count` (opcional): valor numérico para animar de 0 → count con GSAP
+ * (ver [data-count] en lib/animations/choreography.ts).
+ */
+interface Props {
+  value: string;
+  label: string;
+  align?: 'left' | 'center';
+  tone?: 'light' | 'dark';
+  count?: number;
+  countSuffix?: string;
+  class?: string;
+}
+const { value, label, align = 'center', tone = 'light', count, countSuffix, class: className } = Astro.props;
+const onDark = tone === 'dark';
+const wrap = `display:flex;flex-direction:column;gap:6px;align-items:${align === 'center' ? 'center' : 'flex-start'};text-align:${align};`;
+const valueStyle = `font-family:var(--font-display);font-weight:var(--fw-bold);font-size:var(--fs-h2);line-height:1;color:${onDark ? 'var(--white)' : 'var(--text-strong)'};`;
+const labelStyle = `font-family:var(--font-sans);font-weight:var(--fw-semibold);font-size:12px;letter-spacing:var(--ls-eyebrow);text-transform:uppercase;color:${onDark ? 'var(--white-a70)' : 'var(--text-muted)'};`;
+---
+
+<div class={className} style={wrap}>
+  <span style={valueStyle} data-count={count ?? undefined} data-count-suffix={countSuffix ?? undefined}>
+    {value}
+  </span>
+  <span style={labelStyle}>{label}</span>
+</div>

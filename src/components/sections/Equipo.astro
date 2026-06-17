@@ -1,0 +1,195 @@
+---
+/**
+ * Equipo — grilla del equipo (screenshot 3). Va en SEGUNDO lugar en /nosotros.
+ *
+ * Integración:
+ *   · Lee la colección `team` del Content Layer (getCollection) → SSR estático.
+ *   · Cada tarjeta es estática; un botón-overlay con data-team-modal="<id>"
+ *     abre el modal. El enlace de LinkedIn lleva data-team-ignore para no
+ *     disparar el modal.
+ *   · La isla <TeamModal> (client:idle) escucha los clics y muestra el perfil.
+ */
+import { getCollection } from 'astro:content';
+import Eyebrow from '@components/primitives/Eyebrow.astro';
+import Streaks from '@components/decor/Streaks.astro';
+import RImgPlaceholder from '@components/primitives/Placeholder.astro';
+import TeamModal from '@components/islands/TeamModal.tsx';
+
+const members = (await getCollection('team')).sort((a, b) => a.data.order - b.data.order);
+// Datos serializables para la isla (id + campos del esquema).
+const modalData = members.map((m) => ({ id: m.id, ...m.data }));
+---
+
+<section class="eq">
+  <Streaks color="var(--amber-300)" opacity={0.85} parallax />
+  <div class="eq__inner mc-container">
+    <div class="eq__intro" data-gsap="fade-right">
+      <Eyebrow>Movecar.pro</Eyebrow>
+      <h2 class="eq__title">Equipo</h2>
+      <p>
+        Detrás de MoveCar.pro hay un equipo con experiencia en Emprendimiento, Mundo Corporativo,
+        Transformación Digital, Crecimiento de Compañías y Proyectos que han impactado a millones de
+        personas en Latinoamérica.
+      </p>
+      <p>
+        Compartimos una misma convicción: construir más y mejores oportunidades para quienes mueven
+        nuestras ciudades todos los días.
+      </p>
+    </div>
+
+    <div class="eq__grid" data-gsap-group>
+      {
+        members.map((m) => (
+          <article class="eq-card" data-gsap-child>
+            {/* Botón-overlay: hace toda la tarjeta clickeable y accesible */}
+            <button
+              type="button"
+              class="eq-card__open"
+              data-team-modal={m.id}
+              aria-label={`Ver perfil de ${m.data.name}`}
+            />
+            <div class="eq-card__photo">
+              <RImgPlaceholder src={m.data.photo} alt={m.data.name} ratio="1/1" fit="cover" rounded="var(--radius-md)" />
+            </div>
+            <h3 class="eq-card__name">{m.data.name}</h3>
+            <p class="eq-card__role">{m.data.role}</p>
+            <p class="eq-card__bio">{m.data.bioShort}</p>
+            {m.data.linkedin && (
+              <a
+                class="eq-card__linkedin"
+                href={m.data.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-team-ignore
+                aria-label={`LinkedIn de ${m.data.name}`}
+              >
+                <i class="fa-brands fa-linkedin" aria-hidden="true" />
+              </a>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </div>
+
+  {/* Isla: escucha los clics de las tarjetas y abre el modal */}
+  <TeamModal client:idle members={modalData} />
+</section>
+
+<style>
+  .eq {
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    padding-block: var(--space-section);
+  }
+  .eq__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .eq__intro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 96px;
+  }
+  .eq__title {
+    margin: 0;
+    font-size: var(--fs-h1);
+    color: var(--text-strong);
+  }
+  .eq__intro p {
+    margin: 0;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--text-muted);
+  }
+  .eq__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .eq-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 24px;
+    transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+  }
+  .eq-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  /* Overlay que cubre la tarjeta para abrir el modal (accesible vía teclado). */
+  .eq-card__open {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: var(--radius-lg);
+  }
+  .eq-card__open:focus-visible {
+    outline: 2px solid var(--amber-500);
+    outline-offset: 2px;
+  }
+  .eq-card__name {
+    margin: 4px 0 0;
+    font-family: var(--font-sans);
+    font-weight: var(--fw-bold);
+    font-size: 18px;
+    color: var(--text-strong);
+  }
+  .eq-card__role {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  .eq-card__bio {
+    margin: 4px 0 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--text-body);
+    /* Truncado a 3 líneas con elipsis (como el diseño). */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .eq-card__linkedin {
+    position: relative;
+    z-index: 2; /* por encima del overlay */
+    align-self: flex-start;
+    color: var(--ink-700);
+    font-size: 22px;
+    margin-top: 4px;
+  }
+  .eq-card__linkedin:hover {
+    color: var(--amber-600);
+  }
+
+  @media (max-width: 1024px) {
+    .eq__inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .eq__intro {
+      position: static;
+    }
+  }
+  @media (max-width: 560px) {
+    .eq__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

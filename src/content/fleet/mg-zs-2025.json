@@ -1,0 +1,120 @@
+{
+  "order": 9,
+  "name": "MG ZS 2025",
+  "badge": "Bencina",
+  "fuel": "gas",
+  "tags": [
+    "2025",
+    "Bencina",
+    "SUV"
+  ],
+  "image": "vehicles/mg-zs-2025.png",
+  "detail": {
+    "description": "Uno de los SUV más populares del mercado, reconocido por su equilibrio entre espacio, tecnología y comodidad.",
+    "images": [
+      {
+        "src": "vehicles/mg-zs-2025-front.png",
+        "alt": "MG ZS 2025 vista frontal"
+      },
+      {
+        "src": "vehicles/mg-zs-2025-rear.png",
+        "alt": "MG ZS 2025 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Motor bencinero moderno y eficiente.",
+          "Excelente rendimiento para uso urbano.",
+          "Costos operativos competitivos."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Consumo combinado aproximado: 13,5 km/l.",
+          "Estanque de combustible: 45 litros.",
+          "Autonomía estimada: 600 km.",
+          "Ideal para jornadas extensas de conducción."
+        ]
+      },
+      {
+        "icon": "fa-gas-pump",
+        "title": "Reabastecimiento simple",
+        "items": [
+          "Reabastecimiento rápido y conveniente.",
+          "Amplia disponibilidad de combustible.",
+          "Siempre listo para continuar operando."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Posición de manejo SUV.",
+          "Excelente visibilidad.",
+          "Conducción suave y confortable."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Amplio espacio interior.",
+          "Cabina confortable para cinco ocupantes.",
+          "Excelente experiencia de viaje."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Capacidad para 5 pasajeros.",
+          "Maletero cercano a 450 litros.",
+          "Ideal para equipaje y viajes."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Múltiples airbags.",
+          "Frenos ABS con EBD.",
+          "Control electrónico de estabilidad."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Cámara de retroceso.",
+          "Sensores de estacionamiento.",
+          "Control crucero según versión."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Pantalla multimedia.",
+          "Apple CarPlay y Android Auto.",
+          "Bluetooth y puertos USB."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Mecánica ampliamente probada.",
+          "Red de servicio nacional.",
+          "Mantenciones simples y accesibles."
+        ]
+      }
+    ]
+  }
+}

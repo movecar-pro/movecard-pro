@@ -1,0 +1,86 @@
+---
+/**
+ * Navbar — barra sticky blanca: logo, links centrados, CTA amber.
+ * Portado del DS (components/navigation/Navbar.jsx) + responsive.
+ *
+ * 🏝️  En desktop los links son estáticos (.astro, cero JS). En móvil se
+ *      colapsan en un drawer interactivo => isla React `MobileMenu`.
+ */
+import Logo from '@components/primitives/Logo.astro';
+import Button from '@components/primitives/Button.astro';
+import MobileMenu from '@components/islands/NavbarMobile.tsx';
+import { nav } from '@lib/content';
+
+interface Props {
+  active?: string;
+}
+const { active = 'Inicio' } = Astro.props;
+const links = nav.links;
+---
+
+<nav class="mc-navbar">
+  <a href="/" aria-label="Inicio Movecar" style="line-height:0"><Logo height={30} /></a>
+
+  {/* Links desktop (ocultos en móvil via CSS) */}
+  <div class="mc-navbar__links">
+    {
+      links.map((l) => (
+        <a href={l.href} class:list={['mc-navbar__link', { 'is-active': l.label === active }]}>
+          {l.label}
+        </a>
+      ))
+    }
+  </div>
+
+  <div class="mc-navbar__cta">
+    <Button size="sm" href="#postular">{nav.cta}</Button>
+  </div>
+
+  {/* Isla React: botón hamburguesa + drawer (solo interactivo). */}
+  <MobileMenu client:idle links={links} cta={nav.cta} active={active} />
+</nav>
+
+<style>
+  .mc-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    height: 76px;
+    padding: 0 var(--page-gutter);
+    background: var(--white);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .mc-navbar__links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+  }
+  .mc-navbar__link {
+    font-family: var(--font-sans);
+    font-weight: var(--fw-medium);
+    font-size: 15px;
+    color: var(--text-strong);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+  .mc-navbar__link:hover,
+  .mc-navbar__link.is-active {
+    color: var(--text-accent);
+  }
+
+  /* Responsive: bajo 900px ocultamos links+CTA y mostramos la isla móvil. */
+  @media (max-width: 900px) {
+    .mc-navbar__links,
+    .mc-navbar__cta {
+      display: none;
+    }
+  }
+  @media (min-width: 901px) {
+    /* La isla móvil se auto-oculta arriba de 900px (ver el .tsx). */
+  }
+</style>

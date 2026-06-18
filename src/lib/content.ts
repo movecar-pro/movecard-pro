@@ -160,42 +160,42 @@ export const fortalezas = {
   ],
 };
 
-/* Ventajas de Movecar — 5 tarjetas (en móvil se comportan como carrusel). */
+/* Ventajas de Movecar — 5 tarjetas (en desktop grilla, en móvil carrusel con dots). */
 export const ventajasMovecar = {
   eyebrow: 'Ventajas de Movecar',
   title: 'Muévete al futuro de la Electromovilidad',
-  subtitle: 'Maximiza tus ganancias con nuestra flota y asegura un sueldo real, hoy, sin sorpresas ni letra chica.',
+  subtitle: 'Maximiza tus ganancias con nuestra flota y asegura un sueldo real. Hoy, sin sorpresas ni letra chica.',
   cta: 'Comenzar ahora',
   items: [
     {
-      icon: 'fa-sack-dollar',
-      title: 'Mejor ingreso del mercado',
-      body: 'Maximiza tus ganancias con nuestra flota y olvídate de los gastos imprevistos.',
-      bullets: ['Hasta $500.000 semanales', 'Promedio $450.000'],
-    },
-    {
-      icon: 'fa-arrow-trend-up',
+      icon: 'fa-clock',
       title: 'Capitaliza tu esfuerzo',
-      body: 'A fin de mes puedes optar a comprar tu auto y capitalizar tu trabajo.',
+      body: 'Al 5to año puedes optar a comprar tu auto desde $1.',
       bullets: [],
     },
     {
       icon: 'fa-leaf',
       title: 'Costos operativos más bajos',
-      body: 'Seguro, mantenciones y descuentos exclusivos para conductores.',
+      body: 'Planes desde 1,6 UF + beneficios exclusivos y descuentos para conductores.',
       bullets: [],
     },
     {
-      icon: 'fa-mobile-screen',
+      icon: 'fa-headset',
       title: 'App más completa del mercado',
-      body: 'Monitorea en tiempo real tus ingresos y gastos, con apoyo 24/7.',
+      body: 'Monitorea ganancias, costos y desempeño en tiempo real, sin letra chica y con apoyo 24/7.',
       bullets: [],
     },
     {
-      icon: 'fa-bolt',
-      title: 'Ingresa hoy, sin sorpresas',
-      body: 'Sin pagos comerciales ni costos de localización: recibes pagos que se adaptan a tu flujo.',
+      icon: 'fa-hand-holding-dollar',
+      title: 'Ingresa hoy, sin ahogarte',
+      body: 'No exigimos pago inmediato de cuota de incorporación y podemos pactar cuotas que se adapten a tu flujo.',
       bullets: [],
+    },
+    {
+      icon: 'fa-wallet',
+      title: 'Mejor ingreso del mercado',
+      body: 'Maximiza tus ganancias con nuestra flota y olvídate de los gastos imprevistos.',
+      bullets: ['Hasta $500.000 semanales', 'Promedio $450.000'],
     },
   ],
 };

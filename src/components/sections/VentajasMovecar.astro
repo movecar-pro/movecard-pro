@@ -1,17 +1,32 @@
 ---
 /**
- * VentajasMovecar — "Muévete al futuro de la Electromovilidad" + 5 tarjetas
- * de ventajas. En DESKTOP es una grilla de 5 columnas; en MÓVIL se comporta
- * como CARRUSEL (scroll-snap horizontal, deslizable, una tarjeta por vista).
- * Reutiliza Eyebrow. No requiere JS (carrusel nativo por scroll-snap).
+ * VentajasMovecar — "Muévete al futuro de la Electromovilidad" + 5 ventajas.
+ * DESKTOP: grilla de 5 tarjetas (icono en círculo punteado), con un auto
+ * tenue de fondo. MÓVIL: carrusel con dots (isla VentajasCarousel).
+ * El shell (fondo, header, CTA) es estático; solo las tarjetas/carrusel
+ * son isla. Reutiliza Eyebrow y Button.
  */
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
+import VentajasCarousel from '@components/islands/VentajasCarousel.tsx';
 import { ventajasMovecar } from '@lib/content';
+import { USE_REAL_IMAGES, IMAGE_BASE } from '@lib/config';
 const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
 ---
 
 <section class="vm2 mc-section">
+  {/* Auto tenue de fondo (solo cuando hay imágenes reales, para no ensuciar dev) */}
+  {
+    USE_REAL_IMAGES && (
+      <img
+        class="vm2__bg"
+        src={`${IMAGE_BASE}/vehicles/ventajas-bg.png`}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+      />
+    )
+  }
   <div class="vm2__inner mc-container">
     <div class="vm2__head" data-gsap="fade-up">
       <Eyebrow align="center">{eyebrow}</Eyebrow>
@@ -19,29 +34,9 @@ const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
       <p class="vm2__subtitle">{subtitle}</p>
     </div>
 
-    {/* Grilla en desktop · carrusel scroll-snap en móvil */}
-    <div class="vm2__track" data-gsap-group>
-      {
-        items.map((it) => (
-          <article class="vm2__card" data-gsap-child>
-            <span class="vm2__icon" aria-hidden="true">
-              <i class={`fa-solid ${it.icon}`} />
-            </span>
-            <h3 class="vm2__card-title">{it.title}</h3>
-            <p class="vm2__card-body">{it.body}</p>
-            {it.bullets.length > 0 && (
-              <ul class="vm2__list">
-                {it.bullets.map((b) => (
-                  <li>
-                    <i class="fa-solid fa-check" aria-hidden="true" />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </article>
-        ))
-      }
+    {/* Tarjetas (grilla desktop · carrusel móvil con dots) */}
+    <div data-gsap="fade-up">
+      <VentajasCarousel client:visible items={items} />
     </div>
 
     <div class="vm2__cta"><Button href="#postular">{cta}</Button></div>
@@ -50,7 +45,23 @@ const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
 
 <style>
   .vm2 {
+    position: relative;
+    overflow: hidden;
     background: var(--surface-subtle);
+  }
+  .vm2__bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(900px, 90%);
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .vm2__inner {
+    position: relative;
+    z-index: 1;
   }
   .vm2__head {
     text-align: center;
@@ -70,89 +81,8 @@ const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
     font-size: var(--fs-body-lg);
     color: var(--text-muted);
   }
-
-  .vm2__track {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    align-items: stretch;
-  }
-  .vm2__card {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background: var(--surface-card);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    padding: 24px;
-  }
-  .vm2__icon {
-    width: 44px;
-    height: 44px;
-    border-radius: var(--radius-md);
-    background: var(--amber-50);
-    color: var(--amber-600);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-  }
-  .vm2__card-title {
-    margin: 0;
-    font-family: var(--font-sans);
-    font-weight: var(--fw-semibold);
-    font-size: var(--fs-body-lg);
-    color: var(--text-accent);
-  }
-  .vm2__card-body {
-    margin: 0;
-    font-size: var(--fs-small);
-    line-height: 1.55;
-    color: var(--text-muted);
-  }
-  .vm2__list {
-    margin: auto 0 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .vm2__list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: var(--fs-small);
-    color: var(--text-body);
-  }
-  .vm2__list i {
-    color: var(--green-700);
-    margin-top: 3px;
-    font-size: 12px;
-  }
   .vm2__cta {
     text-align: center;
     margin-top: 44px;
-  }
-
-  /* ---- MÓVIL: carrusel scroll-snap (una tarjeta por vista, deslizable) ---- */
-  @media (max-width: 900px) {
-    .vm2__track {
-      display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 12px;
-      margin-inline: calc(-1 * var(--page-gutter));
-      padding-inline: var(--page-gutter);
-      scrollbar-width: none;
-    }
-    .vm2__track::-webkit-scrollbar {
-      display: none;
-    }
-    .vm2__card {
-      flex: 0 0 82%;
-      scroll-snap-align: center;
-    }
   }
 </style>

@@ -26,7 +26,9 @@ const heroCars = (await getCollection('fleet'))
     <div class="hero__copy">
       <Eyebrow tone="onDark" data-gsap="hero-eyebrow">{hero.eyebrow}</Eyebrow>
       <h1 class="hero__title" data-gsap="hero-title">
-        {hero.titleLead} <span class="hero__hl">{hero.titleHighlight}</span> {hero.titleRest}
+        {hero.titleLead}
+        <span class="hero__hl">{hero.titleHighlight}</span>
+        {hero.titleRest}
       </h1>
       <p class="hero__subtitle" data-gsap="hero-subtitle">{hero.subtitle}</p>
       <div class="hero__cta" data-gsap="hero-cta">

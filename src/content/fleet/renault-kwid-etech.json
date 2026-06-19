@@ -8,16 +8,16 @@
     "298 km",
     "Compacto"
   ],
-  "image": "vehicles/renault-kwid-etech.png",
+  "image": "vehicles/renault-kwid-etech.webp",
   "detail": {
     "description": "El eléctrico más compacto y económico para maximizar la rentabilidad en ciudad.",
     "images": [
       {
-        "src": "vehicles/renault-kwid-etech-front.png",
+        "src": "vehicles/renault-kwid-etech-front.webp",
         "alt": "Renault Kwid E-Tech EV 2025 vista frontal"
       },
       {
-        "src": "vehicles/renault-kwid-etech-rear.png",
+        "src": "vehicles/renault-kwid-etech-rear.webp",
         "alt": "Renault Kwid E-Tech EV 2025 vista trasera"
       }
     ],

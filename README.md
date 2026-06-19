@@ -1,6 +1,6 @@
 # Move Card Pro — Landing
 
-Landing page de **Move Card Pro** (Movecar.pro) construida con **AstroJS + Tailwind v4 + GSAP**, sobre el **Movecar Design System**.
+Landing page de **Move Car Pro** (Movecar.pro) construida con **AstroJS + Tailwind v4 + GSAP**, sobre el **Movecar Design System**.
 
 Voz español-Chile, money-first, sin emoji. Color amber `#FE9307`, charcoal y verde eco. Tipografía Playfair Display + Inter.
 
@@ -54,8 +54,10 @@ src/
 Los tokens del Design System están en `src/styles/tokens/` (CSS vars). `global.css` los expone como utilidades Tailwind vía `@theme`. Puedes usar **cualquiera de los dos**:
 
 ```astro
-<div class="bg-amber-500 rounded-lg">…</div>      <!-- utilidad Tailwind -->
-<div style="background:var(--amber-500)">…</div>  <!-- var() del DS -->
+<div class="rounded-lg bg-amber-500">…</div>
+<!-- utilidad Tailwind -->
+<div style="background:var(--amber-500)">…</div>
+<!-- var() del DS -->
 ```
 
 Para cambiar un valor de marca, edita **solo** el archivo en `tokens/` — se propaga a todo.
@@ -84,7 +86,8 @@ Todo vive en `src/lib/animations/`. La home las inicializa en un `<script>` clie
 
 ```astro
 <!-- Reveal on-scroll -->
-<div data-gsap="fade-up">…</div>        <!-- fade-up | fade-in | fade-left | fade-right | scale-in -->
+<div data-gsap="fade-up">…</div>
+<!-- fade-up | fade-in | fade-left | fade-right | scale-in -->
 
 <!-- Grupo con entrada escalonada -->
 <div data-gsap-group>
@@ -107,12 +110,12 @@ Para algo a medida, añade un bloque dentro de `initHomeChoreography()` en `chor
 
 Lo interactivo se aísla en `src/components/islands/*.tsx` y se hidrata con directivas `client:*`:
 
-| Directiva | Cuándo hidrata | Ejemplo en el repo |
-|---|---|---|
-| `client:load` | inmediato | (above the fold crítico) |
-| `client:idle` | navegador ocioso | `NavbarMobile` |
+| Directiva        | Cuándo hidrata        | Ejemplo en el repo                 |
+| ---------------- | --------------------- | ---------------------------------- |
+| `client:load`    | inmediato             | (above the fold crítico)           |
+| `client:idle`    | navegador ocioso      | `NavbarMobile`                     |
 | `client:visible` | al entrar en viewport | `IncomeSimulator`, `PlanAccordion` |
-| `client:media` | según media query | — |
+| `client:media`   | según media query     | —                                  |
 
 ```astro
 import MiIsla from '@components/islands/MiIsla.tsx';
@@ -141,10 +144,10 @@ const members = (await getCollection('team')).sort((a, b) => a.data.order - b.da
 
 **Modales** (islas React con shell accesible compartido — ESC, scroll-lock, foco, backdrop):
 
-| Modal | Disparador | Hidratación |
-|---|---|---|
-| `TeamModal` | grilla `Equipo.astro` (2ª sección de `/nosotros`); cards estáticas con `data-team-modal="<id>"`, clic delegado | `client:idle` |
-| `VehicleModal` | `FleetCarousel` (sección Flota); clic en una tarjeta del carrusel | `client:idle` |
+| Modal          | Disparador                                                                                                     | Hidratación   |
+| -------------- | -------------------------------------------------------------------------------------------------------------- | ------------- |
+| `TeamModal`    | grilla `Equipo.astro` (2ª sección de `/nosotros`); cards estáticas con `data-team-modal="<id>"`, clic delegado | `client:idle` |
+| `VehicleModal` | `FleetCarousel` (sección Flota); clic en una tarjeta del carrusel                                              | `client:idle` |
 
 Patrón: el contenido se renderiza en el servidor (SEO/perf) y solo el comportamiento del modal/carrusel viaja como JS. El microcopy de marketing sigue en `content.ts`; las entidades, en colecciones (listo para mapear a Decap).
 

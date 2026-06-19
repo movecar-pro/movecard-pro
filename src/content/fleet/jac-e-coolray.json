@@ -8,16 +8,16 @@
     "+400 km",
     "SUV"
   ],
-  "image": "vehicles/jac-e-coolray.png",
+  "image": "vehicles/jac-e-coolray.webp",
   "detail": {
     "description": "SUV eléctrico moderno y espacioso, pensado para maximizar tu comodidad y reducir tus costos operativos.",
     "images": [
       {
-        "src": "vehicles/jac-e-coolray-front.png",
+        "src": "vehicles/jac-e-coolray-front.webp",
         "alt": "JAC E-Coolray 2025 vista frontal"
       },
       {
-        "src": "vehicles/jac-e-coolray-rear.png",
+        "src": "vehicles/jac-e-coolray-rear.webp",
         "alt": "JAC E-Coolray 2025 vista trasera"
       }
     ],

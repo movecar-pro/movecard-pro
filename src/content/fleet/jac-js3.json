@@ -8,16 +8,16 @@
     "Bencina",
     "SUV"
   ],
-  "image": "vehicles/jac-js3.png",
+  "image": "vehicles/jac-js3.webp",
   "detail": {
     "description": "SUV compacto y versátil, ideal para conductores que buscan economía, comodidad y practicidad.",
     "images": [
       {
-        "src": "vehicles/jac-js3-front.png",
+        "src": "vehicles/jac-js3-front.webp",
         "alt": "JAC JS3 2024 vista frontal"
       },
       {
-        "src": "vehicles/jac-js3-rear.png",
+        "src": "vehicles/jac-js3-rear.webp",
         "alt": "JAC JS3 2024 vista trasera"
       }
     ],

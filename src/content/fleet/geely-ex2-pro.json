@@ -8,16 +8,16 @@
     "320 km",
     "SUV"
   ],
-  "image": "vehicles/geely-ex2-pro.png",
+  "image": "vehicles/geely-ex2-pro.webp",
   "detail": {
     "description": "SUV eléctrico eficiente y práctico para conductores que buscan maximizar sus ingresos.",
     "images": [
       {
-        "src": "vehicles/geely-ex2-pro-front.png",
+        "src": "vehicles/geely-ex2-pro-front.webp",
         "alt": "Geely EX2 Pro 2026 vista frontal"
       },
       {
-        "src": "vehicles/geely-ex2-pro-rear.png",
+        "src": "vehicles/geely-ex2-pro-rear.webp",
         "alt": "Geely EX2 Pro 2026 vista trasera"
       }
     ],

@@ -8,16 +8,16 @@
     "320 km",
     "SUV"
   ],
-  "image": "vehicles/mg-zs-ev.png",
+  "image": "vehicles/mg-zs-ev.webp",
   "detail": {
     "description": "SUV eléctrico ampliamente probado en plataformas de transporte y uso urbano intensivo.",
     "images": [
       {
-        "src": "vehicles/mg-zs-ev-front.png",
+        "src": "vehicles/mg-zs-ev-front.webp",
         "alt": "MG ZS EV Full Equipo 2022 vista frontal"
       },
       {
-        "src": "vehicles/mg-zs-ev-rear.png",
+        "src": "vehicles/mg-zs-ev-rear.webp",
         "alt": "MG ZS EV Full Equipo 2022 vista trasera"
       }
     ],

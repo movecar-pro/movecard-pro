@@ -131,7 +131,7 @@ export default function VentajasCarousel({ items }: { items: Item[] }) {
           display: inline-flex; align-items: center; justify-content: center; font-size: 18px;
         }
         .vc__card-title { margin: 4px 0 0; font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-body-lg); color: var(--text-accent); }
-        .vc__list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+        .vc__list { margin: 0; padding-left: 0; display: flex; flex-direction: column; gap: 8px; }
         .vc__list li { font-size: var(--fs-small); line-height: 1.55; color: var(--text-muted); }
 
         /* DESKTOP grilla */

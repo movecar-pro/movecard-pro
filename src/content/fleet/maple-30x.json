@@ -8,16 +8,16 @@
     "300 km",
     "SUV"
   ],
-  "image": "vehicles/maple-30x.png",
+  "image": "vehicles/maple-30x.webp",
   "detail": {
     "description": "SUV eléctrico compacto diseñado para maximizar la rentabilidad en ciudad.",
     "images": [
       {
-        "src": "vehicles/maple-30x-front.png",
+        "src": "vehicles/maple-30x-front.webp",
         "alt": "Maple 30X 2022 vista frontal"
       },
       {
-        "src": "vehicles/maple-30x-rear.png",
+        "src": "vehicles/maple-30x-rear.webp",
         "alt": "Maple 30X 2022 vista trasera"
       }
     ],

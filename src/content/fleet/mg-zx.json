@@ -8,16 +8,16 @@
     "Bencina",
     "SUV"
   ],
-  "image": "vehicles/mg-zx.png",
+  "image": "vehicles/mg-zx.webp",
   "detail": {
     "description": "SUV moderno y espacioso, diseñado para conductores que buscan comodidad, tecnología y una excelente experiencia para sus pasajeros.",
     "images": [
       {
-        "src": "vehicles/mg-zx-front.png",
+        "src": "vehicles/mg-zx-front.webp",
         "alt": "MG ZX 2026 vista frontal"
       },
       {
-        "src": "vehicles/mg-zx-rear.png",
+        "src": "vehicles/mg-zx-rear.webp",
         "alt": "MG ZX 2026 vista trasera"
       }
     ],

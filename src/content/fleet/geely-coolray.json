@@ -8,16 +8,16 @@
     "Turbo",
     "SUV"
   ],
-  "image": "vehicles/geely-coolray.png",
+  "image": "vehicles/jac-e-coolray.webp",
   "detail": {
     "description": "SUV dinámico y tecnológico que combina eficiencia, espacio y una experiencia superior de conducción.",
     "images": [
       {
-        "src": "vehicles/geely-coolray-front.png",
+        "src": "vehicles/geely-coolray-front.webp",
         "alt": "Geely Coolray 2026 vista frontal"
       },
       {
-        "src": "vehicles/geely-coolray-rear.png",
+        "src": "vehicles/geely-coolray-rear.webp",
         "alt": "Geely Coolray 2026 vista trasera"
       }
     ],

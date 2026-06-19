@@ -8,16 +8,16 @@
     "Bencina",
     "SUV"
   ],
-  "image": "vehicles/mg-zs-2025.png",
+  "image": "vehicles/mg-zs-2025.webp",
   "detail": {
     "description": "Uno de los SUV más populares del mercado, reconocido por su equilibrio entre espacio, tecnología y comodidad.",
     "images": [
       {
-        "src": "vehicles/mg-zs-2025-front.png",
+        "src": "vehicles/mg-zs-2025-front.webp",
         "alt": "MG ZS 2025 vista frontal"
       },
       {
-        "src": "vehicles/mg-zs-2025-rear.png",
+        "src": "vehicles/mg-zs-2025-rear.webp",
         "alt": "MG ZS 2025 vista trasera"
       }
     ],

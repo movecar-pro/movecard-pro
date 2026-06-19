@@ -8,16 +8,16 @@
     "430 km",
     "Urbano"
   ],
-  "image": "vehicles/dongfeng-nammi.png",
+  "image": "vehicles/dongfeng-nammi.webp",
   "detail": {
     "description": "Uno de los eléctricos urbanos más modernos y eficientes de su categoría.",
     "images": [
       {
-        "src": "vehicles/dongfeng-nammi-front.png",
+        "src": "vehicles/dongfeng-nammi-front.webp",
         "alt": "Dongfeng Nammi 2026 vista frontal"
       },
       {
-        "src": "vehicles/dongfeng-nammi-rear.png",
+        "src": "vehicles/dongfeng-nammi-rear.webp",
         "alt": "Dongfeng Nammi 2026 vista trasera"
       }
     ],

@@ -1,29 +1,29 @@
 ---
 /**
  * TrustStrip — tarjeta de stats que "flota" superpuesta al hero (margin
- * negativo). Los números animan de 0 al valor con GSAP (data-count).
+ * negativo). 4 cifras separadas por divisores verticales.
+ *
+ * Nota: NO usamos el contador animado (data-count) aquí. Los valores no son
+ * números puros ($400.000+, "1 año", "24/7"), y el count-up reordenaba el
+ * "$"/"/" rompiendo el formato. Se renderizan tal cual; la entrada animada
+ * se mantiene vía el stagger de GSAP (data-gsap-group / data-gsap-child).
  */
 import Card from '@components/primitives/Card.astro';
 import StatBlock from '@components/cards/StatBlock.astro';
 import { trustStats } from '@lib/content';
-
-// Parseo simple para alimentar el contador animado donde aplica.
-const enriched = trustStats.map((s) => {
-  const num = Number(s.value.replace(/[^0-9]/g, ''));
-  const suffix = s.value.replace(/[0-9.]/g, '');
-  return { ...s, count: Number.isFinite(num) && num > 0 ? num : undefined, suffix };
-});
 ---
 
 <div class="trust mc-container">
-  <Card radius="xl" pad="lg" elevation="lg" style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px">
-    {
-      enriched.map((s) => (
-        <div data-gsap-child>
-          <StatBlock value={s.value} label={s.label} count={s.count} countSuffix={s.suffix} />
-        </div>
-      ))
-    }
+  <Card radius="xl" pad="lg" elevation="lg">
+    <div class="trust__grid" data-gsap-group>
+      {
+        trustStats.map((s) => (
+          <div class="trust__item" data-gsap-child>
+            <StatBlock value={s.value} label={s.label} />
+          </div>
+        ))
+      }
+    </div>
   </Card>
 </div>
 
@@ -33,9 +33,38 @@ const enriched = trustStats.map((s) => {
     position: relative;
     z-index: 2;
   }
-</style>
+  .trust__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+  .trust__item {
+    position: relative;
+    padding-inline: var(--space-5);
+  }
+  /* Divisor vertical entre cifras (no en la primera de cada fila). */
+  .trust__item:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 48px;
+    background: var(--border-subtle);
+  }
 
-<script>
-  // Marca el grupo para el stagger de GSAP (ver choreography.ts bloque 3).
-  document.querySelector('.trust > *')?.setAttribute('data-gsap-group', '');
-</script>
+  @media (max-width: 600px) {
+    .trust__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 0;
+    }
+    /* En 2 columnas, el divisor solo va antes de la 2ª y 4ª (columna derecha). */
+    .trust__item:not(:first-child)::before {
+      display: none;
+    }
+    .trust__item:nth-child(even)::before {
+      display: block;
+    }
+  }
+</style>

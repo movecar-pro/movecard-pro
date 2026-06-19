@@ -42,8 +42,8 @@ export const hero = {
 
 export const trustStats = [
   { value: '$400.000+', label: 'Promedio semana' },
-  { value: '$800K', label: 'Ingreso mensual promedio' },
   { value: '98%', label: 'Satisfacción' },
+  { value: '1 año', label: 'Antigüedad flota promedio' },
   { value: '24/7', label: 'Soporte' },
 ];
 

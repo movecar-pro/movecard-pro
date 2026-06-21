@@ -8,7 +8,10 @@ import Streaks from '@components/decor/Streaks.astro';
 import Placeholder from '@components/primitives/Placeholder.astro';
 import { appPromo } from '@lib/content';
 
-const storeIcon: Record<string, string> = { Apple: 'fa-brands fa-apple', Android: 'fa-brands fa-android' };
+const storeIcon: Record<string, string> = {
+  Apple: 'fa-brands fa-apple',
+  Android: 'fa-brands fa-android',
+};
 ---
 
 <section class="mc-section" style="background:var(--white)">
@@ -19,7 +22,9 @@ const storeIcon: Record<string, string> = { Apple: 'fa-brands fa-apple', Android
         <h2 class="app__title">{appPromo.title}</h2>
         <p class="app__body">{appPromo.body}</p>
         <div class="app__actions">
-          <Button variant="dark" icon="fa-solid fa-download" href="#descargar">{appPromo.cta}</Button>
+          <Button variant="dark" icon="fa-solid fa-download" href="#descargar"
+            >{appPromo.cta}</Button
+          >
           <span class="app__stores">
             {
               appPromo.stores.map((s) => (
@@ -33,7 +38,13 @@ const storeIcon: Record<string, string> = { Apple: 'fa-brands fa-apple', Android
         </div>
       </div>
       <div class="app__media">
-        <Placeholder src={appPromo.image.src} alt={appPromo.image.alt} ratio="9/16" fit="cover" rounded="26px" />
+        <Placeholder
+          src={appPromo.image.src}
+          alt={appPromo.image.alt}
+          ratio="9/16"
+          fit="cover"
+          rounded="26px"
+        />
       </div>
     </div>
   </div>

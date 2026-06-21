@@ -205,7 +205,7 @@ export const appPromo = {
   body: 'La única plataforma donde puedes revisar la generación de ganancias y gestión en línea, porque cuentas claras conservan el bienestar.',
   cta: 'Descargar APP',
   stores: ['Apple', 'Android'],
-  image: { src: 'app/app-earnings.png', alt: 'App Movecar Copilot' },
+  image: { src: 'app/app-earnings.webp', alt: 'App Movecar Copilot' },
 };
 
 export const finalCta = {

@@ -11,7 +11,6 @@
  */
 import { getCollection } from 'astro:content';
 import Eyebrow from '@components/primitives/Eyebrow.astro';
-import Streaks from '@components/decor/Streaks.astro';
 import RImgPlaceholder from '@components/primitives/Placeholder.astro';
 import TeamModal from '@components/islands/TeamModal.tsx';
 
@@ -21,7 +20,6 @@ const modalData = members.map((m) => ({ id: m.id, ...m.data }));
 ---
 
 <section class="eq">
-  <Streaks color="var(--amber-300)" opacity={0.85} parallax />
   <div class="eq__inner mc-container">
     <div class="eq__intro" data-gsap="fade-right">
       <Eyebrow>Movecar.pro</Eyebrow>
@@ -80,7 +78,9 @@ const modalData = members.map((m) => ({ id: m.id, ...m.data }));
   .eq {
     position: relative;
     overflow: hidden;
-    background: var(--white);
+    /* Fondo de marca. SVG en public/assets/images/backgrounds/streak2.svg */
+    background:
+      var(--white) url('/assets/images/backgrounds/streak2.svg') center / cover no-repeat;
     padding-block: var(--space-section);
   }
   .eq__inner {

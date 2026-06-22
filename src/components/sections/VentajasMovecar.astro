@@ -10,23 +10,10 @@ import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
 import VentajasCarousel from '@components/islands/VentajasCarousel.tsx';
 import { ventajasMovecar } from '@lib/content';
-import { USE_REAL_IMAGES, IMAGE_BASE } from '@lib/config';
 const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
 ---
 
 <section class="vm2 mc-section">
-  {/* Auto tenue de fondo (solo cuando hay imágenes reales, para no ensuciar dev) */}
-  {
-    USE_REAL_IMAGES && (
-      <img
-        class="vm2__bg"
-        src={`${IMAGE_BASE}/vehicles/ventajas-bg.png`}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-      />
-    )
-  }
   <div class="vm2__inner mc-container">
     <div class="vm2__head" data-gsap="fade-up">
       <Eyebrow align="center">{eyebrow}</Eyebrow>
@@ -47,17 +34,9 @@ const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
   .vm2 {
     position: relative;
     overflow: hidden;
-    background: var(--surface-subtle);
-  }
-  .vm2__bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: min(900px, 90%);
-    opacity: 0.12;
-    pointer-events: none;
-    z-index: 0;
+    /* Fondo de marca. SVG en public/assets/images/backgrounds/streak2a.svg */
+    background:
+      var(--surface-subtle) url('/assets/images/backgrounds/streak2a.svg') center / cover no-repeat;
   }
   .vm2__inner {
     position: relative;

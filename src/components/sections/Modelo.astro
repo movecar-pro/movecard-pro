@@ -1,0 +1,92 @@
+---
+/**
+ * Modelo — tercera sección de /nosotros: layout editorial a 2 columnas
+ * ("Más que arriendo de vehículos" / "Tecnología para generar más ganancias"
+ * / "Nuestra forma de construir") + imagen de flota (placeholder).
+ * Fondo de marca streak2.svg.
+ */
+import Placeholder from '@components/primitives/Placeholder.astro';
+import { about } from '@lib/content';
+const { leftCol, rightCol, image } = about.modelo;
+---
+
+<section class="mo">
+  <div class="mo__inner mc-container">
+    <div class="mo__grid">
+      <div class="mo__col" data-gsap="fade-up">
+        {
+          leftCol.map((b) =>
+            b.kind === 'h' ? <h2 class="mo__h">{b.text}</h2> : <p class="mo__p">{b.text}</p>,
+          )
+        }
+      </div>
+      <div class="mo__col" data-gsap="fade-up">
+        {
+          rightCol.map((b) =>
+            b.kind === 'h' ? <h2 class="mo__h">{b.text}</h2> : <p class="mo__p">{b.text}</p>,
+          )
+        }
+      </div>
+    </div>
+
+    {/* Imagen de flota (placeholder) — public/assets/images/about/movecar-fleet.png */}
+    <div class="mo__media" data-gsap="fade-up">
+      <Placeholder src={image.src} alt={image.alt} ratio="16/9" fit="cover" rounded="var(--radius-lg)" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .mo {
+    position: relative;
+    overflow: hidden;
+    /* Fondo de marca. SVG en public/assets/images/backgrounds/streak2.svg */
+    background:
+      var(--surface-subtle) url('/assets/images/backgrounds/streak2.svg') center / cover no-repeat;
+    padding-block: var(--space-section);
+  }
+  .mo__inner {
+    position: relative;
+  }
+  .mo__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 64px;
+    align-items: start;
+    margin-bottom: 64px;
+  }
+  .mo__col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .mo__h {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-h3);
+    line-height: 1.15;
+    color: var(--text-strong);
+  }
+  /* Espacio extra antes de un título que no es el primero (look editorial). */
+  .mo__p + .mo__h {
+    margin-top: 12px;
+  }
+  .mo__p {
+    margin: 0;
+    font-size: var(--fs-small);
+    line-height: 1.7;
+    color: var(--text-body);
+  }
+  .mo__media {
+    max-width: 980px;
+    margin-inline: auto;
+  }
+  @media (max-width: 900px) {
+    .mo__grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+  }
+</style>

@@ -1,51 +1,45 @@
 ---
 /**
- * Simulador — banda charcoal con streaks; copy + isla interactiva.
- * 🏝️ La calculadora es una ISLA React (IncomeSimulator) hidratada con
- *    client:visible: no carga JS hasta acercarse al viewport.
+ * Simulador — banda con FONDO SÓLIDO ámbar y TEXTO OSCURO (sin streaks).
+ * copy a la izquierda + isla interactiva (card blanca) a la derecha, con un
+ * disclaimer legal bajo la card. Reutilizable en todas las páginas.
+ * 🏝️ La calculadora es una ISLA React (IncomeSimulator) con client:visible.
  */
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Card from '@components/primitives/Card.astro';
-import Streaks from '@components/decor/Streaks.astro';
 import IncomeSimulator from '@components/islands/IncomeSimulator.tsx';
 import { simulador } from '@lib/content';
 ---
 
 <section class="sim" id="como-funciona">
-  <Streaks opacity={0.5} parallax />
-  <div class="sim__scrim" aria-hidden="true"></div>
   <div class="sim__inner mc-container">
     <div class="sim__copy" data-gsap="fade-right">
-      <Eyebrow tone="onDark">{simulador.eyebrow}</Eyebrow>
+      <Eyebrow tone="dark">{simulador.eyebrow}</Eyebrow>
       <h2 class="sim__title">{simulador.title}</h2>
       <p class="sim__body">{simulador.body}</p>
     </div>
 
-    <Card radius="xl" pad="lg" elevation="lg" data-gsap="fade-left">
-      <IncomeSimulator
-        client:visible
-        planes={simulador.planes}
-        cta={simulador.cta}
-        disclaimer={simulador.disclaimer}
-      />
-    </Card>
+    <div class="sim__panel" data-gsap="fade-left">
+      <Card radius="xl" pad="lg" elevation="lg">
+        <IncomeSimulator
+          client:visible
+          planes={simulador.planes}
+          cta={simulador.cta}
+          disclaimer={simulador.disclaimer}
+        />
+      </Card>
+      <p class="sim__note">{simulador.note}</p>
+    </div>
   </div>
 </section>
 
 <style>
   .sim {
-    position: relative;
-    background: var(--ink-600);
-    overflow: hidden;
+    /* Fondo sólido ámbar, texto oscuro. */
+    background: var(--amber-400);
     padding-block: var(--space-section);
   }
-  .sim__scrim {
-    position: absolute;
-    inset: 0;
-    background: rgba(51, 51, 51, 0.55);
-  }
   .sim__inner {
-    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 56px;
@@ -60,13 +54,27 @@ import { simulador } from '@lib/content';
     margin: 0;
     font-size: var(--fs-h1);
     line-height: 1.12;
-    color: var(--white);
+    color: var(--ink-800);
   }
   .sim__body {
     margin: 0;
     font-size: var(--fs-body-lg);
     line-height: var(--lh-body);
-    color: var(--white-a70);
+    color: var(--ink-600);
+  }
+  .sim__panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sim__note {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ink-600);
+    max-width: 460px;
+    margin-inline: auto;
   }
   @media (max-width: 900px) {
     .sim__inner {

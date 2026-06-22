@@ -1,30 +1,29 @@
 ---
 /**
- * FinalCTA — cierre charcoal con streaks, titular fuerte y CTAs.
- * id="postular" → ancla destino de todos los CTAs "Quiero postular".
+ * FinalCTA — cierre con FONDO SÓLIDO ámbar y TEXTO OSCURO (como el diseño).
+ * Sin streaks. CTA único. id="postular" → ancla destino de los CTAs.
  */
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
-import Streaks from '@components/decor/Streaks.astro';
 import { finalCta } from '@lib/content';
+
+// Iconos por bullet (orden: Datos seguros · Sin spam · Cancelación libre).
+const bulletIcons = ['fa-lock', 'fa-check', 'fa-shield-halved'];
 ---
 
 <section class="final" id="postular">
-  <Streaks opacity={0.85} parallax />
-  <div class="final__scrim" aria-hidden="true"></div>
   <div class="final__inner" data-gsap="fade-up">
-    <Eyebrow tone="onDark">{finalCta.eyebrow}</Eyebrow>
+    <Eyebrow tone="dark">{finalCta.eyebrow}</Eyebrow>
     <h2 class="final__title">{finalCta.title}</h2>
     <p class="final__body">{finalCta.body}</p>
     <div class="final__cta">
-      <Button size="lg" href="#postular">{finalCta.ctaPrimary}</Button>
-      <Button size="lg" variant="light" href="#contacto">{finalCta.ctaSecondary}</Button>
+      <Button size="lg" href="#postular">{finalCta.cta}</Button>
     </div>
     <div class="final__bullets">
       {
-        finalCta.bullets.map((t) => (
+        finalCta.bullets.map((t, i) => (
           <span class="final__bullet">
-            <i class="fa-solid fa-circle-check" style="color:var(--amber-500)" />
+            <i class={`fa-solid ${bulletIcons[i] ?? 'fa-circle-check'}`} aria-hidden="true" />
             {t}
           </span>
         ))
@@ -35,19 +34,12 @@ import { finalCta } from '@lib/content';
 
 <style>
   .final {
-    position: relative;
-    overflow: hidden;
-    background: var(--ink-600);
+    /* Fondo sólido ámbar, texto oscuro. */
+    background: var(--amber-400);
     padding-block: 88px;
     text-align: center;
   }
-  .final__scrim {
-    position: absolute;
-    inset: 0;
-    background: rgba(51, 51, 51, 0.5);
-  }
   .final__inner {
-    position: relative;
     max-width: 720px;
     margin: 0 auto;
     padding-inline: var(--page-gutter);
@@ -60,12 +52,12 @@ import { finalCta } from '@lib/content';
     margin: 0;
     font-size: var(--fs-h1);
     line-height: 1.1;
-    color: var(--white);
+    color: var(--ink-800);
   }
   .final__body {
     margin: 0;
     font-size: var(--fs-body-lg);
-    color: var(--white-a70);
+    color: var(--ink-600);
   }
   .final__cta {
     display: flex;
@@ -85,6 +77,9 @@ import { finalCta } from '@lib/content';
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    color: var(--white-a85);
+    color: var(--ink-700);
+  }
+  .final__bullet i {
+    color: var(--ink-600);
   }
 </style>

@@ -7,7 +7,6 @@
 import { getCollection } from 'astro:content';
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
-import Streaks from '@components/decor/Streaks.astro';
 import FleetCarousel from '@components/islands/FleetCarousel.tsx';
 import { flota } from '@lib/content';
 
@@ -17,7 +16,6 @@ const vehicles = (await getCollection('fleet'))
 ---
 
 <section class="flota" id="flota">
-  <Streaks color="var(--amber-200)" opacity={0.6} />
   <div class="flota__inner mc-container">
     <div class="flota__head" data-gsap="fade-up">
       <Eyebrow align="center">{flota.eyebrow}</Eyebrow>
@@ -41,7 +39,9 @@ const vehicles = (await getCollection('fleet'))
     position: relative;
     overflow: hidden;
     padding-block: var(--space-section);
-    background: var(--grey-50);
+    /* Fondo de marca. SVG en public/assets/images/backgrounds/streak4.svg */
+    background:
+      var(--grey-50) url('/assets/images/backgrounds/streak4.svg') center / cover no-repeat;
   }
   .flota__inner {
     position: relative;

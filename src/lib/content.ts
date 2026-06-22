@@ -67,6 +67,7 @@ export const simulador = {
   planes: ['MoveElectric AM', 'MoveElectric PM', 'Plan Bencina'],
   disclaimer: 'Sin compromiso. Proceso 100% online.',
   cta: 'Quiero postular',
+  note: '*Las ganancias proyectadas son estimaciones referenciales basadas en patrones históricos y variables de mercado. No constituyen una garantía de ganancias futuras ni una recomendación de jornada de conducción.',
 };
 
 export const flota = {
@@ -102,6 +103,7 @@ export const testimonios = {
   eyebrow: 'Testimonios',
   title: 'Movedrivers felices',
   body: 'No lo decimos nosotros, lo dicen ellos.',
+  // 9 testimonios — carrusel: 3 por pasada en desktop, 1 a 1 en móvil.
   items: [
     {
       rating: 5,
@@ -127,13 +129,61 @@ export const testimonios = {
       role: 'Santiago · 4 meses',
       income: '$670K/mes',
     },
+    {
+      rating: 5,
+      quote:
+        'Empecé sin auto y en una semana ya estaba generando. El proceso fue claro de principio a fin.',
+      name: 'Pedro G.',
+      role: 'Maipú · 6 meses',
+      income: '$580K/mes',
+    },
+    {
+      rating: 5,
+      quote:
+        'La app me deja ver todo: ingresos, gastos y lo que recibo el jueves. Cero sorpresas.',
+      name: 'Daniela R.',
+      role: 'Puente Alto · 10 meses',
+      income: '$610K/mes',
+    },
+    {
+      rating: 5,
+      quote:
+        'El auto eléctrico me bajó muchísimo los costos. Hoy gano más manejando lo mismo.',
+      name: 'Andrés M.',
+      role: 'Santiago · 1 año',
+      income: '$700K/mes',
+    },
+    {
+      rating: 4,
+      quote:
+        'Tenía dudas al principio, pero el equipo me acompañó por WhatsApp en cada paso.',
+      name: 'Camila S.',
+      role: 'La Florida · 5 meses',
+      income: '$560K/mes',
+    },
+    {
+      rating: 5,
+      quote:
+        'Si el auto falla te dan reemplazo al toque. No dejo de generar ni un día.',
+      name: 'Rodrigo T.',
+      role: 'Ñuñoa · 7 meses',
+      income: '$640K/mes',
+    },
+    {
+      rating: 5,
+      quote:
+        'Postulé 100% online y sin pagar nada para entrar. La garantía la fui pagando de mis ganancias.',
+      name: 'Fernanda V.',
+      role: 'Quilicura · 3 meses',
+      income: '$520K/mes',
+    },
   ],
 };
 
 export const fortalezas = {
   eyebrow: 'Súbete al futuro y al compromiso con el planeta',
   title: 'Fortalezas de Nuestro Modelo',
-  carImage: { src: 'vehicles/top-view.png', alt: 'Vista superior del modelo Movecar' },
+  carImage: { src: 'vehicles/top-view.webp', alt: 'Vista superior del modelo Movecar' },
   items: [
     { icon: 'fa-bolt', title: 'Bono Electricidad', body: 'Bono por Movecar sobre el 50% de tus gastos mensuales.' },
     {
@@ -201,20 +251,22 @@ export const ventajasMovecar = {
 };
 
 export const appPromo = {
-  title: 'Movecar – Copilot',
-  body: 'La única plataforma donde puedes revisar la generación de ganancias y gestión en línea, porque cuentas claras conservan el bienestar.',
+  title: 'Movecar - Copilot',
+  body: 'La única plataforma donde podrás revisar tus ingresos y gastos en línea junto con DATA-IA, con los datos para optimizar tus rutas, porque datos claros conservan la amistad.',
+  downloadLabel: 'Descarga tu app segura',
   cta: 'Descargar APP',
+  compatibleLabel: 'Compatible con',
   stores: ['Apple', 'Android'],
-  image: { src: 'app/app-earnings.webp', alt: 'App Movecar Copilot' },
+  // Pantallas de la app: coloca en public/assets/images/app/app-earnings.webp
+  image: { src: 'app/app-earnings.webp', alt: 'App Movecar Copilot — pantalla de ganancias' },
 };
 
 export const finalCta = {
   eyebrow: 'Cupos limitados',
   title: 'Empieza a generar ganancias esta semana',
-  body: 'Sé parte de Movecar y maximiza tus ganancias con las mejores condiciones del mercado.',
-  ctaPrimary: 'Postular ahora',
-  ctaSecondary: 'Hablar con ventas',
-  bullets: ['Sin pagos iniciales', '100% online', 'Contrato claro'],
+  body: 'Incorpórate a MoveCar.pro y maximiza tus ganancias con la mejor plataforma y flota del mercado, junto a las mejores condiciones de arriendo pensadas para ti.',
+  cta: 'Quiero ganar más',
+  bullets: ['Datos seguros', 'Sin spam', 'Cancelación libre'],
 };
 
 export const footer = {
@@ -235,6 +287,51 @@ export const about = {
     title: 'Movemos a Chile hacia la electromovilidad',
     subtitle:
       'Somos la plataforma que le entrega a cada movedriver un vehículo eléctrico, con todo incluido, para que genere ingresos sin la carga de tener auto propio.',
+  },
+  // Sección 1 (hero): título + mosaico de rostros (placeholder).
+  hero: {
+    titleLead: 'Construimos',
+    titleHighlight: 'oportunidades.',
+    titleRest: 'No solo movilidad',
+    paragraphs: [
+      'Detrás de MoveCar hay un equipo que ha participado en la creación y escalamiento de compañías que han impactado a millones de personas en Latinoamérica.',
+      'Hoy ponemos esa experiencia al servicio de una nueva generación de conductores, combinando tecnología, analítica avanzada y una obsesión permanente por generar valor real.',
+    ],
+    cta: 'Quiero postular',
+    // Imágenes (placeholders): mosaico de rostros + fondo tenue de manos.
+    image: { src: 'about/team-mosaic.png', alt: 'Comunidad de movedrivers Movecar' },
+    bg: 'about/hands-bg.png',
+  },
+  // Tercera sección: layout editorial "Más que arriendo de vehículos".
+  modelo: {
+    leftCol: [
+      { kind: 'h', text: 'Más que arriendo de vehículos' },
+      {
+        kind: 'p',
+        text: 'Creemos que el futuro de la movilidad no pasa únicamente por tener mejores autos, sino por entregar mejores herramientas a quienes los conducen. Por eso desarrollamos MoveCar Copilot, una plataforma de analítica avanzada e inteligencia artificial diseñada para ayudar a los conductores a comprender mejor su operación, identificar oportunidades de ganancias, optimizar horarios y hábitos de conducción, acceder a contenido educativo y recibir recomendaciones personalizadas orientadas a maximizar su rentabilidad.',
+      },
+      {
+        kind: 'p',
+        text: 'A través del análisis continuo de datos operacionales y patrones de comportamiento, MoveCar Copilot busca transformar información compleja en decisiones simples y accionables, ayudando a cada conductor a obtener el máximo potencial de su tiempo y vehículo.',
+      },
+      { kind: 'h', text: 'Nuestra forma de construir' },
+    ],
+    rightCol: [
+      {
+        kind: 'p',
+        text: 'No somos simplemente una empresa de arriendo de vehículos. Estamos construyendo una plataforma diseñada para que los conductores puedan enfocarse en generar ganancias mientras nosotros nos encargamos del resto. Desde el vehículo y el soporte operacional, hasta el acceso a beneficios, herramientas de gestión y tecnología especialmente desarrollada para maximizar su rentabilidad.',
+      },
+      { kind: 'h', text: 'Tecnología para generar más ganancias' },
+      {
+        kind: 'p',
+        text: 'Creemos en la tecnología como habilitador, en la excelencia operacional como ventaja competitiva y en las personas como el principal motor de cualquier organización. Nuestro objetivo es simple: construir la mejor experiencia para trabajar con plataformas de movilidad en Chile.',
+      },
+      {
+        kind: 'p',
+        text: 'Somos un equipo con ADN emprendedor, obsesionado con resolver problemas reales, ejecutar con excelencia y construir una plataforma que permita a miles de conductores generar más ganancias con mejores herramientas, mejor información y una mejor experiencia.',
+      },
+    ],
+    image: { src: 'about/movecar-fleet.png', alt: 'Flota Movecar en estación de carga' },
   },
   mision: {
     eyebrow: 'Nuestra misión',

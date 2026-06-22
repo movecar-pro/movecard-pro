@@ -1,76 +1,103 @@
 ---
 /**
- * AppPromo — panel charcoal redondeado con streaks: copy de la app +
- * mockup (placeholder) y botones de store.
+ * AppPromo — panel con gradiente naranja (clases Tailwind) + copy de la app y
+ * las pantallas de celular (SVG) que SOBRESALEN del panel sin recortarse.
+ *
+ * - Gradiente y radio van como utilidades Tailwind en la clase del panel:
+ *     rounded-[2rem]
+ *     bg-[image:linear-gradient(90deg,#FE5B3E_0%,#FE9307_100%)]
+ * - Sin streaks.
+ * - Las pantallas son una imagen SVG (ruta en appPromo.image.src). Se muestra
+ *   a su aspecto natural (width:100%/height:auto) => nunca se recorta y puede
+ *   desbordar el panel por arriba/abajo/derecha.
+ *
+ * 📎 Coloca el SVG en: public/assets/images/app/movecar-copilot.svg
  */
 import Button from '@components/primitives/Button.astro';
-import Streaks from '@components/decor/Streaks.astro';
-import Placeholder from '@components/primitives/Placeholder.astro';
 import { appPromo } from '@lib/content';
+import { IMAGE_BASE } from '@lib/config';
 
 const storeIcon: Record<string, string> = {
   Apple: 'fa-brands fa-apple',
   Android: 'fa-brands fa-android',
 };
+const storeColor: Record<string, string> = {
+  Apple: 'var(--ink-900)',
+  Android: '#3DDC84',
+};
+const mediaSrc = `${IMAGE_BASE}/${appPromo.image.src}`;
 ---
 
-<section class="mc-section" style="background:var(--white)">
+<section class="mc-section app-section">
   <div class="mc-container">
-    <div class="app" data-gsap="scale-in">
-      <Streaks opacity={0.7} parallax />
-      <div class="app__copy">
-        <h2 class="app__title">{appPromo.title}</h2>
-        <p class="app__body">{appPromo.body}</p>
-        <div class="app__actions">
-          <Button variant="dark" icon="fa-solid fa-download" href="#descargar"
-            >{appPromo.cta}</Button
-          >
-          <span class="app__stores">
-            {
-              appPromo.stores.map((s) => (
-                <span class="app__store">
-                  <i class={storeIcon[s]} aria-hidden="true" />
-                  {s}
-                </span>
-              ))
-            }
-          </span>
+    <div class="app-wrap" data-gsap="scale-in">
+      {/* Panel naranja — gradiente + radio vía Tailwind */}
+      <div class="app rounded-[2rem] bg-[image:linear-gradient(90deg,#FE5B3E_0%,#FE9307_100%)]">
+        <div class="app__copy">
+          <h2 class="app__title">{appPromo.title}</h2>
+          <p class="app__body">{appPromo.body}</p>
+          <div class="app__actions">
+            <div class="app__col">
+              <span class="app__label">{appPromo.downloadLabel}</span>
+              <Button variant="dark" icon="fa-solid fa-download" href="#descargar">{appPromo.cta}</Button>
+            </div>
+            <div class="app__col">
+              <span class="app__label">{appPromo.compatibleLabel}</span>
+              <div class="app__stores">
+                {
+                  appPromo.stores.map((s) => (
+                    <span class="app__store">
+                      <i class={storeIcon[s]} style={`color:${storeColor[s]}`} aria-hidden="true" />
+                      {s}
+                    </span>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Pantallas de la app (SVG) — sobresalen del panel, sin recorte */}
       <div class="app__media">
-        <Placeholder
-          src={appPromo.image.src}
-          alt={appPromo.image.alt}
-          ratio="9/16"
-          fit="cover"
-          rounded="26px"
-        />
+        <img class="app__phones" src={mediaSrc} alt={appPromo.image.alt} loading="lazy" />
       </div>
     </div>
   </div>
 </section>
 
 <style>
+  .app-section {
+    /* Fondo de marca. SVG en public/assets/images/backgrounds/streak5.svg */
+    background:
+      var(--white) url('/assets/images/backgrounds/streak5.svg') center / cover no-repeat;
+  }
+  .app-wrap {
+    position: relative;
+  }
   .app {
     position: relative;
-    overflow: hidden;
-    border-radius: var(--radius-xl);
-    background: var(--ink-600);
+    z-index: 1;
+    width: 64%;
+    min-height: 360px;
     padding: 56px;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .app__copy {
-    position: relative;
     display: flex;
     flex-direction: column;
     gap: 18px;
+    max-width: 520px;
   }
   .app__title {
     margin: 0;
+    font-family: var(--font-display);
+    font-weight: var(--fw-semibold);
     font-size: var(--fs-h2);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
     color: var(--white);
   }
   .app__body {
@@ -78,48 +105,81 @@ const storeIcon: Record<string, string> = {
     font-size: 17px;
     line-height: var(--lh-body);
     color: var(--white-a85);
-    max-width: 440px;
+    max-width: 460px;
   }
   .app__actions {
     display: flex;
-    gap: 12px;
+    gap: 40px;
     flex-wrap: wrap;
-    align-items: center;
+    margin-top: 6px;
+  }
+  .app__col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .app__label {
+    font-family: var(--font-sans);
+    font-weight: var(--fw-semibold);
+    font-size: 14px;
+    color: var(--white);
   }
   .app__stores {
     display: flex;
-    gap: 10px;
+    gap: 12px;
   }
   .app__store {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--ink-900);
-    color: var(--white);
+    background: var(--white);
+    color: var(--ink-700);
     border-radius: var(--radius-sm);
-    padding: 10px 16px;
+    padding: 11px 20px;
+    font-family: var(--font-sans);
+    font-weight: var(--fw-semibold);
     font-size: 14px;
+    box-shadow: var(--shadow-sm);
   }
+
+  /* Pantallas: posicionadas a la derecha, desbordando el panel, sin recorte. */
   .app__media {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    max-width: 240px;
-    margin-inline: auto;
-    box-shadow: var(--shadow-lg);
-    border-radius: 26px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48%;
+    z-index: 2;
+    pointer-events: none;
   }
+  .app__phones {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.25));
+  }
+
+  /* ---- Responsive: el panel ocupa todo y las pantallas van debajo, sin recorte ---- */
   @media (max-width: 900px) {
     .app {
-      grid-template-columns: 1fr;
-      padding: 32px;
+      width: 100%;
       text-align: center;
+      padding: 36px 28px;
     }
-    .app__body {
+    .app__copy {
       max-width: none;
+      align-items: center;
     }
     .app__actions {
       justify-content: center;
+      gap: 28px;
+    }
+    .app__media {
+      position: static;
+      transform: none;
+      width: 100%;
+      max-width: 360px;
+      margin: 28px auto 0;
     }
   }
 </style>

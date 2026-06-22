@@ -1,13 +1,15 @@
 ---
 /**
- * Testimonios — grilla de 3 reseñas con stagger.
+ * Testimonios — carrusel de testimonios (3 por pasada en desktop, 1 a 1 en
+ * móvil). El shell (header) es estático; el carrusel es una isla escalable
+ * (TestimoniosCarousel) que se alimenta de testimonios.items.
  */
 import Eyebrow from '@components/primitives/Eyebrow.astro';
-import Testimonial from '@components/cards/Testimonial.astro';
+import TestimoniosCarousel from '@components/islands/TestimoniosCarousel.tsx';
 import { testimonios } from '@lib/content';
 ---
 
-<section class="mc-section" style="background:var(--grey-50)">
+<section class="mc-section tst">
   <div class="mc-container">
     <div class="tst__head" data-gsap="fade-up">
       <Eyebrow align="center">{testimonios.eyebrow}</Eyebrow>
@@ -15,19 +17,18 @@ import { testimonios } from '@lib/content';
       <p class="tst__body">{testimonios.body}</p>
     </div>
 
-    <div class="tst__grid" data-gsap-group>
-      {
-        testimonios.items.map((t) => (
-          <div data-gsap-child>
-            <Testimonial rating={t.rating} quote={t.quote} name={t.name} role={t.role} income={t.income} />
-          </div>
-        ))
-      }
+    <div data-gsap="fade-up">
+      <TestimoniosCarousel client:visible items={testimonios.items} />
     </div>
   </div>
 </section>
 
 <style>
+  .tst {
+    /* Fondo de marca. SVG en public/assets/images/backgrounds/streak2.svg */
+    background:
+      var(--grey-50) url('/assets/images/backgrounds/streak2.svg') center / cover no-repeat;
+  }
   .tst__head {
     text-align: center;
     display: flex;
@@ -44,17 +45,5 @@ import { testimonios } from '@lib/content';
     margin: 0;
     font-size: var(--fs-body-lg);
     color: var(--text-muted);
-  }
-  .tst__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  @media (max-width: 900px) {
-    .tst__grid {
-      grid-template-columns: 1fr;
-      max-width: 480px;
-      margin-inline: auto;
-    }
   }
 </style>

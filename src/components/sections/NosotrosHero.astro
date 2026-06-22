@@ -1,0 +1,101 @@
+---
+/**
+ * NosotrosHero — sección 1 de /nosotros: título con palabra destacada en
+ * ámbar, copy + CTA a la izquierda; mosaico de rostros (placeholder) a la
+ * derecha. Fondo claro con imagen tenue de manos (placeholder/CSS).
+ * Deja placeholders para las imágenes (mosaico + fondo).
+ */
+import Button from '@components/primitives/Button.astro';
+import Placeholder from '@components/primitives/Placeholder.astro';
+import { about } from '@lib/content';
+import { USE_REAL_IMAGES, IMAGE_BASE } from '@lib/config';
+const h = about.hero;
+---
+
+<header class="nh" data-anim="hero">
+  {/* Fondo tenue de manos (solo con imágenes reales para no ensuciar dev).
+      Placeholder de imagen: public/assets/images/about/hands-bg.png */}
+  {
+    USE_REAL_IMAGES && (
+      <img class="nh__bg" src={`${IMAGE_BASE}/${h.bg}`} alt="" aria-hidden="true" loading="lazy" />
+    )
+  }
+
+  <div class="nh__inner mc-container">
+    <div class="nh__copy">
+      <h1 class="nh__title" data-gsap="hero-title">
+        {h.titleLead} <span class="nh__hl">{h.titleHighlight}</span> {h.titleRest}
+      </h1>
+      <div class="nh__body" data-gsap="hero-subtitle">
+        {h.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+      <div data-gsap="hero-cta"><Button size="lg" href="#postular">{h.cta}</Button></div>
+    </div>
+
+    {/* Mosaico de rostros (placeholder) — public/assets/images/about/team-mosaic.png */}
+    <div class="nh__media" data-gsap="hero-media">
+      <Placeholder src={h.image.src} alt={h.image.alt} ratio="4/3" fit="cover" rounded="var(--radius-md)" />
+    </div>
+  </div>
+</header>
+
+<style>
+  .nh {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface-subtle);
+  }
+  .nh__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  .nh__inner {
+    position: relative;
+    z-index: 1;
+    padding-block: 84px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .nh__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 520px;
+  }
+  .nh__title {
+    margin: 0;
+    font-size: var(--fs-display);
+    line-height: 1.08;
+    color: var(--text-strong);
+  }
+  .nh__hl {
+    color: var(--amber-500);
+  }
+  .nh__body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .nh__body p {
+    margin: 0;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--text-muted);
+  }
+  @media (max-width: 900px) {
+    .nh__inner {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .nh__copy {
+      max-width: none;
+    }
+  }
+</style>

@@ -299,8 +299,8 @@ export const about = {
     ],
     cta: 'Quiero postular',
     // Imágenes (placeholders): mosaico de rostros + fondo tenue de manos.
-    image: { src: 'about/team-mosaic.png', alt: 'Comunidad de movedrivers Movecar' },
-    bg: 'about/hands-bg.png',
+    image: { src: 'team/team-mosaic.webp', alt: 'Comunidad de movedrivers Movecar' },
+    bg: 'backgrounds/nosotros.webp',
   },
   // Tercera sección: layout editorial "Más que arriendo de vehículos".
   modelo: {
@@ -331,7 +331,7 @@ export const about = {
         text: 'Somos un equipo con ADN emprendedor, obsesionado con resolver problemas reales, ejecutar con excelencia y construir una plataforma que permita a miles de conductores generar más ganancias con mejores herramientas, mejor información y una mejor experiencia.',
       },
     ],
-    image: { src: 'about/movecar-fleet.png', alt: 'Flota Movecar en estación de carga' },
+    image: { src: 'vehicles/flota.webp', alt: 'Flota Movecar en estación de carga' },
   },
   mision: {
     eyebrow: 'Nuestra misión',
@@ -457,20 +457,12 @@ export const comoFunciona = {
    PÁGINA: PRECIOS / PLANES
    ============================================================ */
 // Features incluidas en todos los planes (precio semanal "todo incluido").
-const PLAN_FEATURES = [
-  'Vehículo habilitado y configurado para Uber',
-  'Seguro vehicular completo con gestión de siniestros',
-  'Mantenciones preventivas programadas',
-  'Soporte 24/7 con mesa de ayuda y monitoreo GPS',
-  'Liquidación semanal detallada',
-];
-
 export const pricing = {
   header: {
-    eyebrow: 'Planes',
+    eyebrow: 'Precios / Planes',
     title: 'Los planes más completos del mercado',
     subtitle:
-      'Elige el turno que mejor se adapta a ti. El precio semanal lo incluye todo: vehículo, seguro, mantención y soporte. Sin pagos iniciales.',
+      'Una experiencia 360° pensada para maximizar tus ganancias: flota, tecnología, cobertura, beneficios y acompañamiento real para que solo te preocupes de manejar.',
   },
   // 4 planes en 2 grupos. En desktop son tarjetas; en móvil, acordeones.
   groups: [
@@ -481,22 +473,40 @@ export const pricing = {
         {
           id: 'electric-am',
           name: 'MoveElectric AM',
-          schedule: 'Diurno · 06:00 a 18:00 · 8,5 hrs productivas',
-          price: '$242.500',
-          period: 'semanal',
-          features: PLAN_FEATURES,
-          cta: 'Quiero postular',
+          badge: '100% Eléctrico',
+          description:
+            'Maximiza tus ganancias con el menor costo operativo del mercado. Ideal para complementar ganancias o trabajar de forma eficiente durante el día.',
+          price: '2,3',
+          period: 'UF/semanal',
+          features: [
+            'Variable x Km: 0,00280 UF',
+            'Turno: 06:00 a 18:00',
+            '50% aprox. de cobertura eléctrica mensual',
+            'Seguro cobertura completa + deducible 10 UF',
+            'Auto de reemplazo hasta 10 días',
+            'Copilot App con monitoreo de ganancias y costos',
+            'Opción preferente de compra desde $500.000',
+          ],
+          cta: 'Contratar',
         },
         {
           id: 'electric-pm',
           name: 'MoveElectric PM',
-          schedule: 'Nocturno · 18:00 a 06:00 · 10 hrs productivas',
-          price: '$343.375',
-          period: 'semanal',
-          badge: 'Mayor ingreso',
-          featured: true,
-          features: PLAN_FEATURES,
-          cta: 'Quiero postular',
+          badge: '100% Eléctrico',
+          description:
+            'La mejor opción para conductores full-time. Más cobertura, menor costo energético y mayor potencial de ganancias.',
+          price: '3,9',
+          period: 'UF/semanal',
+          features: [
+            'Variable x Km: 0,00290 UF',
+            'Turno: 18:00 a 06:00',
+            '50% aprox. de cobertura eléctrica mensual',
+            'Seguro premium + deducible 3 UF',
+            'Auto de reemplazo hasta 30 días',
+            'Copilot App + métricas para maximizar ganancias',
+            'Opción preferente de compra a $100',
+          ],
+          cta: 'Contratar',
         },
       ],
     },
@@ -507,20 +517,40 @@ export const pricing = {
         {
           id: 'gas-am',
           name: 'MoveGas AM',
-          schedule: 'Diurno · 06:00 a 18:00 · 8,5 hrs productivas',
-          price: '$242.500',
-          period: 'semanal',
-          features: PLAN_FEATURES,
-          cta: 'Quiero postular',
+          badge: 'Bencinero',
+          description:
+            'La forma más flexible y accesible de comenzar. Ideal para complementar ganancias con una baja inversión inicial.',
+          price: '1,6',
+          period: 'UF/semanal',
+          features: [
+            'Variable x Km: 0,00196 UF',
+            'Turno: 06:00 a 18:00',
+            'Seguro cobertura completa + deducible 10 UF',
+            'Auto de reemplazo hasta 10 días',
+            'Copilot App con monitoreo de ganancias y costos',
+            'Menor costo del mercado',
+            'Opción preferente de compra desde $500.000',
+          ],
+          cta: 'Contratar',
         },
         {
           id: 'gas-pm',
           name: 'MoveGas PM',
-          schedule: 'Nocturno · 18:00 a 06:00 · 10 hrs productivas',
-          price: '$343.375',
-          period: 'semanal',
-          features: PLAN_FEATURES,
-          cta: 'Quiero postular',
+          badge: 'Bencinero',
+          description:
+            'Libertad total para trabajar en horarios de alta demanda. Mayor autonomía y flexibilidad para maximizar ganancias sin depender de carga eléctrica.',
+          price: '2,7',
+          period: 'UF/semanal',
+          features: [
+            'Variable x Km: 0,00203 UF',
+            'Turno: 18:00 a 06:00',
+            'Seguro premium + deducible 3 UF',
+            'Auto de reemplazo hasta 30 días',
+            'Copilot App + métricas para maximizar ganancias',
+            'Mayor potencial de ganancias',
+            'Opción preferente de compra a $100',
+          ],
+          cta: 'Contratar',
         },
       ],
     },

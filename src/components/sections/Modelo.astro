@@ -29,9 +29,15 @@ const { leftCol, rightCol, image } = about.modelo;
       </div>
     </div>
 
-    {/* Imagen de flota (placeholder) — public/assets/images/about/movecar-fleet.png */}
+    {/* Imagen de flota (placeholder) — public/assets/images/vehicles/fleet.webp */}
     <div class="mo__media" data-gsap="fade-up">
-      <Placeholder src={image.src} alt={image.alt} ratio="16/9" fit="cover" rounded="var(--radius-lg)" />
+      <Placeholder
+        src={image.src}
+        alt={image.alt}
+        ratio="16/9"
+        fit="cover"
+        rounded="var(--radius-lg)"
+      />
     </div>
   </div>
 </section>
@@ -41,8 +47,8 @@ const { leftCol, rightCol, image } = about.modelo;
     position: relative;
     overflow: hidden;
     /* Fondo de marca. SVG en public/assets/images/backgrounds/streak2.svg */
-    background:
-      var(--surface-subtle) url('/assets/images/backgrounds/streak2.svg') center / cover no-repeat;
+    background: var(--surface-subtle) url('/assets/images/backgrounds/streak2.svg') center / cover
+      no-repeat;
     padding-block: var(--space-section);
   }
   .mo__inner {

@@ -1,30 +1,27 @@
 ---
 /**
- * NosotrosHero — sección 1 de /nosotros: título con palabra destacada en
- * ámbar, copy + CTA a la izquierda; mosaico de rostros (placeholder) a la
- * derecha. Fondo claro con imagen tenue de manos (placeholder/CSS).
- * Deja placeholders para las imágenes (mosaico + fondo).
+ * NosotrosHero — sección 1 de /nosotros: título con palabra en ámbar, copy y
+ * CTA a la izquierda; mosaico de rostros a la derecha (mix-blend-mode:multiply
+ * para fundirse con el fondo). Fondo base: backgrounds/nosotros.webp.
  */
 import Button from '@components/primitives/Button.astro';
-import Placeholder from '@components/primitives/Placeholder.astro';
 import { about } from '@lib/content';
-import { USE_REAL_IMAGES, IMAGE_BASE } from '@lib/config';
+import { IMAGE_BASE } from '@lib/config';
 const h = about.hero;
+const bgUrl = `${IMAGE_BASE}/${h.bg}`;
+const mosaicUrl = `${IMAGE_BASE}/${h.image.src}`;
 ---
 
-<header class="nh" data-anim="hero">
-  {/* Fondo tenue de manos (solo con imágenes reales para no ensuciar dev).
-      Placeholder de imagen: public/assets/images/about/hands-bg.png */}
-  {
-    USE_REAL_IMAGES && (
-      <img class="nh__bg" src={`${IMAGE_BASE}/${h.bg}`} alt="" aria-hidden="true" loading="lazy" />
-    )
-  }
+<header class="nh" data-anim="hero" style={`background-image:url('${bgUrl}')`}>
+  {/* Velo claro a la izquierda para legibilidad del texto oscuro */}
+  <div class="nh__veil" aria-hidden="true"></div>
 
   <div class="nh__inner mc-container">
     <div class="nh__copy">
       <h1 class="nh__title" data-gsap="hero-title">
-        {h.titleLead} <span class="nh__hl">{h.titleHighlight}</span> {h.titleRest}
+        {h.titleLead}
+        <span class="nh__hl">{h.titleHighlight}</span><br />
+        {h.titleRest}
       </h1>
       <div class="nh__body" data-gsap="hero-subtitle">
         {h.paragraphs.map((p) => <p>{p}</p>)}
@@ -32,9 +29,12 @@ const h = about.hero;
       <div data-gsap="hero-cta"><Button size="lg" href="#postular">{h.cta}</Button></div>
     </div>
 
-    {/* Mosaico de rostros (placeholder) — public/assets/images/about/team-mosaic.png */}
-    <div class="nh__media" data-gsap="hero-media">
-      <Placeholder src={h.image.src} alt={h.image.alt} ratio="4/3" fit="cover" rounded="var(--radius-md)" />
+    {
+      /* Mosaico de rostros — funde con el fondo vía multiply.
+        Archivo: public/assets/images/team/team-mosaic.webp */
+    }
+    <div class="nh__media">
+      <img class="nh__mosaic" src={mosaicUrl} alt={h.image.alt} loading="lazy" />
     </div>
   </div>
 </header>
@@ -43,23 +43,31 @@ const h = about.hero;
   .nh {
     position: relative;
     overflow: hidden;
-    background: var(--surface-subtle);
+    background-color: var(--surface-subtle);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Contiene el blending: el mosaico (multiply) se funde con ESTE fondo. */
+    isolation: isolate;
   }
-  .nh__bg {
+  /* Velo cálido (izq → der) para contraste del texto sin tapar el mosaico. */
+  .nh__veil {
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.12;
-    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 250, 242, 0.6) 0%,
+      rgba(255, 250, 242, 0.2) 40%,
+      rgba(255, 250, 242, 0) 65%
+    );
   }
   .nh__inner {
     position: relative;
-    z-index: 1;
-    padding-block: 84px;
+    /* Sin z-index: evita crear un stacking context que aísle el blending.
+       El contenido igual queda sobre el velo por orden de pintado. */
+    padding-block: 72px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.1fr;
     gap: 48px;
     align-items: center;
   }
@@ -89,6 +97,17 @@ const h = about.hero;
     line-height: var(--lh-body);
     color: var(--text-muted);
   }
+  .nh__media {
+    position: relative;
+  }
+  .nh__mosaic {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Funde el mosaico con el fondo (los blancos desaparecen). */
+    mix-blend-mode: multiply;
+  }
+
   @media (max-width: 900px) {
     .nh__inner {
       grid-template-columns: 1fr;
@@ -96,6 +115,10 @@ const h = about.hero;
     }
     .nh__copy {
       max-width: none;
+    }
+    /* En móvil el mosaico no se muestra (el diseño es solo texto). */
+    .nh__media {
+      display: none;
     }
   }
 </style>

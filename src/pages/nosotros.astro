@@ -4,13 +4,13 @@
  *   1. NosotrosHero  → "Construimos oportunidades. No solo movilidad"
  *   2. Equipo        → grilla del equipo (fondo streak2.svg)
  *   3. Modelo        → "Más que arriendo de vehículos" (fondo streak2.svg)
- *   + Simulador y FinalCTA (secciones globales reutilizadas).
+ *   + FinalCTA (sección global reutilizada).
+ * Nota: esta página NO lleva la sección Simulador ("Calcula tu ingreso").
  */
 import BaseLayout from '@layouts/BaseLayout.astro';
 import NosotrosHero from '@components/sections/NosotrosHero.astro';
 import Equipo from '@components/sections/Equipo.astro';
 import Modelo from '@components/sections/Modelo.astro';
-import Simulador from '@components/sections/Simulador.astro';
 import FinalCTA from '@components/sections/FinalCTA.astro';
 import { about } from '@lib/content';
 ---
@@ -24,7 +24,6 @@ import { about } from '@lib/content';
     <NosotrosHero />
     <Equipo />
     <Modelo />
-    <Simulador />
     <FinalCTA />
   </main>
 </BaseLayout>

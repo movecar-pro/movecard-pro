@@ -47,7 +47,13 @@ const modalData = members.map((m) => ({ id: m.id, ...m.data }));
               aria-label={`Ver perfil de ${m.data.name}`}
             />
             <div class="eq-card__photo">
-              <RImgPlaceholder src={m.data.photo} alt={m.data.name} ratio="1/1" fit="cover" rounded="var(--radius-md)" />
+              <RImgPlaceholder
+                src={m.data.photo}
+                alt={m.data.name}
+                ratio="1/1"
+                fit="cover"
+                rounded="var(--radius-md)"
+              />
             </div>
             <h3 class="eq-card__name">{m.data.name}</h3>
             <p class="eq-card__role">{m.data.role}</p>
@@ -79,8 +85,7 @@ const modalData = members.map((m) => ({ id: m.id, ...m.data }));
     position: relative;
     overflow: hidden;
     /* Fondo de marca. SVG en public/assets/images/backgrounds/streak2.svg */
-    background:
-      var(--white) url('/assets/images/backgrounds/streak2.svg') center / cover no-repeat;
+    background: var(--white) url('/assets/images/backgrounds/streak2.svg') center / cover no-repeat;
     padding-block: var(--space-section);
   }
   .eq__inner {
@@ -122,8 +127,10 @@ const modalData = members.map((m) => ({ id: m.id, ...m.data }));
     background: var(--surface-card);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
-    padding: 24px;
-    transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+    padding: 1rem;
+    transition:
+      transform var(--dur-base) var(--ease-out),
+      box-shadow var(--dur-base) var(--ease-out);
   }
   .eq-card:hover {
     transform: translateY(-4px);

@@ -25,7 +25,9 @@ const right = fortalezas.items.slice(3, 6);
         {
           left.map((f) => (
             <div class="fm__feat">
-              <span class="fm__feat-icon" aria-hidden="true"><i class={`fa-solid ${f.icon}`} /></span>
+              <span class="fm__feat-icon" aria-hidden="true">
+                <i class={`fa-solid ${f.icon}`} />
+              </span>
               <div class="fm__feat-text">
                 <h3>{f.title}</h3>
                 <p>{f.body}</p>
@@ -36,14 +38,22 @@ const right = fortalezas.items.slice(3, 6);
       </div>
 
       <div class="fm__car" data-gsap="scale-in">
-        <Placeholder src={fortalezas.carImage.src} alt={fortalezas.carImage.alt} ratio="3/5" fit="contain" rounded="0" />
+        <Placeholder
+          src={fortalezas.carImage.src}
+          alt={fortalezas.carImage.alt}
+          ratio="3/5"
+          fit="contain"
+          rounded="0"
+        />
       </div>
 
       <div class="fm__col fm__col--right" data-gsap="fade-left">
         {
           right.map((f) => (
             <div class="fm__feat">
-              <span class="fm__feat-icon" aria-hidden="true"><i class={`fa-solid ${f.icon}`} /></span>
+              <span class="fm__feat-icon" aria-hidden="true">
+                <i class={`fa-solid ${f.icon}`} />
+              </span>
               <div class="fm__feat-text">
                 <h3>{f.title}</h3>
                 <p>{f.body}</p>
@@ -61,8 +71,8 @@ const right = fortalezas.items.slice(3, 6);
     position: relative;
     overflow: hidden;
     /* Fondo de marca. SVG en public/assets/images/backgrounds/streak2.svg */
-    background:
-      var(--surface-subtle) url('/assets/images/backgrounds/streak2.svg') center / cover no-repeat;
+    background: var(--surface-subtle) url('/assets/images/backgrounds/streak2.svg') center / cover
+      no-repeat;
     padding-block: var(--space-section);
   }
   .fm__inner {

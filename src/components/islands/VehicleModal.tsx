@@ -84,7 +84,7 @@ export default function VehicleModal({
           {vehicle.detail.images.length > 0 && (
             <div className="vm__images" data-count={vehicle.detail.images.length}>
               {vehicle.detail.images.map((img, i) => (
-                <div className="vm__image" key={i}>
+                <div className="vm__image mix-blend-multiply" key={i}>
                   <RImg src={img.src} alt={img.alt} ratio="16/10" fit="contain" rounded="var(--radius-lg)" />
                 </div>
               ))}
@@ -126,9 +126,9 @@ export default function VehicleModal({
         .vm__group-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
         .vm__group-list li { font-size: 14px; line-height: 1.45; color: var(--text-body); }
 
-        .vm__images { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .vm__images { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin: 0 -3rem; }
         .vm__images[data-count="1"] { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; }
-        .vm__image { background: var(--grey-50); border-radius: var(--radius-lg); padding: 16px; }
+        .vm__image { background: var(--grey-50); padding: 0; }
 
         @media (max-width: 1024px) {
           .vm__top, .vm__bottom { grid-template-columns: repeat(2, 1fr); }

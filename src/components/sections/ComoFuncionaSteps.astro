@@ -143,7 +143,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
     border-top: 3px solid transparent;
   }
   .cf__card:first-child {
-    border-top-color: var(--amber-500);
+    /* border-top-color: var(--amber-500); */
   }
   /* número dentro de la tarjeta: oculto en desktop (está en el rail) */
   .cf__card-num {
@@ -175,6 +175,10 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
   .cf__cta {
     text-align: center;
     margin-top: 44px;
+  }
+
+  .mc-section {
+    background: url('/assets/images/backgrounds/fondo-beneficios.webp') center / cover no-repeat;
   }
 
   /* ---- Responsive: bajo 900px el rail se oculta y las tarjetas pasan a

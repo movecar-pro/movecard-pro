@@ -39,7 +39,9 @@ const mediaSrc = `${IMAGE_BASE}/${appPromo.image.src}`;
           <div class="app__actions">
             <div class="app__col">
               <span class="app__label">{appPromo.downloadLabel}</span>
-              <Button variant="dark" icon="fa-solid fa-download" href="#descargar">{appPromo.cta}</Button>
+              <Button variant="dark" icon="fa-solid fa-download" href="#descargar"
+                >{appPromo.cta}</Button
+              >
             </div>
             <div class="app__col">
               <span class="app__label">{appPromo.compatibleLabel}</span>
@@ -70,7 +72,8 @@ const mediaSrc = `${IMAGE_BASE}/${appPromo.image.src}`;
   .app-section {
     /* Fondo de marca. SVG en public/assets/images/backgrounds/streak5.svg */
     background:
-      var(--white) url('/assets/images/backgrounds/streak5.svg') center / cover no-repeat;
+      url('/assets/images/backgrounds/streak5.svg') center / cover no-repeat,
+      linear-gradient(106deg, #fff 1.03%, #f8bd66 91.41%);
   }
   .app-wrap {
     position: relative;

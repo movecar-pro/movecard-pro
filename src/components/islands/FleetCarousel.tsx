@@ -95,7 +95,7 @@ export default function FleetCarousel({ vehicles }: { vehicles: Vehicle[] }) {
                     {v.badge}
                   </span>
                 )}
-                <div className="fc__media">
+                <div className="fc__media mix-blend-multiply">
                   <RImg src={v.image} alt={v.name} ratio="3/2" fit="contain" rounded="0" />
                 </div>
                 <div className="fc__body">

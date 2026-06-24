@@ -1,18 +1,17 @@
 ---
 /**
  * PreciosCompara — "Asegura el mejor plan para lo que necesitas": tabla
- * comparativa de los 4 planes. En móvil la primera columna queda fija y la
- * tabla hace scroll horizontal, mostrando ~2 columnas a la vez.
- * Reutiliza Eyebrow. Estático (sin JS).
+ * comparativa MoveCar vs. competencia. Cada columna lleva una IMAGEN circular
+ * en el encabezado. En móvil solo se muestran 2 columnas: Beneficio + MoveCar
+ * (las columnas de competidores se ocultan). Estático (sin JS).
  */
 import Eyebrow from '@components/primitives/Eyebrow.astro';
-import Streaks from '@components/decor/Streaks.astro';
 import { pricing } from '@lib/content';
-const { eyebrow, title, subtitle, plans, rows } = pricing.compare;
+import { IMAGE_BASE } from '@lib/config';
+const { eyebrow, title, subtitle, rowHead, plans, rows } = pricing.compare;
 ---
 
 <section class="cmp">
-  <Streaks color="var(--amber-200)" opacity={0.4} parallax />
   <div class="cmp__inner mc-container">
     <div class="cmp__head" data-gsap="fade-up">
       <Eyebrow align="center">{eyebrow}</Eyebrow>
@@ -24,16 +23,14 @@ const { eyebrow, title, subtitle, plans, rows } = pricing.compare;
       <table class="cmp__table">
         <thead>
           <tr>
-            <th class="cmp__rowhead" scope="col"><span class="cmp__sr">Característica</span></th>
+            <th class="cmp__rowhead" scope="col">{rowHead}</th>
             {
-              plans.map((p) => (
-                <th scope="col" class="cmp__plan">
-                  <i
-                    class={`fa-solid ${p.fuel === 'ev' ? 'fa-bolt' : 'fa-gas-pump'}`}
-                    style={`color:${p.fuel === 'ev' ? 'var(--amber-500)' : 'var(--ink-500)'}`}
-                    aria-hidden="true"
-                  />
-                  <span>{p.name}</span>
+              plans.map((p, i) => (
+                <th scope="col" class={`cmp__plan ${i > 0 ? 'cmp__plan--rival' : ''}`}>
+                  <span class="cmp__plan-img">
+                    <img src={`${IMAGE_BASE}/${p.img}`} alt={p.name} loading="lazy" />
+                  </span>
+                  {p.brand && <span class="cmp__plan-name">{p.name}</span>}
                 </th>
               ))
             }
@@ -44,12 +41,12 @@ const { eyebrow, title, subtitle, plans, rows } = pricing.compare;
             rows.map((r) => (
               <tr>
                 <th scope="row" class="cmp__rowhead">{r.label}</th>
-                {r.values.map((v) => (
-                  <td>
+                {r.values.map((v, i) => (
+                  <td class={i > 0 ? 'cmp__cell--rival' : ''}>
                     {v === true ? (
                       <i class="fa-solid fa-check cmp__yes" aria-label="Incluido" />
                     ) : v === false ? (
-                      <i class="fa-solid fa-minus cmp__no" aria-label="No incluido" />
+                      <i class="fa-solid fa-xmark cmp__no" aria-label="No incluido" />
                     ) : (
                       <span class="cmp__val">{v}</span>
                     )}
@@ -61,7 +58,6 @@ const { eyebrow, title, subtitle, plans, rows } = pricing.compare;
         </tbody>
       </table>
     </div>
-    <p class="cmp__hint">Desliza para comparar todos los planes →</p>
   </div>
 </section>
 
@@ -69,7 +65,10 @@ const { eyebrow, title, subtitle, plans, rows } = pricing.compare;
   .cmp {
     position: relative;
     overflow: hidden;
-    background: var(--white);
+    /* Fondo de marca (streaks ámbar). */
+    background:
+      url('/assets/images/backgrounds/streak2a.svg') center / cover no-repeat,
+      var(--white);
     padding-block: var(--space-section);
   }
   .cmp__inner {
@@ -96,84 +95,88 @@ const { eyebrow, title, subtitle, plans, rows } = pricing.compare;
 
   .cmp__scroll {
     overflow-x: auto;
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
   }
   .cmp__table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 720px;
   }
   .cmp__table th,
   .cmp__table td {
-    padding: 16px 20px;
+    padding: 18px 20px;
     text-align: center;
     border-bottom: 1px solid var(--border-subtle);
     font-size: var(--fs-small);
+    white-space: pre-line; /* permite saltos de línea en los valores */
+    vertical-align: middle;
   }
-  .cmp__table tbody tr:last-child th,
-  .cmp__table tbody tr:last-child td {
-    border-bottom: none;
-  }
-  /* primera columna (etiquetas) fija y alineada a la izquierda */
+  /* primera columna (etiquetas), alineada a la izquierda */
   .cmp__rowhead {
-    position: sticky;
-    left: 0;
-    z-index: 1;
     text-align: left;
-    background: var(--surface-subtle);
     font-weight: var(--fw-semibold);
     color: var(--text-strong);
-    min-width: 200px;
+    white-space: normal;
+    min-width: 190px;
   }
-  thead .cmp__plan {
-    background: var(--white);
+  /* Encabezados con imagen circular */
+  thead th {
+    border-bottom: 1px solid var(--border-subtle);
+    vertical-align: bottom;
+    padding-bottom: 22px;
+  }
+  thead .cmp__rowhead {
+    vertical-align: bottom;
+    font-weight: var(--fw-bold);
+  }
+  .cmp__plan-img {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cmp__plan-img img {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-pill);
+    object-fit: cover;
+    box-shadow: var(--shadow-sm);
+  }
+  .cmp__plan-name {
+    display: block;
+    margin-top: 10px;
     font-family: var(--font-sans);
     font-weight: var(--fw-bold);
-    color: var(--text-strong);
-    white-space: nowrap;
+    color: var(--text-accent);
   }
-  thead .cmp__plan {
-    display: table-cell;
-  }
-  thead .cmp__plan i {
-    margin-right: 6px;
-  }
-  thead th {
-    border-bottom: 2px solid var(--border-subtle);
+  /* Columnas de competidores: leve tinte para resaltar MoveCar */
+  .cmp__plan--rival,
+  .cmp__cell--rival {
+    background: rgba(254, 147, 7, 0.06);
   }
   .cmp__yes {
-    color: var(--green-700);
+    color: var(--green-600);
+    font-size: 16px;
   }
   .cmp__no {
-    color: var(--grey-300);
+    color: #e5484d;
+    font-size: 16px;
   }
   .cmp__val {
     color: var(--text-body);
     font-weight: var(--fw-medium);
   }
-  .cmp__sr {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-  }
-  .cmp__hint {
-    display: none;
-    margin: 12px 0 0;
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-muted);
-  }
 
-  /* En móvil mostramos la pista de scroll (la 1ª col fija deja ~2 visibles). */
+  /* ---- MÓVIL: solo 2 columnas (Beneficio + MoveCar) ---- */
   @media (max-width: 900px) {
-    .cmp__hint {
-      display: block;
+    .cmp__plan--rival,
+    .cmp__cell--rival {
+      display: none;
     }
     .cmp__rowhead {
-      min-width: 150px;
+      min-width: 0;
+      width: 55%;
+    }
+    .cmp__table th,
+    .cmp__table td {
+      padding: 16px 12px;
     }
   }
 </style>

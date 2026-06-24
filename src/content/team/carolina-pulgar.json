@@ -15,17 +15,33 @@
   "sections": [
     {
       "icon": "fa-graduation-cap",
-      "title": "Formación y especialización",
+      "title": "Tecnología y liderazgo",
       "paragraphs": [
-        "Ingeniera en Informática con experiencia en el desarrollo de plataformas digitales, liderazgo de equipos tecnológicos y gestión de operaciones. Combina visión técnica y de producto para construir soluciones confiables y escalables."
+        "Ingeniera en Informática con experiencia en el desarrollo de plataformas digitales, liderazgo de equipos tecnológicos y gestión de operaciones TI en entornos de alto crecimiento. Su trayectoria combina profundidad técnica con una sólida capacidad de gestión, permitiéndole conectar las necesidades del negocio con soluciones tecnológicas escalables, eficientes y sostenibles."
       ]
     },
     {
       "icon": "fa-laptop-code",
-      "title": "Tecnología y producto",
+      "title": "Construcción y evolución de plataformas",
       "paragraphs": [
-        "Lidera el desarrollo de la plataforma y la app Copilot de Movecar, asegurando que la tecnología esté siempre al servicio del movedriver: monitoreo de ganancias, gestión y soporte en línea, simples y disponibles 24/7."
+        "A lo largo de su carrera ha participado en todas las etapas del ciclo de desarrollo de software, desde roles técnicos especializados hasta posiciones de liderazgo tecnológico. Ha contribuido al diseño, construcción y evolución de plataformas digitales utilizadas por miles de usuarios, impulsando iniciativas de modernización, escalabilidad e innovación tecnológica.\n\n Su experiencia abarca arquitecturas cloud, desarrollo de software, integración de sistemas y gestión de equipos multidisciplinarios, siempre con foco en la calidad, la continuidad operacional y la generación de valor para los usuarios."
+      ]
+    },
+    {
+      "icon": "fa-laptop-code",
+      "title": "Gestión tecnológica y ejecución",
+      "paragraphs": [
+        "Durante los últimos años ha liderado equipos y operaciones tecnológicas en Chile y México, participando en procesos de crecimiento organizacional, fortalecimiento de capacidades técnicas y consolidación de estructuras capaces de acompañar la evolución del negocio.\n\n Le apasiona construir equipos sólidos, promover culturas de colaboración y transformar desafíos complejos en soluciones prácticas que combinen eficiencia, estabilidad y capacidad de crecimiento."
+      ]
+    },
+    {
+      "icon": "fa-laptop-code",
+      "title": "Lo que la mueve",
+      "paragraphs": [
+        "Disfruta especialmente los entornos dinámicos donde la tecnología se transforma en un habilitador estratégico para el crecimiento de las organizaciones.\n\nSu foco está puesto en construir soluciones confiables, equipos comprometidos y plataformas capaces de evolucionar junto con las necesidades de las personas y del negocio."
       ]
     }
-  ]
+  ],
+  "funFacts": [
+    "Además de su desarrollo profesional, es madre de dos niñas, experiencia que ha fortalecido habilidades como la organización, la empatía y la resiliencia. En su tiempo libre disfruta tejer, actividad que refleja parte importante de su personalidad: paciencia, creatividad y una especial atención por los detalles.\n\nEstá convencida de que las mejores soluciones nacen cuando la tecnología, las personas y la ejecución trabajan alineadas hacia un mismo propósito."  ]
 }

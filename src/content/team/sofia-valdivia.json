@@ -15,17 +15,33 @@
   "sections": [
     {
       "icon": "fa-graduation-cap",
-      "title": "Formación y especialización",
+      "title": "Personas y organizaciones",
       "paragraphs": [
-        "Psicóloga con experiencia en Psicología Laboral y Psicología Clínica, orientada al desarrollo de personas, construcción de equipos y cultura organizacional."
+        "Psicóloga con experiencia en Psicología Laboral y Psicología Clínica, orientada al desarrollo de personas, construcción de equipos y fortalecimiento de culturas organizacionales saludables. Su trabajo se basa en una convicción simple: las organizaciones crecen cuando las personas que las integran tienen las condiciones adecuadas para desarrollarse y aportar su mejor versión."
       ]
     },
     {
       "icon": "fa-heart",
-      "title": "Personas y cultura",
+      "title": "Talento y cultura",
       "paragraphs": [
-        "Acompaña el crecimiento del equipo de Movecar y de su comunidad de movedrivers, cuidando que la cultura combine cercanía, alto desempeño y un genuino foco en las personas."
+        "Ha participado en procesos de reclutamiento, selección y desarrollo de talento, combinando una mirada estratégica y humana para identificar no solo el ajuste técnico de los candidatos, sino también su compatibilidad con la cultura, los valores y los desafíos de cada organización. \n\nSu experiencia integra además conocimientos de normativa laboral y gestión de personas, contribuyendo a la construcción de entornos de trabajo justos, colaborativos y alineados con las necesidades tanto de los equipos como del negocio."
+      ]
+    },
+    {
+      "icon": "fa-heart",
+      "title": "Desarrollo humano y bienestar",
+      "paragraphs": [
+        "Complementa su experiencia organizacional con la práctica clínica, acompañando a adultos en procesos de autoconocimiento, resolución de conflictos y fortalecimiento de relaciones interpersonales. \n\nEsta combinación le permite comprender de manera integral las dinámicas humanas que influyen tanto en el bienestar individual como en el desempeño colectivo de los equipos."
+      ]
+    },
+    {
+      "icon": "fa-heart",
+      "title": "Lo que la mueve",
+      "paragraphs": [
+        "Le apasiona acompañar el crecimiento de las personas y generar espacios donde el talento pueda desarrollarse de manera auténtica y sostenible. \n\nSu foco está puesto en construir culturas que combinen alto desempeño, bienestar y sentido de propósito, convencida de que las mejores organizaciones son aquellas que logran equilibrar resultados con desarrollo humano."
       ]
     }
-  ]
+  ],
+  "funFacts": [
+    "Sofía es esposa, mamá de una pequeña de pocos meses y una convencida de que la familia constituye el espacio más importante para construir bienestar, aprendizaje y propósito. Disfruta las caminatas largas, la lectura, la cocina y los momentos compartidos con las personas que quiere, actividades que reflejan su interés permanente por las relaciones humanas y el equilibrio entre la vida personal y profesional. \n\nActualmente se encuentra enfocada en continuar ampliando su impacto en el desarrollo de personas y organizaciones, apostando por la formación continua como una herramienta fundamental para responder a los desafíos de un mundo laboral en constante evolución."]
 }

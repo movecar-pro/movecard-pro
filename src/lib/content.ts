@@ -565,34 +565,49 @@ export const pricing = {
       { icon: 'fa-shield-halved', title: 'Seguro', body: 'Seguro full cobertura y soporte 24/7 en cada turno.' },
     ],
   },
-  // Tabla comparativa. En móvil: primera columna fija + scroll (2 visibles).
+  // Tabla comparativa: MoveCar vs. competencia. Cada columna lleva una imagen
+  // en el encabezado. En móvil solo se muestran 2 columnas (Beneficio + MoveCar).
   compare: {
     eyebrow: 'Compara',
     title: 'Asegura el mejor plan para lo que necesitas',
     subtitle:
-      'Todos los planes incluyen lo esencial. Revisa las diferencias y elige según tu turno y motorización.',
+      'No todos los planes de arriendo son iguales. Movecar combina tecnología, cobertura, flexibilidad y beneficios exclusivos para ayudarte a generar más ganancias con uno de los planes más completos del mercado.',
+    rowHead: 'Beneficio',
     plans: [
-      { name: 'MoveElectric AM', fuel: 'ev' as const },
-      { name: 'MoveElectric PM', fuel: 'ev' as const },
-      { name: 'MoveGas AM', fuel: 'gas' as const },
-      { name: 'MoveGas PM', fuel: 'gas' as const },
+      { name: 'MoveCar', img: 'plan/plan-movecar.png', brand: true },
+      { name: 'Competidor 1', img: 'plan/plan1.png' },
+      { name: 'Competidor 2', img: 'plan/plan2.png' },
+      { name: 'Competidor 3', img: 'plan/plan3.png' },
     ],
     rows: [
-      { label: 'Horario del turno', values: ['06:00–18:00', '18:00–06:00', '06:00–18:00', '18:00–06:00'] },
-      { label: 'Horas productivas', values: ['8,5 hrs', '10 hrs', '8,5 hrs', '10 hrs'] },
-      { label: 'Precio semanal', values: ['$242.500', '$343.375', '$242.500', '$343.375'] },
-      { label: 'Vehículo habilitado para Uber', values: [true, true, true, true] },
-      { label: 'Seguro full cobertura', values: [true, true, true, true] },
-      { label: 'Mantenciones preventivas', values: [true, true, true, true] },
-      { label: 'Soporte 24/7 + monitoreo GPS', values: [true, true, true, true] },
-      { label: 'Liquidación semanal detallada', values: [true, true, true, true] },
-      { label: 'Comisión de administración (1%)', values: [true, true, true, true] },
-      { label: 'Garantía $350.000 (en cuotas)', values: [true, true, true, true] },
-      { label: 'Kilometraje ilimitado', values: [true, true, true, true] },
-      { label: 'App MoveCar Copilot', values: [true, true, true, true] },
-      { label: 'Opción de compra (200/250 sem)', values: [true, true, true, true] },
-      { label: 'Bono electricidad', values: [true, true, false, false] },
-      { label: 'Cero emisiones', values: [true, true, false, false] },
+      { label: 'Planes AM / PM diferenciados', values: ['Full flexible', true, false, false] },
+      { label: 'Opción preferente de compra', values: ['Todos los planes', true, false, true] },
+      {
+        label: 'Cobertura eléctrica / gasolina',
+        values: ['Eléctrico y gasolina\nCon tope', 'Solo eléctricos\nCon tope', 'Solo eléctricos\nCon tope', false],
+      },
+      {
+        label: 'Cobertura eléctrica / gasolina',
+        values: [
+          '3 UF daño menor / 10 UF pérdida total',
+          '10 UF daño menor / 30 UF pérdida total',
+          '15 UF daño menor / 30 UF pérdida total',
+          '15 UF daño menor / 30 UF pérdida total',
+        ],
+      },
+      {
+        label: 'Auto reemplazo / tiempos entrega',
+        values: ['24–72 hrs', '1 semana aprox.', false, 'Indeterminado según demanda'],
+      },
+      { label: 'App ganancias y gastos', values: [true, 'Básica', false, false] },
+      { label: 'App + IA maximización ganancias', values: ['Movecar Copilot', false, true, false] },
+      { label: 'Flexibilidad en cuotas', values: ['Hasta 9 cuotas', 'Hasta 7 cuotas', false, false] },
+      { label: 'Soporte Operacional 24/7', values: [true, true, 'Solo técnico', true] },
+      { label: 'Capacitación integrada App', values: ['Todos los modelos', false, false, false] },
+      {
+        label: 'Estaciones de carga',
+        values: ['Libre (cualquiera)\nSin tiempos de espera', 'Red específica\nMayor tiempo de espera', 'Red específica\nMayor tiempo de espera', 'Libre'],
+      },
     ],
   },
   help: {

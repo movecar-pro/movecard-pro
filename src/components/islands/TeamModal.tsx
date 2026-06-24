@@ -130,7 +130,7 @@ export default function TeamModal({ members }: { members: TeamMember[] }) {
         .tm__icon { width: 32px; height: 32px; border-radius: var(--radius-sm); background: var(--amber-50); color: var(--amber-600); display: inline-flex; align-items: center; justify-content: center; font-size: 14px; }
         .tm__section-body { display: flex; flex-direction: column; gap: 10px; }
         .tm__section-title { margin: 0 0 2px; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: 16px; color: var(--text-strong); }
-        .tm__section-body p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text-body); }
+        .tm__section-body p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--text-body); white-space: pre-line; }
 
         .tm__facts { display: grid; grid-template-columns: 32px 1fr; gap: 14px; background: var(--amber-50); border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 8px; }
         .tm__facts > i { color: var(--amber-500); font-size: 22px; }

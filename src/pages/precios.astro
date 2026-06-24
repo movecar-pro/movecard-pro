@@ -46,7 +46,7 @@ import { faqCategories } from '@lib/faq';
     <PreciosCompara />
 
     {/* Reaseguro: Rápido, Transparente y Seguro */}
-    <section class="mc-section" style="background:var(--surface-subtle)">
+    <section class="mc-section hidden" style="background:var(--surface-subtle)">
       <div class="mc-container reassure">
         <div class="reassure__head" data-gsap="fade-up">
           <h2 class="reassure__title">{pricing.reassurance.title}</h2>
@@ -80,7 +80,7 @@ import { faqCategories } from '@lib/faq';
     </section>
 
     {/* ¿Todavía con dudas? */}
-    <section style="background:var(--surface-subtle);padding-block:var(--space-7)">
+    <section class="hidden" style="background:var(--surface-subtle);padding-block:var(--space-7)">
       <div class="mc-container help" data-gsap="fade-up">
         <div>
           <h2 class="help__title">{pricing.help.title}</h2>
@@ -91,7 +91,7 @@ import { faqCategories } from '@lib/faq';
     </section>
 
     {/* Simulador + CTA final (reutilizados) */}
-    <Simulador />
+    <!-- <Simulador /> -->
     <FinalCTA />
   </main>
 </BaseLayout>
@@ -106,9 +106,8 @@ import { faqCategories } from '@lib/faq';
   .pp-hero {
     position: relative;
     overflow: hidden;
-    background:
-      var(--surface-subtle) url('/assets/images/backgrounds/streak2a.svg') center top / cover
-      no-repeat;
+    background: var(--surface-subtle) url('/assets/images/backgrounds/streak2a.svg') center top /
+      cover no-repeat;
     padding-block: var(--space-section);
   }
   .pp-hero__head {

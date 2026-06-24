@@ -62,7 +62,12 @@ export default function VehicleModal({
     <Modal open={open} onClose={onClose} labelledBy="vehicle-modal-name" size="xl">
       {vehicle && (
         <div className="vm">
-          {/* Cabecera + primeros grupos */}
+          {/* Imagen del auto al inicio — SOLO móvil */}
+          <div className="vm__hero">
+            <RImg src={vehicle.image} alt={vehicle.name} ratio="16/10" fit="contain" rounded="var(--radius-lg)" />
+          </div>
+
+          {/* Cabecera (columna izquierda) + grilla de grupos (3 columnas) */}
           <div className="vm__top">
             <header className="vm__head">
               {vehicle.badge && (
@@ -75,9 +80,11 @@ export default function VehicleModal({
               </h2>
               <p className="vm__desc">{vehicle.detail.description}</p>
             </header>
-            {vehicle.detail.groupsTop.map((g, i) => (
-              <Group key={i} g={g} />
-            ))}
+            <div className="vm__groups">
+              {vehicle.detail.groupsTop.map((g, i) => (
+                <Group key={i} g={g} />
+              ))}
+            </div>
           </div>
 
           {/* Imágenes */}
@@ -104,7 +111,22 @@ export default function VehicleModal({
 
       <style>{`
         .vm { display: flex; flex-direction: column; gap: 32px; }
-        .vm__top, .vm__bottom {
+        /* Imagen hero: solo se muestra en móvil (≤600px) */
+        .vm__hero { display: none; background: var(--grey-50); border-radius: var(--radius-lg); padding: 12px; }
+        /* Cabecera a la izquierda + grilla de grupos a la derecha (3 columnas) */
+        .vm__top {
+          display: grid;
+          grid-template-columns: 1fr 2.8fr;
+          gap: 28px 40px;
+          align-items: start;
+        }
+        .vm__groups {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 28px 32px;
+        }
+        /* Grupos inferiores: fila completa de 4 columnas */
+        .vm__bottom {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           gap: 28px 32px;
@@ -131,11 +153,14 @@ export default function VehicleModal({
         .vm__image { background: var(--grey-50); padding: 0; }
 
         @media (max-width: 1024px) {
-          .vm__top, .vm__bottom { grid-template-columns: repeat(2, 1fr); }
+          .vm__top { grid-template-columns: 1fr; }
+          .vm__groups { grid-template-columns: repeat(2, 1fr); }
+          .vm__bottom { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 600px) {
-          .vm__top, .vm__bottom { grid-template-columns: 1fr; }
-          .vm__images { grid-template-columns: 1fr; }
+          .vm__groups, .vm__bottom { grid-template-columns: 1fr; }
+          .vm__hero { display: block; }
+          .vm__images { display: none; } /* en móvil basta la imagen hero de arriba */
           .vm__name { font-size: 30px; }
         }
       `}</style>

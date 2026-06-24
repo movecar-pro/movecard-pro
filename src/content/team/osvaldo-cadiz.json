@@ -20,12 +20,35 @@
         "Ejecutivo formado en la Universidad de Chile, con Diplomado en Control de Gestión Gerencial de la Facultad de Economía y Negocios. Su formación está orientada a la eficiencia operacional, el control de gestión y la toma de decisiones basada en datos."
       ]
     },
+        {
+      "icon": "fa-graduation-cap",
+      "title": "Experiencia multisectorial",
+      "paragraphs": [
+        "A lo largo de su carrera ha participado en industrias tan diversas como la agroindustria, la exportación frutícola, el comercio internacional, los servicios de capital humano y la eficiencia energética, desempeñándose tanto en roles ejecutivos como en proyectos de emprendimiento y desarrollo de nuevos negocios.\n\nHa liderado operaciones comerciales y de exportación hacia mercados de Asia, Europa, Estados Unidos y Latinoamérica, participando activamente en la construcción de relaciones comerciales internacionales, gestión de cadenas productivas y desarrollo de oportunidades de crecimiento en distintos mercados.\n \nSu experiencia combina gestión comercial, operaciones, procesos productivos, comercio internacional y desarrollo organizacional, participando en proyectos de crecimiento tanto en Chile como en mercados internacionales."
+      ]
+    },
     {
       "icon": "fa-gears",
-      "title": "Operaciones y gestión",
+      "title": "Estrategia, crecimiento e innovación",
       "paragraphs": [
-        "Lidera la operación de Movecar asegurando que cada movedriver reciba un servicio confiable de punta a punta: flota, mantención, carga y soporte. Su foco está en construir procesos escalables y sostenibles que mantengan altos niveles de servicio a medida que la compañía crece."
+        "Su experiencia se ha desarrollado principalmente en estrategia y crecimiento, desarrollo comercial y de producto, así como en la construcción de capacidades operacionales y tecnológicas para modelos de negocio escalables y sostenibles. Ha participado en procesos de expansión internacional, levantamiento de capital, integración de compañías, transformación digital, inteligencia artificial y desarrollo de ecosistemas digitales de alto impacto."
+      ]
+    },
+    {
+      "icon": "fa-gears",
+      "title": "Construcción y escalamiento de negocios",
+      "paragraphs": [
+        "Gran parte de su trayectoria ha estado vinculada a la creación y consolidación de empresas desde sus etapas iniciales. Ha participado en la definición de modelos de negocio, desarrollo comercial, implementación de procesos y construcción de equipos capaces de acompañar el crecimiento de una organización.\n \n Le interesa especialmente conectar la estrategia con la ejecución, diseñando procesos simples, indicadores de gestión y estructuras que permitan escalar operaciones sin perder flexibilidad ni capacidad de adaptación."
+      ]
+    },
+    {
+      "icon": "fa-gears",
+      "title": "Lo que lo mueve",
+      "paragraphs": [
+        "Disfruta especialmente los desafíos asociados a la construcción de nuevos proyectos, donde es necesario combinar visión de negocio, trabajo en equipo y capacidad de ejecución para transformar ideas en operaciones sostenibles y generadoras de valor.\n\nSu foco está puesto en construir organizaciones ordenadas, eficientes y orientadas a resultados, manteniendo siempre una mirada práctica sobre la forma en que las empresas crecen y evolucionan."
       ]
     }
-  ]
+  ],
+  "funFacts": [
+    "Osvaldo disfruta especialmente los proyectos en etapa de construcción, donde las ideas todavía están tomando forma y cada decisión tiene impacto directo en el futuro de la organización. Gran parte de su carrera ha estado vinculada al desarrollo de negocios, la apertura de mercados y la construcción de relaciones comerciales de largo plazo, experiencia que le ha permitido trabajar con distintas culturas, industrias y formas de hacer empresa alrededor del mundo. Está convencido de que las mejores compañías se construyen desde la disciplina, la consistencia y la capacidad de ejecutar bien los detalles que otros suelen pasar por alto."  ]
 }

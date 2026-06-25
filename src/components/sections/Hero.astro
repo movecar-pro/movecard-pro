@@ -28,8 +28,10 @@ const heroCars = (await getCollection('fleet'))
       </h1>
       <p class="hero__subtitle" data-gsap="hero-subtitle">{hero.subtitle}</p>
       <div class="hero__cta" data-gsap="hero-cta">
-        <Button size="lg" href="#postular">{hero.ctaPrimary}</Button>
-        <Button size="lg" variant="secondary" href="#como-funciona">{hero.ctaSecondary}</Button>
+        <Button size="lg" class="uppercase" href="#postular">{hero.ctaPrimary}</Button>
+        <Button size="lg" variant="secondary" class="uppercase" href="#como-funciona"
+          >{hero.ctaSecondary}</Button
+        >
       </div>
       <div class="hero__bullets">
         {
@@ -55,8 +57,7 @@ const heroCars = (await getCollection('fleet'))
     position: relative;
     /* Fondo de marca (streaks ámbar sobre claro). El SVG se agrega en
        public/assets/images/backgrounds/streak1.svg */
-    background:
-      var(--white) url('/assets/images/backgrounds/streak1.svg') center / cover no-repeat;
+    background: var(--white) url('/assets/images/backgrounds/streak1.svg') center / cover no-repeat;
     overflow: hidden;
   }
   .hero__inner {

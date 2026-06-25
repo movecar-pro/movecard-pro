@@ -122,6 +122,9 @@ img {
   max-width: 100%;
   display: block;
 }
+button {
+  text-transform: uppercase;
+}
 
 /* Foco accesible y visible sobre cualquier control. */
 :where(a, button, input, select, textarea):focus-visible {

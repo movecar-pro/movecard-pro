@@ -75,6 +75,7 @@ export const flota = {
   title: 'Los vehículos que puedes elegir',
   body: 'Todos incluyen seguro, mantención y soporte. Haz clic en un modelo para ver su ficha.',
   cta: 'Conocer la flota',
+  star: '4.9 de 5 estrellas',
   // Los vehículos viven en el Content Layer (colección `fleet`, src/content/fleet/).
 };
 
@@ -84,15 +85,15 @@ export const pasos = {
   body: 'Desde la inscripción hasta la entrega, hacemos un proceso simple para que empieces a generar ganancias rápido.',
   cta: 'Comenzar ahora',
   steps: [
-    { day: 'Día 1', title: 'Regístrate', body: 'Completa tus datos iniciales para postular a Movecar.' },
+    { day: 'Primer Paso: Día 1', title: 'Regístrate', body: 'Completa tus datos iniciales para postular a Movecar.' },
     {
-      day: 'Día 1-3',
+      day: 'Segundo Paso: Día 1-3',
       title: 'Entrevista',
       body: 'Coordinamos una reunión para conocerte y resolver tus dudas.',
     },
-    { day: 'Día 4', title: 'Activación', body: 'Firmamos el contrato y activamos tu perfil de conductor.' },
+    { day: 'Tercer Paso: Día 4', title: 'Activación', body: 'Firmamos el contrato y activamos tu perfil de conductor.' },
     {
-      day: 'Día 5',
+      day: 'Cuarto Paso: Día 5',
       title: 'Entrega',
       body: 'Recibes tu vehículo y comienzas a generar ingresos desde Movecar.',
     },
@@ -101,8 +102,9 @@ export const pasos = {
 
 export const testimonios = {
   eyebrow: 'Testimonios',
-  title: 'Movedrivers felices',
+  title: 'Movers felices',
   body: 'No lo decimos nosotros, lo dicen ellos.',
+  startext: '4.9 de 5 estrellas',
   // 9 testimonios — carrusel: 3 por pasada en desktop, 1 a 1 en móvil.
   items: [
     {
@@ -270,7 +272,7 @@ export const finalCta = {
 };
 
 export const footer = {
-  tagline: 'La plataforma de electromovilidad para movedrivers en Chile.',
+  tagline: 'La plataforma de electromovilidad para movers en Chile.',
   columns: [
     { title: 'Plataforma', links: ['Cómo funciona', 'Flota', 'Precios', 'Simulador'] },
     { title: 'Compañía', links: ['Nosotros', 'Preguntas Frecuentes', 'Contacto', 'Blog'] },
@@ -299,7 +301,7 @@ export const about = {
     ],
     cta: 'Quiero postular',
     // Imágenes (placeholders): mosaico de rostros + fondo tenue de manos.
-    image: { src: 'team/team-mosaic.webp', alt: 'Comunidad de movedrivers Movecar' },
+    image: { src: 'team/team-mosaic.webp', alt: 'Comunidad de movers Movecar' },
     bg: 'backgrounds/nosotros.webp',
   },
   // Tercera sección: layout editorial "Más que arriendo de vehículos".
@@ -345,7 +347,7 @@ export const about = {
     ],
   },
   stats: [
-    { value: '+1.200', label: 'Movedrivers activos' },
+    { value: '+1.200', label: 'Movers activos' },
     { value: '98%', label: 'Satisfacción' },
     { value: '3', label: 'Ciudades en Chile' },
     { value: '24/7', label: 'Soporte' },
@@ -356,7 +358,7 @@ export const about = {
     items: [
       { icon: 'fa-hand-holding-dollar', title: 'Transparencia', body: 'Cuentas claras, sin letra chica. Sabes exactamente cuánto generas y cuánto gastas.' },
       { icon: 'fa-leaf', title: 'Compromiso eco', body: 'Cada vehículo eléctrico es un paso hacia un transporte más limpio para todos.' },
-      { icon: 'fa-people-group', title: 'Comunidad', body: 'Nuestros movedrivers son el centro: los escuchamos y crecemos con ellos.' },
+      { icon: 'fa-people-group', title: 'Comunidad', body: 'Nuestros movers son el centro: los escuchamos y crecemos con ellos.' },
       { icon: 'fa-headset', title: 'Cercanía', body: 'Soporte humano y rápido cuando lo necesitas, no un bot que te deja esperando.' },
       { icon: 'fa-shield-halved', title: 'Respaldo', body: 'Seguro full cobertura y auto de reemplazo: nunca dejas de generar ingresos.' },
       { icon: 'fa-rocket', title: 'Simpleza', body: 'Del registro a la entrega en días, 100% online y sin trámites engorrosos.' },
@@ -395,7 +397,7 @@ export const comoFunciona = {
         label: 'Elección de Plan',
         title: 'Elige el plan que más te acomode',
         items: [
-          'Simula tus ganancias según tus horas trabajadas y tu zona con la calculadora. Referencias basadas en el promedio de Movedrivers.',
+          'Simula tus ganancias según tus horas trabajadas y tu zona con la calculadora. Referencias basadas en el promedio de Movers.',
           'Información clara, transparente y sin letra chica.',
         ],
       },

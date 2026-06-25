@@ -22,8 +22,10 @@ const bulletIcons = ['fa-shield-halved', 'fa-check', 'fa-star'];
       <h1 class="ph2__title" data-gsap="hero-title">{title}</h1>
       <p class="ph2__subtitle" data-gsap="hero-subtitle">{subtitle}</p>
       <div class="ph2__cta" data-gsap="hero-cta">
-        <Button size="lg" href="#postular">{ctaPrimary}</Button>
-        <Button size="lg" variant="secondary" href="#como-funciona">{ctaSecondary}</Button>
+        <Button size="lg" href="#postular" class="uppercase">{ctaPrimary}</Button>
+        <Button size="lg" variant="secondary" href="#como-funciona" class="uppercase"
+          >{ctaSecondary}</Button
+        >
       </div>
       <div class="ph2__bullets">
         {
@@ -44,8 +46,8 @@ const bulletIcons = ['fa-shield-halved', 'fa-check', 'fa-star'];
     position: relative;
     overflow: hidden;
     /* Imagen base. Archivo: public/assets/images/backgrounds/how-to.webp */
-    background:
-      var(--grey-50) url('/assets/images/backgrounds/how-to.webp') center / cover no-repeat;
+    background: var(--grey-50) url('/assets/images/backgrounds/how-to.webp') center / cover
+      no-repeat;
   }
   /* Velo claro (izq → der) para contraste del texto oscuro. */
   .ph2__veil {

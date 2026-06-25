@@ -26,7 +26,7 @@ const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
       <VentajasCarousel client:visible items={items} />
     </div>
 
-    <div class="vm2__cta"><Button href="#postular">{cta}</Button></div>
+    <div class="vm2__cta"><Button href="#postular" class="uppercase">{cta}</Button></div>
   </div>
 </section>
 
@@ -35,8 +35,8 @@ const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
     position: relative;
     overflow: hidden;
     /* Fondo de marca. SVG en public/assets/images/backgrounds/streak2a.svg */
-    background:
-      var(--surface-subtle) url('/assets/images/backgrounds/streak2a.svg') center / cover no-repeat;
+    background: var(--surface-subtle) url('/assets/images/backgrounds/streak2a.svg') center / cover
+      no-repeat;
   }
   .vm2__inner {
     position: relative;

@@ -23,14 +23,18 @@ const vehicles = (await getCollection('fleet'))
       <p class="flota__body">{flota.body}</p>
     </div>
 
-    {/* 🏝️ Carrusel interactivo: clic en una tarjeta abre el modal del auto.
+    {
+      /* 🏝️ Carrusel interactivo: clic en una tarjeta abre el modal del auto.
          client:idle → hidrata al quedar el navegador ocioso (no depende del
-         viewport). Para diferir hasta el scroll, cambia a client:visible. */}
+         viewport). Para diferir hasta el scroll, cambia a client:visible. */
+    }
     <div data-gsap="fade-up">
       <FleetCarousel client:idle vehicles={vehicles} />
     </div>
 
-    <div class="flota__cta"><Button href="#postular">{flota.cta}</Button></div>
+    <div class="flota__cta hidden">
+      <Button href="#postular" class="uppercase">{flota.cta}</Button>
+    </div>
   </div>
 </section>
 
@@ -40,8 +44,8 @@ const vehicles = (await getCollection('fleet'))
     overflow: hidden;
     padding-block: var(--space-section);
     /* Fondo de marca. SVG en public/assets/images/backgrounds/streak4.svg */
-    background:
-      var(--grey-50) url('/assets/images/backgrounds/streak4.svg') center / cover no-repeat;
+    background: var(--grey-50) url('/assets/images/backgrounds/streak4.svg') center / cover
+      no-repeat;
   }
   .flota__inner {
     position: relative;

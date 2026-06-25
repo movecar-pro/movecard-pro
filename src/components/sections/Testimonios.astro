@@ -15,6 +15,14 @@ import { testimonios } from '@lib/content';
       <Eyebrow align="center">{testimonios.eyebrow}</Eyebrow>
       <h2 class="tst__title">{testimonios.title}</h2>
       <p class="tst__body">{testimonios.body}</p>
+      <p class="tst__star">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </p>
+      <p class="tst__star-text">{testimonios.startext}</p>
     </div>
 
     <div data-gsap="fade-up">
@@ -26,8 +34,8 @@ import { testimonios } from '@lib/content';
 <style>
   .tst {
     /* Fondo de marca. SVG en public/assets/images/backgrounds/streak2.svg */
-    background:
-      var(--grey-50) url('/assets/images/backgrounds/streak2.svg') center / cover no-repeat;
+    background: var(--grey-50) url('/assets/images/backgrounds/streak2.svg') center / cover
+      no-repeat;
   }
   .tst__head {
     text-align: center;
@@ -45,5 +53,8 @@ import { testimonios } from '@lib/content';
     margin: 0;
     font-size: var(--fs-body-lg);
     color: var(--text-muted);
+  }
+  .tst__star {
+    color: var(--color-orange-500);
   }
 </style>

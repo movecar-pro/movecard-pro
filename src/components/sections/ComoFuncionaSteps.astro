@@ -52,15 +52,15 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
 
     {/* Flechas del carrusel — solo móvil */}
     <div class="cf__controls">
-      <button type="button" class="cf__arrow" data-cf-prev aria-label="Paso anterior">
+      <button type="button" class="cf__arrow uppercase" data-cf-prev aria-label="Paso anterior">
         <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
       </button>
-      <button type="button" class="cf__arrow" data-cf-next aria-label="Paso siguiente">
+      <button type="button" class="cf__arrow uppercase" data-cf-next aria-label="Paso siguiente">
         <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </button>
     </div>
 
-    <div class="cf__cta"><Button href="#postular">{cta}</Button></div>
+    <div class="cf__cta"><Button href="#postular" class="uppercase">{cta}</Button></div>
   </div>
 </section>
 

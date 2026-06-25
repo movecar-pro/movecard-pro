@@ -86,7 +86,7 @@ export default function IncomeSimulator({ planes, cta, disclaimer }: Props) {
         </span>
       </div>
 
-      <a href="#postular" className="mc-sim__cta">
+      <a href="#postular" className="mc-sim__cta uppercase">
         {cta}
       </a>
       <span className="mc-sim__disclaimer">{disclaimer}</span>

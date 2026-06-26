@@ -9,7 +9,7 @@
 import '@styles/global.css';
 import Navbar from '@components/navigation/Navbar.astro';
 import Footer from '@components/navigation/Footer.astro';
-import { SITE, GA_MEASUREMENT_ID } from '@lib/config';
+import { SITE, GA_MEASUREMENT_ID, GTM_CONTAINER_ID, NOINDEX } from '@lib/config';
 
 interface Props {
   title?: string;
@@ -30,6 +30,30 @@ const canonical = new URL(Astro.url.pathname, SITE.url).href;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {/* Google Tag Manager — solo si PUBLIC_GTM_ID está definido (producción).
+        Va lo más arriba posible del <head>. is:inline evita que Astro lo empaquete. */}
+    {
+      GTM_CONTAINER_ID && (
+        <script is:inline define:vars={{ gtmId: GTM_CONTAINER_ID }}>
+          /* eslint-disable */
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', gtmId);
+        </script>
+      )
+    }
+
+    {/* noindex en entornos de staging (PUBLIC_NOINDEX=true) */}
+    {NOINDEX && <meta name="robots" content="noindex, nofollow" />}
+
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -96,6 +120,20 @@ const canonical = new URL(Astro.url.pathname, SITE.url).href;
     }
   </head>
   <body>
+    {/* Google Tag Manager (noscript) — solo si hay container; va tras abrir <body>. */}
+    {
+      GTM_CONTAINER_ID && (
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_CONTAINER_ID}`}
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          />
+        </noscript>
+      )
+    }
+
     <Navbar active={active} />
     <slot />
     <Footer />

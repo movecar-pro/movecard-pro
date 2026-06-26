@@ -1,13 +1,17 @@
 // @ts-check
+import process from 'node:process';
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
+// Dominio para sitemap y URLs canónicas. En producción (Vercel) define
+// PUBLIC_SITE_URL; default = dominio definitivo. Sin barra final.
+const SITE_URL = (process.env.PUBLIC_SITE_URL ?? 'https://movecar.pro').replace(/\/+$/, '');
+
 // https://astro.build/config
 export default defineConfig({
-  // ⚙️ Cambia esto por el dominio de producción (afecta sitemap y URLs canónicas).
-  site: 'https://movecard.pro',
+  site: SITE_URL,
 
   integrations: [
     // 🏝️  ISLAS REACT: habilita componentes interactivos .tsx con client:* directives.

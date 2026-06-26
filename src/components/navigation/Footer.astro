@@ -4,8 +4,9 @@
  * Portado del DS (components/navigation/Footer.jsx).
  */
 import Logo from '@components/primitives/Logo.astro';
-import { footer } from '@lib/content';
-const { columns, tagline } = footer;
+import LegalModal from '@components/islands/LegalModal.tsx';
+import { footer, legalDocs } from '@lib/content';
+const { columns, tagline, legal } = footer;
 ---
 
 <footer class="mc-footer">
@@ -21,7 +22,7 @@ const { columns, tagline } = footer;
             <div class="mc-footer__col">
               <span class="mc-footer__col-title">{col.title}</span>
               {col.links.map((l) => (
-                <a href="#">{l}</a>
+                <a href={l.href}>{l.label}</a>
               ))}
             </div>
           ))
@@ -31,11 +32,19 @@ const { columns, tagline } = footer;
     <div class="mc-footer__bottom">
       <span>© 2026 Movecar. Todos los derechos reservados.</span>
       <span class="mc-footer__legal">
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Política de Privacidad</a>
+        {
+          legal.map((l) => (
+            <button type="button" class="mc-footer__legal-link" data-legal-modal={l.modal}>
+              {l.label}
+            </button>
+          ))
+        }
       </span>
     </div>
   </div>
+
+  {/* Isla: escucha los clics legales y abre el modal correspondiente */}
+  <LegalModal client:idle docs={legalDocs} />
 </footer>
 
 <style>
@@ -109,11 +118,17 @@ const { columns, tagline } = footer;
     display: flex;
     gap: var(--space-5);
   }
-  .mc-footer__legal a {
+  .mc-footer__legal-link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    font-size: 13px;
     color: var(--white-a50);
-    text-decoration: none;
+    transition: color var(--dur-fast) var(--ease-out);
   }
-  .mc-footer__legal a:hover {
+  .mc-footer__legal-link:hover {
     color: var(--white-a70);
   }
 </style>

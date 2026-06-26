@@ -274,10 +274,128 @@ export const finalCta = {
 export const footer = {
   tagline: 'La plataforma de electromovilidad para movers en Chile.',
   columns: [
-    { title: 'Plataforma', links: ['Cómo funciona', 'Flota', 'Precios', 'Simulador'] },
-    { title: 'Compañía', links: ['Nosotros', 'Preguntas Frecuentes', 'Contacto', 'Blog'] },
-    { title: 'Soporte', links: ['Ayuda', 'Estado del servicio', 'WhatsApp', 'Contacto 24/7'] },
+    {
+      title: 'Plataforma',
+      links: [
+        { label: 'Cómo funciona', href: '/como-funciona' },
+        { label: 'Flota', href: '/#flota' },
+        { label: 'Precios', href: '/precios' },
+      ],
+    },
+    {
+      title: 'Compañía',
+      links: [
+        { label: 'Nosotros', href: '/nosotros' },
+        { label: 'Preguntas Frecuentes', href: '/precios#faq' },
+      ],
+    },
+    {
+      title: 'Soporte',
+      links: [
+        { label: 'Ayuda', href: '/precios#faq' },
+        { label: 'Postular', href: '/#postular' },
+        { label: 'Contacto', href: '/#postular' },
+      ],
+    },
   ],
+  // Links legales: abren modales (no navegan). 'modal' = clave del documento.
+  legal: [
+    { label: 'Términos y condiciones', modal: 'terms' as const },
+    { label: 'Política de Privacidad', modal: 'privacy' as const },
+  ],
+};
+
+/* ============================================================
+   DOCUMENTOS LEGALES (contenido simulado — reemplazar por el real)
+   Los muestran los modales del footer (isla LegalModal).
+   ============================================================ */
+export const legalDocs = {
+  terms: {
+    title: 'Términos y condiciones',
+    updated: 'Junio 2026',
+    sections: [
+      {
+        heading: '1. Aceptación de los términos',
+        body: [
+          'Al acceder y utilizar la plataforma Movecar.pro, el usuario declara haber leído, comprendido y aceptado íntegramente los presentes Términos y Condiciones. Si no estás de acuerdo con alguna parte, te pedimos no utilizar el servicio.',
+          'Este documento es un contenido simulado de demostración y no constituye un texto legal vigente.',
+        ],
+      },
+      {
+        heading: '2. Objeto del servicio',
+        body: [
+          'Movecar ofrece el arriendo de vehículos habilitados para plataformas de transporte, junto con servicios asociados de seguro, mantención, soporte operacional y herramientas tecnológicas de gestión de ingresos.',
+        ],
+      },
+      {
+        heading: '3. Requisitos del conductor',
+        body: [
+          'El conductor debe cumplir con los requisitos de edad, licencia vigente, antecedentes y habilitación descritos en el proceso de postulación. Movecar se reserva el derecho de admisión conforme a sus políticas internas.',
+        ],
+      },
+      {
+        heading: '4. Obligaciones y uso del vehículo',
+        body: [
+          'El vehículo debe utilizarse exclusivamente dentro del horario y las condiciones del plan contratado. El uso indebido, el subarriendo o la manipulación de los sistemas de telemetría constituyen incumplimientos graves.',
+        ],
+      },
+      {
+        heading: '5. Pagos y liquidaciones',
+        body: [
+          'Los pagos, descuentos y liquidaciones se rigen por las condiciones del plan y se detallan semanalmente. El conductor dispone de un plazo para objetar la liquidación conforme al procedimiento informado.',
+        ],
+      },
+      {
+        heading: '6. Modificaciones',
+        body: [
+          'Movecar podrá actualizar estos términos en cualquier momento. Las modificaciones se informarán por los canales oficiales y regirán desde su publicación.',
+        ],
+      },
+    ],
+  },
+  privacy: {
+    title: 'Política de Privacidad',
+    updated: 'Junio 2026',
+    sections: [
+      {
+        heading: '1. Responsable del tratamiento',
+        body: [
+          'Movecar es responsable del tratamiento de los datos personales recopilados a través de la plataforma, conforme a la legislación vigente sobre protección de datos.',
+          'Este documento es un contenido simulado de demostración y no constituye una política legal vigente.',
+        ],
+      },
+      {
+        heading: '2. Datos que recopilamos',
+        body: [
+          'Recopilamos datos de identificación y contacto, datos de habilitación legal (licencia, antecedentes), datos económicos y datos operacionales del vehículo, incluyendo telemetría (ubicación, velocidad y kilometraje).',
+        ],
+      },
+      {
+        heading: '3. Finalidad del tratamiento',
+        body: [
+          'Utilizamos tus datos para evaluar postulaciones, ejecutar el contrato, gestionar pagos y siniestros, brindar soporte y mejorar la operación de la flota.',
+        ],
+      },
+      {
+        heading: '4. Compartición con terceros',
+        body: [
+          'Solo compartimos datos cuando es necesario para la operación: aseguradoras, proveedores tecnológicos, talleres y autoridades cuando exista obligación legal. Nunca comercializamos datos personales.',
+        ],
+      },
+      {
+        heading: '5. Tus derechos',
+        body: [
+          'Puedes solicitar el acceso, rectificación, supresión, oposición y portabilidad de tus datos escribiendo a los canales oficiales de Movecar.',
+        ],
+      },
+      {
+        heading: '6. Seguridad',
+        body: [
+          'Aplicamos medidas técnicas y organizativas razonables para proteger tus datos frente a accesos no autorizados, pérdida o alteración.',
+        ],
+      },
+    ],
+  },
 };
 
 /* ============================================================

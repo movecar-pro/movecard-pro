@@ -10,7 +10,6 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import ComoFuncionaSteps from '@components/sections/ComoFuncionaSteps.astro';
 import PreciosCompara from '@components/sections/PreciosCompara.astro';
-import Simulador from '@components/sections/Simulador.astro';
 import FinalCTA from '@components/sections/FinalCTA.astro';
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
@@ -67,7 +66,7 @@ import { faqCategories } from '@lib/faq';
     </section>
 
     {/* Preguntas Frecuentes — contenido completo, una sola abierta a la vez */}
-    <section class="mc-section" style="background:var(--white)">
+    <section id="faq" class="mc-section" style="background:var(--white)">
       <div class="mc-container" style="max-width:var(--content-max)">
         <div class="faq__head" data-gsap="fade-up">
           <Eyebrow align="center">Preguntas Frecuentes</Eyebrow>

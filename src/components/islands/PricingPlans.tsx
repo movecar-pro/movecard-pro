@@ -66,7 +66,12 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
                 <p className="pp__desc">{p.description}</p>
                 <Price price={p.price} period={p.period} />
                 <Features items={p.features} />
-                <a className="pp__cta" href="#postular">
+                <a
+                  className="pp__cta"
+                  href="#postular"
+                  data-ga-event="cta_contratar"
+                  data-ga-location={p.id}
+                >
                   {p.cta}
                 </a>
               </article>
@@ -103,7 +108,12 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
                       <div className="pp__acc-body">
                         <p className="pp__desc">{p.description}</p>
                         <Features items={p.features} />
-                        <a className="pp__cta" href="#postular">
+                        <a
+                          className="pp__cta"
+                          href="#postular"
+                          data-ga-event="cta_contratar"
+                          data-ga-location={p.id}
+                        >
                           {p.cta}
                         </a>
                       </div>

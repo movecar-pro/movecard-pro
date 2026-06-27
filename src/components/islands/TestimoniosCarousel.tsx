@@ -102,7 +102,7 @@ export default function TestimoniosCarousel({ items }: { items: Testimonio[] }) 
       </div>
 
       <div className="tc__controls">
-        <button type="button" className="tc__arrow" aria-label="Anteriores" onClick={() => go(page - 1)}>
+        <button type="button" className="tc__arrow" aria-label="Anteriores" data-ga-ignore onClick={() => go(page - 1)}>
           <i className="fa-solid fa-arrow-left" aria-hidden="true" />
         </button>
         <div className="tc__dots" role="tablist" aria-label="Página de testimonios">
@@ -113,11 +113,12 @@ export default function TestimoniosCarousel({ items }: { items: Testimonio[] }) 
               className={`tc__dot ${i === page ? 'is-active' : ''}`}
               aria-label={`Página ${i + 1}`}
               aria-current={i === page}
+              data-ga-ignore
               onClick={() => go(i)}
             />
           ))}
         </div>
-        <button type="button" className="tc__arrow" aria-label="Siguientes" onClick={() => go(page + 1)}>
+        <button type="button" className="tc__arrow" aria-label="Siguientes" data-ga-ignore onClick={() => go(page + 1)}>
           <i className="fa-solid fa-arrow-right" aria-hidden="true" />
         </button>
       </div>

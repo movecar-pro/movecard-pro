@@ -121,7 +121,7 @@ export default function FleetCarousel({ vehicles }: { vehicles: Vehicle[] }) {
 
       {/* Controles: flechas + dots */}
       <div className="fc__controls">
-        <button type="button" className="fc__arrow" aria-label="Modelo anterior" onClick={prev}>
+        <button type="button" className="fc__arrow" aria-label="Modelo anterior" data-ga-ignore onClick={prev}>
           <i className="fa-solid fa-arrow-left" aria-hidden="true" />
         </button>
         <div className="fc__dots" role="tablist" aria-label="Ir a posición">
@@ -132,11 +132,12 @@ export default function FleetCarousel({ vehicles }: { vehicles: Vehicle[] }) {
               className={`fc__dot ${i === index ? 'is-active' : ''}`}
               aria-label={`Posición ${i + 1}`}
               aria-current={i === index}
+              data-ga-ignore
               onClick={() => go(i)}
             />
           ))}
         </div>
-        <button type="button" className="fc__arrow" aria-label="Modelo siguiente" onClick={next}>
+        <button type="button" className="fc__arrow" aria-label="Modelo siguiente" data-ga-ignore onClick={next}>
           <i className="fa-solid fa-arrow-right" aria-hidden="true" />
         </button>
       </div>

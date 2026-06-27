@@ -112,6 +112,7 @@ export default function VentajasCarousel({ items }: { items: Item[] }) {
               className={`vc__dot ${i === index ? 'is-active' : ''}`}
               aria-label={`Ventaja ${i + 1}: ${it.title}`}
               aria-current={i === index}
+              data-ga-ignore
               onClick={() => go(i)}
             />
           ))}

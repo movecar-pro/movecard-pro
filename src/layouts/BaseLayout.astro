@@ -137,5 +137,11 @@ const canonical = new URL(Astro.url.pathname, SITE.url).href;
     <Navbar active={active} />
     <slot />
     <Footer />
+
+    {/* Medición de clics → empuja eventos al dataLayer (GTM/GA4/Meta). */}
+    <script>
+      import { initClickTracking } from '@lib/analytics';
+      initClickTracking();
+    </script>
   </body>
 </html>

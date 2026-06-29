@@ -16,14 +16,14 @@ const { leftCol, rightCol, image } = about.modelo;
       <div class="mo__col" data-gsap="fade-up">
         {
           leftCol.map((b) =>
-            b.kind === 'h' ? <h2 class="mo__h">{b.text}</h2> : <p class="mo__p">{b.text}</p>,
+            b.kind === 'h' ? <h4 class="mo__h">{b.text}</h4> : <p class="mo__p">{b.text}</p>,
           )
         }
       </div>
       <div class="mo__col" data-gsap="fade-up">
         {
           rightCol.map((b) =>
-            b.kind === 'h' ? <h2 class="mo__h">{b.text}</h2> : <p class="mo__p">{b.text}</p>,
+            b.kind === 'h' ? <h4 class="mo__h">{b.text}</h4> : <p class="mo__p">{b.text}</p>,
           )
         }
       </div>

@@ -430,25 +430,25 @@ export const about = {
         kind: 'p',
         text: 'Creemos que el futuro de la movilidad no pasa únicamente por tener mejores autos, sino por entregar mejores herramientas a quienes los conducen. Por eso desarrollamos MoveCar Copilot, una plataforma de analítica avanzada e inteligencia artificial diseñada para ayudar a los conductores a comprender mejor su operación, identificar oportunidades de ganancias, optimizar horarios y hábitos de conducción, acceder a contenido educativo y recibir recomendaciones personalizadas orientadas a maximizar su rentabilidad.',
       },
+      { kind: 'h', text: 'Nuestra forma de construir' },
       {
         kind: 'p',
-        text: 'A través del análisis continuo de datos operacionales y patrones de comportamiento, MoveCar Copilot busca transformar información compleja en decisiones simples y accionables, ayudando a cada conductor a obtener el máximo potencial de su tiempo y vehículo.',
+        text: 'Somos un equipo con ADN emprendedor, obsesionado con resolver problemas reales, ejecutar con excelencia y construir una plataforma que permita a miles de conductores generar más ganancias con mejores herramientas, mejor información y una mejor experiencia.',
       },
-      { kind: 'h', text: 'Nuestra forma de construir' },
     ],
     rightCol: [
       {
         kind: 'p',
         text: 'No somos simplemente una empresa de arriendo de vehículos. Estamos construyendo una plataforma diseñada para que los conductores puedan enfocarse en generar ganancias mientras nosotros nos encargamos del resto. Desde el vehículo y el soporte operacional, hasta el acceso a beneficios, herramientas de gestión y tecnología especialmente desarrollada para maximizar su rentabilidad.',
       },
+      {
+        kind: 'p',
+        text: 'A través del análisis continuo de datos operacionales y patrones de comportamiento, MoveCar Copilot busca transformar información compleja en decisiones simples y accionables, ayudando a cada conductor a obtener el máximo potencial de su tiempo y vehículo.',
+      },
       { kind: 'h', text: 'Tecnología para generar más ganancias' },
       {
         kind: 'p',
         text: 'Creemos en la tecnología como habilitador, en la excelencia operacional como ventaja competitiva y en las personas como el principal motor de cualquier organización. Nuestro objetivo es simple: construir la mejor experiencia para trabajar con plataformas de movilidad en Chile.',
-      },
-      {
-        kind: 'p',
-        text: 'Somos un equipo con ADN emprendedor, obsesionado con resolver problemas reales, ejecutar con excelencia y construir una plataforma que permita a miles de conductores generar más ganancias con mejores herramientas, mejor información y una mejor experiencia.',
       },
     ],
     image: { src: 'vehicles/flota.webp', alt: 'Flota Movecar en estación de carga' },

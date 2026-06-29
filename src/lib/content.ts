@@ -306,49 +306,87 @@ export const footer = {
 };
 
 /* ============================================================
-   DOCUMENTOS LEGALES (contenido simulado — reemplazar por el real)
-   Los muestran los modales del footer (isla LegalModal).
+   DOCUMENTOS LEGALES — los muestran los modales del footer (isla LegalModal).
+   `body` admite párrafos (string) y listas ({ list: string[] }).
    ============================================================ */
 export const legalDocs = {
   terms: {
-    title: 'Términos y condiciones',
+    title: 'Términos y Condiciones del Servicio',
     updated: 'Junio 2026',
     sections: [
       {
-        heading: '1. Aceptación de los términos',
+        heading: '1. Objeto del Contrato',
         body: [
-          'Al acceder y utilizar la plataforma Movecar.pro, el usuario declara haber leído, comprendido y aceptado íntegramente los presentes Términos y Condiciones. Si no estás de acuerdo con alguna parte, te pedimos no utilizar el servicio.',
-          'Este documento es un contenido simulado de demostración y no constituye un texto legal vigente.',
+          'El servicio consiste en el arrendamiento de vehículos modernos, habilitados y configurados para operar en plataformas de transporte (ej. Uber), sujetos a las reglas operacionales definidas por MOVERENT SpA y el mandato de recaudación de MOVECOLLECT SpA.',
         ],
       },
       {
-        heading: '2. Objeto del servicio',
+        heading: '2. Requisitos del Conductor',
         body: [
-          'Movecar ofrece el arriendo de vehículos habilitados para plataformas de transporte, junto con servicios asociados de seguro, mantención, soporte operacional y herramientas tecnológicas de gestión de ingresos.',
+          'Para acceder al servicio, el conductor debe cumplir:',
+          {
+            list: [
+              'Edad: entre 23 y 65 años (casos de 66-70 años sujetos a entrevista).',
+              'Documentación: cédula de identidad, licencia de conducir vigente, certificado de antecedentes y hoja de vida del conductor (sin faltas graves).',
+              'Cuenta de Uber Driver activa.',
+            ],
+          },
         ],
       },
       {
-        heading: '3. Requisitos del conductor',
+        heading: '3. Reglas de Uso del Vehículo',
         body: [
-          'El conductor debe cumplir con los requisitos de edad, licencia vigente, antecedentes y habilitación descritos en el proceso de postulación. Movecar se reserva el derecho de admisión conforme a sus políticas internas.',
+          {
+            list: [
+              'Exclusividad: el vehículo es de uso personal e intransferible. El subarriendo o cesión a terceros es motivo de término inmediato del contrato y multa de 5 UF.',
+              'Zona de operación: uso exclusivo en Santiago y Región Metropolitana. Prohibido el transporte interregional.',
+              'Telemetría: el vehículo cuenta con monitoreo GPS 24/7. Manipular o desactivar estos sistemas constituye una falta grave.',
+              'Uso en apps: el conductor puede usar otras apps, pero al menos el 50% de los kilómetros semanales deben realizarse en la plataforma Uber.',
+            ],
+          },
         ],
       },
       {
-        heading: '4. Obligaciones y uso del vehículo',
+        heading: '4. Condiciones Financieras',
         body: [
-          'El vehículo debe utilizarse exclusivamente dentro del horario y las condiciones del plan contratado. El uso indebido, el subarriendo o la manipulación de los sistemas de telemetría constituyen incumplimientos graves.',
+          {
+            list: [
+              'Garantía: $350.000, pagaderos al inicio o en cuotas semanales. Se devuelve en dos partes (a las 3 y 6 semanas de finalizado el contrato, sujeto a cargos pendientes).',
+              'Liquidaciones: se emite una liquidación semanal todos los jueves.',
+              'Descuentos: de los ingresos brutos se descuentan canon de arriendo, multas (contractuales y de tránsito), TAG, peajes, comisión de administración (1%) y deducibles de seguro.',
+              'Impugnación: el usuario tiene 5 días corridos desde la recepción de la liquidación para objetarla por escrito.',
+            ],
+          },
         ],
       },
       {
-        heading: '5. Pagos y liquidaciones',
+        heading: '5. Seguros y Siniestros',
         body: [
-          'Los pagos, descuentos y liquidaciones se rigen por las condiciones del plan y se detallan semanalmente. El conductor dispone de un plazo para objetar la liquidación conforme al procedimiento informado.',
+          {
+            list: [
+              'MoveCar gestiona el seguro. En caso de siniestro, el conductor es responsable de un deducible de 10 UF (daño parcial) o 30 UF (pérdida total).',
+              'La cobertura queda sin efecto ante conducción bajo efectos de alcohol/drogas, fuga del lugar o uso no autorizado.',
+            ],
+          },
         ],
       },
       {
-        heading: '6. Modificaciones',
+        heading: '6. Opción de Compra',
         body: [
-          'Movecar podrá actualizar estos términos en cualquier momento. Las modificaciones se informarán por los canales oficiales y regirán desde su publicación.',
+          'Los conductores tienen derecho a la opción de compra del vehículo asignado si mantienen la continuidad del arriendo:',
+          {
+            list: [
+              'A las 200 semanas: compra al 10% del valor de tasación fiscal.',
+              'A las 250 semanas: precio de compra de $100.',
+              'Un incumplimiento grave anula este derecho.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '7. Confidencialidad y Cumplimiento (Ley 20.393)',
+        body: [
+          'El usuario se compromete a mantener la confidencialidad de la información estratégica de MoveCar y a cumplir con las políticas anticorrupción y prevención de delitos según la Ley 20.393.',
         ],
       },
     ],
@@ -358,40 +396,63 @@ export const legalDocs = {
     updated: 'Junio 2026',
     sections: [
       {
-        heading: '1. Responsable del tratamiento',
+        heading: '1. Objetivo',
         body: [
-          'Movecar es responsable del tratamiento de los datos personales recopilados a través de la plataforma, conforme a la legislación vigente sobre protección de datos.',
-          'Este documento es un contenido simulado de demostración y no constituye una política legal vigente.',
+          'El objetivo de esta política es informar sobre cómo MoveCar trata los datos personales recopilados en el marco de la relación comercial, conforme a la Ley N° 19.628 sobre Protección de la Vida Privada y la Ley N° 21.719.',
         ],
       },
       {
         heading: '2. Datos que recopilamos',
         body: [
-          'Recopilamos datos de identificación y contacto, datos de habilitación legal (licencia, antecedentes), datos económicos y datos operacionales del vehículo, incluyendo telemetría (ubicación, velocidad y kilometraje).',
+          'MoveCar trata los siguientes tipos de información:',
+          {
+            list: [
+              'Identificación y contacto: nombre, RUT, datos de contacto.',
+              'Habilitación legal: licencia de conducir, certificado de antecedentes y hoja de vida del conductor.',
+              'Información económica y financiera: datos bancarios necesarios para los pagos y liquidaciones semanales.',
+              'Datos operacionales y telemetría: ubicación GPS en tiempo real, velocidad, kilometraje, tiempos de operación y parámetros de conducción.',
+            ],
+          },
         ],
       },
       {
         heading: '3. Finalidad del tratamiento',
         body: [
-          'Utilizamos tus datos para evaluar postulaciones, ejecutar el contrato, gestionar pagos y siniestros, brindar soporte y mejorar la operación de la flota.',
+          'Los datos son utilizados exclusivamente para:',
+          {
+            list: [
+              'Gestionar el contrato de arrendamiento de vehículos y el mandato de recaudación.',
+              'Monitorear el uso correcto del vehículo y garantizar la seguridad de la flota.',
+              'Cumplir con obligaciones legales, incluyendo reportes a autoridades si fuera requerido.',
+              'Procesar pagos, liquidaciones y gestionar siniestros a través de la aseguradora.',
+            ],
+          },
         ],
       },
       {
-        heading: '4. Compartición con terceros',
+        heading: '4. Compartición de información',
         body: [
-          'Solo compartimos datos cuando es necesario para la operación: aseguradoras, proveedores tecnológicos, talleres y autoridades cuando exista obligación legal. Nunca comercializamos datos personales.',
+          'MoveCar no comercializa datos personales. La información se comparte únicamente con:',
+          {
+            list: [
+              'MOVERENT SpA y MOVECOLLECT SpA: para la ejecución del modelo contractual.',
+              'Proveedores tecnológicos: plataformas de gestión, telemetría y hosting.',
+              'Compañías de seguros: para la gestión de siniestros.',
+              'Autoridades: cuando exista una obligación legal de entrega de información.',
+            ],
+          },
         ],
       },
       {
-        heading: '5. Tus derechos',
+        heading: '5. Derechos del Titular (Derechos PROSA)',
         body: [
-          'Puedes solicitar el acceso, rectificación, supresión, oposición y portabilidad de tus datos escribiendo a los canales oficiales de Movecar.',
-        ],
-      },
-      {
-        heading: '6. Seguridad',
-        body: [
-          'Aplicamos medidas técnicas y organizativas razonables para proteger tus datos frente a accesos no autorizados, pérdida o alteración.',
+          'Los usuarios tienen derecho a solicitar:',
+          {
+            list: [
+              'Acceso, Rectificación, Supresión, Oposición y Portabilidad de sus datos.',
+            ],
+          },
+          'Para ejercer estos derechos, el usuario debe contactar a los canales oficiales de soporte de MoveCar.',
         ],
       },
     ],

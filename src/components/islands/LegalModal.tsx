@@ -10,9 +10,10 @@
 import { useEffect, useState } from 'react';
 import Modal from './Modal';
 
+type LegalBlock = string | { list: string[] };
 interface LegalSection {
   heading: string;
-  body: string[];
+  body: LegalBlock[];
 }
 export interface LegalDoc {
   title: string;
@@ -52,9 +53,17 @@ export default function LegalModal({ docs }: { docs: Record<DocKey, LegalDoc> })
           {doc.sections.map((s, i) => (
             <section className="lm__section" key={i}>
               <h3>{s.heading}</h3>
-              {s.body.map((p, j) => (
-                <p key={j}>{p}</p>
-              ))}
+              {s.body.map((b, j) =>
+                typeof b === 'string' ? (
+                  <p key={j}>{b}</p>
+                ) : (
+                  <ul key={j} className="lm__list">
+                    {b.list.map((li, k) => (
+                      <li key={k}>{li}</li>
+                    ))}
+                  </ul>
+                ),
+              )}
             </section>
           ))}
 
@@ -65,6 +74,8 @@ export default function LegalModal({ docs }: { docs: Record<DocKey, LegalDoc> })
             .lm__section { display: flex; flex-direction: column; gap: 8px; }
             .lm__section h3 { margin: 0; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-body-lg); color: var(--text-strong); }
             .lm__section p { margin: 0; font-size: var(--fs-small); line-height: 1.65; color: var(--text-body); }
+            .lm__list { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+            .lm__list li { font-size: var(--fs-small); line-height: 1.6; color: var(--text-body); }
           `}</style>
         </article>
       )}

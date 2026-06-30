@@ -8,12 +8,15 @@
 
 /**
  * 🖼️  GESTIÓN DE IMÁGENES (requisito del brief).
- * En desarrollo dejamos placeholders (no se necesitan assets reales).
- * Cuando tengas las imágenes en /public/assets/images/, define
- * PUBLIC_USE_REAL_IMAGES=true en tu .env y el componente <Placeholder />
- * servirá el archivo real en vez del bloque marcador.
+ * Regla: si PUBLIC_USE_REAL_IMAGES está definida, manda ('true'/'false').
+ * Si NO está definida, el default depende del entorno:
+ *   · build de producción (Vercel/Netlify) → imágenes reales (no hay que
+ *     recordar setear la variable en prod).
+ *   · `astro dev` → placeholders (no necesitas assets reales para desarrollar).
  */
-export const USE_REAL_IMAGES: boolean = import.meta.env.PUBLIC_USE_REAL_IMAGES === 'true';
+const REAL_IMAGES_FLAG = import.meta.env.PUBLIC_USE_REAL_IMAGES;
+export const USE_REAL_IMAGES: boolean =
+  REAL_IMAGES_FLAG === 'true' || (REAL_IMAGES_FLAG !== 'false' && import.meta.env.PROD);
 
 /** Ruta base pública donde vivirán los assets de imagen. */
 export const IMAGE_BASE = '/assets/images';
@@ -48,10 +51,10 @@ const SITE_URL = (import.meta.env.PUBLIC_SITE_URL ?? 'https://movecar.pro').repl
 
 /** Metadatos por defecto para <head>. */
 export const SITE = {
-  name: 'Move Card Pro',
-  shortName: 'MoveCard',
+  name: 'MoveCar Pro',
+  shortName: 'MoveCar',
   url: SITE_URL,
-  defaultTitle: 'Move Card Pro — Genera ganancias sin auto propio',
+  defaultTitle: 'MoveCar Pro — Genera ganancias sin auto propio',
   defaultDescription:
     'Súmate a la plataforma de electromovilidad más moderna de Chile. Genera ingresos manejando un vehículo eléctrico con seguro, mantención, carga y soporte 24/7 incluidos.',
   locale: 'es_CL',

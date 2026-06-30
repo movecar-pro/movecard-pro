@@ -1,7 +1,7 @@
 ---
 /**
  * ============================================================
- * HOME — Move Card Pro (prueba de concepto con GSAP)
+ * HOME — MoveCar Pro (prueba de concepto con GSAP)
  * ------------------------------------------------------------
  * Compone las secciones en el orden del diseño de referencia:
  *   Hero → TrustStrip → Ventajas → Simulador → Flota → Pasos →
@@ -40,12 +40,14 @@ import FinalCTA from '@components/sections/FinalCTA.astro';
   </main>
 </BaseLayout>
 
-{/*
+{
+  /*
   COREOGRAFÍA GSAP — se ejecuta solo en cliente.
   Para añadir animaciones a NUEVAS secciones no necesitas tocar este
   script: basta con marcar elementos con data-gsap="fade-up" (etc.) o
   envolver grupos en data-gsap-group. Ver lib/animations/choreography.ts.
-*/}
+*/
+}
 <script>
   import { initHomeChoreography } from '@lib/animations/choreography';
   initHomeChoreography();

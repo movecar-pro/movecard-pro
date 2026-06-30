@@ -1,4 +1,4 @@
-# Move Card Pro — Landing
+# MoveCar Pro — Landing
 
 Landing page de **Move Car Pro** (Movecar.pro) construida con **AstroJS + Tailwind v4 + GSAP**, sobre el **Movecar Design System**.
 

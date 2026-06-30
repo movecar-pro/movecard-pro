@@ -2,7 +2,7 @@
   "name": "movecard-pro",
   "type": "module",
   "version": "0.1.0",
-  "description": "Landing page de Move Card Pro — AstroJS + Tailwind v4 + GSAP, sobre el Movecar Design System.",
+  "description": "Landing page de Move Car Pro — AstroJS + Tailwind v4 + GSAP, sobre el Movecar Design System.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

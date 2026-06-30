@@ -23,29 +23,37 @@ const faqs: AccordionEntry[] = [
   {
     title: '¿Necesito tener auto propio?',
     subtitle: 'Requisitos',
-    content: 'No. Movecar te entrega el vehículo eléctrico con seguro, mantención y carga incluidos.',
+    content:
+      'No. Movecar te entrega el vehículo eléctrico con seguro, mantención y carga incluidos.',
   },
   {
     title: '¿Cuánto puedo ganar?',
-    content: 'Depende de tu disponibilidad. Usa el simulador de la home para una estimación según tus días y horas.',
+    content:
+      'Depende de tu disponibilidad. Usa el simulador de la home para una estimación según tus días y horas.',
   },
   {
     title: '¿Qué pasa si el auto falla?',
-    content: 'Te entregamos un vehículo de reemplazo en menos de 24 horas para que no dejes de generar ingresos.',
+    content:
+      'Te entregamos un vehículo de reemplazo en menos de 24 horas para que no dejes de generar ingresos.',
   },
 ];
 ---
 
 <BaseLayout
-  title="Preguntas frecuentes — Move Card Pro"
+  title="Preguntas frecuentes — MoveCar Pro"
   description="Resuelve tus dudas sobre cómo generar ingresos con Movecar."
   active="Nosotros"
 >
   <main class="mc-section">
     <div class="mc-container" style="max-width:var(--content-max)">
-      <div style="text-align:center;display:flex;flex-direction:column;gap:12px;margin-bottom:40px" data-gsap="fade-up">
+      <div
+        style="text-align:center;display:flex;flex-direction:column;gap:12px;margin-bottom:40px"
+        data-gsap="fade-up"
+      >
         <Eyebrow align="center">Preguntas frecuentes</Eyebrow>
-        <h1 style="margin:0;font-size:var(--fs-h1);color:var(--text-strong)">Todo lo que necesitas saber</h1>
+        <h1 style="margin:0;font-size:var(--fs-h1);color:var(--text-strong)">
+          Todo lo que necesitas saber
+        </h1>
       </div>
 
       {/* 🏝️ Isla React hidratada al entrar en viewport. */}

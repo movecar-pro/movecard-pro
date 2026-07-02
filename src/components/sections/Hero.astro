@@ -8,7 +8,7 @@ import { getCollection } from 'astro:content';
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
 import HeroCarousel from '@components/islands/HeroCarousel.tsx';
-import { hero } from '@lib/content';
+import { hero, WHATSAPP_URL } from '@lib/content';
 
 // 3 modelos para el carrusel del hero (desde la colección `fleet`).
 const heroCars = (await getCollection('fleet'))
@@ -28,7 +28,13 @@ const heroCars = (await getCollection('fleet'))
       </h1>
       <p class="hero__subtitle" data-gsap="hero-subtitle">{hero.subtitle}</p>
       <div class="hero__cta" data-gsap="hero-cta">
-        <Button size="lg" class="uppercase" href="#postular">{hero.ctaPrimary}</Button>
+        <Button
+          size="lg"
+          class="uppercase"
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer">{hero.ctaPrimary}</Button
+        >
         <Button size="lg" variant="secondary" class="uppercase" href="#como-funciona"
           >{hero.ctaSecondary}</Button
         >

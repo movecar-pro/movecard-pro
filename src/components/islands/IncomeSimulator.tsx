@@ -16,9 +16,11 @@ interface Props {
   planes: string[];
   cta: string;
   disclaimer: string;
+  ctaHref?: string;
 }
 
-export default function IncomeSimulator({ planes, cta, disclaimer }: Props) {
+export default function IncomeSimulator({ planes, cta, disclaimer, ctaHref = '#postular' }: Props) {
+  const external = ctaHref.startsWith('http');
   const [plan, setPlan] = useState(planes[0]);
   const [horas, setHoras] = useState(12);
   const [dias, setDias] = useState(5);
@@ -86,7 +88,12 @@ export default function IncomeSimulator({ planes, cta, disclaimer }: Props) {
         </span>
       </div>
 
-      <a href="#postular" className="mc-sim__cta uppercase">
+      <a
+        href={ctaHref}
+        className="mc-sim__cta uppercase"
+        target={external ? '_blank' : undefined}
+        rel={external ? 'noopener noreferrer' : undefined}
+      >
         {cta}
       </a>
       <span className="mc-sim__disclaimer">{disclaimer}</span>

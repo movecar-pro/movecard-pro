@@ -26,6 +26,13 @@ export const nav = {
   cta: 'Quiero postular',
 };
 
+/**
+ * Enlace de conversión principal (WhatsApp). Lo usan los CTAs "Quiero
+ * postular", "Comenzar ahora" y "Quiero ganar más". Cambiar aquí actualiza
+ * todos esos botones a la vez.
+ */
+export const WHATSAPP_URL = 'https://wa.me/56957918247';
+
 export const hero = {
   eyebrow: 'Súmate a la plataforma de electromovilidad más moderna de Chile',
   // El span amber se resuelve en el componente; aquí marcamos la parte destacada.
@@ -342,6 +349,9 @@ export const legalDocs = {
               'Zona de operación: uso exclusivo en Santiago y Región Metropolitana. Prohibido el transporte interregional.',
               'Telemetría: el vehículo cuenta con monitoreo GPS 24/7. Manipular o desactivar estos sistemas constituye una falta grave.',
               'Uso en apps: el conductor puede usar otras apps, pero al menos el 50% de los kilómetros semanales deben realizarse en la plataforma Uber.',
+              'Horario del plan: el vehículo debe utilizarse exclusivamente en el horario del plan contratado (AM o PM). El uso fuera del horario asignado constituye incumplimiento contractual.',
+              'Kilometraje: el vehículo cuenta con kilometraje ilimitado, sujeto a un uso razonable coherente con la operación en plataformas de transporte.',
+              'Reemplazo del vehículo: MOVERENT SpA puede reemplazar el vehículo por otro de categoría equivalente o superior por razones operativas, técnicas o de disponibilidad.',
             ],
           },
         ],
@@ -355,6 +365,8 @@ export const legalDocs = {
               'Liquidaciones: se emite una liquidación semanal todos los jueves.',
               'Descuentos: de los ingresos brutos se descuentan canon de arriendo, multas (contractuales y de tránsito), TAG, peajes, comisión de administración (1%) y deducibles de seguro.',
               'Impugnación: el usuario tiene 5 días corridos desde la recepción de la liquidación para objetarla por escrito.',
+              'Arriendo mínimo: el período mínimo de arriendo es de 4 semanas.',
+              'Devengo: el arriendo se devenga semanalmente mientras el vehículo esté entregado al conductor, con independencia del nivel de uso efectivo y de los ingresos generados en las plataformas.',
             ],
           },
         ],
@@ -364,8 +376,9 @@ export const legalDocs = {
         body: [
           {
             list: [
-              'MoveCar gestiona el seguro. En caso de siniestro, el conductor es responsable de un deducible de 10 UF (daño parcial) o 30 UF (pérdida total).',
+              'MoveCar gestiona el seguro. En caso de siniestro, el conductor es responsable de un deducible de 3 UF (daño parcial) o 10 UF (pérdida total).',
               'La cobertura queda sin efecto ante conducción bajo efectos de alcohol/drogas, fuga del lugar o uso no autorizado.',
+              'Aviso de siniestro: el conductor debe informar a MoveCar dentro de las 12 horas siguientes al evento, con registro fotográfico y los antecedentes requeridos. El incumplimiento de este aviso puede implicar la pérdida de la cobertura.',
             ],
           },
         ],
@@ -379,6 +392,8 @@ export const legalDocs = {
               'A las 200 semanas: compra al 10% del valor de tasación fiscal.',
               'A las 250 semanas: precio de compra de $100.',
               'Un incumplimiento grave anula este derecho.',
+              'Si ocurre un siniestro imputable al conductor que no constituya incumplimiento grave, el cómputo de semanas se reinicia desde cero. Si el siniestro no es imputable al conductor, el cómputo continúa sin alteraciones.',
+              'El pago del precio de la opción de compra puede ser recaudado y gestionado por MOVECOLLECT SpA conforme al contrato de mandato.',
             ],
           },
         ],
@@ -387,6 +402,84 @@ export const legalDocs = {
         heading: '7. Confidencialidad y Cumplimiento (Ley 20.393)',
         body: [
           'El usuario se compromete a mantener la confidencialidad de la información estratégica de MoveCar y a cumplir con las políticas anticorrupción y prevención de delitos según la Ley 20.393.',
+        ],
+      },
+      {
+        heading: '8. Naturaleza de la Relación',
+        body: [
+          'La relación entre el conductor y MOVERENT SpA / MOVECOLLECT SpA es exclusivamente de arrendamiento de vehículo y de mandato de recaudación. No existe relación laboral, subordinación ni dependencia de ninguna especie. El conductor actúa como trabajador independiente, por cuenta y riesgo propios, y mantiene plena autonomía para decidir cuándo, cómo y cuánto operar en las plataformas.',
+        ],
+      },
+      {
+        heading: '9. Déficit y Compensación Automática',
+        body: [
+          {
+            list: [
+              'Existe déficit cuando los ingresos brutos del período no alcanzan a cubrir el arriendo y los demás cargos.',
+              'El déficit se imputa automáticamente a la garantía, hasta el límite del saldo disponible.',
+              'Si la garantía no alcanza, la diferencia constituye una deuda líquida y exigible de cargo del conductor.',
+              'Si la garantía queda bajo $350.000, debe recomponerse mediante cuotas semanales de entre $35.000 y $70.000.',
+              'Los déficits reiterados o la falta de recomposición de la garantía pueden derivar en suspensión de la operación, devolución del vehículo o término anticipado del contrato.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '10. Multas Contractuales por Velocidad',
+        body: [
+          {
+            list: [
+              'La velocidad se registra por telemetría cada 10 segundos. Cada exceso sobre el límite legal constituye un evento sancionable, con multas en UF por tramos según el contrato de arrendamiento.',
+              'Las multas se descuentan automáticamente en la liquidación semanal.',
+              'Umbral mínimo de cobro: las multas acumuladas en la semana solo se cobran si suman $5.000 o más. Bajo ese monto no se cobran ni se trasladan a períodos posteriores.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '11. Mandato de Recaudación (MOVECOLLECT SpA)',
+        body: [
+          {
+            list: [
+              'El conductor suscribe un mandato mercantil con MOVECOLLECT SpA, que recibe directamente los ingresos generados en las plataformas y los administra como fondos de terceros.',
+              'Los ingresos son en todo momento propiedad del conductor; MOVECOLLECT actúa solo como administradora y cobra una comisión del 1% del ingreso bruto.',
+              'El mandato es irrevocable mientras existan obligaciones pendientes de pago.',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '12. Pagaré Complementario',
+        body: [
+          'El conductor suscribe uno o más pagarés complementarios por hasta 60 UF, destinados a garantizar el cumplimiento de las obligaciones del contrato (déficits, daños, multas). Los pagarés pueden ser completados por MOVERENT SpA en caso de incumplimiento de pago.',
+        ],
+      },
+      {
+        heading: '13. Terminación Inmediata',
+        body: [
+          'MOVERENT SpA puede poner término inmediato al contrato y exigir la restitución del vehículo ante:',
+          {
+            list: [
+              'Pérdida, suspensión o inhabilitación de la cuenta Uber Driver sin regularización.',
+              'Cualquier incumplimiento grave (subarriendo, manipulación de telemetría, uso no autorizado, entre otros).',
+              'Déficits reiterados o mora en obligaciones económicas.',
+              'Riesgo de pérdida del vehículo, negativa de devolución u ocultamiento.',
+              'Violencia o amenazas contra el personal o proveedores.',
+              'Pérdida de los requisitos de ingreso (hoja de vida del conductor o certificado de antecedentes).',
+            ],
+          },
+        ],
+      },
+      {
+        heading: '14. Protección de Datos Personales',
+        body: [
+          'MoveCar trata datos de identificación, contacto, habilitación legal, datos económicos y datos de telemetría del vehículo (ubicación, velocidad, kilometraje), conforme a la Ley N° 19.628 y la Ley N° 21.719. Los datos se comparten solo cuando es necesario para la operación (entre MOVERENT SpA y MOVECOLLECT SpA, aseguradora, proveedores tecnológicos y autoridades cuando exista obligación legal) y nunca se comercializan. El conductor puede ejercer sus derechos de acceso, rectificación, supresión, oposición y portabilidad a través de los canales oficiales.',
+        ],
+      },
+      {
+        heading: '15. Ley Aplicable y Jurisdicción',
+        body: [
+          'Estos Términos y Condiciones se rigen por las leyes de la República de Chile. Cualquier controversia será sometida a los tribunales ordinarios de justicia de la comuna de Santiago. Las notificaciones contractuales pueden efectuarse válidamente al correo electrónico registrado por el conductor.',
         ],
       },
     ],
@@ -411,6 +504,7 @@ export const legalDocs = {
               'Habilitación legal: licencia de conducir, certificado de antecedentes y hoja de vida del conductor.',
               'Información económica y financiera: datos bancarios necesarios para los pagos y liquidaciones semanales.',
               'Datos operacionales y telemetría: ubicación GPS en tiempo real, velocidad, kilometraje, tiempos de operación y parámetros de conducción.',
+              'Datos de postulación: información entregada durante el proceso de postulación, incluyendo el número de teléfono ingresado en la web, el formulario de datos personales, la encuesta de perfil y los documentos subidos.',
             ],
           },
         ],
@@ -425,6 +519,8 @@ export const legalDocs = {
               'Monitorear el uso correcto del vehículo y garantizar la seguridad de la flota.',
               'Cumplir con obligaciones legales, incluyendo reportes a autoridades si fuera requerido.',
               'Procesar pagos, liquidaciones y gestionar siniestros a través de la aseguradora.',
+              'Gestionar el proceso de postulación y evaluación de conductores.',
+              'Verificar el cumplimiento de las obligaciones contractuales y aplicar multas contractuales, en base a los registros de telemetría.',
             ],
           },
         ],
@@ -439,6 +535,7 @@ export const legalDocs = {
               'Proveedores tecnológicos: plataformas de gestión, telemetría y hosting.',
               'Compañías de seguros: para la gestión de siniestros.',
               'Autoridades: cuando exista una obligación legal de entrega de información.',
+              'Talleres y proveedores de mantención: para la gestión de mantenciones y reparaciones del vehículo.',
             ],
           },
         ],
@@ -450,9 +547,40 @@ export const legalDocs = {
           {
             list: [
               'Acceso, Rectificación, Supresión, Oposición y Portabilidad de sus datos.',
+              'Estos derechos rigen conforme a la Ley N° 21.719, vigente desde diciembre de 2026. El titular también puede reclamar ante la Agencia de Protección de Datos Personales.',
             ],
           },
           'Para ejercer estos derechos, el usuario debe contactar a los canales oficiales de soporte de MoveCar.',
+        ],
+      },
+      {
+        heading: '6. Responsables del Tratamiento',
+        body: [
+          'Los responsables del tratamiento de los datos personales son MOVERENT SpA (arrendadora de los vehículos) y MOVECOLLECT SpA (recaudadora y administradora de ingresos), sociedades que operan bajo MoveCar. Ambas tratan los datos de forma coordinada para la ejecución del modelo contractual.',
+        ],
+      },
+      {
+        heading: '7. Telemetría y Monitoreo',
+        body: [
+          'Todos los vehículos cuentan con sistemas de telemetría y monitoreo GPS activos las 24 horas. Al firmar el contrato de arrendamiento, el conductor autoriza expresamente este monitoreo y el tratamiento de la información obtenida (ubicación, velocidad, kilometraje, consumo de TAG, patrones de conducción y tiempos de operación) para fines de control operativo, verificación de uso, determinación de incumplimientos, aplicación de multas contractuales y gestión del riesgo.',
+        ],
+      },
+      {
+        heading: '8. Conservación de los Datos',
+        body: [
+          'Los datos personales se conservan mientras dure la relación contractual y, una vez terminada, por los plazos necesarios para cumplir obligaciones legales, gestionar contingencias pendientes (siniestros, cobros, garantía) y ejercer o defender derechos. Cumplidos esos plazos, los datos son eliminados o anonimizados.',
+        ],
+      },
+      {
+        heading: '9. Seguridad de la Información',
+        body: [
+          'MoveCar aplica medidas técnicas y organizativas razonables para proteger los datos personales contra acceso no autorizado, pérdida, alteración o divulgación indebida, incluyendo el acceso restringido a la información según el rol de cada miembro del equipo y proveedores sujetos a obligaciones de confidencialidad.',
+        ],
+      },
+      {
+        heading: '10. Modificaciones a esta Política',
+        body: [
+          'MoveCar puede actualizar esta Política de Privacidad. La versión vigente estará siempre publicada en el sitio web con su fecha de última actualización. Los cambios relevantes serán comunicados a los conductores a través de los canales oficiales.',
         ],
       },
     ],

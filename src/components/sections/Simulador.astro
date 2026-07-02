@@ -8,7 +8,7 @@
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Card from '@components/primitives/Card.astro';
 import IncomeSimulator from '@components/islands/IncomeSimulator.tsx';
-import { simulador } from '@lib/content';
+import { simulador, WHATSAPP_URL } from '@lib/content';
 ---
 
 <section class="sim" id="como-funciona">
@@ -26,6 +26,7 @@ import { simulador } from '@lib/content';
           planes={simulador.planes}
           cta={simulador.cta}
           disclaimer={simulador.disclaimer}
+          ctaHref={WHATSAPP_URL}
         />
       </Card>
       <p class="sim__note">{simulador.note}</p>

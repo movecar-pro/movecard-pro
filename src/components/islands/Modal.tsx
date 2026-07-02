@@ -70,11 +70,14 @@ export default function Modal({ open, onClose, labelledBy, size = 'lg', children
         tabIndex={-1}
         className={`mc-modal__panel mc-modal__panel--${size}`}
       >
-        <button type="button" className="mc-modal__close" aria-label="Cerrar" onClick={onClose}>
-          <i className="fa-solid fa-xmark" aria-hidden="true" />
-        </button>
         {children}
       </div>
+
+      {/* Cierre FIJO al viewport (fuera del panel): siempre visible aunque el
+          contenido haga scroll. Fondo con desenfoque para no camuflarse. */}
+      <button type="button" className="mc-modal__close" aria-label="Cerrar" onClick={onClose}>
+        <i className="fa-solid fa-xmark" aria-hidden="true" />
+      </button>
 
       <style>{`
         .mc-modal {
@@ -104,14 +107,21 @@ export default function Modal({ open, onClose, labelledBy, size = 'lg', children
         .mc-modal__panel--lg { max-width: 1040px; }
         .mc-modal__panel--xl { max-width: 1200px; }
         .mc-modal__close {
-          position: absolute; top: 18px; right: 18px; z-index: 2;
-          width: 36px; height: 36px; border: none; border-radius: var(--radius-pill);
-          background: var(--grey-200); color: var(--ink-600);
+          position: fixed; z-index: 120;
+          top: clamp(12px, 3vh, 28px); right: clamp(12px, 3vw, 28px);
+          width: 44px; height: 44px; border-radius: var(--radius-pill);
+          border: 1px solid rgba(17, 17, 17, 0.08);
+          /* Fondo translúcido + desenfoque para que no se camufle con el texto. */
+          background: rgba(255, 255, 255, 0.72);
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          color: var(--ink-700); box-shadow: var(--shadow-md);
           display: inline-flex; align-items: center; justify-content: center;
-          font-size: 16px; cursor: pointer;
-          transition: background var(--dur-fast) var(--ease-out);
+          font-size: 17px; cursor: pointer;
+          transition: background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
         }
-        .mc-modal__close:hover { background: var(--grey-300); }
+        .mc-modal__close:hover { background: rgba(255, 255, 255, 0.95); transform: scale(1.05); }
+        .mc-modal__close:focus-visible { outline: 2px solid var(--amber-500); outline-offset: 2px; }
 
         @keyframes mcOverlayIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes mcPanelIn {

@@ -6,7 +6,7 @@
  */
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
-import { pasos } from '@lib/content';
+import { pasos, WHATSAPP_URL } from '@lib/content';
 ---
 
 <section class="mc-section" style="background:var(--white)">
@@ -15,7 +15,11 @@ import { pasos } from '@lib/content';
       <Eyebrow>{pasos.eyebrow}</Eyebrow>
       <h2 class="pasos__title">{pasos.title}</h2>
       <p class="pasos__body">{pasos.body}</p>
-      <div><Button href="#postular" class="uppercase">{pasos.cta}</Button></div>
+      <div>
+        <Button href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="uppercase"
+          >{pasos.cta}</Button
+        >
+      </div>
     </div>
 
     <ol class="trail" data-gsap-group>

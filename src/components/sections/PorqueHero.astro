@@ -6,7 +6,7 @@
  * CTAs y los 3 bullets de confianza. data-anim/data-gsap → timeline del hero.
  */
 import Button from '@components/primitives/Button.astro';
-import { comoFunciona } from '@lib/content';
+import { comoFunciona, WHATSAPP_URL } from '@lib/content';
 const { title, subtitle, ctaPrimary, ctaSecondary, bullets } = comoFunciona.hero;
 
 // Iconos por bullet (shield · check · star), como el diseño.
@@ -22,7 +22,9 @@ const bulletIcons = ['fa-shield-halved', 'fa-check', 'fa-star'];
       <h1 class="ph2__title" data-gsap="hero-title">{title}</h1>
       <p class="ph2__subtitle" data-gsap="hero-subtitle">{subtitle}</p>
       <div class="ph2__cta" data-gsap="hero-cta">
-        <Button size="lg" href="#postular" class="uppercase">{ctaPrimary}</Button>
+        <Button size="lg" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="uppercase"
+          >{ctaPrimary}</Button
+        >
         <Button size="lg" variant="secondary" href="#como-funciona" class="uppercase"
           >{ctaSecondary}</Button
         >

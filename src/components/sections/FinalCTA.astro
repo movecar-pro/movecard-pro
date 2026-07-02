@@ -5,7 +5,7 @@
  */
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
-import { finalCta } from '@lib/content';
+import { finalCta, WHATSAPP_URL } from '@lib/content';
 
 // Iconos por bullet (orden: Datos seguros · Sin spam · Cancelación libre).
 const bulletIcons = ['fa-lock', 'fa-check', 'fa-shield-halved'];
@@ -17,7 +17,9 @@ const bulletIcons = ['fa-lock', 'fa-check', 'fa-shield-halved'];
     <h2 class="final__title">{finalCta.title}</h2>
     <p class="final__body">{finalCta.body}</p>
     <div class="final__cta">
-      <Button size="lg" href="#postular" class="uppercase">{finalCta.cta}</Button>
+      <Button size="lg" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="uppercase"
+        >{finalCta.cta}</Button
+      >
     </div>
     <div class="final__bullets">
       {

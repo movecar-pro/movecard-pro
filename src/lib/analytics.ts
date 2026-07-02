@@ -31,13 +31,14 @@ declare global {
  * tanto "#postular" como "/#postular".
  */
 const HREF_EVENTS: Record<string, string> = {
+  'wa.me': 'cta_postular', // CTA de WhatsApp = conversión de postulación
   '#postular': 'cta_postular',
   '#descargar': 'cta_descarga',
   '#como-funciona': 'cta_como_funciona',
 };
 
 function eventFromHref(href: string): string | null {
-  const match = Object.keys(HREF_EVENTS).find((k) => href === k || href.endsWith(k));
+  const match = Object.keys(HREF_EVENTS).find((k) => href.includes(k));
   return match ? HREF_EVENTS[match] : null;
 }
 

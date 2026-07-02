@@ -7,7 +7,7 @@
  */
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
-import { comoFunciona } from '@lib/content';
+import { comoFunciona, WHATSAPP_URL } from '@lib/content';
 const { eyebrow, title, subtitle, steps, cta } = comoFunciona.flow;
 const num = (i: number) => String(i + 1).padStart(2, '0');
 ---
@@ -60,7 +60,11 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
       </button>
     </div>
 
-    <div class="cf__cta"><Button href="#postular" class="uppercase">{cta}</Button></div>
+    <div class="cf__cta">
+      <Button href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="uppercase"
+        >{cta}</Button
+      >
+    </div>
   </div>
 </section>
 

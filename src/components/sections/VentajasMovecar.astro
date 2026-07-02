@@ -9,7 +9,7 @@
 import Eyebrow from '@components/primitives/Eyebrow.astro';
 import Button from '@components/primitives/Button.astro';
 import VentajasCarousel from '@components/islands/VentajasCarousel.tsx';
-import { ventajasMovecar } from '@lib/content';
+import { ventajasMovecar, WHATSAPP_URL } from '@lib/content';
 const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
 ---
 
@@ -26,7 +26,11 @@ const { eyebrow, title, subtitle, items, cta } = ventajasMovecar;
       <VentajasCarousel client:visible items={items} />
     </div>
 
-    <div class="vm2__cta"><Button href="#postular" class="uppercase">{cta}</Button></div>
+    <div class="vm2__cta">
+      <Button href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="uppercase"
+        >{cta}</Button
+      >
+    </div>
   </div>
 </section>
 

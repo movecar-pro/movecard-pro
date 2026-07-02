@@ -5,7 +5,7 @@
  * para fundirse con el fondo). Fondo base: backgrounds/nosotros.webp.
  */
 import Button from '@components/primitives/Button.astro';
-import { about } from '@lib/content';
+import { about, WHATSAPP_URL } from '@lib/content';
 import { IMAGE_BASE } from '@lib/config';
 const h = about.hero;
 const bgUrl = `${IMAGE_BASE}/${h.bg}`;
@@ -27,7 +27,9 @@ const mosaicUrl = `${IMAGE_BASE}/${h.image.src}`;
         {h.paragraphs.map((p) => <p>{p}</p>)}
       </div>
       <div data-gsap="hero-cta">
-        <Button size="lg" href="#postular" class="uppercase">{h.cta}</Button>
+        <Button size="lg" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="uppercase"
+          >{h.cta}</Button
+        >
       </div>
     </div>
 

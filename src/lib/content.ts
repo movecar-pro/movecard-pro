@@ -109,7 +109,7 @@ export const pasos = {
 
 export const testimonios = {
   eyebrow: 'Testimonios',
-  title: 'Movers felices',
+  title: 'Movers Felices',
   body: 'No lo decimos nosotros, lo dicen ellos.',
   startext: '4.9 de 5 estrellas',
   // 9 testimonios — carrusel: 3 por pasada en desktop, 1 a 1 en móvil.
@@ -896,7 +896,7 @@ export const pricing = {
         values: ['Eléctrico y gasolina\nCon tope', 'Solo eléctricos\nCon tope', 'Solo eléctricos\nCon tope', false],
       },
       {
-        label: 'Cobertura eléctrica / gasolina',
+        label: 'Seguro + deducibles preferenciales',
         values: [
           '3 UF daño menor / 10 UF pérdida total',
           '10 UF daño menor / 30 UF pérdida total',

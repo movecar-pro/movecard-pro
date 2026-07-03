@@ -113,11 +113,13 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Qué planes de arriendo ofrece MoveCar?',
         a: [
-          'MoveCar tiene dos planes principales:',
+          'MoveCar tiene cuatro planes de arriendo, según el tipo de vehículo y el turno',
           {
             list: [
-              'Plan Diurno (AM) "Ingreso Estable": horario 06:00 a 18:00 hrs, turno de 8,5 hrs productivas — $242.500/semana',
-              'Plan Nocturno (PM) "Aumenta tus Ingresos": horario 18:00 a 06:00 hrs, turno de 10 hrs productivas — $343.375/semana',
+              'MoveElectric AM (eléctrico, turno diurno): horario 06:00 a 18:00 hrs — 2,3 UF/semana',
+              'MoveElectric PM (eléctrico, turno nocturno): horario 18:00 a 06:00 hrs — 3,9 UF/semana',
+              'MoveGas AM (bencinero, turno diurno): horario 06:00 a 18:00 hrs — 1,6 UF/semana',
+              'MoveGas PM (bencinero, turno nocturno): horario 18:00 a 06:00 hrs — 2,7 UF/semana',
             ],
           },
         ],
@@ -151,7 +153,7 @@ export const faqCategories: FaqCategory[] = [
             list: [
               'Multas de tránsito',
               'TAG y peajes',
-              'Deducible por siniestro: 10 UF en daño parcial / 30 UF en pérdida total',
+              'Deducible por siniestro: 3 UF por evento en daño parcial / 10 UF en pérdida total',
             ],
           },
         ],
@@ -347,7 +349,7 @@ export const faqCategories: FaqCategory[] = [
           'Sí. MoveCar tiene una opción de compra para conductores comprometidos con la continuidad:',
           {
             list: [
-              'A las 200 semanas continuas: puedes comprar el vehículo al 10% de su valor de tasación fiscal vigente',
+              'A las 200 semanas continuas: puedes comprar el vehículo al 10% de su valor comercial',
               'A las 250 semanas continuas: precio de compra de $100 (cien pesos)',
             ],
           },

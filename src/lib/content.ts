@@ -31,7 +31,8 @@ export const nav = {
  * postular", "Comenzar ahora" y "Quiero ganar más". Cambiar aquí actualiza
  * todos esos botones a la vez.
  */
-export const WHATSAPP_URL = 'https://wa.me/56957918247';
+//export const WHATSAPP_URL = 'https://wa.me/56957918247';
+export const WHATSAPP_URL = 'https://wa.link/e0k8uq';
 
 export const hero = {
   eyebrow: 'Súmate a la plataforma de electromovilidad más moderna de Chile',

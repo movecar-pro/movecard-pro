@@ -714,36 +714,35 @@ export const comoFunciona = {
     cta: 'Quiero postular',
     steps: [
       {
-        label: 'Elección de Plan',
-        title: 'Elige el plan que más te acomode',
+        label: 'Descubre tu Potencial',
+        title: 'Todo parte por entender cuánto podrías generar',
         items: [
-          'Simula tus ingresos según tus horas trabajadas y tu zona con la calculadora. Referencias basadas en el promedio de Movers.',
-          'Información clara, transparente y sin letra chica.',
+          'Utiliza la Calculadora MoveCar para estimar tus ingresos según las horas que quieres trabajar y el vehículo que prefieras.',
+          'Obtendrás una proyección basada en información real de conductores MoveCar, para que tomes una decisión con datos y no con promesas.',
         ],
       },
       {
-        label: 'Preaprobación',
-        title: 'Tu perfil preaprobado en 24 horas',
+        label: ' Encuentra Tu vehículo Ideal',
+        title: 'Compara y elige el plan que mejor se adapta a ti',
         items: [
-          'Postula desde tu computador o celular, sin filas ni trámites innecesarios.',
-          'Nuestro equipo revisa tu solicitud y te acompaña directamente por WhatsApp.',
+          'Conoce nuestros vehículos eléctricos y bencineros, revisa sus costos operacionales, autonomía, consumo y equipamiento.',
+          'Cuando estés listo, presiona "Quiero Postular" y comienza tu proceso a través de WhatsApp, donde podrás resolver tus dudas, agendar una reunión con nuestro equipo y avanzar en cada etapa de tu postulación.',
         ],
       },
       {
-        label: 'Información Firma',
-        title: 'Conoce exacto lo que vas a pagar antes de firmar',
+        label: 'Comienza',
+        title: 'Con total transparencia. Sin sorpresas. Sin letra chica',
         items: [
-          'Seguro, mantenciones, impuestos y costos operacionales completamente desglosados.',
-          'Toda la información disponible en la liquidación semanal y en MoveCar.pro Copilot.',
-          'Sin costos ocultos ni sorpresas.',
+          'Antes de firmar conocerás exactamente cuánto pagarás, qué incluye tu plan y cuáles serán tus costos operacionales.',
+          'Toda esta información estará siempre disponible en MoveCar Copilot y en tus liquidaciones semanales.',
         ],
       },
       {
-        label: 'Retiro Auto',
-        title: 'Retira tu auto y empieza a generar ingresos',
+        label: 'Crece Con MoveCar',
+        title: 'Nosotros nos encargamos de todo. Tú de conducir',
         items: [
-          'Nosotros nos encargamos de la operación: mantenciones, seguros, permisos, soporte y todo lo que necesitas.',
-          'Tú solo te preocupas de manejar.',
+          'Seguros, mantenciones, permisos, soporte y gestión operacional quedan en nuestras manos para que puedas concentrarte en lo más importante: generar más ingresos.',
+          'Y con MoveCar Copilot, tendrás recomendaciones, beneficios y herramientas diseñadas para ayudarte a mejorar tu operación semana tras semana.',
         ],
       },
     ],
@@ -919,7 +918,7 @@ export const pricing = {
       },
       {
         label: 'Auto reemplazo / tiempos entrega',
-        values: ['24–72 hrs', '1 semana aprox.', false, 'Indeterminado según demanda'],
+        values: ['24–72 hrs', '1 semana aprox.', false, 'Indeterminado según disponibilidad'],
       },
       { label: 'App ingresos y gastos', values: [true, 'Básica', false, false] },
       { label: 'App + IA maximización ingresos', values: ['Movecar Copilot', false, true, false] },

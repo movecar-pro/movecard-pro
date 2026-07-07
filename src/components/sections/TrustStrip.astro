@@ -53,10 +53,13 @@ import { trustStats } from '@lib/content';
     height: 48px;
     background: var(--border-subtle);
   }
+  .trust.mc-container {
+    padding-bottom: 0;
+  }
 
   @media (max-width: 600px) {
     .trust__grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 28px 0;
     }
     /* En 2 columnas, el divisor solo va antes de la 2ª y 4ª (columna derecha). */
@@ -64,7 +67,10 @@ import { trustStats } from '@lib/content';
       display: none;
     }
     .trust__item:nth-child(even)::before {
-      display: block;
+      display: none;
+    }
+    .trust.mc-container {
+      padding-bottom: 2rem;
     }
   }
 </style>

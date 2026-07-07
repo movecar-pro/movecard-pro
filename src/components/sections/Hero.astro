@@ -27,15 +27,11 @@ const heroCars = (await getCollection('fleet'))
         {hero.titleRest}
       </h1>
       <p class="hero__subtitle" data-gsap="hero-subtitle">{hero.subtitle}</p>
-      <div class="hero__cta" data-gsap="hero-cta">
-        <Button
-          size="lg"
-          class="uppercase"
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer">{hero.ctaPrimary}</Button
+      <div class="hero__cta flex flex-col md:flex-row" data-gsap="hero-cta">
+        <Button class="uppercase" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
+          >{hero.ctaPrimary}</Button
         >
-        <Button size="lg" variant="secondary" class="uppercase" href="#como-funciona"
+        <Button variant="secondary" class="md:lg uppercase" href="#como-funciona"
           >{hero.ctaSecondary}</Button
         >
       </div>

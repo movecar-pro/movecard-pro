@@ -20,7 +20,7 @@ const right = fortalezas.items.slice(3, 6);
       <h2 class="fm__title">{fortalezas.title}</h2>
     </div>
 
-    <div class="fm__grid">
+    <div class="fm__grid mt-16 md:mt-0">
       <div class="fm__col" data-gsap="fade-right">
         {
           left.map((f) => (
@@ -43,7 +43,7 @@ const right = fortalezas.items.slice(3, 6);
           src={fortalezas.carImage.src}
           alt={fortalezas.carImage.alt}
           ratio="3/5"
-          fit="contain"
+          fit="cover"
           rounded="0"
         />
       </div>
@@ -155,7 +155,7 @@ const right = fortalezas.items.slice(3, 6);
       gap: 32px;
     }
     .fm__car {
-      order: -1;
+      /* order: -1; */
       max-width: 300px;
     }
     .fm__col {

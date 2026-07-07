@@ -38,9 +38,10 @@ const sizes = {
 const s = sizes[size] ?? sizes.md;
 
 const variants: Record<string, string> = {
-  primary: 'background:var(--color-primary);color:var(--color-on-primary);box-shadow:var(--shadow-amber);',
+  primary:
+    'background:var(--color-primary);color:var(--color-on-primary);box-shadow:var(--shadow-amber);',
   secondary: 'background:transparent;color:var(--text-strong);border-color:var(--border-strong);',
-  dark: 'background:var(--ink-600);color:var(--white);',
+  dark: 'background:var(--ink-700);color:var(--white);',
   light: 'background:var(--white);color:var(--text-strong);box-shadow:var(--shadow-sm);',
   link: 'background:transparent;color:var(--text-accent);',
 };
@@ -80,19 +81,25 @@ const Tag = href ? 'a' : 'button';
   data-variant={variant}
   {...rest}
 >
-  {icon && iconPosition === 'leading' && (
-    <i class={icon} style={`font-size:${s.icon}`} aria-hidden="true"></i>
-  )}
+  {
+    icon && iconPosition === 'leading' && (
+      <i class={icon} style={`font-size:${s.icon}`} aria-hidden="true" />
+    )
+  }
   {
     isLink ? (
-      <span style="border-bottom:2px solid currentColor;padding-bottom:1px"><slot /></span>
+      <span style="border-bottom:2px solid currentColor;padding-bottom:1px">
+        <slot />
+      </span>
     ) : (
       <slot />
     )
   }
-  {icon && iconPosition === 'trailing' && (
-    <i class={icon} style={`font-size:${s.icon}`} aria-hidden="true"></i>
-  )}
+  {
+    icon && iconPosition === 'trailing' && (
+      <i class={icon} style={`font-size:${s.icon}`} aria-hidden="true" />
+    )
+  }
 </Tag>
 
 <style>
@@ -104,7 +111,7 @@ const Tag = href ? 'a' : 'button';
     background: var(--color-primary-press) !important;
   }
   [data-variant='secondary']:hover {
-    background: var(--ink-600) !important;
+    background: var(--ink-700) !important;
     color: var(--white) !important;
   }
   [data-variant='light']:hover {

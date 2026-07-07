@@ -58,7 +58,7 @@ export default function PlanAccordion({ items, defaultOpen = 0 }: Props) {
         }
         .mc-acc__titles { flex: 1; display: flex; flex-direction: column; gap: 2px; }
         .mc-acc__title { font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-body-lg); color: var(--text-strong); }
-        .mc-acc__subtitle { font-family: var(--font-sans); font-size: 14px; color: var(--text-muted); }
+        .mc-acc__subtitle { font-family: var(--font-sans); font-size: 14px; color: var(--ink-700); }
         .mc-acc__chevron {
           width: 32px; height: 32px; border-radius: var(--radius-pill); flex-shrink: 0;
           display: inline-flex; align-items: center; justify-content: center;

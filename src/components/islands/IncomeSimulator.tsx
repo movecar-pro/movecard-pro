@@ -104,7 +104,7 @@ export default function IncomeSimulator({ planes, cta, disclaimer, ctaHref = '#p
         @media (max-width: 480px) { .mc-sim__row { grid-template-columns: 1fr; } }
         .mc-sim__field { display: flex; flex-direction: column; gap: 8px; }
         .mc-sim__field > span {
-          font-family: var(--font-sans); font-weight: var(--fw-medium); font-size: 13px; color: var(--text-muted);
+          font-family: var(--font-sans); font-weight: var(--fw-medium); font-size: 13px; color: var(--ink-700);
         }
         .mc-sim__field input, .mc-sim__select-wrap select {
           width: 100%; box-sizing: border-box; background: var(--white);
@@ -116,11 +116,11 @@ export default function IncomeSimulator({ planes, cta, disclaimer, ctaHref = '#p
         .mc-sim__select-wrap select { appearance: none; -webkit-appearance: none; padding-right: 40px; cursor: pointer; }
         .mc-sim__select-wrap i {
           position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
-          pointer-events: none; font-size: 13px; color: var(--text-muted);
+          pointer-events: none; font-size: 13px; color: var(--ink-700);
         }
         .mc-sim__slider { display: flex; flex-direction: column; gap: 10px; }
         .mc-sim__slider-head { display: flex; justify-content: space-between; align-items: center; }
-        .mc-sim__slider-head span { font-family: var(--font-sans); font-size: 13px; color: var(--text-muted); }
+        .mc-sim__slider-head span { font-family: var(--font-sans); font-size: 13px; color: var(--ink-700); }
         .mc-sim__slider-head strong { font-family: var(--font-sans); font-size: 14px; color: var(--text-strong); }
         .mc-sim input[type=range] {
           width: 100%; appearance: none; -webkit-appearance: none; height: 6px;
@@ -135,12 +135,12 @@ export default function IncomeSimulator({ planes, cta, disclaimer, ctaHref = '#p
           border: 3px solid var(--white); box-shadow: var(--shadow-sm); cursor: pointer;
         }
         .mc-sim__result { background: var(--grey-50); border-radius: var(--radius-md); padding: 20px; text-align: center; }
-        .mc-sim__result-label { display: block; font-size: 13px; color: var(--text-muted); }
+        .mc-sim__result-label { display: block; font-size: 13px; color: var(--ink-700); }
         .mc-sim__result-amount {
           display: block; font-family: var(--font-display); font-weight: var(--fw-bold);
           font-size: 40px; color: var(--text-strong);
         }
-        .mc-sim__result-unit { font-size: 15px; font-family: var(--font-sans); font-weight: var(--fw-medium); color: var(--text-muted); }
+        .mc-sim__result-unit { font-size: 15px; font-family: var(--font-sans); font-weight: var(--fw-medium); color: var(--ink-700); }
         .mc-sim__cta {
           display: flex; align-items: center; justify-content: center; padding: 15px 26px;
           background: var(--color-primary); color: var(--white); border-radius: var(--radius-sm);
@@ -148,7 +148,7 @@ export default function IncomeSimulator({ planes, cta, disclaimer, ctaHref = '#p
           font-size: 16px; text-decoration: none; transition: background var(--dur-fast) var(--ease-out);
         }
         .mc-sim__cta:hover { background: var(--color-primary-hover); }
-        .mc-sim__disclaimer { font-size: 12px; color: var(--text-muted); text-align: center; }
+        .mc-sim__disclaimer { font-size: 12px; color: var(--ink-700); text-align: center; }
       `}</style>
     </div>
   );

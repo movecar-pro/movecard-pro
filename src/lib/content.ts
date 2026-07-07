@@ -41,11 +41,11 @@ export const hero = {
   titleHighlight: '$300.000*',
   titleRest: 'a la semana. Sin auto propio.',
   subtitle:
-    'Concéntrate en tus ganancias mientras nosotros nos encargamos del resto. Únete al futuro de la electromovilidad.',
+    'Concéntrate en tus ingresos mientras nosotros nos encargamos del resto. Únete al futuro de la electromovilidad.',
   ctaPrimary: 'Quiero postular',
   ctaSecondary: 'Cómo funciona',
-  bullets: ['Sin pagos iniciales', 'Monitoreo de ganancias online', 'Soporte 24/7'],
-  image: { src: 'vehicles/vehicle-coolray.png', alt: 'Vehículo eléctrico Movecar' },
+  bullets: ['Sin pagos iniciales', 'Monitoreo de ingresos online', 'Soporte 24/7'],
+  image: { src: 'vehicles/vehicle-coolray.png', alt: 'Vehículo eléctrico Movecar.pro' },
 };
 
 export const trustStats = [
@@ -56,13 +56,13 @@ export const trustStats = [
 ];
 
 export const ventajas = {
-  eyebrow: 'Ventajas de Movecar',
+  eyebrow: 'Ventajas de Movecar.pro',
   title: 'Muévete al futuro de la Electromovilidad',
-  body: 'Maximiza tus ganancias con nuestra flota y asegura un sueldo real. Hoy, sin sorpresas ni letra chica.',
+  body: 'Maximiza tus ingresos con nuestra flota y asegura un sueldo real. Hoy, sin sorpresas ni letra chica.',
   cta: 'Comenzar ahora',
   badge: 'Mejor ingreso del mercado',
   highlights: [
-    'Maximiza tus ganancias con nuestra flota',
+    'Maximiza tus ingresos con nuestra flota',
     'Hasta $500.000 semanales',
     'Promedio $450.000',
   ],
@@ -70,12 +70,12 @@ export const ventajas = {
 
 export const simulador = {
   eyebrow: 'Calcula tu ingreso aproximado',
-  title: '¿Cuánto puedes ganar con Movecar?',
-  body: 'Usa nuestro simulador interactivo para proyectar tus ganancias reales basadas en tu disponibilidad.',
+  title: '¿Cuánto puedes ganar con Movecar.pro?',
+  body: 'Usa nuestro simulador interactivo para proyectar tus ingresos reales basadas en tu disponibilidad.',
   planes: ['MoveElectric AM', 'MoveElectric PM', 'Plan Bencina'],
   disclaimer: 'Sin compromiso. Proceso 100% online.',
   cta: 'Quiero postular',
-  note: '*Las ganancias proyectadas son estimaciones referenciales basadas en patrones históricos y variables de mercado. No constituyen una garantía de ganancias futuras ni una recomendación de jornada de conducción.',
+  note: '*Las ingresos proyectadas son estimaciones referenciales basadas en patrones históricos y variables de mercado. No constituyen una garantía de ingresos futuras ni una recomendación de jornada de conducción.',
 };
 
 export const flota = {
@@ -90,10 +90,10 @@ export const flota = {
 export const pasos = {
   eyebrow: 'Inscripción sin estrés',
   title: 'Inscríbete fácil. Sin costos, sin trámites.',
-  body: 'Desde la inscripción hasta la entrega, hacemos un proceso simple para que empieces a generar ganancias rápido.',
+  body: 'Desde la inscripción hasta la entrega, hacemos un proceso simple para que empieces a generar ingresos rápido.',
   cta: 'Comenzar ahora',
   steps: [
-    { day: 'Primer Paso: Día 1', title: 'Regístrate', body: 'Completa tus datos iniciales para postular a Movecar.' },
+    { day: 'Primer Paso: Día 1', title: 'Regístrate', body: 'Completa tus datos iniciales para postular a Movecar.pro' },
     {
       day: 'Segundo Paso: Día 1-3',
       title: 'Entrevista',
@@ -103,7 +103,7 @@ export const pasos = {
     {
       day: 'Cuarto Paso: Día 5',
       title: 'Entrega',
-      body: 'Recibes tu vehículo y comienzas a generar ingresos desde Movecar.',
+      body: 'Recibes tu vehículo y comienzas a generar ingresos desde Movecar.pro.',
     },
   ],
 };
@@ -118,10 +118,10 @@ export const testimonios = {
     {
       rating: 5,
       quote:
-        'Llevamos meses trabajando con Movecar y fue súper rápido. El monitoreo de una semana ya estaba en la plataforma.',
+        'Llevamos meses trabajando con Movecar.pro y fue súper rápido. El monitoreo de una semana ya estaba en la plataforma.',
       name: 'Carlos B.',
       role: 'Santiago · 8 meses',
-      income: '$620K/mes',
+      income: '$610K/mes',
     },
     {
       rating: 4,
@@ -129,7 +129,7 @@ export const testimonios = {
         'Lo que más valoro es el soporte. Tuve un problema con mi mantención y el equipo respondió súper rápido.',
       name: 'María F.',
       role: 'Valparaíso · 1 año',
-      income: '$540K/mes',
+      income: '$630K/mes',
     },
     {
       rating: 5,
@@ -137,7 +137,7 @@ export const testimonios = {
         'Nada que reprochar. Todos los gastos están claros antes y la diferencia con otras plataformas es enorme.',
       name: 'Juan F.',
       role: 'Santiago · 4 meses',
-      income: '$670K/mes',
+      income: '$450K/mes',
     },
     {
       rating: 5,
@@ -145,15 +145,15 @@ export const testimonios = {
         'Empecé sin auto y en una semana ya estaba generando. El proceso fue claro de principio a fin.',
       name: 'Pedro G.',
       role: 'Maipú · 6 meses',
-      income: '$580K/mes',
+      income: '$420K/mes',
     },
     {
       rating: 5,
       quote:
         'La app me deja ver todo: ingresos, gastos y lo que recibo el jueves. Cero sorpresas.',
       name: 'Daniela R.',
-      role: 'Puente Alto · 10 meses',
-      income: '$610K/mes',
+      role: 'Quilicura · 4 meses',
+      income: '$390K/mes',
     },
     {
       rating: 5,
@@ -161,7 +161,7 @@ export const testimonios = {
         'El auto eléctrico me bajó muchísimo los costos. Hoy gano más manejando lo mismo.',
       name: 'Andrés M.',
       role: 'Santiago · 1 año',
-      income: '$700K/mes',
+      income: '$385K/mes',
     },
     {
       rating: 4,
@@ -169,7 +169,7 @@ export const testimonios = {
         'Tenía dudas al principio, pero el equipo me acompañó por WhatsApp en cada paso.',
       name: 'Camila S.',
       role: 'La Florida · 5 meses',
-      income: '$560K/mes',
+      income: '$325K/mes',
     },
     {
       rating: 5,
@@ -177,15 +177,15 @@ export const testimonios = {
         'Si el auto falla te dan reemplazo al toque. No dejo de generar ni un día.',
       name: 'Rodrigo T.',
       role: 'Ñuñoa · 7 meses',
-      income: '$640K/mes',
+      income: '$340K/mes',
     },
     {
       rating: 5,
       quote:
-        'Postulé 100% online y sin pagar nada para entrar. La garantía la fui pagando de mis ganancias.',
+        'Postulé 100% online y sin pagar nada para entrar. La garantía la fui pagando de mis ingresos.',
       name: 'Fernanda V.',
       role: 'Quilicura · 3 meses',
-      income: '$520K/mes',
+      income: '$540K/mes',
     },
   ],
 };
@@ -193,13 +193,13 @@ export const testimonios = {
 export const fortalezas = {
   eyebrow: 'Súbete al futuro y al compromiso con el planeta',
   title: 'Fortalezas de Nuestro Modelo',
-  carImage: { src: 'vehicles/top-view.webp', alt: 'Vista superior del modelo Movecar' },
+  carImage: { src: 'vehicles/top-view.webp', alt: 'Vista superior del modelo Movecar.pro' },
   items: [
-    { icon: 'fa-bolt', title: 'Bono Electricidad', body: 'Bono por Movecar sobre el 50% de tus gastos mensuales.' },
+    { icon: 'fa-bolt', title: 'Bono Electricidad', body: 'Bono por Movecar.pro sobre el 50% de tus gastos mensuales.', disclaimer:'*Calculado en base al recorrido promedio de nuestros Movers' },
     {
       icon: 'fa-shield-halved',
       title: 'Seguro Full Cobertura',
-      body: 'Cuentas con el mejor seguro del mercado, deducibles bajos.',
+      body: 'Cuentas con los mejores seguros del mercado y mas bajos deducibles.',
     },
     {
       icon: 'fa-charging-station',
@@ -222,40 +222,40 @@ export const fortalezas = {
 
 /* Ventajas de Movecar — 5 tarjetas (en desktop grilla, en móvil carrusel con dots). */
 export const ventajasMovecar = {
-  eyebrow: 'Ventajas de Movecar',
+  eyebrow: 'Ventajas de Movecar.pro',
   title: 'Muévete al futuro de la Electromovilidad',
-  subtitle: 'Maximiza tus ganancias con nuestra flota y asegura un sueldo real. Hoy, sin sorpresas ni letra chica.',
+  subtitle: 'Maximiza tus ingresos con nuestra flota y asegura un sueldo real. Hoy, sin sorpresas ni letra chica.',
   cta: 'Comenzar ahora',
   items: [
     {
       icon: 'fa-clock',
       title: 'Capitaliza tu esfuerzo',
-      body: 'Al 5to año puedes optar a comprar tu auto desde $1.',
+      body: 'Al 5to año puedes optar a comprar tu auto desde $100.',
       bullets: [],
     },
     {
       icon: 'fa-leaf',
-      title: 'Costos operativos más bajos',
+      title: 'Planes de Arriendo mas bajos del mercado',
       body: 'Planes desde 1,6 UF + beneficios exclusivos y descuentos para conductores.',
       bullets: [],
     },
     {
       icon: 'fa-headset',
-      title: 'App más completa del mercado',
-      body: 'Monitorea ganancias, costos y desempeño en tiempo real, sin letra chica y con apoyo 24/7.',
+      title: 'App Copilot, Asistente y Data en tiempo real',
+      body: 'Monitorea ingresos, costos y desempeño en tiempo real, sin letra chica y con apoyo 24/7.',
       bullets: [],
     },
     {
       icon: 'fa-hand-holding-dollar',
       title: 'Ingresa hoy, sin ahogarte',
-      body: 'No exigimos pago inmediato de cuota de incorporación y podemos pactar cuotas que se adapten a tu flujo.',
+      body: 'No exigimos pago inmediato de cuota de incorporación, tenemos opciones flexibles de pago que se adapten a tu flujo.',
       bullets: [],
     },
     {
       icon: 'fa-wallet',
-      title: 'Mejor ingreso del mercado',
-      body: 'Maximiza tus ganancias con nuestra flota y olvídate de los gastos imprevistos.',
-      bullets: ['Hasta $500.000 semanales', 'Promedio $450.000'],
+      title: 'Ingreso Seguro',
+      body: 'Maximiza tus ingresos con nuestra flota y llega tranquilo a fin de mes, con ingresos promedio en torno a los $400.000 semanales.',
+      bullets: [],
     },
   ],
 };
@@ -268,13 +268,13 @@ export const appPromo = {
   compatibleLabel: 'Compatible con',
   stores: ['Apple', 'Android'],
   // Pantallas de la app: coloca en public/assets/images/app/app-earnings.webp
-  image: { src: 'app/app-earnings.webp', alt: 'App Movecar Copilot — pantalla de ganancias' },
+  image: { src: 'app/app-earnings.webp', alt: 'App Movecar Copilot — pantalla de ingresos' },
 };
 
 export const finalCta = {
   eyebrow: 'Cupos limitados',
-  title: 'Empieza a generar ganancias esta semana',
-  body: 'Incorpórate a MoveCar.pro y maximiza tus ganancias con la mejor plataforma y flota del mercado, junto a las mejores condiciones de arriendo pensadas para ti.',
+  title: 'Empieza a generar ingresos esta semana',
+  body: 'Incorpórate a MoveCar.pro y maximiza tus ingresos con la mejor plataforma y flota del mercado. Obtén las mejores condiciones de arriendo pensadas para ti.',
   cta: 'Quiero ganar más',
   bullets: ['Datos seguros', 'Sin spam', 'Cancelación libre'],
 };
@@ -379,7 +379,7 @@ export const legalDocs = {
             list: [
               'MoveCar gestiona el seguro. En caso de siniestro, el conductor es responsable de un deducible de 3 UF (daño parcial) o 10 UF (pérdida total).',
               'La cobertura queda sin efecto ante conducción bajo efectos de alcohol/drogas, fuga del lugar o uso no autorizado.',
-              'Aviso de siniestro: el conductor debe informar a MoveCar dentro de las 12 horas siguientes al evento, con registro fotográfico y los antecedentes requeridos. El incumplimiento de este aviso puede implicar la pérdida de la cobertura.',
+              'Aviso de siniestro: el conductor debe informar a MoveCar.pro dentro de las 12 horas siguientes al evento, con registro fotográfico y los antecedentes requeridos. El incumplimiento de este aviso puede implicar la pérdida de la cobertura.',
             ],
           },
         ],
@@ -402,7 +402,7 @@ export const legalDocs = {
       {
         heading: '7. Confidencialidad y Cumplimiento (Ley 20.393)',
         body: [
-          'El usuario se compromete a mantener la confidencialidad de la información estratégica de MoveCar y a cumplir con las políticas anticorrupción y prevención de delitos según la Ley 20.393.',
+          'El usuario se compromete a mantener la confidencialidad de la información estratégica de MoveCar.pro y a cumplir con las políticas anticorrupción y prevención de delitos según la Ley 20.393.',
         ],
       },
       {
@@ -474,7 +474,7 @@ export const legalDocs = {
       {
         heading: '14. Protección de Datos Personales',
         body: [
-          'MoveCar trata datos de identificación, contacto, habilitación legal, datos económicos y datos de telemetría del vehículo (ubicación, velocidad, kilometraje), conforme a la Ley N° 19.628 y la Ley N° 21.719. Los datos se comparten solo cuando es necesario para la operación (entre MOVERENT SpA y MOVECOLLECT SpA, aseguradora, proveedores tecnológicos y autoridades cuando exista obligación legal) y nunca se comercializan. El conductor puede ejercer sus derechos de acceso, rectificación, supresión, oposición y portabilidad a través de los canales oficiales.',
+          'MoveCar.pro trata datos de identificación, contacto, habilitación legal, datos económicos y datos de telemetría del vehículo (ubicación, velocidad, kilometraje), conforme a la Ley N° 19.628 y la Ley N° 21.719. Los datos se comparten solo cuando es necesario para la operación (entre MOVERENT SpA y MOVECOLLECT SpA, aseguradora, proveedores tecnológicos y autoridades cuando exista obligación legal) y nunca se comercializan. El conductor puede ejercer sus derechos de acceso, rectificación, supresión, oposición y portabilidad a través de los canales oficiales.',
         ],
       },
       {
@@ -492,7 +492,7 @@ export const legalDocs = {
       {
         heading: '1. Objetivo',
         body: [
-          'El objetivo de esta política es informar sobre cómo MoveCar trata los datos personales recopilados en el marco de la relación comercial, conforme a la Ley N° 19.628 sobre Protección de la Vida Privada y la Ley N° 21.719.',
+          'El objetivo de esta política es informar sobre cómo MoveCar.pro trata los datos personales recopilados en el marco de la relación comercial, conforme a la Ley N° 19.628 sobre Protección de la Vida Privada y la Ley N° 21.719.',
         ],
       },
       {
@@ -529,7 +529,7 @@ export const legalDocs = {
       {
         heading: '4. Compartición de información',
         body: [
-          'MoveCar no comercializa datos personales. La información se comparte únicamente con:',
+          'MoveCar.pro no comercializa datos personales. La información se comparte únicamente con:',
           {
             list: [
               'MOVERENT SpA y MOVECOLLECT SpA: para la ejecución del modelo contractual.',
@@ -551,13 +551,13 @@ export const legalDocs = {
               'Estos derechos rigen conforme a la Ley N° 21.719, vigente desde diciembre de 2026. El titular también puede reclamar ante la Agencia de Protección de Datos Personales.',
             ],
           },
-          'Para ejercer estos derechos, el usuario debe contactar a los canales oficiales de soporte de MoveCar.',
+          'Para ejercer estos derechos, el usuario debe contactar a los canales oficiales de soporte de MoveCar.pro.',
         ],
       },
       {
         heading: '6. Responsables del Tratamiento',
         body: [
-          'Los responsables del tratamiento de los datos personales son MOVERENT SpA (arrendadora de los vehículos) y MOVECOLLECT SpA (recaudadora y administradora de ingresos), sociedades que operan bajo MoveCar. Ambas tratan los datos de forma coordinada para la ejecución del modelo contractual.',
+          'Los responsables del tratamiento de los datos personales son MOVERENT SpA (arrendadora de los vehículos) y MOVECOLLECT SpA (recaudadora y administradora de ingresos), sociedades que operan bajo MoveCar.pro. Ambas tratan los datos de forma coordinada para la ejecución del modelo contractual.',
         ],
       },
       {
@@ -575,13 +575,13 @@ export const legalDocs = {
       {
         heading: '9. Seguridad de la Información',
         body: [
-          'MoveCar aplica medidas técnicas y organizativas razonables para proteger los datos personales contra acceso no autorizado, pérdida, alteración o divulgación indebida, incluyendo el acceso restringido a la información según el rol de cada miembro del equipo y proveedores sujetos a obligaciones de confidencialidad.',
+          'MoveCar.pro aplica medidas técnicas y organizativas razonables para proteger los datos personales contra acceso no autorizado, pérdida, alteración o divulgación indebida, incluyendo el acceso restringido a la información según el rol de cada miembro del equipo y proveedores sujetos a obligaciones de confidencialidad.',
         ],
       },
       {
         heading: '10. Modificaciones a esta Política',
         body: [
-          'MoveCar puede actualizar esta Política de Privacidad. La versión vigente estará siempre publicada en el sitio web con su fecha de última actualización. Los cambios relevantes serán comunicados a los conductores a través de los canales oficiales.',
+          'MoveCar.pro puede actualizar esta Política de Privacidad. La versión vigente estará siempre publicada en el sitio web con su fecha de última actualización. Los cambios relevantes serán comunicados a los conductores a través de los canales oficiales.',
         ],
       },
     ],
@@ -604,49 +604,61 @@ export const about = {
     titleHighlight: 'oportunidades.',
     titleRest: 'No solo movilidad',
     paragraphs: [
-      'Detrás de MoveCar hay un equipo que ha participado en la creación y escalamiento de compañías que han impactado a millones de personas en Latinoamérica.',
-      'Hoy ponemos esa experiencia al servicio de una nueva generación de conductores, combinando tecnología, analítica avanzada y una obsesión permanente por generar valor real.',
+      'Detrás de MoveCar.pro hay un equipo que ha participado en la creación y escalamiento de compañías que han impactado a millones de personas en Latinoamérica.',
+      'Hoy ponemos esa experiencia al servicio de una nueva generación de conductores, combinando tecnología, analítica avanzada y una obsesión permanente por generar valor que se ve.',
     ],
     cta: 'Quiero postular',
     // Imágenes (placeholders): mosaico de rostros + fondo tenue de manos.
-    image: { src: 'team/team-mosaic.webp', alt: 'Comunidad de movers Movecar' },
+    image: { src: 'team/team-mosaic.webp', alt: 'Comunidad de movers Movecar.pro' },
     bg: 'backgrounds/nosotros.webp',
   },
   // Tercera sección: layout editorial "Más que arriendo de vehículos".
   modelo: {
     leftCol: [
-      { kind: 'h', text: 'Más que arriendo de vehículos' },
+      { kind: 'h', text: 'Más que un vehículo' },
       {
         kind: 'p',
-        text: 'Creemos que el futuro de la movilidad no pasa únicamente por tener mejores autos, sino por entregar mejores herramientas a quienes los conducen. Por eso desarrollamos MoveCar Copilot, una plataforma de analítica avanzada e inteligencia artificial diseñada para ayudar a los conductores a comprender mejor su operación, identificar oportunidades de ganancias, optimizar horarios y hábitos de conducción, acceder a contenido educativo y recibir recomendaciones personalizadas orientadas a maximizar su rentabilidad.',
+        text: 'Los conductores no necesitan solamente un mejor auto. Necesitan un mejor aliado.',
       },
-      { kind: 'h', text: 'Nuestra forma de construir' },
       {
         kind: 'p',
-        text: 'Somos un equipo con ADN emprendedor, obsesionado con resolver problemas reales, ejecutar con excelencia y construir una plataforma que permita a miles de conductores generar más ganancias con mejores herramientas, mejor información y una mejor experiencia.',
+        text: 'Por eso creamos MoveCar.pro: una plataforma pensada para ayudar a miles de conductores a trabajar mejor, ganar más y preocuparse menos de todo lo que ocurre fuera del volante.',
+      },
+      { kind: 'h', text: 'Todo lo que necesitas para trabajar' },
+      {
+        kind: 'p',
+        text: 'Un vehículo es solo el comienzo.',
+      },{
+        kind: 'p',
+        text: 'MoveCar reúne tecnología, soporte, beneficios, analítica y servicios en un solo lugar, acompañando al conductor durante toda su operación para que pueda enfocarse en lo que realmente importa.',
       },
     ],
     rightCol: [
+      { kind: 'h', text: 'La inteligencia detrás de cada decisión' },
       {
         kind: 'p',
-        text: 'No somos simplemente una empresa de arriendo de vehículos. Estamos construyendo una plataforma diseñada para que los conductores puedan enfocarse en generar ganancias mientras nosotros nos encargamos del resto. Desde el vehículo y el soporte operacional, hasta el acceso a beneficios, herramientas de gestión y tecnología especialmente desarrollada para maximizar su rentabilidad.',
+        text: 'Cada kilómetro genera información.',
       },
       {
         kind: 'p',
-        text: 'A través del análisis continuo de datos operacionales y patrones de comportamiento, MoveCar Copilot busca transformar información compleja en decisiones simples y accionables, ayudando a cada conductor a obtener el máximo potencial de su tiempo y vehículo.',
+        text: 'MoveCar Copilot utiliza inteligencia artificial para convertir esos datos en recomendaciones prácticas que ayudan a mejorar la operación, optimizar el tiempo y aumentar la rentabilidad de cada jornada.',
       },
-      { kind: 'h', text: 'Tecnología para generar más ganancias' },
+      { kind: 'h', text: 'Construimos para quienes mueven las ciudades' },
       {
         kind: 'p',
-        text: 'Creemos en la tecnología como habilitador, en la excelencia operacional como ventaja competitiva y en las personas como el principal motor de cualquier organización. Nuestro objetivo es simple: construir la mejor experiencia para trabajar con plataformas de movilidad en Chile.',
+        text: 'Somos emprendedores, tecnólogos y operadores. Sabemos que las mejores compañías no se construyen desde una oficina, sino entendiendo los problemas reales de las personas.',
+      },
+      {
+        kind: 'p',
+        text: 'Nuestra misión es simple: dignificar el trabajo del conductor profesional mediante tecnología, excelencia operacional y una obsesión permanente por crear valor.',
       },
     ],
-    image: { src: 'vehicles/flota.webp', alt: 'Flota Movecar en estación de carga' },
+    image: { src: 'vehicles/flota.webp', alt: 'Flota Movecar.pro en estación de carga' },
   },
   mision: {
     eyebrow: 'Nuestra misión',
     title: 'Que manejar deje de ser un gasto y sea una ganancia',
-    body: 'Nacimos para resolver el mayor problema del conductor de apps: el costo y el riesgo de operar un auto. Movecar pone el vehículo, el seguro, la mantención y la carga; tú pones las ganas de generar ingresos.',
+    body: 'Nacimos para resolver el mayor problema del conductor de apps: el costo y el riesgo de operar un auto. Movecar.pro pone el vehículo, el seguro, la mantención y la carga; tú pones las ganas de generar ingresos.',
     cta: 'Quiero postular',
     highlights: [
       'Vehículos 100% eléctricos de alta eficiencia',
@@ -686,26 +698,26 @@ export const comoFunciona = {
   },
   // Hero de la página (foto de conductor + streaks).
   hero: {
-    title: '¿Porqué MOVECAR es tu mejor opción?',
+    title: '¿Porqué MOVECAR.pro es tu mejor opción?',
     subtitle:
-      'Movecar combina tecnología, soporte humano y una flota preparada para que puedas enfocarte en tus ganancias.',
+      'Movecar.pro combina tecnología, soporte humano y una flota preparada para que puedas enfocarte en tus ingresos.',
     ctaPrimary: 'Quiero postular',
     ctaSecondary: 'Cómo funciona',
-    bullets: ['Sin pagos iniciales', 'Monitoreo de ganancias online', 'Soporte 24/7'],
-    image: { src: 'lifestyle/driver-wheel.png', alt: 'Conductor Movecar al volante' },
+    bullets: ['Sin pagos iniciales', 'Monitoreo de ingresos online', 'Soporte 24/7'],
+    image: { src: 'lifestyle/driver-wheel.png', alt: 'Conductor Movecar.pro al volante' },
   },
   // Stepper horizontal "Cómo Funciona".
   flow: {
-    eyebrow: 'Ingreso a Movecar',
+    eyebrow: 'Ingreso a Movecar.pro',
     title: 'Cómo Funciona',
-    subtitle: 'Maximiza tus ganancias con una flota lista para trabajar y olvídate de los gastos imprevistos.',
+    subtitle: 'Maximiza tus ingresos con una flota lista para trabajar y olvídate de los gastos imprevistos.',
     cta: 'Quiero postular',
     steps: [
       {
         label: 'Elección de Plan',
         title: 'Elige el plan que más te acomode',
         items: [
-          'Simula tus ganancias según tus horas trabajadas y tu zona con la calculadora. Referencias basadas en el promedio de Movers.',
+          'Simula tus ingresos según tus horas trabajadas y tu zona con la calculadora. Referencias basadas en el promedio de Movers.',
           'Información clara, transparente y sin letra chica.',
         ],
       },
@@ -722,13 +734,13 @@ export const comoFunciona = {
         title: 'Conoce exacto lo que vas a pagar antes de firmar',
         items: [
           'Seguro, mantenciones, impuestos y costos operacionales completamente desglosados.',
-          'Toda la información disponible en la liquidación semanal y en MoveCar Copilot.',
+          'Toda la información disponible en la liquidación semanal y en MoveCar.pro Copilot.',
           'Sin costos ocultos ni sorpresas.',
         ],
       },
       {
         label: 'Retiro Auto',
-        title: 'Retira tu auto y empieza a generar ganancias',
+        title: 'Retira tu auto y empieza a generar ingresos',
         items: [
           'Nosotros nos encargamos de la operación: mantenciones, seguros, permisos, soporte y todo lo que necesitas.',
           'Tú solo te preocupas de manejar.',
@@ -742,7 +754,7 @@ export const comoFunciona = {
     {
       title: '¿Necesito tener auto propio?',
       subtitle: 'Requisitos',
-      content: 'No. Movecar te entrega el vehículo eléctrico con seguro, mantención y carga incluidos.',
+      content: 'No. Movecar.pro te entrega el vehículo eléctrico con seguro, mantención y carga incluidos.',
     },
     {
       title: '¿Qué necesito para postular?',
@@ -772,7 +784,7 @@ export const pricing = {
     eyebrow: 'Precios / Planes',
     title: 'Los planes más completos del mercado',
     subtitle:
-      'Una experiencia 360° pensada para maximizar tus ganancias: flota, tecnología, cobertura, beneficios y acompañamiento real para que solo te preocupes de manejar.',
+      'Una experiencia 360° pensada para maximizar tus ingresos: flota, tecnología, cobertura, beneficios y acompañamiento real para que solo te preocupes de manejar.',
   },
   // 4 planes en 2 grupos. En desktop son tarjetas; en móvil, acordeones.
   groups: [
@@ -785,7 +797,7 @@ export const pricing = {
           name: 'MoveElectric AM',
           badge: '100% Eléctrico',
           description:
-            'Maximiza tus ganancias con el menor costo operativo del mercado. Ideal para complementar ganancias o trabajar de forma eficiente durante el día.',
+            'Maximiza tus ingresos con el menor costo operativo del mercado. Ideal para complementar ingresos o trabajar de forma eficiente durante el día.',
           price: '2,3',
           period: 'UF/semanal',
           features: [
@@ -794,7 +806,7 @@ export const pricing = {
             '50% aprox. de cobertura eléctrica mensual',
             'Seguro cobertura completa + deducible 10 UF',
             'Auto de reemplazo hasta 10 días',
-            'Copilot App con monitoreo de ganancias y costos',
+            'Copilot App con monitoreo de ingresos y costos',
             'Opción preferente de compra desde $500.000',
           ],
           cta: 'Contratar',
@@ -804,7 +816,7 @@ export const pricing = {
           name: 'MoveElectric PM',
           badge: '100% Eléctrico',
           description:
-            'La mejor opción para conductores full-time. Más cobertura, menor costo energético y mayor potencial de ganancias.',
+            'La mejor opción para conductores full-time. Más cobertura, menor costo energético y mayor potencial de ingresos.',
           price: '3,9',
           period: 'UF/semanal',
           features: [
@@ -813,7 +825,7 @@ export const pricing = {
             '50% aprox. de cobertura eléctrica mensual',
             'Seguro premium + deducible 3 UF',
             'Auto de reemplazo hasta 30 días',
-            'Copilot App + métricas para maximizar ganancias',
+            'Copilot App + métricas para maximizar ingresos',
             'Opción preferente de compra a $100',
           ],
           cta: 'Contratar',
@@ -829,7 +841,7 @@ export const pricing = {
           name: 'MoveGas AM',
           badge: 'Bencinero',
           description:
-            'La forma más flexible y accesible de comenzar. Ideal para complementar ganancias con una baja inversión inicial.',
+            'La forma más flexible y accesible de comenzar. Ideal para complementar ingresos con una baja inversión inicial.',
           price: '1,6',
           period: 'UF/semanal',
           features: [
@@ -837,7 +849,7 @@ export const pricing = {
             'Turno: 06:00 a 18:00',
             'Seguro cobertura completa + deducible 10 UF',
             'Auto de reemplazo hasta 10 días',
-            'Copilot App con monitoreo de ganancias y costos',
+            'Copilot App con monitoreo de ingresos y costos',
             'Menor costo del mercado',
             'Opción preferente de compra desde $500.000',
           ],
@@ -848,7 +860,7 @@ export const pricing = {
           name: 'MoveGas PM',
           badge: 'Bencinero',
           description:
-            'Libertad total para trabajar en horarios de alta demanda. Mayor autonomía y flexibilidad para maximizar ganancias sin depender de carga eléctrica.',
+            'Libertad total para trabajar en horarios de alta demanda. Mayor autonomía y flexibilidad para maximizar ingresos sin depender de carga eléctrica.',
           price: '2,7',
           period: 'UF/semanal',
           features: [
@@ -856,8 +868,8 @@ export const pricing = {
             'Turno: 18:00 a 06:00',
             'Seguro premium + deducible 3 UF',
             'Auto de reemplazo hasta 30 días',
-            'Copilot App + métricas para maximizar ganancias',
-            'Mayor potencial de ganancias',
+            'Copilot App + métricas para maximizar ingresos',
+            'Mayor potencial de ingresos',
             'Opción preferente de compra a $100',
           ],
           cta: 'Contratar',
@@ -881,7 +893,7 @@ export const pricing = {
     eyebrow: 'Compara',
     title: 'Asegura el mejor plan para lo que necesitas',
     subtitle:
-      'No todos los planes de arriendo son iguales. Movecar combina tecnología, cobertura, flexibilidad y beneficios exclusivos para ayudarte a generar más ganancias con uno de los planes más completos del mercado.',
+      'No todos los planes de arriendo son iguales. Movecar.pro combina tecnología, cobertura, flexibilidad y beneficios exclusivos para ayudarte a generar más ingresos con uno de los planes más completos del mercado.',
     rowHead: 'Beneficio',
     plans: [
       { name: 'MoveCar', img: 'plan/plan-movecar.png', brand: true },
@@ -909,8 +921,8 @@ export const pricing = {
         label: 'Auto reemplazo / tiempos entrega',
         values: ['24–72 hrs', '1 semana aprox.', false, 'Indeterminado según demanda'],
       },
-      { label: 'App ganancias y gastos', values: [true, 'Básica', false, false] },
-      { label: 'App + IA maximización ganancias', values: ['Movecar Copilot', false, true, false] },
+      { label: 'App ingresos y gastos', values: [true, 'Básica', false, false] },
+      { label: 'App + IA maximización ingresos', values: ['Movecar Copilot', false, true, false] },
       { label: 'Flexibilidad en cuotas', values: ['Hasta 9 cuotas', 'Hasta 7 cuotas', false, false] },
       { label: 'Soporte Operacional 24/7', values: [true, true, 'Solo técnico', true] },
       { label: 'Capacitación integrada App', values: ['Todos los modelos', false, false, false] },

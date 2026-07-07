@@ -166,7 +166,7 @@ export default function FleetCarousel({ vehicles }: { vehicles: Vehicle[] }) {
           font-size: 11px; font-weight: var(--fw-semibold);
           padding: 4px 10px; border-radius: var(--radius-pill);
         }
-        .fc__badge--gas { background: var(--grey-100); color: var(--ink-600); }
+        .fc__badge--gas { background: var(--grey-100); color: var(--ink-700); }
         .fc__media { background: var(--grey-50); padding: 16px; }
         .fc__body { display: flex; flex-direction: column; gap: 12px; padding: 20px 24px 24px; flex: 1; }
         .fc__name { margin: 0; font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: 22px; color: var(--text-strong); }

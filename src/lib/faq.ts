@@ -189,7 +189,7 @@ export const faqCategories: FaqCategory[] = [
           {
             list: [
               'Al momento de recibir el vehículo en un solo pago',
-              'En cuotas semanales descontadas directamente de tus ganancias (entre $35.000 y $70.000 por semana)',
+              'En cuotas semanales descontadas directamente de tus ingresos (entre $35.000 y $70.000 por semana)',
             ],
           },
         ],
@@ -203,11 +203,11 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Cuándo y cómo recibo mi pago semanal?',
         a: [
-          'Cada semana MoveCar emite una liquidación detallada. Si el saldo es positivo (tus ganancias superan los descuentos), el depósito se realiza el jueves en tu cuenta bancaria. Si el saldo es negativo, tienes hasta el martes para regularizar el pago.',
+          'Cada semana MoveCar emite una liquidación detallada. Si el saldo es positivo (tus ingresos superan los descuentos), el depósito se realiza el jueves en tu cuenta bancaria. Si el saldo es negativo, tienes hasta el martes para regularizar el pago.',
         ],
       },
       {
-        q: '¿Qué se descuenta de mis ganancias?',
+        q: '¿Qué se descuenta de mis ingresos?',
         a: [
           'De tus ingresos brutos se descuentan en orden de prioridad:',
           {
@@ -224,7 +224,7 @@ export const faqCategories: FaqCategory[] = [
         ],
       },
       {
-        q: '¿Qué pasa si mis ganancias no alcanzan para cubrir el arriendo?',
+        q: '¿Qué pasa si mis ingresos no alcanzan para cubrir el arriendo?',
         a: [
           'Si los ingresos no cubren el arriendo y los cargos del período, se genera un déficit. Este se imputa automáticamente a la garantía. Si la garantía tampoco alcanza, el saldo negativo queda como deuda exigible que debes pagar. La acumulación de déficits puede derivar en la suspensión del servicio o término del contrato.',
         ],
@@ -232,10 +232,10 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Qué pasa si cobré muchos viajes en efectivo y Uber me quedó debiendo menos de lo que recibí?',
         a: [
-          'Cuando haces muchos viajes en efectivo, recibes el dinero directo del pasajero en el momento. Sin embargo, Uber descuenta su comisión (tasa de servicio) de tus ganancias digitales. Si en una semana cobraste más en efectivo que lo que Uber te debe transferir, puede quedar un saldo pendiente con Uber — es decir, Uber ya no te deposita nada y tú "les debes" la comisión de esos viajes en efectivo.',
+          'Cuando haces muchos viajes en efectivo, recibes el dinero directo del pasajero en el momento. Sin embargo, Uber descuenta su comisión (tasa de servicio) de tus ingresos digitales. Si en una semana cobraste más en efectivo que lo que Uber te debe transferir, puede quedar un saldo pendiente con Uber — es decir, Uber ya no te deposita nada y tú "les debes" la comisión de esos viajes en efectivo.',
           {
             list: [
-              'MoveCar recibe la información de tus ganancias desde Uber al cierre de cada semana',
+              'MoveCar recibe la información de tus ingresos desde Uber al cierre de cada semana',
               'Si hay un saldo pendiente con Uber, este se refleja como deuda en tu liquidación MoveCar',
               'Ese monto se descuenta de tu garantía o deberás pagarlo antes del martes',
               'Para evitarlo: intenta mantener un equilibrio entre viajes en efectivo y viajes con tarjeta cada semana',
@@ -252,7 +252,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Se cobra alguna cuota de inscripción?',
         a: [
-          'No. MoveCar no cobra cuota de inscripción. Entras sin poner plata de tu bolsillo — solo la garantía, que además puedes pagar en cuotas desde tus ganancias.',
+          'No. MoveCar no cobra cuota de inscripción. Entras sin poner plata de tu bolsillo — solo la garantía, que además puedes pagar en cuotas desde tus ingresos.',
         ],
       },
     ],
@@ -382,7 +382,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Qué es la app MoveCar Copilot?',
         a: [
-          'Es la app exclusiva para conductores MoveCar. Te acompaña en cada turno con información práctica sobre tus ganancias, el estado de tu liquidación, el rendimiento del vehículo y tu progreso hacia la opción de compra del auto.',
+          'Es la app exclusiva para conductores MoveCar. Te acompaña en cada turno con información práctica sobre tus ingresos, el estado de tu liquidación, el rendimiento del vehículo y tu progreso hacia la opción de compra del auto.',
         ],
       },
       {
@@ -391,7 +391,7 @@ export const faqCategories: FaqCategory[] = [
           'La app tiene cuatro funciones principales:',
           {
             list: [
-              'Ver tus ganancias: consulta cuánto llevas ganado hoy, esta semana y este mes, con el detalle de lo que se descuenta y lo que recibirás el jueves',
+              'Ver tus ingresos: consulta cuánto llevas ganado hoy, esta semana y este mes, con el detalle de lo que se descuenta y lo que recibirás el jueves',
               'Revisar tu liquidación: accede al desglose completo de tu semana, historial de períodos anteriores y un canal directo para consultar cualquier diferencia',
               'Conocer el estado del auto: revisa la carga disponible, los kilómetros estimados por recorrer y reporta cualquier incidente con fotos desde el mismo teléfono',
               'Seguir tu progreso: mira cuántas semanas llevas acumuladas, cuántas te faltan y cuánto cuesta hoy el auto que manejas',

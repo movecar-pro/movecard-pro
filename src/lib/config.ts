@@ -54,7 +54,7 @@ export const SITE = {
   name: 'MoveCar Pro',
   shortName: 'MoveCar',
   url: SITE_URL,
-  defaultTitle: 'MoveCar Pro — Genera ganancias sin auto propio',
+  defaultTitle: 'MoveCar Pro — Genera ingresos sin auto propio',
   defaultDescription:
     'Súmate a la plataforma de electromovilidad más moderna de Chile. Genera ingresos manejando un vehículo eléctrico con seguro, mantención, carga y soporte 24/7 incluidos.',
   locale: 'es_CL',

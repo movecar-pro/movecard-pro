@@ -146,7 +146,7 @@ export default function TestimoniosCarousel({ items }: { items: Testimonio[] }) 
         }
         .tc__id { display: flex; flex-direction: column; gap: 2px; }
         .tc__name { font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: 14px; color: var(--text-strong); }
-        .tc__role { font-family: var(--font-sans); font-size: 13px; color: var(--text-muted); }
+        .tc__role { font-family: var(--font-sans); font-size: 13px; color: var(--ink-700); }
         .tc__income {
           margin-left: auto; font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: 12px;
           color: var(--green-700); background: var(--green-50); padding: 5px 10px; border-radius: var(--radius-xs); white-space: nowrap;

@@ -118,7 +118,7 @@ export default function TeamModal({ members }: { members: TeamMember[] }) {
         .tm__aside { display: flex; flex-direction: column; gap: 12px; position: sticky; top: 0; }
         .tm__name { margin: 8px 0 0; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: 32px; line-height: 1.1; color: var(--text-strong); }
         .tm__role { margin: 0; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: 16px; color: var(--text-accent); }
-        .tm__meta { margin: 4px 0 8px; font-size: 12px; color: var(--text-muted); }
+        .tm__meta { margin: 4px 0 8px; font-size: 12px; color: var(--ink-700); }
         .tm__creds { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
         .tm__creds li { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--text-body); }
         .tm__creds i { color: var(--amber-500); width: 18px; text-align: center; }
@@ -134,7 +134,7 @@ export default function TeamModal({ members }: { members: TeamMember[] }) {
 
         .tm__facts { display: grid; grid-template-columns: 32px 1fr; gap: 14px; background: var(--amber-50); border-radius: var(--radius-lg); padding: 24px 28px; margin-top: 8px; }
         .tm__facts > i { color: var(--amber-500); font-size: 22px; }
-        .tm__facts p { margin: 0 0 8px; font-size: 14px; line-height: 1.6; color: var(--ink-600); }
+        .tm__facts p { margin: 0 0 8px; font-size: 14px; line-height: 1.6; color: var(--ink-700); }
         .tm__facts p:last-child { margin-bottom: 0; }
 
         @media (max-width: 820px) {

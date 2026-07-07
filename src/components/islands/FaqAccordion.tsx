@@ -83,7 +83,7 @@ export default function FaqAccordion({ categories }: { categories: FaqCategory[]
           color: var(--text-strong);
         }
         .faq__item.is-open .faq__q { color: var(--text-accent); }
-        .faq__chevron { font-size: 13px; color: var(--text-muted); transition: transform var(--dur-base) var(--ease-out); flex-shrink: 0; }
+        .faq__chevron { font-size: 13px; color: var(--ink-700); transition: transform var(--dur-base) var(--ease-out); flex-shrink: 0; }
         .faq__item.is-open .faq__chevron { transform: rotate(180deg); color: var(--text-accent); }
         .faq__panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--dur-base) var(--ease-out); }
         .faq__panel-inner { overflow: hidden; }

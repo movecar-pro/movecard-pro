@@ -27,8 +27,12 @@ const mosaicUrl = `${IMAGE_BASE}/${h.image.src}`;
         {h.paragraphs.map((p) => <p>{p}</p>)}
       </div>
       <div data-gsap="hero-cta">
-        <Button size="lg" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" class="uppercase"
-          >{h.cta}</Button
+        <Button
+          size="lg"
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="uppercase">{h.cta}</Button
         >
       </div>
     </div>
@@ -99,7 +103,7 @@ const mosaicUrl = `${IMAGE_BASE}/${h.image.src}`;
     margin: 0;
     font-size: var(--fs-body);
     line-height: var(--lh-body);
-    color: var(--text-muted);
+    color: var(--ink-700);
   }
   .nh__media {
     position: relative;

@@ -30,11 +30,11 @@ const {
 } = Astro.props;
 
 const wrap = featured
-  ? 'background:var(--ink-600);color:var(--white);box-shadow:var(--shadow-amber),var(--shadow-lg);border:none;'
+  ? 'background:var(--ink-700);color:var(--white);box-shadow:var(--shadow-amber),var(--shadow-lg);border:none;'
   : 'background:var(--surface-card);color:var(--text-body);box-shadow:var(--shadow-md);border:1px solid var(--border-subtle);';
 const titleColor = featured ? 'var(--white)' : 'var(--text-strong)';
 const priceColor = featured ? 'var(--amber-400)' : 'var(--text-strong)';
-const mutedColor = featured ? 'var(--white-a70)' : 'var(--text-muted)';
+const mutedColor = featured ? 'var(--white-a70)' : 'var(--ink-700)';
 const checkColor = featured ? 'var(--amber-400)' : 'var(--green-700)';
 ---
 
@@ -43,24 +43,41 @@ const checkColor = featured ? 'var(--amber-400)' : 'var(--green-700)';
   style={`display:flex;flex-direction:column;gap:var(--space-5);border-radius:var(--radius-xl);padding:var(--space-7);${wrap}`}
 >
   <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
-    <h3 style={`margin:0;font-family:var(--font-display);font-weight:var(--fw-semibold);font-size:var(--fs-h4);color:${titleColor}`}>
+    <h3
+      style={`margin:0;font-family:var(--font-display);font-weight:var(--fw-semibold);font-size:var(--fs-h4);color:${titleColor}`}
+    >
       {name}
     </h3>
     {badge && <Badge tone={featured ? 'amber' : 'amberSoft'}>{badge}</Badge>}
   </div>
 
-  {description && <p style={`margin:0;font-size:var(--fs-body);line-height:var(--lh-body);color:${mutedColor}`}>{description}</p>}
+  {
+    description && (
+      <p style={`margin:0;font-size:var(--fs-body);line-height:var(--lh-body);color:${mutedColor}`}>
+        {description}
+      </p>
+    )
+  }
 
   <div style="display:flex;align-items:baseline;gap:8px">
-    <span style={`font-family:var(--font-display);font-weight:var(--fw-bold);font-size:var(--fs-h2);color:${priceColor}`}>{price}</span>
+    <span
+      style={`font-family:var(--font-display);font-weight:var(--fw-bold);font-size:var(--fs-h2);color:${priceColor}`}
+      >{price}</span
+    >
     <span style={`font-size:var(--fs-small);color:${mutedColor}`}>{period}</span>
   </div>
 
   <div style="display:flex;flex-direction:column;gap:12px">
     {
       features.map((f) => (
-        <span style={`display:flex;align-items:flex-start;gap:10px;font-size:var(--fs-body);color:${featured ? 'var(--white-a85)' : 'var(--text-body)'}`}>
-          <i class="fa-solid fa-circle-check" style={`color:${checkColor};margin-top:3px`} aria-hidden="true" />
+        <span
+          style={`display:flex;align-items:flex-start;gap:10px;font-size:var(--fs-body);color:${featured ? 'var(--white-a85)' : 'var(--text-body)'}`}
+        >
+          <i
+            class="fa-solid fa-circle-check"
+            style={`color:${checkColor};margin-top:3px`}
+            aria-hidden="true"
+          />
           {f}
         </span>
       ))

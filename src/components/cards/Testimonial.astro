@@ -21,7 +21,10 @@ const wrap =
   <div style="display:flex;gap:3px;font-size:14px" aria-label={`${rating} de 5`}>
     {
       Array.from({ length: 5 }).map((_, i) => (
-        <i class="fa-solid fa-star" style={`color:${i < rating ? 'var(--amber-500)' : 'var(--grey-200)'}`} />
+        <i
+          class="fa-solid fa-star"
+          style={`color:${i < rating ? 'var(--amber-500)' : 'var(--grey-200)'}`}
+        />
       ))
     }
   </div>
@@ -38,10 +41,17 @@ const wrap =
       >{initial}</span
     >
     <div style="display:flex;flex-direction:column;gap:2px">
-      <span style="font-family:var(--font-sans);font-weight:var(--fw-semibold);font-size:14px;color:var(--text-strong)"
+      <span
+        style="font-family:var(--font-sans);font-weight:var(--fw-semibold);font-size:14px;color:var(--text-strong)"
         >{name}</span
       >
-      {role && <span style="font-family:var(--font-sans);font-size:13px;color:var(--text-muted)">{role}</span>}
+      {
+        role && (
+          <span style="font-family:var(--font-sans);font-size:13px;color:var(--ink-700)">
+            {role}
+          </span>
+        )
+      }
     </div>
     {
       income && (

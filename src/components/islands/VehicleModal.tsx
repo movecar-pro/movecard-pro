@@ -137,10 +137,10 @@ export default function VehicleModal({
           font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: 12px;
           padding: 5px 12px; border-radius: var(--radius-pill);
         }
-        .vm__badge--gas { background: var(--grey-100); color: var(--ink-600); }
+        .vm__badge--gas { background: var(--grey-100); color: var(--ink-700); }
         .vm__name { margin: 0; font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: 38px; line-height: 1.05; color: var(--text-strong); position: relative; }
         .vm__name::after { content: ''; display: block; width: 48px; height: 3px; background: var(--amber-500); margin-top: 14px; border-radius: 2px; }
-        .vm__desc { margin: 0; font-size: 14px; line-height: 1.6; color: var(--text-muted); }
+        .vm__desc { margin: 0; font-size: 14px; line-height: 1.6; color: var(--ink-700); }
 
         .vm__group { display: grid; grid-template-columns: 32px 1fr; gap: 12px; align-items: start; }
         .vm__group-icon { width: 32px; height: 32px; border-radius: var(--radius-pill); border: 1px solid var(--amber-300); color: var(--amber-500); display: inline-flex; align-items: center; justify-content: center; font-size: 13px; }

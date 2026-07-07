@@ -70,7 +70,7 @@ export default function LegalModal({ docs }: { docs: Record<DocKey, LegalDoc> })
           <style>{`
             .lm { display: flex; flex-direction: column; gap: 20px; }
             .lm__title { margin: 0; font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h3); color: var(--text-strong); }
-            .lm__updated { margin: -12px 0 0; font-size: var(--fs-small); color: var(--text-muted); }
+            .lm__updated { margin: -12px 0 0; font-size: var(--fs-small); color: var(--ink-700); }
             .lm__section { display: flex; flex-direction: column; gap: 8px; }
             .lm__section h3 { margin: 0; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-body-lg); color: var(--text-strong); }
             .lm__section p { margin: 0; font-size: var(--fs-small); line-height: 1.65; color: var(--text-body); }

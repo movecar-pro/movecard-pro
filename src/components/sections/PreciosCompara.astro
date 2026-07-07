@@ -40,7 +40,9 @@ const { eyebrow, title, subtitle, rowHead, plans, rows } = pricing.compare;
           {
             rows.map((r) => (
               <tr>
-                <th scope="row" class="cmp__rowhead">{r.label}</th>
+                <th scope="row" class="cmp__rowhead">
+                  {r.label}
+                </th>
                 {r.values.map((v, i) => (
                   <td class={i > 0 ? 'cmp__cell--rival' : ''}>
                     {v === true ? (
@@ -90,7 +92,7 @@ const { eyebrow, title, subtitle, rowHead, plans, rows } = pricing.compare;
   .cmp__subtitle {
     margin: 0;
     font-size: var(--fs-body-lg);
-    color: var(--text-muted);
+    color: var(--ink-700);
   }
 
   .cmp__scroll {

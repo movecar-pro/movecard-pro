@@ -135,7 +135,7 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
 
         /* Comunes */
         .pp__name { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h4); color: var(--text-strong); margin: 0; }
-        .pp__desc { margin: 0; font-size: var(--fs-small); line-height: 1.55; color: var(--text-muted); }
+        .pp__desc { margin: 0; font-size: var(--fs-small); line-height: 1.55; color: var(--ink-700); }
         .pp__price { display: flex; align-items: baseline; justify-content: center; gap: 8px; }
         .pp__amount { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: 44px; line-height: 1; color: var(--text-accent); }
         .pp__period { font-size: var(--fs-small); font-weight: var(--fw-semibold); color: var(--text-accent); }
@@ -170,7 +170,7 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
         .pp__acc-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; padding: 18px 20px; background: transparent; border: none; cursor: pointer; text-align: left; }
         .pp__acc-titles { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
         .pp__badge { background: var(--green-100); color: var(--green-700); font-size: 11px; font-weight: var(--fw-semibold); padding: 3px 10px; border-radius: var(--radius-pill); }
-        .pp__badge.is-gas { background: var(--grey-100); color: var(--ink-600); }
+        .pp__badge.is-gas { background: var(--grey-100); color: var(--ink-700); }
         .pp__acc-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
         .pp__acc-price { font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-body-lg); color: var(--text-accent); white-space: nowrap; }
         .pp__acc-price span { font-weight: var(--fw-regular); font-size: 11px; color: var(--text-accent); }

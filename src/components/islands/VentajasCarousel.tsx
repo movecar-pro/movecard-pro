@@ -128,12 +128,12 @@ export default function VentajasCarousel({ items }: { items: Item[] }) {
         }
         .vc__icon {
           width: 48px; height: 48px; border-radius: var(--radius-pill);
-          border: 2px dashed var(--amber-300); color: var(--ink-600);
+          border: 2px dashed var(--amber-300); color: var(--ink-700);
           display: inline-flex; align-items: center; justify-content: center; font-size: 18px;
         }
         .vc__card-title { margin: 4px 0 0; font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-body-lg); color: var(--text-accent); }
         .vc__list { margin: 0; padding-left: 0; display: flex; flex-direction: column; gap: 8px; }
-        .vc__list li { font-size: var(--fs-small); line-height: 1.55; color: var(--text-muted); }
+        .vc__list li { font-size: var(--fs-small); line-height: 1.55; color: var(--ink-700); }
 
         /* DESKTOP grilla */
         .vc__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; align-items: stretch; }

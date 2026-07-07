@@ -15,7 +15,7 @@ const tones: Record<string, string> = {
   amberSoft: 'background:var(--amber-50);color:var(--amber-700);',
   eco: 'background:var(--green-700);color:var(--white);',
   ecoSoft: 'background:var(--green-50);color:var(--green-700);',
-  dark: 'background:var(--ink-600);color:var(--white);',
+  dark: 'background:var(--ink-700);color:var(--white);',
 };
 const style = [
   'display:inline-flex',
@@ -33,6 +33,6 @@ const style = [
 ---
 
 <span class={className} style={style}>
-  {icon && <i class={icon} aria-hidden="true" style="font-size:12px"></i>}
+  {icon && <i class={icon} aria-hidden="true" style="font-size:12px" />}
   <slot />
 </span>

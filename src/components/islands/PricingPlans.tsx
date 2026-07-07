@@ -56,7 +56,7 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
     <div className="pp">
       {groups.map((g) => (
         <div className="pp__group" key={g.label}>
-          <h3 className="pp__group-label">{g.label}</h3>
+          <h3 className="pp__group-label hidden md:block">{g.label}</h3>
 
           {/* DESKTOP: tarjetas */}
           <div className="pp__cards">
@@ -167,7 +167,7 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
         /* MÓVIL acordeón (oculto en desktop) */
         .pp__acc { display: none; flex-direction: column; gap: 12px; }
         .pp__acc-item { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); background: var(--surface-card); }
-        .pp__acc-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; padding: 18px 20px; background: transparent; border: none; cursor: pointer; text-align: left; }
+        .pp__acc-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; width: 100%; padding: 18px 20px; background: transparent; border: none; cursor: pointer; text-align: left; }
         .pp__acc-titles { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
         .pp__badge { background: var(--green-100); color: var(--green-700); font-size: 11px; font-weight: var(--fw-semibold); padding: 3px 10px; border-radius: var(--radius-pill); }
         .pp__badge.is-gas { background: var(--grey-100); color: var(--ink-700); }
@@ -183,6 +183,7 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
         @media (max-width: 900px) {
           .pp__cards { display: none; }
           .pp__acc { display: flex; }
+          .pp__name {font-size: var(--fs-h5); text-transform: none }
         }
       `}</style>
     </div>

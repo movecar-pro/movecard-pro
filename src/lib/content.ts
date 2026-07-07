@@ -274,7 +274,7 @@ export const appPromo = {
 export const finalCta = {
   eyebrow: 'Cupos limitados',
   title: 'Empieza a generar ingresos esta semana',
-  body: 'Incorpórate a MoveCar.pro y maximiza tus ingresos con la mejor plataforma y flota del mercado. Obtén las mejores condiciones de arriendo pensadas para ti.',
+  body: 'Incorpórate a MoveCar.pro y maximiza tus ingresos con la mejor plataforma y flota del mercado. \n \n Obtén las mejores condiciones de arriendo pensadas para ti.',
   cta: 'Quiero ganar más',
   bullets: ['Datos seguros', 'Sin spam', 'Cancelación libre'],
 };
@@ -286,7 +286,7 @@ export const footer = {
       title: 'Plataforma',
       links: [
         { label: 'Cómo funciona', href: '/como-funciona' },
-        { label: 'Flota', href: '/#flota' },
+        { label: 'Flota', href: '/nosotros/#flota' },
         { label: 'Precios', href: '/precios' },
       ],
     },
@@ -294,15 +294,15 @@ export const footer = {
       title: 'Compañía',
       links: [
         { label: 'Nosotros', href: '/nosotros' },
-        { label: 'Preguntas Frecuentes', href: '/precios#faq' },
+        { label: 'Preguntas Frecuentes', href: '/precios/#faq' },
       ],
     },
     {
       title: 'Soporte',
       links: [
-        { label: 'Ayuda', href: '/precios#faq' },
-        { label: 'Postular', href: '/#postular' },
-        { label: 'Contacto', href: '/#postular' },
+        { label: 'Ayuda', href: '/precios/#faq' },
+        { label: 'Postular', href: 'https://wa.link/e0k8uq' },
+        { label: 'Contacto', href: 'mailto:contacto@movercar.pro' },
       ],
     },
   ],

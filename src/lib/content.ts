@@ -274,7 +274,7 @@ export const appPromo = {
 export const finalCta = {
   eyebrow: 'Cupos limitados',
   title: 'Empieza a generar ingresos esta semana',
-  body: 'Incorpórate a MoveCar.pro y maximiza tus ingresos con la mejor plataforma y flota del mercado. \n \n Obtén las mejores condiciones de arriendo pensadas para ti.',
+  body: 'Incorpórate a MoveCar.pro y maximiza tus ingresos con la mejor plataforma y flota del mercado. Obtén las mejores condiciones de arriendo pensadas en ti.',
   cta: 'Quiero ganar más',
   bullets: ['Datos seguros', 'Sin spam', 'Cancelación libre'],
 };
@@ -824,7 +824,7 @@ export const pricing = {
             '50% aprox. de cobertura eléctrica mensual',
             'Seguro premium + deducible 3 UF',
             'Auto de reemplazo hasta 30 días',
-            'Copilot App Plus, con Modelo de Predicción para mas mayores ingresos',
+            'Copilot App Plus, con Modelo de Predicción para mayores ingresos',
             'Opción preferente de compra a $100 CLP',
           ],
           cta: 'Contratar',
@@ -867,7 +867,7 @@ export const pricing = {
             'Turno: 18:00 a 06:00',
             'Seguro premium + deducible 3 UF',
             'Auto de reemplazo hasta 30 días',
-            'Copilot App Plus, con Modelo de Predicción para mas mayores ingresos',
+            'Copilot App Plus, con Modelo de Predicción para mayores ingresos',
             'Mayor potencial de ingresos',
             'Opción preferente de compra a $100 CLP',
           ],

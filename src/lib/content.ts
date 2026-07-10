@@ -121,7 +121,7 @@ export const testimonios = {
         'Llevamos meses trabajando con Movecar.pro y fue súper rápido. El monitoreo de una semana ya estaba en la plataforma.',
       name: 'Carlos B.',
       role: 'Santiago · 8 meses',
-      income: '$610K/mes',
+      income: '$610K/sem',
     },
     {
       rating: 4,
@@ -129,7 +129,7 @@ export const testimonios = {
         'Lo que más valoro es el soporte. Tuve un problema con mi mantención y el equipo respondió súper rápido.',
       name: 'María F.',
       role: 'Valparaíso · 1 año',
-      income: '$630K/mes',
+      income: '$630K/sem',
     },
     {
       rating: 5,
@@ -137,7 +137,7 @@ export const testimonios = {
         'Nada que reprochar. Todos los gastos están claros antes y la diferencia con otras plataformas es enorme.',
       name: 'Juan F.',
       role: 'Santiago · 4 meses',
-      income: '$450K/mes',
+      income: '$450K/sem',
     },
     {
       rating: 5,
@@ -145,7 +145,7 @@ export const testimonios = {
         'Empecé sin auto y en una semana ya estaba generando. El proceso fue claro de principio a fin.',
       name: 'Pedro G.',
       role: 'Maipú · 6 meses',
-      income: '$420K/mes',
+      income: '$420K/sem',
     },
     {
       rating: 5,
@@ -153,7 +153,7 @@ export const testimonios = {
         'La app me deja ver todo: ingresos, gastos y lo que recibo el jueves. Cero sorpresas.',
       name: 'Daniela R.',
       role: 'Quilicura · 4 meses',
-      income: '$390K/mes',
+      income: '$390K/sem',
     },
     {
       rating: 5,
@@ -161,7 +161,7 @@ export const testimonios = {
         'El auto eléctrico me bajó muchísimo los costos. Hoy gano más manejando lo mismo.',
       name: 'Andrés M.',
       role: 'Santiago · 1 año',
-      income: '$385K/mes',
+      income: '$385K/sem',
     },
     {
       rating: 4,
@@ -169,7 +169,7 @@ export const testimonios = {
         'Tenía dudas al principio, pero el equipo me acompañó por WhatsApp en cada paso.',
       name: 'Camila S.',
       role: 'La Florida · 5 meses',
-      income: '$325K/mes',
+      income: '$325K/sem',
     },
     {
       rating: 5,
@@ -177,7 +177,7 @@ export const testimonios = {
         'Si el auto falla te dan reemplazo al toque. No dejo de generar ni un día.',
       name: 'Rodrigo T.',
       role: 'Ñuñoa · 7 meses',
-      income: '$340K/mes',
+      income: '$340K/sem',
     },
     {
       rating: 5,
@@ -185,7 +185,7 @@ export const testimonios = {
         'Postulé 100% online y sin pagar nada para entrar. La garantía la fui pagando de mis ingresos.',
       name: 'Fernanda V.',
       role: 'Quilicura · 3 meses',
-      income: '$540K/mes',
+      income: '$540K/sem',
     },
   ],
 };

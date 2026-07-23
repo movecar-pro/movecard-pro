@@ -1,0 +1,82 @@
+---
+/**
+ * Ruta dinámica para PÁGINAS creadas por el editor (colección `pages`).
+ * Cada archivo src/content/pages/<slug>.md se publica en /<slug>.
+ * El editor (CMS) crea/edita esos .md; aquí solo se renderizan.
+ */
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@layouts/BaseLayout.astro';
+import PageHeader from '@components/sections/PageHeader.astro';
+
+export async function getStaticPaths() {
+  const pages = (await getCollection('pages')).filter((p) => !p.data.draft);
+  return pages.map((p) => ({ params: { slug: p.id }, props: { page: p } }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<BaseLayout title={`${page.data.title} — Move Card Pro`} description={page.data.description}>
+  <main>
+    <PageHeader
+      eyebrow={page.data.eyebrow ?? 'Movecar'}
+      title={page.data.title}
+      subtitle={page.data.description ?? ''}
+    />
+    <section class="mc-section" style="background:var(--white)">
+      <article class="pagina mc-container">
+        <Content />
+      </article>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  /* Estilos de lectura para el markdown que escribe el editor. */
+  .pagina {
+    max-width: var(--content-max);
+    color: var(--text-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+  .pagina :global(h2) {
+    margin: 2rem 0 0.75rem;
+    font-family: var(--font-display);
+    font-size: var(--fs-h3);
+    color: var(--text-strong);
+  }
+  .pagina :global(h3) {
+    margin: 1.5rem 0 0.5rem;
+    font-family: var(--font-sans);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-body-lg);
+    color: var(--text-strong);
+  }
+  .pagina :global(p) {
+    margin: 0 0 1rem;
+  }
+  .pagina :global(ul),
+  .pagina :global(ol) {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .pagina :global(a) {
+    color: var(--text-accent);
+    text-decoration: underline;
+  }
+  .pagina :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+  }
+  .pagina :global(blockquote) {
+    margin: 1.25rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--amber-500);
+    color: var(--text-muted);
+  }
+</style>

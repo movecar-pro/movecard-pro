@@ -69,4 +69,16 @@ const fleet = defineCollection({
   }),
 });
 
-export const collections = { team, fleet };
+/* --- Colección: páginas editables (las crea el editor desde el CMS) ---
+   Cada .md en src/content/pages/ genera una ruta /<slug> vía [...slug].astro. */
+const pages = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/pages' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    eyebrow: z.string().optional(),
+    draft: z.boolean().default(false), // true = no se publica
+  }),
+});
+
+export const collections = { team, fleet, pages };

@@ -803,7 +803,7 @@ export const pricing = {
             'Variable x Km: 0,00280 UF',
             'Turno: 06:00 a 18:00',
             '50% aprox. de cobertura eléctrica mensual',
-            'Seguro cobertura completa + deducible 10 UF',
+            'Seguro cobertura completa + deducible 3 UF',
             'Auto de reemplazo hasta 10 días',
             'Copilot App Base, con monitoreo de ingresos y costos',
             'Opción preferente de compra desde $500.000 CLP',
@@ -816,7 +816,7 @@ export const pricing = {
           badge: '100% Eléctrico',
           description:
             'La mejor opción para conductores full-time. Más cobertura, menor costo energético y mayor potencial de ingresos.',
-          price: '3,9',
+          price: '2,5',
           period: 'UF/semanal',
           features: [
             'Variable x Km: 0,00290 UF',
@@ -841,12 +841,12 @@ export const pricing = {
           badge: 'Bencinero',
           description:
             'La forma más flexible y accesible de comenzar. Ideal para complementar ingresos con una baja inversión inicial.',
-          price: '1,6',
+          price: '1,9',
           period: 'UF/semanal',
           features: [
             'Variable x Km: 0,00196 UF',
             'Turno: 06:00 a 18:00',
-            'Seguro cobertura completa + deducible 10 UF',
+            'Seguro cobertura completa + deducible 5 UF',
             'Auto de reemplazo hasta 10 días',
             'Copilot App con monitoreo de ingresos y costos',
             'Menor costo del mercado',
@@ -860,12 +860,12 @@ export const pricing = {
           badge: 'Bencinero',
           description:
             'Libertad total para trabajar en horarios de alta demanda. Mayor autonomía y flexibilidad para maximizar ingresos sin depender de carga eléctrica.',
-          price: '2,7',
+          price: '2,9',
           period: 'UF/semanal',
           features: [
             'Variable x Km: 0,00203 UF',
             'Turno: 18:00 a 06:00',
-            'Seguro premium + deducible 3 UF',
+            'Seguro premium + deducible 5 UF',
             'Auto de reemplazo hasta 30 días',
             'Copilot App Plus, con Modelo de Predicción para mayores ingresos',
             'Mayor potencial de ingresos',

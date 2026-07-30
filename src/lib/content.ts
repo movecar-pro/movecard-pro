@@ -797,7 +797,7 @@ export const pricing = {
           badge: '100% Eléctrico',
           description:
             'Maximiza tus ingresos con el menor costo operativo del mercado. Ideal para complementar ingresos o trabajar de forma eficiente durante el día.',
-          price: '2,3',
+          price: '2,5',
           period: 'UF/semanal',
           features: [
             'Variable x Km: 0,00280 UF',

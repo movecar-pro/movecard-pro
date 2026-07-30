@@ -816,7 +816,7 @@ export const pricing = {
           badge: '100% Eléctrico',
           description:
             'La mejor opción para conductores full-time. Más cobertura, menor costo energético y mayor potencial de ingresos.',
-          price: '2,5',
+          price: '3,9',
           period: 'UF/semanal',
           features: [
             'Variable x Km: 0,00290 UF',

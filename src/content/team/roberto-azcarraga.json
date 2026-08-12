@@ -1,0 +1,45 @@
+{
+  "order": 6,
+  "name": "Roberto Azcarraga",
+  "role": "Data Analyst",
+  "roleShort": "Data Analyst",
+  "photo": "team/roberto-azcarraga.webp",
+  "bioShort": "Ingeniero Industrial con enfoque en análisis de datos, mejora de procesos y desarrollo de soluciones para la toma de decisiones estratégicas.",
+  "linkedin": "https://www.linkedin.com/in/roberto-azcarraga/",
+  "location": "Chile",
+  "credentials": [
+    { "icon": "fa-graduation-cap", "text": "Ingeniero Industrial" },
+    { "icon": "fa-users", "text": "Data Analyst" },
+    { "icon": "fa-location-dot", "text": "Chile" }
+  ],
+  "sections": [
+    {
+      "icon": "fa-graduation-cap",
+      "title": "Formación y especialización",
+      "paragraphs": [
+        "Ingeniero Industrial egresado de la Universidad Tecnológica de Puebla, con formación orientada al análisis de datos, mejora de procesos y desarrollo de soluciones enfocadas en la toma de decisiones. Mi interés profesional se centra en transformar información en herramientas útiles que permitan generar valor y contribuir al crecimiento y eficiencia de las organizaciones."
+      ]
+    },
+    {
+      "icon": "fa-globe",
+      "title": "Experiencia regional",
+      "paragraphs": [
+        "A lo largo de mi trayectoria he tenido la oportunidad de desarrollarme en distintos entornos laborales, incluyendo experiencia en la industria automotriz y proyectos en Estados Unidos, experiencias que me permitieron fortalecer habilidades como la adaptabilidad, el trabajo colaborativo y una visión orientada a resultados dentro de contextos dinámicos y multiculturales."
+      ]
+    },
+    {
+      "icon": "fa-rocket",
+      "title": "Estrategia, crecimiento e innovación",
+      "paragraphs": [
+        "Mi desarrollo profesional se ha enfocado en comprender cómo los datos y los procesos pueden convertirse en herramientas estratégicas para identificar oportunidades de mejora y apoyar decisiones basadas en información. Disfruto especialmente los retos que requieren combinar pensamiento analítico, estructura y una visión de negocio para construir soluciones con impacto real."
+      ]
+    },
+    {
+      "icon": "fa-lightbulb",
+      "title": "Lo que lo mueve",
+      "paragraphs": [
+        "Me motiva el aprendizaje continuo, la mejora constante y participar en proyectos que permitan construir desde cero, aportar nuevas ideas y generar resultados sostenibles para las organizaciones y las personas"
+      ]
+    }
+  ]
+}

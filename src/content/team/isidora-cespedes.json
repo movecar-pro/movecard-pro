@@ -1,0 +1,57 @@
+{
+  "order": 5,
+  "name": "Isidora Céspedes",
+  "role": "Experience Designer",
+  "roleShort": "Experience Designer",
+  "photo": "team/isidora-cespedes.webp",
+  "bioShort": "Diseñadora Industrial y de Servicios de la Universidad de Chile, con especialización en UX/UI Design y experiencia internacional en Australia. Combina un enfoque centrado en el usuario con habilidades en diseño gráfico, frontend y proyectos de construcción.",
+  "linkedin": "https://www.linkedin.com/in/isidora-cespedes-gaete/",
+  "location": "Chile",
+  "credentials": [
+    { "icon": "fa-graduation-cap", "text": "Diseñadora Industrial y de Servicios" },
+    { "icon": "fa-users", "text": "UX/UI Design" },
+    { "icon": "fa-location-dot", "text": "Chile" }
+  ],
+  "sections": [
+    {
+      "icon": "fa-graduation-cap",
+      "title": "Formación y especialización",
+      "paragraphs": [
+        "Diseñadora Industrial y Servicios de la Universidad de Chile, Isidora exploró muchas áreas del diseño antes de aterrizar en su especialización en UX/UI Design. Si bien su mayor enfoque es el trabajo en torno a las experiencias del usuario y el diseño visual de interfaces, también cumple roles menores en desarrollo Front End."
+      ]
+    },
+    {
+      "icon": "fa-globe",
+      "title": "Distintos enfoques",
+      "paragraphs": [
+        "Además de su desempeño como diseñadora desde 2016, ha tenido la oportunidad de crecer profesionalmente en Australia, donde exploró nuevas formas de entender el diseño desde una perspectiva experiencial."
+      ]
+    },
+    {
+      "icon": "fa-flask",
+      "title": "Mentalidad de diseño",
+      "paragraphs": [
+        "Trabaja con un enfoque claro y simple: pensar siempre en las personas como centro de sus diseños. Comenzando por diferentes análisis que comparten el objetivo de desarrollar soluciones eficaces, atractivas y rentables."
+      ]
+    },
+    {
+      "icon": "fa-flask",
+      "title": "Empatía y cultura",
+      "paragraphs": [
+        "Le gusta nutrirse de distintas perspectivas, pensamientos y culturas para replicarlas en ideas artísticas que apuntan a resolver objetivos específicos a través del Design Thinking como base de su proceso creativo."
+      ]
+    },
+    {
+      "icon": "fa-heart",
+      "title": "Lo que la mueve",
+      "paragraphs": [
+        "Cree netamente en diseñar en torno al usuario. Las personas y sus necesidades siempre serán su mayor enfoque, junto con los objetivos y requerimientos de la empresa, Isidora cree en crear productos y servicios innovadores, funcionales y atractivos."
+      ]
+    }
+  ],
+  "funFacts": [
+    "Isidora ha vivido la mayor parte de su vida en la región del Maule, donde pacientemente construye su casa en la precordillera chilena.",
+    "Le gustan las actividades creativas y las conversaciones del mundo actual. Si no está diseñando pasa su tiempo construyendo, leyendo, escuchando música o consintiendo a sus muchas mascotas.",
+    "Una de sus expresiones creativas favoritas es la gastronomía, Isidora aprecia las comidas hechas a mano, probar platos nuevos y experimentar con ingredientes inesperados."
+  ]
+}

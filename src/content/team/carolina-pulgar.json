@@ -3,7 +3,7 @@
   "name": "Carolina Pulgar",
   "role": "Co-Founder & Tech Leader",
   "roleShort": "Co-Founder & Tech Leader",
-  "photo": "team/carolina-pulgar.png",
+  "photo": "team/carolina-pulgar.webp",
   "bioShort": "Ingeniera en Informática con experiencia en el desarrollo de plataformas digitales, liderazgo de equipos tecnológicos y gestión de operaciones.",
   "linkedin": "https://www.linkedin.com/in/carolina-pulgar-015b5b164/",
   "location": "Chile",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "icon": "fa-laptop-code",
+      "icon": "fa-heart",
       "title": "Lo que la mueve",
       "paragraphs": [
         "Disfruta especialmente los entornos dinámicos donde la tecnología se transforma en un habilitador estratégico para el crecimiento de las organizaciones.\n\nSu foco está puesto en construir soluciones confiables, equipos comprometidos y plataformas capaces de evolucionar junto con las necesidades de las personas y del negocio."

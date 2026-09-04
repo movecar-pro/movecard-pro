@@ -15,6 +15,14 @@
   to = "/admin/index.html"
   status = 200
 
+# Política de la app para Play Store: se proxea desde S3 (contenido
+# fuente en el bucket de archivos, sin duplicar el PDF en el repo).
+[[redirects]]
+  from = "/aplicacion/politicas/playstore_politica.pdf"
+  to = "https://mc-archivos-312850677540-us-east-2-an.s3.us-east-2.amazonaws.com/public/politicas.pdf"
+  status = 200
+  force = true
+
 # ------------------------------------------------------------
 # 🔌 INTEGRAR DECAP CMS — pasos:
 #   1. En la UI de Netlify: Identity → Enable, y Git Gateway → Enable.

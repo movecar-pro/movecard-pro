@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/aplicacion/politicas/playstore_politica.pdf",
+      "destination": "https://mc-archivos-312850677540-us-east-2-an.s3.us-east-2.amazonaws.com/public/politicas.pdf"
+    }
+  ]
+}

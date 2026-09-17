@@ -94,7 +94,7 @@ const canonical = new URL(Astro.url.pathname, SITE.url).href;
       Pega tu ID GA4 en .env (PUBLIC_GA_ID=G-XXXXXXX). Si está vacío,
       no se inyecta nada (dev/preview quedan limpios).
       Para otros proveedores (Plausible, GTM, Meta Pixel...), añade aquí
-      su <script> con el mismo patrón condicional.
+      su etiqueta script con el mismo patrón condicional.
       Para medir clics en CTAs concretos, agrega data-attrs en los
       botones (ej. data-ga-event="cta_postular") y un listener global.
       ============================================================

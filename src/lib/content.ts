@@ -300,7 +300,7 @@ export const footer = {
     {
       title: 'Soporte',
       links: [
-        { label: 'Ayuda', href: 'https://wa.me/56957918247' },
+        { label: 'Ayuda', href: 'https://wa.me/56963228508' },
         { label: 'Postular', href: 'https://wa.link/e0k8uq' },
         { label: 'Contacto', href: 'mailto:contacto@movercar.pro' },
       ],

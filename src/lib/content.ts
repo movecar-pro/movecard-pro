@@ -306,6 +306,16 @@ export const footer = {
       ],
     },
   ],
+  // Redes sociales — 'icon' = clase Font Awesome brands.
+  social: [
+    {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/movecar-pro/',
+      icon: 'fa-linkedin-in',
+    },
+    { label: 'Instagram', href: 'https://www.instagram.com/movecar.pro/', icon: 'fa-instagram' },
+    { label: 'Facebook', href: 'https://www.facebook.com/movecar.pro/', icon: 'fa-facebook-f' },
+  ],
   // Links legales: abren modales (no navegan). 'modal' = clave del documento.
   legal: [
     { label: 'Términos y condiciones', modal: 'terms' as const },

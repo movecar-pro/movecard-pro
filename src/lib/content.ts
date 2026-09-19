@@ -38,7 +38,7 @@ export const hero = {
   eyebrow: 'Súmate a la plataforma de electromovilidad más moderna de Chile',
   // El span amber se resuelve en el componente; aquí marcamos la parte destacada.
   titleLead: 'Genera desde',
-  titleHighlight: '$300.000*',
+  titleHighlight: '$350.000*',
   titleRest: 'a la semana. Sin auto propio.',
   subtitle:
     'Concéntrate en tus ingresos mientras nosotros nos encargamos del resto. Únete al futuro de la electromovilidad.',
@@ -49,9 +49,9 @@ export const hero = {
 };
 
 export const trustStats = [
-  { value: '$400.000+', label: 'Promedio semana' },
+  { value: '$400.000+', label: 'Promedio semana o más' },
   { value: '98%', label: 'Satisfacción' },
-  { value: '1 año', label: 'Antigüedad flota promedio' },
+  { value: '0.1 año', label: 'Antigüedad flota promedio' },
   { value: '24/7', label: 'Soporte' },
 ];
 
@@ -206,7 +206,7 @@ export const fortalezas = {
       title: 'Red de Carga',
       body: 'Red de carga libre. Carga donde quieras evitando filas y esperas.',
     },
-    { icon: 'fa-mobile-screen', title: 'App Copilot', body: 'Monitorea en línea tus ingresos y gastos en tiempo real.' },
+    { icon: 'fa-mobile-screen', title: 'App Movecar', body: 'Monitorea en línea tus ingresos y gastos en tiempo real.' },
     {
       icon: 'fa-leaf',
       title: 'Bajo Gasto Eléctrico',
@@ -215,7 +215,7 @@ export const fortalezas = {
     {
       icon: 'fa-rotate',
       title: 'Auto Reemplazo',
-      body: 'Si el tuyo falla, te entregamos uno de reemplazo antes de 24 horas.',
+      body: 'Si el tuyo falla, te entregamos uno de reemplazo antes de 24 horas \nsegún disponibilidad.',
     },
   ],
 };
@@ -230,18 +230,18 @@ export const ventajasMovecar = {
     {
       icon: 'fa-clock',
       title: 'Capitaliza tu esfuerzo',
-      body: 'Al 5to año puedes optar a comprar tu auto desde $100.',
+      body: 'Puedes comprar tu auto al 4to y 5to año desde 100 pesos.',
       bullets: [],
     },
     {
       icon: 'fa-leaf',
-      title: 'Planes de Arriendo mas bajos del mercado',
-      body: 'Planes desde 1,6 UF + beneficios exclusivos y descuentos para conductores.',
+      title: 'Planes de Arriendo más bajos del mercado',
+      body: 'Planes desde 1,9 UF + beneficios exclusivos y descuentos para conductores.',
       bullets: [],
     },
     {
       icon: 'fa-headset',
-      title: 'App Copilot, Asistente y Data en tiempo real',
+      title: 'App Movecar, Asistente y Data en tiempo real',
       body: 'Monitorea ingresos, costos y desempeño en tiempo real, sin letra chica y con apoyo 24/7.',
       bullets: [],
     },
@@ -254,21 +254,21 @@ export const ventajasMovecar = {
     {
       icon: 'fa-wallet',
       title: 'Ingreso Seguro',
-      body: 'Maximiza tus ingresos con nuestra flota y llega tranquilo a fin de mes, con ingresos promedio en torno a los $400.000 semanales.',
+      body: 'Maximiza tus ingresos con nuestra flota y llega tranquilo a fin de mes, con ingresos promedio desde $350.000 semanales.',
       bullets: [],
     },
   ],
 };
 
 export const appPromo = {
-  title: 'Movecar - Copilot',
+  title: 'App Movecar',
   body: 'La única plataforma donde podrás revisar tus ingresos y gastos en línea junto con DATA-IA, con los datos para optimizar tus rutas, porque datos claros conservan la amistad.',
   downloadLabel: 'Descarga tu app segura',
   cta: 'Descargar APP',
   compatibleLabel: 'Compatible con',
   stores: ['Apple', 'Android'],
   // Pantallas de la app: coloca en public/assets/images/app/app-earnings.webp
-  image: { src: 'app/app-earnings.webp', alt: 'App Movecar Copilot — pantalla de ingresos' },
+  image: { src: 'app/app-earnings.webp', alt: 'App Movecar — pantalla de ingresos' },
 };
 
 export const finalCta = {
@@ -651,7 +651,7 @@ export const about = {
       },
       {
         kind: 'p',
-        text: 'MoveCar Copilot utiliza inteligencia artificial para convertir esos datos en recomendaciones prácticas que ayudan a mejorar la operación, optimizar el tiempo y aumentar la rentabilidad de cada jornada.',
+        text: 'MoveCar utiliza inteligencia artificial para convertir esos datos en recomendaciones prácticas que ayudan a mejorar la operación, optimizar el tiempo y aumentar la rentabilidad de cada jornada.',
       },
       { kind: 'h', text: 'Construimos para quienes mueven las ciudades' },
       {
@@ -690,7 +690,7 @@ export const about = {
       { icon: 'fa-leaf', title: 'Compromiso eco', body: 'Cada vehículo eléctrico es un paso hacia un transporte más limpio para todos.' },
       { icon: 'fa-people-group', title: 'Comunidad', body: 'Nuestros movers son el centro: los escuchamos y crecemos con ellos.' },
       { icon: 'fa-headset', title: 'Cercanía', body: 'Soporte humano y rápido cuando lo necesitas, no un bot que te deja esperando.' },
-      { icon: 'fa-shield-halved', title: 'Respaldo', body: 'Seguro full cobertura y auto de reemplazo: nunca dejas de generar ingresos.' },
+      { icon: 'fa-shield-halved', title: 'Respaldo', body: 'Seguro full cobertura y auto de reemplazo (según disponibilidad) : nunca dejas de generar ingresos.' },
       { icon: 'fa-rocket', title: 'Simpleza', body: 'Del registro a la entrega en días, 100% online y sin trámites engorrosos.' },
     ],
   },
@@ -725,34 +725,34 @@ export const comoFunciona = {
     steps: [
       {
         label: 'Descubre tu Potencial',
-        title: 'Todo parte por entender cuánto podrías generar',
+        title: 'Calcula cuánto puedes generar por semana',
         items: [
-          'Utiliza la Calculadora MoveCar para estimar tus ingresos según las horas que quieres trabajar y el vehículo que prefieras.',
-          'Obtendrás una proyección basada en información real de conductores MoveCar, para que tomes una decisión con datos y no con promesas.',
+          'Simula tus ingresos según tus horas de trabajo y el tipo de auto que elijas con nuestra calculadora.',
+          'Datos reales de conductores activos en MoveCar: decides con datos transparentes, no con promesas.',
         ],
       },
       {
         label: ' Encuentra Tu vehículo Ideal',
         title: 'Compara y elige el plan que mejor se adapta a ti',
         items: [
-          'Conoce nuestros vehículos eléctricos y bencineros, revisa sus costos operacionales, autonomía, consumo y equipamiento.',
-          'Cuando estés listo, presiona "Quiero Postular" y comienza tu proceso a través de WhatsApp, donde podrás resolver tus dudas, agendar una reunión con nuestro equipo y avanzar en cada etapa de tu postulación.',
+          'Revisa nuestros modelos eléctricos y bencineros: calcula costos operacionales, autonomía, consumo y equipamiento.',
+          'Postula en un clic por WhatsApp: resuelve dudas en minutos, agenda tu entrevista y avanza sin trámites lentos ni filas.',
         ],
       },
       {
         label: 'Comienza',
-        title: 'Con total transparencia. Sin sorpresas. Sin letra chica',
+        title: 'Cero sorpresas. \nCero letra chica',
         items: [
-          'Antes de firmar conocerás exactamente cuánto pagarás, qué incluye tu plan y cuáles serán tus costos operacionales.',
-          'Toda esta información estará siempre disponible en MoveCar Copilot y en tus liquidaciones semanales.',
+          'Sabrás exactamente cuánto pagas y qué incluye tu plan antes de firmar cualquier contrato.',
+          'Revisa números cuando quieras: costos y liquidaciones disponibles siempre en App MoveCar.',
         ],
       },
       {
         label: 'Crece Con MoveCar',
-        title: 'Nosotros nos encargamos de todo. Tú de conducir',
+        title: 'Manejas y cobras. \nNos encargamos del resto',
         items: [
-          'Seguros, mantenciones, permisos, soporte y gestión operacional quedan en nuestras manos para que puedas concentrarte en lo más importante: generar más ingresos.',
-          'Y con MoveCar Copilot, tendrás recomendaciones, beneficios y herramientas diseñadas para ayudarte a mejorar tu operación semana tras semana.',
+          'Seguros, mantenciones periódicas, permisos y soporte operativo van 100% por nuestra cuenta para que nada detenga tus turnos.',
+          'Usa las herramientas de App MoveCar para multiplicar tus ingresos.',
         ],
       },
     ],
@@ -815,7 +815,7 @@ export const pricing = {
             '50% aprox. de cobertura eléctrica mensual',
             'Seguro cobertura completa + deducible 3 UF',
             'Auto de reemplazo hasta 10 días',
-            'Copilot App Base, con monitoreo de ingresos y costos',
+            'App Movecar, con monitoreo de ingresos y costos',
             'Opción preferente de compra desde $500.000 CLP',
           ],
           cta: 'Contratar',
@@ -834,7 +834,7 @@ export const pricing = {
             '50% aprox. de cobertura eléctrica mensual',
             'Seguro premium + deducible 3 UF',
             'Auto de reemplazo hasta 30 días',
-            'Copilot App Plus, con Modelo de Predicción para mayores ingresos',
+            'App Movecar Plus, con Modelo de Predicción para mayores ingresos',
             'Opción preferente de compra a $100 CLP',
           ],
           cta: 'Contratar',
@@ -858,7 +858,7 @@ export const pricing = {
             'Turno: 06:00 a 18:00',
             'Seguro cobertura completa + deducible 5 UF',
             'Auto de reemplazo hasta 10 días',
-            'Copilot App con monitoreo de ingresos y costos',
+            'App Movecar con monitoreo de ingresos y costos',
             'Menor costo del mercado',
             'Opción preferente de compra desde $500.000 CLP',
           ],
@@ -877,7 +877,7 @@ export const pricing = {
             'Turno: 18:00 a 06:00',
             'Seguro premium + deducible 5 UF',
             'Auto de reemplazo hasta 30 días',
-            'Copilot App Plus, con Modelo de Predicción para mayores ingresos',
+            'App Movecar, con Modelo de Predicción para mayores ingresos',
             'Mayor potencial de ingresos',
             'Opción preferente de compra a $100 CLP',
           ],
@@ -931,7 +931,7 @@ export const pricing = {
         values: ['24–72 hrs', '1 semana aprox.', false, 'Indeterminado según disponibilidad'],
       },
       { label: 'App ingresos y gastos', values: [true, 'Básica', false, false] },
-      { label: 'App + IA maximización ingresos', values: ['Movecar Copilot', false, true, false] },
+      { label: 'App + IA maximización ingresos', values: ['App Movecar', false, true, false] },
       { label: 'Flexibilidad en cuotas', values: ['Hasta 9 cuotas', 'Hasta 7 cuotas', false, false] },
       { label: 'Soporte Operacional 24/7', values: [true, true, 'Solo técnico', true] },
       { label: 'Capacitación integrada App', values: ['Todos los modelos', false, false, false] },

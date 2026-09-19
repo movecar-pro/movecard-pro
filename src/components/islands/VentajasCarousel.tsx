@@ -29,7 +29,7 @@ function Card({ it }: { it: Item }) {
       <span className="vc__icon" aria-hidden="true">
         <i className={`fa-solid ${it.icon}`} />
       </span>
-      <h3 className="vc__card-title">{it.title}</h3>
+      <h4 className="vc__card-title">{it.title}</h4>
       <ul className="vc__list">
         <li>{it.body}</li>
         {it.bullets.map((b, i) => (
@@ -122,21 +122,21 @@ export default function VentajasCarousel({ items }: { items: Item[] }) {
       <style>{`
         /* Tarjeta (compartida) */
         .vc__card {
-          display: flex; flex-direction: column; gap: 12px; height: 100%;
+          display: flex; flex-direction: column; gap: 8px; height: 100%;
           background: var(--surface-card); border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-md); padding: 28px 24px; box-sizing: border-box;
+          box-shadow: var(--shadow-md); padding: 16px; box-sizing: border-box;
         }
         .vc__icon {
           width: 48px; height: 48px; border-radius: var(--radius-pill);
           border: 2px dashed var(--amber-300); color: var(--ink-700);
           display: inline-flex; align-items: center; justify-content: center; font-size: 18px;
         }
-        .vc__card-title { margin: 4px 0 0; font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-body-lg); color: var(--text-accent); }
+        .vc__card-title { margin: 4px 0 0; font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-small); color: var(--text-accent); }
         .vc__list { margin: 0; padding-left: 0; display: flex; flex-direction: column; gap: 8px; }
         .vc__list li { font-size: var(--fs-small); line-height: 1.55; color: var(--ink-700); }
 
         /* DESKTOP grilla */
-        .vc__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; align-items: stretch; }
+        .vc__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; align-items: stretch; }
         .vc__carousel { display: none; }
 
         /* MÓVIL carrusel */

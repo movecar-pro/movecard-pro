@@ -39,7 +39,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
           <div class="cf__card" data-gsap-child>
             {/* En móvil mostramos el número dentro de la tarjeta */}
             <span class="cf__card-num">{num(i)}</span>
-            <h3 class="cf__card-title">{s.title}</h3>
+            <h6 class="cf__card-title">{s.title}</h6>
             <ul class="cf__list">
               {s.items.map((it) => (
                 <li>{it}</li>
@@ -171,7 +171,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
   .cf__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 16px;
     align-items: stretch;
   }
   .cf__card {
@@ -180,7 +180,7 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
     gap: 12px;
     background: var(--surface-card);
     border-radius: var(--radius-lg);
-    padding: var(--space-6);
+    padding: var(--space-5);
     box-shadow: var(--shadow-sm);
     border-top: 3px solid transparent;
   }
@@ -199,8 +199,9 @@ const num = (i: number) => String(i + 1).padStart(2, '0');
     margin: 0;
     font-family: var(--font-sans);
     font-weight: var(--fw-semibold);
-    font-size: var(--fs-body-lg);
+    font-size: var(--fs-body-md);
     color: var(--text-accent);
+    white-space: pre-line;
   }
   .cf__list {
     margin: 0;

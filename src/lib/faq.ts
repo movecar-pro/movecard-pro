@@ -377,10 +377,10 @@ export const faqCategories: FaqCategory[] = [
   },
   {
     n: 8,
-    title: 'App MoveCar Copilot',
+    title: 'App MoveCar',
     items: [
       {
-        q: '¿Qué es la app MoveCar Copilot?',
+        q: '¿Qué es la app MoveCar?',
         a: [
           'Es la app exclusiva para conductores MoveCar. Te acompaña en cada turno con información práctica sobre tus ingresos, el estado de tu liquidación, el rendimiento del vehículo y tu progreso hacia la opción de compra del auto.',
         ],
@@ -402,7 +402,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Cuándo está disponible la app?',
         a: [
-          'La app MoveCar Copilot está en desarrollo. Será informada su disponibilidad a través de los canales oficiales de MoveCar.',
+          'La app MoveCar está en desarrollo. Será informada su disponibilidad a través de los canales oficiales de MoveCar.',
         ],
       },
     ],

@@ -1,10 +1,9 @@
 {
   "order": 9,
-  "name": "MG ZS 2025",
+  "name": "MG ZS 2027",
   "badge": "Bencina",
   "fuel": "gas",
   "tags": [
-    "2025",
     "Bencina",
     "SUV"
   ],
@@ -14,11 +13,11 @@
     "images": [
       {
         "src": "vehicles/mg-zs-2025-front.webp",
-        "alt": "MG ZS 2025 vista frontal"
+        "alt": "MG ZS 2027 vista frontal"
       },
       {
         "src": "vehicles/mg-zs-2025-rear.webp",
-        "alt": "MG ZS 2025 vista trasera"
+        "alt": "MG ZS 2027 vista trasera"
       }
     ],
     "groupsTop": [

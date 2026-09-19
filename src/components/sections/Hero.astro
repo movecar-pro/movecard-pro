@@ -18,16 +18,25 @@ const heroCars = (await getCollection('fleet'))
 ---
 
 <header class="hero" data-anim="hero">
-  <div class="hero__inner mc-container">
+  <div class="hero__inner mc-container py-10 md:pb-0">
     <div class="hero__copy">
       <Eyebrow tone="muted" data-gsap="hero-eyebrow">{hero.eyebrow}</Eyebrow>
-      <h1 class="hero__title" data-gsap="hero-title">
+      <h3 class="hero__title" data-gsap="hero-title">
         {hero.titleLead}
         <span class="hero__hl">{hero.titleHighlight}</span>
         {hero.titleRest}
-      </h1>
+      </h3>
       <p class="hero__subtitle" data-gsap="hero-subtitle">{hero.subtitle}</p>
-      <div class="hero__cta flex flex-col md:flex-row" data-gsap="hero-cta">
+    </div>
+
+    {/* Carrusel transparente auto-rotatorio (oculto en móvil vía CSS) */}
+    <div class="hero__media" data-gsap="hero-media">
+      <HeroCarousel client:idle items={heroCars} />
+    </div>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-4 mc-container pb-24 justify-between">
+    {<!-- Row -->}
+     <div class="flex flex-col md:flex-row gap-4" data-gsap="hero-cta">
         <Button class="uppercase" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
           >{hero.ctaPrimary}</Button
         >
@@ -35,7 +44,7 @@ const heroCars = (await getCollection('fleet'))
           >{hero.ctaSecondary}</Button
         >
       </div>
-      <div class="hero__bullets">
+      <div class="w-full flex flex-col sm:flex-row gap-2 justify-center" data-gsap="hero-bullets">
         {
           hero.bullets.map((t) => (
             <span class="hero__bullet" data-gsap="hero-bullet">
@@ -45,12 +54,6 @@ const heroCars = (await getCollection('fleet'))
           ))
         }
       </div>
-    </div>
-
-    {/* Carrusel transparente auto-rotatorio (oculto en móvil vía CSS) */}
-    <div class="hero__media" data-gsap="hero-media">
-      <HeroCarousel client:idle items={heroCars} />
-    </div>
   </div>
 </header>
 
@@ -64,10 +67,10 @@ const heroCars = (await getCollection('fleet'))
   }
   .hero__inner {
     position: relative;
-    padding-block: 84px 96px;
+    padding-block: 0 96px 0;
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 40px;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 0;
     align-items: center;
   }
   .hero__copy {

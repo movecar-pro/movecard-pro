@@ -735,7 +735,7 @@ export const comoFunciona = {
         label: ' Encuentra Tu vehículo Ideal',
         title: 'Compara y elige el plan que mejor se adapta a ti',
         items: [
-          'Revisa nuestros modelos eléctricos y bencineros: calcula costos operacionales, autonomía, consumo y equipamiento.',
+          'Revisa nuestros modelos eléctricos y bencineros: calcula autonomía, consumo y equipamiento.',
           'Postula en un clic por WhatsApp: resuelve dudas en minutos, agenda tu entrevista y avanza sin trámites lentos ni filas.',
         ],
       },
@@ -920,7 +920,7 @@ export const pricing = {
       {
         label: 'Seguro + deducibles preferenciales',
         values: [
-          '3 UF daño menor / 10 UF pérdida total',
+          '9 UF máximo  / 10 UF pérdida total',
           '10 UF daño menor / 30 UF pérdida total',
           '15 UF daño menor / 30 UF pérdida total',
           '15 UF daño menor / 30 UF pérdida total',
@@ -928,7 +928,7 @@ export const pricing = {
       },
       {
         label: 'Auto reemplazo / tiempos entrega',
-        values: ['24–72 hrs', '1 semana aprox.', false, 'Indeterminado según disponibilidad'],
+        values: ['Hasta 96hrs', 'Según disponibilidad', false, 'Según disponibilidad'],
       },
       { label: 'App ingresos y gastos', values: [true, 'Básica', false, false] },
       { label: 'App + IA maximización ingresos', values: ['App Movecar', false, true, false] },

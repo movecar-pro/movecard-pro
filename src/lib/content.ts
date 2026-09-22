@@ -1382,7 +1382,7 @@ export const pricing = {
           badge: '100% Eléctrico',
           description:
             'Maximiza tus ingresos con el menor costo operativo del mercado. Ideal para complementar ingresos o trabajar de forma eficiente durante el día.',
-          price: '2,3',
+          price: '2,5',
           period: 'UF/semanal',
           features: [
             'Variable x Km: 0,00280 UF',
@@ -1426,7 +1426,7 @@ export const pricing = {
           badge: 'Bencinero',
           description:
             'La forma más flexible y accesible de comenzar. Ideal para complementar ingresos con una baja inversión inicial.',
-          price: '1,6',
+          price: '1,9',
           period: 'UF/semanal',
           features: [
             'Variable x Km: 0,00196 UF',
@@ -1445,7 +1445,7 @@ export const pricing = {
           badge: 'Bencinero',
           description:
             'Libertad total para trabajar en horarios de alta demanda. Mayor autonomía y flexibilidad para maximizar ingresos sin depender de carga eléctrica.',
-          price: '2,7',
+          price: '2,9',
           period: 'UF/semanal',
           features: [
             'Variable x Km: 0,00203 UF',

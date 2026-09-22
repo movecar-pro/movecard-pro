@@ -10,7 +10,7 @@
 import { useEffect, useState } from 'react';
 import Modal from './Modal';
 
-type LegalBlock = string | { list: string[] };
+type LegalBlock = string | { list: string[] } | { sub: string };
 interface LegalSection {
   heading: string;
   body: LegalBlock[];
@@ -56,6 +56,10 @@ export default function LegalModal({ docs }: { docs: Record<DocKey, LegalDoc> })
               {s.body.map((b, j) =>
                 typeof b === 'string' ? (
                   <p key={j}>{b}</p>
+                ) : 'sub' in b ? (
+                  <h4 key={j} className="lm__sub">
+                    {b.sub}
+                  </h4>
                 ) : (
                   <ul key={j} className="lm__list">
                     {b.list.map((li, k) => (
@@ -73,9 +77,11 @@ export default function LegalModal({ docs }: { docs: Record<DocKey, LegalDoc> })
             .lm__updated { margin: -12px 0 0; font-size: var(--fs-small); color: var(--ink-700); }
             .lm__section { display: flex; flex-direction: column; gap: 8px; }
             .lm__section h3 { margin: 0; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-body-lg); color: var(--text-strong); }
+            .lm__sub { margin: 10px 0 0; font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-body); color: var(--text-strong); }
             .lm__section p { margin: 0; font-size: var(--fs-small); line-height: 1.65; color: var(--text-body); }
-            .lm__list { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
-            .lm__list li { font-size: var(--fs-small); line-height: 1.6; color: var(--text-body); }
+            .lm__list { margin: 0; padding-left: 22px; list-style: disc; }
+            .lm__list li { font-size: var(--fs-small); line-height: 1.6; color: var(--text-body); display: list-item; }
+            .lm__list li + li { margin-top: 6px; }
           `}</style>
         </article>
       )}

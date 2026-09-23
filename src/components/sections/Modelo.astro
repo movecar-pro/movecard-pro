@@ -7,11 +7,23 @@
  */
 import Placeholder from '@components/primitives/Placeholder.astro';
 import { about } from '@lib/content';
-const { leftCol, rightCol, image } = about.modelo;
+const { leftCol, rightCol, image, image1 } = about.modelo;
 ---
 
 <section class="mo" id="flota">
   <div class="mo__inner mc-container">
+    
+         {/* Imagen de flota (placeholder) — public/assets/images/vehicles/fleet.webp */}
+    <div class="mo__media" data-gsap="fade-up">
+      <Placeholder
+        src={image.src}
+        alt={image.alt}
+        ratio="16/9"
+        fit="cover"
+        rounded="var(--radius-lg)"
+      />
+    </div>
+
     <div class="mo__grid">
       <div class="mo__col" data-gsap="fade-up">
         {
@@ -29,11 +41,11 @@ const { leftCol, rightCol, image } = about.modelo;
       </div>
     </div>
 
-    {/* Imagen de flota (placeholder) — public/assets/images/vehicles/fleet.webp */}
-    <div class="mo__media" data-gsap="fade-up">
+{<!-- Foto IF -->}
+      <div class="mo__media" data-gsap="fade-up">
       <Placeholder
-        src={image.src}
-        alt={image.alt}
+        src={image1.src}
+        alt={image1.alt}
         ratio="16/9"
         fit="cover"
         rounded="var(--radius-lg)"
@@ -87,6 +99,7 @@ const { leftCol, rightCol, image } = about.modelo;
   .mo__media {
     max-width: 980px;
     margin-inline: auto;
+    margin-bottom: 40px;
   }
   @media (max-width: 900px) {
     .mo__grid {

@@ -1199,6 +1199,7 @@ export const about = {
   },
   // Tercera sección: layout editorial "Más que arriendo de vehículos".
   modelo: {
+    image1: { src: 'team/team.webp', alt: 'Equipo en sesión de fotos' },
     leftCol: [
       { kind: 'h', text: 'Más que un vehículo' },
       {
@@ -1283,7 +1284,7 @@ export const comoFunciona = {
   },
   // Hero de la página (foto de conductor + streaks).
   hero: {
-    title: '¿Porqué MOVECAR.pro es tu mejor opción?',
+    title: '¿Porqué MOVECAR.PRO es tu mejor opción?',
     subtitle:
       'Movecar.pro combina tecnología, soporte humano y una flota preparada para que puedas enfocarte en tus ingresos.',
     ctaPrimary: 'Quiero postular',
@@ -1366,7 +1367,7 @@ export const comoFunciona = {
 export const pricing = {
   header: {
     eyebrow: 'Precios / Planes',
-    title: 'Los planes más completos del mercado',
+    title: 'Los planes más completos \ndel mercado',
     subtitle:
       'Una experiencia 360° pensada para maximizar tus ingresos: flota, tecnología, cobertura, beneficios y acompañamiento real para que solo te preocupes de manejar.',
   },
@@ -1385,12 +1386,12 @@ export const pricing = {
           price: '2,5',
           period: 'UF/semanal',
           features: [
-            'Variable x Km: 0,00280 UF',
+            'Sólo ~$115 por km recorrido',
             'Turno: 06:00 a 18:00',
-            '50% aprox. de cobertura eléctrica mensual',
-            'Seguro cobertura completa + deducible 3 UF',
-            'Auto de reemplazo hasta 10 días',
-            'App Movecar, con monitoreo de ingresos y costos',
+            'Bono $100.000 al mes para carga',
+            'Seguro Plus - 10 UF deducible',
+            'Auto de reemplazo según disponibilidad',
+            'App Movecar.Pro, con monitoreo de ingresos, \nviajes, costos y ranking',
             'Opción preferente de compra desde $500.000 CLP',
           ],
           cta: 'Contratar',
@@ -1404,12 +1405,12 @@ export const pricing = {
           price: '3,9',
           period: 'UF/semanal',
           features: [
-            'Variable x Km: 0,00290 UF',
+            'Sólo ~$119 por km recorrido',
             'Turno: 18:00 a 06:00',
-            '50% aprox. de cobertura eléctrica mensual',
-            'Seguro premium + deducible 3 UF',
-            'Auto de reemplazo hasta 30 días',
-            'App Movecar Plus, con Modelo de Predicción para mayores ingresos',
+            'Bono $100.000 al mes para carga',
+            'Seguro Plus - 10 UF deducible',
+            'Auto de reemplazo según disponibilidad',
+            'App MoveCar.Pro, con monitoreo de ingresos, \nviajes, costos y ranking',
             'Opción preferente de compra a $100 CLP',
           ],
           cta: 'Contratar',
@@ -1429,11 +1430,11 @@ export const pricing = {
           price: '1,9',
           period: 'UF/semanal',
           features: [
-            'Variable x Km: 0,00196 UF',
+            'Sólo ~$80 por km recorrido',
             'Turno: 06:00 a 18:00',
-            'Seguro cobertura completa + deducible 5 UF',
-            'Auto de reemplazo hasta 10 días',
-            'App Movecar con monitoreo de ingresos y costos',
+            'Seguro Plus - 10 UF deducible',
+            'Auto de reemplazo según disponibilidad',
+            'App MoveCar.Pro, con monitoreo de ingresos, \nviajes, costos y ranking',
             'Menor costo del mercado',
             'Opción preferente de compra desde $500.000 CLP',
           ],
@@ -1448,11 +1449,11 @@ export const pricing = {
           price: '2,9',
           period: 'UF/semanal',
           features: [
-            'Variable x Km: 0,00203 UF',
+            'Sólo ~$83 por km recorrido',
             'Turno: 18:00 a 06:00',
-            'Seguro premium + deducible 5 UF',
-            'Auto de reemplazo hasta 30 días',
-            'App Movecar, con Modelo de Predicción para mayores ingresos',
+            'Seguro Plus - 10 UF deducible',
+            'Auto de reemplazo según disponibilidad',
+            'App MoveCar.Pro, con monitoreo de ingresos, \nviajes, costos y ranking',
             'Mayor potencial de ingresos',
             'Opción preferente de compra a $100 CLP',
           ],

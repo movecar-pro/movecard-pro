@@ -140,7 +140,7 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
         .pp__amount { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: 44px; line-height: 1; color: var(--text-accent); }
         .pp__period { font-size: var(--fs-small); font-weight: var(--fw-semibold); color: var(--text-accent); }
         .pp__features { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-        .pp__features li { display: flex; align-items: flex-start; gap: 12px; font-size: var(--fs-small); color: var(--text-body); }
+        .pp__features li { display: flex; align-items: flex-start; gap: 12px; font-size: var(--fs-small); color: var(--text-body);white-space: pre-line }
         .pp__features i { color: var(--green-700); margin-top: 3px; font-size: 13px; }
         /* Botón outline (como el diseño) */
         .pp__cta {

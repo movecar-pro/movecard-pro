@@ -146,7 +146,7 @@ export default function VehicleModal({
         .vm__group-icon { width: 32px; height: 32px; border-radius: var(--radius-pill); border: 1px solid var(--amber-300); color: var(--amber-500); display: inline-flex; align-items: center; justify-content: center; font-size: 13px; }
         .vm__group-title { margin: 0 0 8px; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: 15px; color: var(--text-strong); }
         .vm__group-list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
-        .vm__group-list li { font-size: 14px; line-height: 1.45; color: var(--text-body); }
+        .vm__group-list li { font-size: 14px; line-height: 1.45; color: var(--text-body); list-style-type: disc }
 
         .vm__images { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; margin: 0 -3rem; }
         .vm__images[data-count="1"] { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; }

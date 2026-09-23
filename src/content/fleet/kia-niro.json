@@ -1,0 +1,118 @@
+{
+  "order": 7,
+  "name": "Kia Niro",
+  "badge": "100% Eléctrico",
+  "fuel": "ev",
+  "tags": [
+    "298 km",
+    "Compacto"
+  ],
+  "image": "vehicles/renault-kwid-etech.webp",
+  "detail": {
+    "description": "El eléctrico más urbano y eficiente para maximizar la rentabilidad en ciudad.",
+    "images": [
+      {
+        "src": "vehicles/renault-kwid-etech-front.webp",
+        "alt": "Renault Kwid E-Tech EV 2025 vista frontal"
+      },
+      {
+        "src": "vehicles/renault-kwid-etech-rear.webp",
+        "alt": "Renault Kwid E-Tech EV 2025 vista trasera"
+      }
+    ],
+    "groupsTop": [
+      {
+        "icon": "fa-gauge-high",
+        "title": "Eficiencia que se nota",
+        "items": [
+          "Operación 100% eléctrica.",
+          "Batería LFP de hasta 42,3 kWh.",
+          "Potencia de 95 HP y 160 Nm de torque."
+        ]
+      },
+      {
+        "icon": "fa-route",
+        "title": "Autonomía para tu jornada",
+        "items": [
+          "Hasta 430 km de autonomía urbana.",
+          "Rendimiento óptimo en el día a día.",
+          "Rango neto mixto real de 313 km."
+        ]
+      },
+      {
+        "icon": "fa-charging-station",
+        "title": "Carga rápida",
+        "items": [
+          "Carga rápida DC 30% a 80% en 30 minutos.",
+          "Soporta potencias DC de hasta 87 kW.",
+          "Carga AC completa cercana a 7 horas."
+        ]
+      },
+      {
+        "icon": "fa-car-side",
+        "title": "Cómodo para ti",
+        "items": [
+          "Conducción muy suave y urbana.",
+          "Excelente visibilidad del entorno.",
+          "Manillas de puertas automáticas retráctiles."
+        ]
+      },
+      {
+        "icon": "fa-users",
+        "title": "Más comodidad para tus pasajeros",
+        "items": [
+          "Distancia entre ejes de 2.660 mm.",
+          "Largo total de 4.020 mm.",
+          "Piso trasero completamente plano."
+        ]
+      },
+      {
+        "icon": "fa-suitcase-rolling",
+        "title": "Espacio que necesitas",
+        "items": [
+          "Maletero de hasta 326 litros.",
+          "Capacidad expandible a 945 litros.",
+          "Asientos traseros abatibles."
+        ]
+      }
+    ],
+    "groupsBottom": [
+      {
+        "icon": "fa-shield-halved",
+        "title": "Seguridad",
+        "items": [
+          "Airbags frontales y laterales.",
+          "Control de estabilidad y asistencia en pendientes.",
+          "Frenos de disco en las 4 ruedas con ABS."
+        ]
+      },
+      {
+        "icon": "fa-camera",
+        "title": "Asistencias de conducción",
+        "items": [
+          "Sistema de cámara 540° con chasis transparente.",
+          "Sensores de proximidad delanteros y traseros.",
+          "Control de crucero adaptativo inteligente."
+        ]
+      },
+      {
+        "icon": "fa-mobile-screen",
+        "title": "Tecnología y conectividad",
+        "items": [
+          "Pantalla central táctil de 12,8.",
+          "Conectividad Apple CarPlay y Android Auto.",
+          "Sistema multimedia avanzado e intuitivo."
+        ]
+      },
+      {
+        "icon": "fa-wrench",
+        "title": "Menor mantenimiento",
+        "items": [
+          "Sin cambios de aceite, filtros ni bujías.",
+          "Menos desgaste mecánico por motorización eléctrica.",
+          "Mayor fiabilidad de componentes a largo plazo."
+        ]
+      }
+    ]
+  }
+}

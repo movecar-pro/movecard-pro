@@ -229,32 +229,32 @@ export const ventajasMovecar = {
   items: [
     {
       icon: 'fa-clock',
-      title: 'Capitaliza tu esfuerzo',
-      body: 'Puedes comprar tu auto al 4to y 5to año desde 100 pesos.',
+      title: 'Capitaliza tu esfuerzo con horarios flexibles',
+      body: 'Puedes comprar tu auto desde el 4to año, y desde el 5to el valor de compra es de solo $100 pesos.',
       bullets: [],
     },
     {
       icon: 'fa-leaf',
-      title: 'Planes de Arriendo más bajos del mercado',
-      body: 'Planes desde 1,9 UF + beneficios exclusivos y descuentos para conductores.',
+      title: 'Planes de arriendo más bajos del mercado',
+      body: 'Elige entre nuestros planes desde 1,9 UF y adquiere beneficios exclusivos para conductores.',
       bullets: [],
     },
     {
       icon: 'fa-headset',
-      title: 'App Movecar, Asistente y Data en tiempo real',
-      body: 'Monitorea ingresos, costos y desempeño en tiempo real, sin letra chica y con apoyo 24/7.',
+      title: 'App MoveCar, asistente y datos en tiempo real',
+      body: 'Monitorea tus ingresos, costos y desempeño en tiempo real, además de contar con soporte 24/7.',
       bullets: [],
     },
     {
       icon: 'fa-hand-holding-dollar',
-      title: 'Ingresa hoy, sin ahogarte',
-      body: 'No exigimos pago inmediato de cuota de incorporación, tenemos opciones flexibles de pago que se adapten a tu flujo.',
+      title: 'Ingresa hoy pagando tu garantía en cuotas',
+      body: 'Contamos con opciones flexibles de pago de garantía para que adaptes tu ingreso a MoveCar de la forma mas cómoda.',
       bullets: [],
     },
     {
       icon: 'fa-wallet',
-      title: 'Ingreso Seguro',
-      body: 'Maximiza tus ingresos con nuestra flota y llega tranquilo a fin de mes, con ingresos promedio desde $350.000 semanales.',
+      title: 'MoveCar ofrece ingresos extra asegurados',
+      body: 'Genera ingresos extra con solo unas horas de conducción a la semana. Tú eliges el horario y la cantidad de tiempo que deseas manejar.',
       bullets: [],
     },
   ],
@@ -1401,7 +1401,7 @@ export const pricing = {
           name: 'MoveElectric PM',
           badge: '100% Eléctrico',
           description:
-            'La mejor opción para conductores full-time. Más cobertura, menor costo energético y mayor potencial de ingresos.',
+            'La mejor opción para conductores full-time. Más cobertura, menor costo energético y mayor potencial de ingresos.\n\n',
           price: '3,9',
           period: 'UF/semanal',
           features: [
@@ -1426,7 +1426,7 @@ export const pricing = {
           name: 'MoveGas AM',
           badge: 'Bencinero',
           description:
-            'La forma más flexible y accesible de comenzar. Ideal para complementar ingresos con una baja inversión inicial.',
+            'La forma más flexible y accesible de comenzar. Ideal para complementar ingresos con una baja inversión inicial.\n\n',
           price: '1,9',
           period: 'UF/semanal',
           features: [

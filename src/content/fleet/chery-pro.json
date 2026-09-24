@@ -1,23 +1,23 @@
 {
-  "order": 7,
-  "name": "Kia Niro",
-  "badge": "100% Eléctrico",
-  "fuel": "ev",
+  "order": 8,
+  "name": "Chery Pro Max2",
+  "badge": "Bencina",
+  "fuel": "gas",
   "tags": [
-    "298 km",
+    "Bencina",
     "Compacto"
   ],
-  "image": "vehicles/kia-niro-front.webp",
+  "image": "vehicles/chery-pro-front.webp",
   "detail": {
-    "description": "El eléctrico más urbano y eficiente para maximizar la rentabilidad en ciudad.",
+    "description": "El bencinero más urbano y eficiente para maximizar la rentabilidad en ciudad.",
     "images": [
       {
-        "src": "vehicles/kia-niro-front.webp",
-        "alt": "Kia Niro vista frontal"
+        "src": "vehicles/chery-pro-front.webp",
+        "alt": "Chery Pro Max 2 vista frontal"
       },
       {
-        "src": "vehicles/kia-niro-rear.webp",
-        "alt": "Kia Niro vista trasera"
+        "src": "vehicles/chery-pro-rear.webp",
+        "alt": "Chery Pro Max 2 vista trasera"
       }
     ],
     "groupsTop": [
@@ -25,9 +25,9 @@
         "icon": "fa-gauge-high",
         "title": "Eficiencia que se nota",
         "items": [
-          "Operación 100% eléctrica.",
-          "Batería LFP de hasta 42,3 kWh.",
-          "Potencia de 95 HP y 160 Nm de torque."
+          "Operación 100% Bencina.",
+          "Motor 1.5 turbo.",
+          "Potencia de 156 HP y 230 Nm de torque."
         ]
       },
       {

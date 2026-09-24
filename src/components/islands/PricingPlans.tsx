@@ -135,7 +135,7 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
 
         /* Comunes */
         .pp__name { font-family: var(--font-display); font-weight: var(--fw-semibold); font-size: var(--fs-h4); color: var(--text-strong); margin: 0; }
-        .pp__desc { margin: 0; font-size: var(--fs-small); line-height: 1.55; color: var(--ink-700); }
+        .pp__desc { margin: 0; font-size: var(--fs-small); line-height: 1.55; color: var(--ink-700); white-space: pre-line; }
         .pp__price { display: flex; align-items: baseline; justify-content: center; gap: 8px; }
         .pp__amount { font-family: var(--font-display); font-weight: var(--fw-bold); font-size: 44px; line-height: 1; color: var(--text-accent); }
         .pp__period { font-size: var(--fs-small); font-weight: var(--fw-semibold); color: var(--text-accent); }

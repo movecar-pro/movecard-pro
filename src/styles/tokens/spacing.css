@@ -38,8 +38,8 @@
   --shadow-amber: 0 8px 24px rgba(254, 147, 7, 0.3); /* glow on primary CTA */
 
   /* Layout */
-  --container-max: 1280px;
-  --container-wide: 1200px;
+  --container-max: 1600px;
+  --container-wide: 1400px;
   --content-max: 864px;
   --content-narrow: 560px;
 

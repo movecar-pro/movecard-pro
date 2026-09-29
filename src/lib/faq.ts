@@ -116,10 +116,10 @@ export const faqCategories: FaqCategory[] = [
           'MoveCar tiene cuatro planes de arriendo, según el tipo de vehículo y el turno',
           {
             list: [
-              'MoveElectric AM (eléctrico, turno diurno): horario 06:00 a 18:00 hrs — 2,3 UF/semana',
+              'MoveElectric AM (eléctrico, turno diurno): horario 06:00 a 18:00 hrs — 2,5 UF/semana',
               'MoveElectric PM (eléctrico, turno nocturno): horario 18:00 a 06:00 hrs — 3,9 UF/semana',
-              'MoveGas AM (bencinero, turno diurno): horario 06:00 a 18:00 hrs — 1,6 UF/semana',
-              'MoveGas PM (bencinero, turno nocturno): horario 18:00 a 06:00 hrs — 2,7 UF/semana',
+              'MoveGas AM (bencinero, turno diurno): horario 06:00 a 18:00 hrs — 1,9 UF/semana',
+              'MoveGas PM (bencinero, turno nocturno): horario 18:00 a 06:00 hrs — 2,9 UF/semana',
             ],
           },
         ],

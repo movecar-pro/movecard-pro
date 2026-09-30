@@ -44,7 +44,7 @@ export const hero = {
     'Concéntrate en tus ingresos mientras nosotros nos encargamos del resto. Únete al futuro de la electromovilidad.',
   ctaPrimary: 'Quiero postular',
   ctaSecondary: 'Cómo funciona',
-  bullets: ['Sin pagos iniciales', 'Monitoreo de ingresos online', 'Soporte 24/7'],
+  bullets: ['Pago Inicial Flexible', 'Monitoreo de ingresos online', 'Soporte 24/7'],
   image: { src: 'vehicles/vehicle-coolray.png', alt: 'Vehículo eléctrico Movecar.pro' },
 };
 
@@ -195,7 +195,7 @@ export const fortalezas = {
   title: 'Fortalezas de Nuestro Modelo',
   carImage: { src: 'vehicles/top-view.webp', alt: 'Vista superior del modelo Movecar.pro' },
   items: [
-    { icon: 'fa-bolt', title: 'Bono Electricidad', body: 'Bono por Movecar.pro sobre el 50% de tus gastos mensuales.', disclaimer:'*Calculado en base al recorrido promedio de nuestros Movers' },
+    { icon: 'fa-bolt', title: 'Bono Electricidad y bencina', body: 'Bono por Movecar.pro sobre el 50% de tus gastos mensuales.', disclaimer:'*Calculado en base al recorrido promedio de nuestros Movers' },
     {
       icon: 'fa-shield-halved',
       title: 'Seguro Full Cobertura',
@@ -1289,7 +1289,7 @@ export const comoFunciona = {
       'Movecar.pro combina tecnología, soporte humano y una flota preparada para que puedas enfocarte en tus ingresos.',
     ctaPrimary: 'Quiero postular',
     ctaSecondary: 'Cómo funciona',
-    bullets: ['Sin pagos iniciales', 'Monitoreo de ingresos online', 'Soporte 24/7'],
+    bullets: ['Pago Inicial Flexible', 'Monitoreo de ingresos online', 'Soporte 24/7'],
     image: { src: 'lifestyle/driver-wheel.png', alt: 'Conductor Movecar.pro al volante' },
   },
   // Stepper horizontal "Cómo Funciona".

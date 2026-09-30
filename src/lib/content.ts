@@ -195,7 +195,7 @@ export const fortalezas = {
   title: 'Fortalezas de Nuestro Modelo',
   carImage: { src: 'vehicles/top-view.webp', alt: 'Vista superior del modelo Movecar.pro' },
   items: [
-    { icon: 'fa-bolt', title: 'Bono Electricidad y bencina', body: 'Bono por Movecar.pro sobre el 50% de tus gastos mensuales.', disclaimer:'*Calculado en base al recorrido promedio de nuestros Movers' },
+    { icon: 'fa-bolt', title: 'Bono Electricidad y Bencina', body: 'Bono por Movecar.pro sobre el 50% de tus gastos mensuales.', disclaimer:'*Calculado en base al recorrido promedio de nuestros Movers' },
     {
       icon: 'fa-shield-halved',
       title: 'Seguro Full Cobertura',

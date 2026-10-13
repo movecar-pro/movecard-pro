@@ -1,0 +1,127 @@
+---
+/**
+ * Política de la empresa y de la app para la ficha de Play Store, en HTML.
+ * Mismo contenido que el PDF que se sirve en /aplicacion/politicas/playstore_politica.pdf
+ * (vercel.json); esa ruta no se toca. Página independiente, sin navbar ni footer del sitio,
+ * con el mismo formato del documento.
+ */
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company &amp; App Policies — Movecar.pro</title>
+    <meta
+      name="description"
+      content="Movecar.pro (Moverent SpA) is a car rental company in Santiago, Chile. Policies for the Movecar.pro app, available only to our rental customers."
+    />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <style>
+      :root {
+        --ink: #1f1f1f;
+        --muted: #6b6b6b;
+        --line: #d4d4d4;
+        --brand: #c2772e;
+        --bg: #ffffff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      main {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: 3.5rem 1.5rem 2.5rem;
+      }
+      header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-bottom: 0.9rem;
+        border-bottom: 2px solid var(--ink);
+      }
+      .brand {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .brand span {
+        color: var(--brand);
+      }
+      .label {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      h1 {
+        font-size: 1.6rem;
+        line-height: 1.25;
+        margin: 2rem 0 1.25rem;
+      }
+      p {
+        margin: 0 0 1.1rem;
+        font-size: 1.02rem;
+      }
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5rem 1rem;
+        margin-top: 3rem;
+        padding-top: 0.8rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      @media (min-width: 640px) {
+        p {
+          text-align: justify;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="brand">Movecar<span>.pro</span></div>
+        <div class="label">Policies</div>
+      </header>
+
+      <h1>Company &amp; App Policies</h1>
+
+      <p>
+        Movecar.pro is a car rental company in Santiago, Chile. It is the trade name of Moverent SpA, RUT
+        78.467.487-8. We own a fleet of cars and rent them to people by weekly subscription, with maintenance,
+        insurance and roadside assistance included.
+      </p>
+      <p>
+        This app is only for our rental customers. Once someone signs a rental contract with us, they use the app to
+        see their plan, follow their weekly statement, check toll and fine charges, pay their deposit, download their
+        invoices and see their car’s documents. Someone who is not a customer cannot do anything in it.
+      </p>
+      <p>
+        It is not a ride-hailing app. It does not connect passengers with drivers, does not assign trips, does not set
+        fares and does not process any passenger payment. Our customers rent a car from us and then work
+        independently, wherever they choose. We are not affiliated with any transport platform.
+      </p>
+
+      <footer>
+        <span>Movecar.pro — Moverent SpA · RUT 78.467.487-8</span>
+        <span>Santiago, Chile</span>
+      </footer>
+    </main>
+  </body>
+</html>

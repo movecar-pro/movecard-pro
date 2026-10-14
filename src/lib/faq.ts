@@ -185,13 +185,8 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Cuánto es la garantía y cómo se paga?',
         a: [
-          'La garantía es de $350.000. Puedes pagarla de dos formas:',
-          {
-            list: [
-              'Al momento de recibir el vehículo en un solo pago',
-              'En cuotas semanales descontadas directamente de tus ingresos (entre $35.000 y $70.000 por semana)',
-            ],
-          },
+          'La garantía es de $350.000. Es un pago inicial en la entrega del auto de $50.000 y luego 6 cuotas de $50.000, descontadas de tus liquidaciones.*',
+          '*Oferta por tiempo limitado'
         ],
       },
       {

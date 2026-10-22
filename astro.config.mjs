@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // Dominio para sitemap y URLs canónicas. En producción (Vercel) define
 // PUBLIC_SITE_URL; default = dominio definitivo. Sin barra final.
-const SITE_URL = (process.env.PUBLIC_SITE_URL ?? 'https://movecar.pro').replace(/\/+$/, '');
+const SITE_URL = (process.env.PUBLIC_SITE_URL ?? 'https://www.movecar.pro').replace(/\/+$/, '');
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +18,7 @@ export default defineConfig({
     //     Ver src/components/islands/ y los comentarios en las secciones que las usan.
     react(),
     // 🗺️  Genera /sitemap-index.xml en build automáticamente.
-    sitemap(),
+    sitemap({ filter: (page) => !new URL(page).pathname.startsWith('/recontacto/') }),
   ],
 
   vite: {

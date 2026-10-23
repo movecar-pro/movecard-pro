@@ -322,7 +322,7 @@ export const footer = {
 export const legalDocs = {
   terms: {
     title: 'Términos y Condiciones de Servicio',
-    updated: 'Versión 1.4 · MOVERENT SpA — Conductores · Vigencia: 20 de agosto de 2026',
+    updated: 'Versión 1.4 · MOVERENT SpA — Conductores',
     sections: [
       {
         heading: 'Capítulo 1 — Arriendo de Vehículos Motorizados por Suscripción',

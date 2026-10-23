@@ -10,7 +10,7 @@
 import { useEffect, useState } from 'react';
 import Modal from './Modal';
 
-type LegalBlock = string | { list: string[] } | { sub: string };
+type LegalBlock = string | { list: string[] } | { sub: string } | { table: string[][] };
 interface LegalSection {
   heading: string;
   body: LegalBlock[];
@@ -60,6 +60,29 @@ export default function LegalModal({ docs }: { docs: Record<DocKey, LegalDoc> })
                   <h4 key={j} className="lm__sub">
                     {b.sub}
                   </h4>
+                ) : 'table' in b ? (
+                  <div key={j} className="lm__table-wrap">
+                    <table className="lm__table">
+                      <thead>
+                        <tr>
+                          {b.table[0].map((c, k) => (
+                            <th key={k} scope="col">
+                              {c}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {b.table.slice(1).map((r, k) => (
+                          <tr key={k}>
+                            {r.map((c, m) => (
+                              <td key={m}>{c}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 ) : (
                   <ul key={j} className="lm__list">
                     {b.list.map((li, k) => (
@@ -79,6 +102,10 @@ export default function LegalModal({ docs }: { docs: Record<DocKey, LegalDoc> })
             .lm__section h3 { margin: 0; font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-body-lg); color: var(--text-strong); }
             .lm__sub { margin: 10px 0 0; font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-body); color: var(--text-strong); }
             .lm__section p { margin: 0; font-size: var(--fs-small); line-height: 1.65; color: var(--text-body); }
+            .lm__table-wrap { overflow-x: auto; }
+            .lm__table { width: 100%; border-collapse: collapse; font-size: var(--fs-small); color: var(--text-body); }
+            .lm__table th, .lm__table td { padding: 8px 10px; border: 1px solid var(--border-subtle); text-align: left; line-height: 1.4; }
+            .lm__table th { background: var(--surface-subtle); font-weight: var(--fw-semibold); color: var(--text-strong); }
             .lm__list { margin: 0; padding-left: 22px; list-style: disc; }
             .lm__list li { font-size: var(--fs-small); line-height: 1.6; color: var(--text-body); display: list-item; }
             .lm__list li + li { margin-top: 6px; }

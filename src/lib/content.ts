@@ -1004,7 +1004,7 @@ export const legalDocs = {
         ],
       },
       {
-        heading: 'Capítulo 31 — Matriz de Infracciones del Mover',
+        heading: 'Capítulo 31 — Matriz de Infracciones del Conductor',
         body: [
           { sub: '31.1 Objeto' },
           'Este Capítulo tipifica las conductas del Usuario que constituyen incumplimiento, las clasifica, fija la escalera de actuación aplicable a cada una y determina su punto final. Se aplica sin perjuicio de las multas de tránsito y de las responsabilidades legales que correspondan, y en todo lo no previsto se rige por el Contrato de Arrendamiento, que prevalece sobre estos Términos.',
@@ -1083,7 +1083,7 @@ export const legalDocs = {
   },
   privacy: {
     title: 'Política de Privacidad',
-    updated: 'Junio 2026',
+    updated: '',
     sections: [
       {
         heading: '1. Objetivo',
@@ -1205,7 +1205,7 @@ export const about = {
     ],
     cta: 'Quiero postular',
     // Imágenes (placeholders): mosaico de rostros + fondo tenue de manos.
-    image: { src: 'team/team-mosaic.webp', alt: 'Comunidad de movers Movecar.pro' },
+    image: { src: 'team/team-mosaic.webp', alt: 'Comunidad de conductores Movecar.pro' },
     bg: 'backgrounds/nosotros.webp',
   },
   // Tercera sección: layout editorial "Más que arriendo de vehículos".

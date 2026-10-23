@@ -49,7 +49,7 @@ export default function LegalModal({ docs }: { docs: Record<DocKey, LegalDoc> })
           <h2 id="legal-modal-title" className="lm__title">
             {doc.title}
           </h2>
-          <p className="lm__updated">Última actualización: {doc.updated}</p>
+          {doc.updated && <p className="lm__updated">{doc.updated}</p>}
           {doc.sections.map((s, i) => (
             <section className="lm__section" key={i}>
               <h3>{s.heading}</h3>

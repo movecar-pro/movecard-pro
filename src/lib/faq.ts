@@ -47,6 +47,12 @@ export const faqCategories: FaqCategory[] = [
         ],
       },
       {
+        q: '¿Tengo que renovar mis documentos?',
+        a: [
+          'Sí. Tu certificado de antecedentes y tu hoja de vida del conductor deben estar vigentes durante todo el contrato. Cada 6 meses te pediremos actualizarlos desde la app. Si vencen, el auto se bloquea hasta que los actualices y el arriendo sigue corriendo.',
+        ],
+      },
+      {
         q: '¿Necesito tener experiencia previa en apps de transporte?',
         a: [
           'No es obligatorio, pero es un factor positivo en la evaluación. Si no tienes experiencia previa en Uber u otras apps (DiDi, Cabify, Bolt), igual puedes postular y pasarás por una entrevista de evaluación.',
@@ -79,15 +85,14 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Cómo funciona el proceso de postulación?',
         a: [
-          'El proceso tiene 6 etapas:',
+          'El proceso tiene 5 etapas:',
           {
             list: [
-              'Postulación: completas el formulario con tus datos básicos',
-              'Evaluación de perfil: respondes una encuesta que evalúa tu compatibilidad con el modelo',
-              'Subida de documentos: cargas tu cédula, licencia, antecedentes y hoja de vida',
-              'Precalificación: MoveCar revisa tu perfil y documentos',
-              'Entrevista: instancia de validación personal con el equipo',
-              'Onboarding: firma de contrato, capacitación y entrega del vehículo',
+              'Postula (día 1): completas tus datos y la encuesta de perfil',
+              'Evaluación (día 1–2): revisamos tus documentos y antecedentes',
+              'Entrevista (día 2–3): nos conocemos y resolvemos tus dudas',
+              'Onboarding (día 3–4): firmas el contrato y te capacitamos en la app',
+              'Entrega (día 4): recibes tu auto y empiezas a generar',
             ],
           },
         ],
@@ -95,7 +100,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Cuánto tiempo demora el proceso hasta recibir el auto?',
         a: [
-          'El proceso es rápido y ágil. Una vez aprobada la postulación y completado el onboarding, en pocos días puedes estar en la calle generando. Los tiempos dependen de la disponibilidad de vehículos y la velocidad con que completes los pasos.',
+          'Alrededor de 4 días desde que postulas, según disponibilidad de autos y lo rápido que completes cada paso.',
         ],
       },
       {
@@ -113,13 +118,14 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Qué planes de arriendo ofrece MoveCar?',
         a: [
-          'MoveCar tiene cuatro planes de arriendo, según el tipo de vehículo y el turno',
+          'MoveCar tiene cinco planes de arriendo, según el tipo de vehículo y el turno',
           {
             list: [
               'MoveElectric AM (eléctrico, turno diurno): horario 06:00 a 18:00 hrs — 2,5 UF/semana',
-              'MoveElectric PM (eléctrico, turno nocturno): horario 18:00 a 06:00 hrs — 3,9 UF/semana',
+              'MoveElectric PM (eléctrico, turno vespertino y nocturno): horario 18:00 a 06:00 hrs — 3,9 UF/semana',
               'MoveGas AM (bencinero, turno diurno): horario 06:00 a 18:00 hrs — 1,9 UF/semana',
-              'MoveGas PM (bencinero, turno nocturno): horario 18:00 a 06:00 hrs — 2,9 UF/semana',
+              'MoveGas PM (bencinero, turno vespertino y nocturno): horario 18:00 a 06:00 hrs — 2,9 UF/semana',
+              'Full Gas (bencinero, 24 horas) — 4,9 UF/semana',
             ],
           },
         ],
@@ -127,7 +133,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Hay un tiempo mínimo de arriendo?',
         a: [
-          'Sí. El arriendo mínimo es de 4 semanas (1 mes). Esto permite que tanto el conductor como MoveCar puedan operar con estabilidad y continuidad desde el inicio de la relación.',
+          'Sí. La permanencia mínima es de 12 semanas. Si terminas antes, se aplica la multa por término anticipado del contrato, con descuento si reasignamos el auto a otro conductor.',
         ],
       },
       {
@@ -153,7 +159,7 @@ export const faqCategories: FaqCategory[] = [
             list: [
               'Multas de tránsito',
               'TAG y peajes',
-              'Deducible por siniestro: 3 UF por evento en daño parcial / 10 UF en pérdida total',
+              'Deducible por siniestro: 10 UF por evento, como tope máximo',
             ],
           },
         ],
@@ -167,13 +173,19 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Puedo usar el auto en otras apps además de Uber?',
         a: [
-          'Sí, puedes operar en otras plataformas de transporte autorizadas. Sin embargo, al menos el 50% de los kilómetros semanales deben ser realizados en Uber. El resto puede distribuirse en otras apps o usos personales. Lo que no está permitido es usar el vehículo para transporte interregional, carga o servicios distintos al transporte de pasajeros.',
+          'Sí, puedes operar en otras plataformas autorizadas, pero al menos el 60% de tu tiempo de operación debe ser en Uber, medido en períodos de 4 semanas. No está permitido usar el auto para carga ni para servicios distintos al transporte de pasajeros.',
         ],
       },
       {
         q: '¿El kilometraje tiene límite?',
         a: [
-          'El vehículo tiene kilometraje ilimitado, sujeto a un uso razonable coherente con la operación en plataformas de transporte. MoveCar puede evaluar si el uso se aparta significativamente de los estándares normales de la flota a través de la telemetría.',
+          'No. El valor por km se cobra solo hasta el tope semanal de tu plan: 1.100 km en turno AM y 1.200 km en turno PM; sobre ese tope no pagas variable. Por telemetría revisamos usos que superen en más de 30% el promedio de la flota.',
+        ],
+      },
+      {
+        q: '¿Puedo hacer viajes hacia o desde el aeropuerto?',
+        a: [
+          'No, salvo autorización expresa de MoveCar. Mientras no esté operativo el Registro de la Ley N° 21.553, los viajes al aeropuerto tienen alto riesgo de fiscalización y retención del auto. Si el auto es retenido en uno de esos viajes, el arriendo sigue corriendo y los costos de multa, grúa, bodegaje y recuperación son de tu cargo.',
         ],
       },
     ],
@@ -185,20 +197,20 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Cuánto es la garantía y cómo se paga?',
         a: [
-          'La garantía es de $350.000. Es un pago inicial en la entrega del auto de $50.000 y luego 6 cuotas de $50.000, descontadas de tus liquidaciones.*',
-          '*Oferta por tiempo limitado'
+          'La garantía es de $350.000. Las condiciones de pago se evalúan caso a caso.',
+          'Además, firmas un pagaré complementario por hasta 60 UF (90 UF en el plan Full Gas), que respalda las obligaciones del contrato. Solo se cobra si quedan deudas impagas 15 días después de tu Liquidación Final de Salida.',
         ],
       },
       {
         q: '¿Me devuelven la garantía cuando termino el contrato?',
         a: [
-          'Sí, se devuelve en dos partes: el monto que excede los $150.000 se restituye a las 3 semanas de devuelto el vehículo, y el saldo restante a las 6 semanas, siempre que no existan cargos, multas, deducibles u otras obligaciones pendientes.',
+          'Sí. Al devolver el auto emitimos tu Liquidación Final de Salida y te devolvemos la garantía descontando lo que quede pendiente: multas, TAG, deducibles o daños. Si hay cargos que todavía no se pueden calcular, como multas que aún no llegan, retenemos solo el monto estimado de esos cargos y te devolvemos el resto cuando se conozcan.',
         ],
       },
       {
         q: '¿Cuándo y cómo recibo mi pago semanal?',
         a: [
-          'Cada semana MoveCar emite una liquidación detallada. Si el saldo es positivo (tus ingresos superan los descuentos), el depósito se realiza el jueves en tu cuenta bancaria. Si el saldo es negativo, tienes hasta el martes para regularizar el pago.',
+          'Cada semana MoveCar emite una liquidación detallada. Si el saldo es positivo (tus ingresos superan los descuentos), el depósito se realiza el jueves en tu cuenta bancaria. Si el saldo es negativo, tienes hasta el martes de la semana siguiente para regularizar el pago.',
         ],
       },
       {
@@ -210,7 +222,7 @@ export const faqCategories: FaqCategory[] = [
               'Canon de arriendo semanal',
               'Multas contractuales (velocidad u otras)',
               'Déficits de períodos anteriores',
-              'Comisión de administración MOVECOLLECT (1% del ingreso bruto)',
+              'Comisión de administración MOVECOLLECT (1% de tu ingreso, neto de las comisiones de la plataforma)',
               'Multas de tránsito',
               'TAG y peajes',
               'Deducibles de seguros u otros cargos asociados al uso del vehículo',
@@ -221,7 +233,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Qué pasa si mis ingresos no alcanzan para cubrir el arriendo?',
         a: [
-          'Si los ingresos no cubren el arriendo y los cargos del período, se genera un déficit. Este se imputa automáticamente a la garantía. Si la garantía tampoco alcanza, el saldo negativo queda como deuda exigible que debes pagar. La acumulación de déficits puede derivar en la suspensión del servicio o término del contrato.',
+          'Queda un saldo pendiente que debes pagar a más tardar el martes de la semana siguiente. La garantía no se usa para cubrir déficits mientras el contrato está vigente: se liquida solo al término. Si acumulas 4 semanas con saldo pendiente, seguidas o no, o $350.000 de deuda, es incumplimiento grave y puede terminar el contrato.',
         ],
       },
       {
@@ -232,7 +244,7 @@ export const faqCategories: FaqCategory[] = [
             list: [
               'MoveCar recibe la información de tus ingresos desde Uber al cierre de cada semana',
               'Si hay un saldo pendiente con Uber, este se refleja como deuda en tu liquidación MoveCar',
-              'Ese monto se descuenta de tu garantía o deberás pagarlo antes del martes',
+              'Ese monto se suma a tu liquidación y debes pagarlo a más tardar el martes de la semana siguiente.',
               'Para evitarlo: intenta mantener un equilibrio entre viajes en efectivo y viajes con tarjeta cada semana',
             ],
           },
@@ -247,7 +259,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Se cobra alguna cuota de inscripción?',
         a: [
-          'No. MoveCar no cobra cuota de inscripción. Entras sin poner plata de tu bolsillo — solo la garantía, que además puedes pagar en cuotas desde tus ingresos.',
+          'No. MoveCar no cobra cuota de inscripción. Entras sin poner plata de tu bolsillo — solo la garantía, cuyas condiciones de pago se evalúan caso a caso.',
         ],
       },
     ],
@@ -283,7 +295,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Puedo llevar el auto fuera de Santiago?',
         a: [
-          'No. El vehículo está habilitado para uso dentro del área de operación de plataformas de transporte en Santiago. El uso interregional está expresamente prohibido por contrato.',
+          'Sí, hasta 150 km. Si el viaje es por Uber, se cobra el valor por km de tu plan sobre los kilómetros de ida. Si es un viaje privado, se cobra el doble del valor por km, ida y vuelta, desde tu domicilio registrado. Para viajes sobre 150 km necesitas autorización previa de MoveCar.',
         ],
       },
     ],
@@ -301,7 +313,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Qué debo hacer si tengo un accidente?',
         a: [
-          'Debes informar a MoveCar dentro de las 12 horas siguientes al siniestro y:',
+          'Debes informar a MoveCar de inmediato, apenas estés en condiciones, y además:',
           {
             list: [
               'Registrar fotográficamente el evento',
@@ -315,7 +327,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Cuánto tengo que pagar si choco el auto?',
         a: [
-          'Si la cobertura del seguro aplica, pagas un deducible de 10 UF en caso de daño parcial o 30 UF en caso de pérdida total. El deducible puede pagarse en cuotas o descontarse de la garantía. Si el siniestro ocurre bajo circunstancias excluidas de la cobertura (alcohol, fuga del lugar, uso no autorizado), respondes por el 100% de los daños sin límite.',
+          'Si la cobertura aplica, pagas un deducible de 10 UF por evento, como tope máximo. Si la reparación cuesta menos, pagas solo su costo. Puedes pagarlo en cuotas desde tus liquidaciones. Si el siniestro ocurre en una situación excluida (alcohol, fuga, uso no autorizado), respondes por el 100% de los daños.',
         ],
       },
       {
@@ -344,8 +356,8 @@ export const faqCategories: FaqCategory[] = [
           'Sí. MoveCar tiene una opción de compra para conductores comprometidos con la continuidad:',
           {
             list: [
-              'A las 200 semanas continuas: puedes comprar el vehículo al 10% de su valor comercial',
-              'A las 250 semanas continuas: precio de compra de $100 (cien pesos)',
+              'A las 208 semanas continuas: puedes comprar el vehículo a un valor preferente definido en tu contrato',
+              'A las 260 semanas continuas: precio de compra de $100',
             ],
           },
         ],
@@ -397,7 +409,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Cuándo está disponible la app?',
         a: [
-          'La app MoveCar está en desarrollo. Será informada su disponibilidad a través de los canales oficiales de MoveCar.',
+          'Ya está disponible. Te enviaremos el link directo de descarga en tu proceso de ingreso. Próximamente descargable desde App Store o Google Play.',
         ],
       },
     ],
@@ -409,7 +421,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Cómo me contacto con MoveCar si tengo un problema?',
         a: [
-          'MoveCar cuenta con un equipo de soporte disponible a través de mesa de ayuda y WhatsApp. Para siniestros o urgencias, tienes un máximo de 12 horas para reportar el evento.',
+          'MoveCar cuenta con un equipo de soporte disponible a través de mesa de ayuda y WhatsApp. Para siniestros o urgencias, debes avisar de inmediato.',
         ],
       },
       {
@@ -433,7 +445,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Qué datos recopila MoveCar sobre mí?',
         a: [
-          'MoveCar trata datos de identificación personal, contacto, habilitación legal (licencia, antecedentes), datos económicos y financieros, datos operacionales del vehículo y datos de telemetría (ubicación, velocidad, kilometraje). Todo conforme a la Política de Privacidad y la Ley N° 19.628 y Ley N° 21.719.',
+          'MoveCar trata datos de identificación personal, contacto, habilitación legal (licencia, antecedentes), datos económicos y financieros, datos operacionales del vehículo y datos de telemetría (ubicación, velocidad, kilometraje). Todo conforme a la Política de Privacidad y la Ley N° 19.628 y la Ley N° 21.719, que entra en vigencia en diciembre de 2026.',
         ],
       },
       {
@@ -445,7 +457,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Puedo pedir que borren mis datos?',
         a: [
-          'Sí. Tienes derecho a solicitar acceso, rectificación, supresión, oposición y portabilidad de tus datos (derechos PROSA conforme a la Ley N° 21.719 vigente desde diciembre 2026). Puedes ejercerlos escribiendo a los canales oficiales de MoveCar.',
+          'Sí. Tienes derecho a solicitar acceso, rectificación, supresión, oposición y portabilidad de tus datos (derechos PROSA conforme a la Ley N° 21.719, que entra en vigencia en diciembre de 2026). Puedes ejercerlos escribiendo a los canales oficiales de MoveCar.',
         ],
       },
     ],

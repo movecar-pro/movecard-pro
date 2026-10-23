@@ -37,11 +37,10 @@ export const WHATSAPP_URL = 'https://wa.link/e0k8uq';
 export const hero = {
   eyebrow: 'Súmate a la plataforma de electromovilidad más moderna de Chile',
   // El span amber se resuelve en el componente; aquí marcamos la parte destacada.
-  titleLead: 'Genera desde',
-  titleHighlight: '$350.000*',
-  titleRest: 'a la semana. Sin auto propio.',
-  subtitle:
-    'Concéntrate en tus ingresos mientras nosotros nos encargamos del resto. Únete al futuro de la electromovilidad.',
+  titleLead: 'Gana en promedio',
+  titleHighlight: '$300.000',
+  titleRest: 'líquidos a la semana. Sin auto propio.',
+  subtitle: 'En una gran semana, nuestros mejores conductores han llegado a $450.000.',
   ctaPrimary: 'Quiero postular',
   ctaSecondary: 'Cómo funciona',
   bullets: ['Pago Inicial Flexible', 'Monitoreo de ingresos online', 'Soporte 24/7'],
@@ -49,8 +48,7 @@ export const hero = {
 };
 
 export const trustStats = [
-  { value: '$400.000+', label: 'Promedio semana o más' },
-  { value: '98%', label: 'Satisfacción' },
+  { value: '$300.000', label: 'Promedio líquido semanal' },
   { value: '0.1 año', label: 'Antigüedad flota promedio' },
   { value: '24/7', label: 'Soporte' },
 ];
@@ -58,7 +56,7 @@ export const trustStats = [
 export const ventajas = {
   eyebrow: 'Ventajas de Movecar.pro',
   title: 'Muévete al futuro de la Electromovilidad',
-  body: 'Maximiza tus ingresos con nuestra flota y asegura un sueldo real. Hoy, sin sorpresas ni letra chica.',
+  body: 'Maximiza tus ingresos con nuestra flota. Hoy, sin sorpresas ni letra chica.',
   cta: 'Comenzar ahora',
   badge: 'Mejor ingreso del mercado',
   highlights: [
@@ -73,46 +71,39 @@ export const simulador = {
   title: '¿Cuánto puedes ganar con Movecar.pro?',
   body: 'Usa nuestro simulador interactivo para proyectar tus ingresos reales basadas en tu disponibilidad.',
   planes: ['MoveElectric AM', 'MoveElectric PM', 'Plan Bencina'],
-  disclaimer: 'Sin compromiso. Proceso 100% online.',
+  disclaimer: 'Sin compromiso. Postulación 100% online.',
   cta: 'Quiero postular',
   note: '*Las ingresos proyectadas son estimaciones referenciales basadas en patrones históricos y variables de mercado. No constituyen una garantía de ingresos futuras ni una recomendación de jornada de conducción.',
 };
 
 export const flota = {
   eyebrow: 'Flota',
-  title: 'Los vehículos que puedes elegir',
+  title: 'Los vehículos de nuestra flota',
   body: 'Todos incluyen seguro, mantención y soporte. Haz clic en un modelo para ver su ficha.',
   cta: 'Conocer la flota',
-  star: '4.9 de 5 estrellas',
   // Los vehículos viven en el Content Layer (colección `fleet`, src/content/fleet/).
 };
 
 export const pasos = {
   eyebrow: 'Inscripción sin estrés',
-  title: 'Inscríbete fácil. Sin costos, sin trámites.',
+  title: 'Inscríbete fácil. Sin cuota de inscripción.',
   body: 'Desde la inscripción hasta la entrega, hacemos un proceso simple para que empieces a generar ingresos rápido.',
   cta: 'Comenzar ahora',
   steps: [
-    { day: 'Primer Paso: Día 1', title: 'Regístrate', body: 'Completa tus datos iniciales para postular a Movecar.pro' },
-    {
-      day: 'Segundo Paso: Día 1-3',
-      title: 'Entrevista',
-      body: 'Coordinamos una reunión para conocerte y resolver tus dudas.',
-    },
-    { day: 'Tercer Paso: Día 4', title: 'Activación', body: 'Firmamos el contrato y activamos tu perfil de conductor.' },
-    {
-      day: 'Cuarto Paso: Día 5',
-      title: 'Entrega',
-      body: 'Recibes tu vehículo y comienzas a generar ingresos desde Movecar.pro.',
-    },
+    { day: 'Día 1', title: 'Postula', body: 'Completa tus datos y la encuesta de perfil.' },
+    { day: 'Día 1–2', title: 'Evaluación', body: 'Revisamos tus documentos y antecedentes.' },
+    { day: 'Día 2–3', title: 'Entrevista', body: 'Nos conocemos y resolvemos tus dudas.' },
+    { day: 'Día 3–4', title: 'Onboarding', body: 'Firmas el contrato y te capacitamos en la app.' },
+    { day: 'Día 4', title: 'Entrega', body: 'Recibes tu auto y empiezas a generar.' },
   ],
 };
 
 export const testimonios = {
   eyebrow: 'Testimonios',
-  title: 'Movers Felices',
+  title: 'Conductores Felices',
   body: 'No lo decimos nosotros, lo dicen ellos.',
-  startext: '4.9 de 5 estrellas',
+  // Etiqueta visible bajo el título: los testimonios son ilustrativos.
+  label: 'Casos ilustrativos',
   // 9 testimonios — carrusel: 3 por pasada en desktop, 1 a 1 en móvil.
   items: [
     {
@@ -121,15 +112,15 @@ export const testimonios = {
         'Llevamos meses trabajando con Movecar.pro y fue súper rápido. El monitoreo de una semana ya estaba en la plataforma.',
       name: 'Carlos B.',
       role: 'Santiago · 8 meses',
-      income: '$610K/sem',
+      income: '$430K/sem',
     },
     {
       rating: 4,
       quote:
         'Lo que más valoro es el soporte. Tuve un problema con mi mantención y el equipo respondió súper rápido.',
       name: 'María F.',
-      role: 'Valparaíso · 1 año',
-      income: '$630K/sem',
+      role: 'Providencia · 1 año',
+      income: '$450K/sem',
     },
     {
       rating: 5,
@@ -185,7 +176,7 @@ export const testimonios = {
         'Postulé 100% online y sin pagar nada para entrar. La garantía la fui pagando de mis ingresos.',
       name: 'Fernanda V.',
       role: 'Quilicura · 3 meses',
-      income: '$540K/sem',
+      income: '$410K/sem',
     },
   ],
 };
@@ -195,11 +186,11 @@ export const fortalezas = {
   title: 'Fortalezas de Nuestro Modelo',
   carImage: { src: 'vehicles/top-view.webp', alt: 'Vista superior del modelo Movecar.pro' },
   items: [
-    { icon: 'fa-bolt', title: 'Bono Electricidad y Bencina', body: 'Bono por Movecar.pro sobre el 50% de tus gastos mensuales.', disclaimer:'*Calculado en base al recorrido promedio de nuestros Movers' },
+    { icon: 'fa-bolt', title: 'Bono de Carga', body: 'Bono de $100.000 al mes por conductor para carga eléctrica o bencina, en todos los planes.' },
     {
       icon: 'fa-shield-halved',
-      title: 'Seguro Full Cobertura',
-      body: 'Cuentas con los mejores seguros del mercado y mas bajos deducibles.',
+      title: 'Seguro',
+      body: 'Seguro con cobertura completa y deducible máximo de 10 UF por evento.',
     },
     {
       icon: 'fa-charging-station',
@@ -215,7 +206,7 @@ export const fortalezas = {
     {
       icon: 'fa-rotate',
       title: 'Auto Reemplazo',
-      body: 'Si el tuyo falla, te entregamos uno de reemplazo antes de 24 horas \nsegún disponibilidad.',
+      body: 'Si tu auto queda fuera de servicio por un siniestro cubierto, te entregamos uno de reemplazo según disponibilidad. Mientras no lo tengas, no pagas arriendo.',
     },
   ],
 };
@@ -224,18 +215,18 @@ export const fortalezas = {
 export const ventajasMovecar = {
   eyebrow: 'Ventajas de Movecar.pro',
   title: 'Muévete al futuro de la Electromovilidad',
-  subtitle: 'Maximiza tus ingresos con nuestra flota y asegura un sueldo real. Hoy, sin sorpresas ni letra chica.',
+  subtitle: 'Maximiza tus ingresos con nuestra flota. Hoy, sin sorpresas ni letra chica.',
   cta: 'Comenzar ahora',
   items: [
     {
       icon: 'fa-clock',
-      title: 'Capitaliza tu esfuerzo con horarios flexibles',
-      body: 'Puedes comprar tu auto desde el 4to año, y desde el 5to el valor de compra es de solo $100 pesos.',
+      title: 'Capitaliza tu esfuerzo: el auto puede ser tuyo',
+      body: 'Compra tu auto: desde las 208 semanas a un valor preferente, y desde las 260 semanas por solo $100.',
       bullets: [],
     },
     {
       icon: 'fa-leaf',
-      title: 'Planes de arriendo más bajos del mercado',
+      title: 'Planes de arriendo desde 1,9 UF',
       body: 'Elige entre nuestros planes desde 1,9 UF y adquiere beneficios exclusivos para conductores.',
       bullets: [],
     },
@@ -247,14 +238,14 @@ export const ventajasMovecar = {
     },
     {
       icon: 'fa-hand-holding-dollar',
-      title: 'Ingresa hoy pagando tu garantía en cuotas',
-      body: 'Contamos con opciones flexibles de pago de garantía para que adaptes tu ingreso a MoveCar de la forma mas cómoda.',
+      title: 'Garantía flexible',
+      body: 'Condiciones de pago de la garantía caso a caso.',
       bullets: [],
     },
     {
       icon: 'fa-wallet',
-      title: 'MoveCar ofrece ingresos extra asegurados',
-      body: 'Genera ingresos extra con solo unas horas de conducción a la semana. Tú eliges el horario y la cantidad de tiempo que deseas manejar.',
+      title: 'Elige tu turno',
+      body: 'Trabaja en turno AM (06:00 a 18:00) o PM (18:00 a 06:00), en auto eléctrico o a combustión.',
       bullets: [],
     },
   ],
@@ -264,7 +255,8 @@ export const appPromo = {
   title: 'App Movecar',
   body: 'La única plataforma donde podrás revisar tus ingresos y gastos en línea junto con DATA-IA, con los datos para optimizar tus rutas, porque datos claros conservan la amistad.',
   downloadLabel: 'Descarga tu app segura',
-  cta: 'Descargar APP',
+  // Aún sin links de tienda: se informa en lugar del botón "Descargar APP".
+  note: 'Te enviamos el link de descarga de la app Movecar en tu proceso de ingreso.',
   compatibleLabel: 'Compatible con',
   stores: ['Apple', 'Android'],
   // Pantallas de la app: coloca en public/assets/images/app/app-earnings.webp
@@ -276,17 +268,17 @@ export const finalCta = {
   title: 'Empieza a generar ingresos esta semana',
   body: 'Incorpórate a MoveCar.pro y maximiza tus ingresos con la mejor plataforma y flota del mercado. Obtén las mejores condiciones de arriendo pensadas en ti.',
   cta: 'Quiero ganar más',
-  bullets: ['Datos seguros', 'Sin spam', 'Cancelación libre'],
+  bullets: ['Datos seguros', 'Sin spam', 'Sin cuota de inscripción'],
 };
 
 export const footer = {
-  tagline: 'La plataforma de electromovilidad para movers en Chile.',
+  tagline: 'La plataforma de electromovilidad para conductores en Chile.',
   columns: [
     {
       title: 'Plataforma',
       links: [
         { label: 'Cómo funciona', href: '/como-funciona' },
-        { label: 'Flota', href: '/nosotros/#flota' },
+        { label: 'Flota', href: '/como-funciona#flota' },
         { label: 'Precios', href: '/precios' },
       ],
     },
@@ -302,7 +294,7 @@ export const footer = {
       links: [
         { label: 'Ayuda', href: 'https://wa.me/56963228508' },
         { label: 'Postular', href: 'https://wa.link/e0k8uq' },
-        { label: 'Contacto', href: 'mailto:contacto@movercar.pro' },
+        { label: 'Contacto', href: 'https://wa.me/56963228508' },
       ],
     },
   ],
@@ -1181,7 +1173,7 @@ export const about = {
     eyebrow: 'Nosotros',
     title: 'Movemos a Chile hacia la electromovilidad',
     subtitle:
-      'Somos la plataforma que le entrega a cada movedriver un vehículo eléctrico, con todo incluido, para que genere ingresos sin la carga de tener auto propio.',
+      'Somos la plataforma que le entrega a cada conductor un vehículo eléctrico o a combustión, con todo incluido, para que genere ingresos sin la carga de tener auto propio.',
   },
   // Sección 1 (hero): título + mosaico de rostros (placeholder).
   hero: {
@@ -1253,7 +1245,7 @@ export const about = {
     ],
   },
   stats: [
-    { value: '+1.200', label: 'Movers activos' },
+    { value: '+1.200', label: 'Conductores activos' },
     { value: '98%', label: 'Satisfacción' },
     { value: '3', label: 'Ciudades en Chile' },
     { value: '24/7', label: 'Soporte' },
@@ -1264,9 +1256,9 @@ export const about = {
     items: [
       { icon: 'fa-hand-holding-dollar', title: 'Transparencia', body: 'Cuentas claras, sin letra chica. Sabes exactamente cuánto generas y cuánto gastas.' },
       { icon: 'fa-leaf', title: 'Compromiso eco', body: 'Cada vehículo eléctrico es un paso hacia un transporte más limpio para todos.' },
-      { icon: 'fa-people-group', title: 'Comunidad', body: 'Nuestros movers son el centro: los escuchamos y crecemos con ellos.' },
+      { icon: 'fa-people-group', title: 'Comunidad', body: 'Nuestros conductores son el centro: los escuchamos y crecemos con ellos.' },
       { icon: 'fa-headset', title: 'Cercanía', body: 'Soporte humano y rápido cuando lo necesitas, no un bot que te deja esperando.' },
-      { icon: 'fa-shield-halved', title: 'Respaldo', body: 'Seguro full cobertura y auto de reemplazo (según disponibilidad) : nunca dejas de generar ingresos.' },
+      { icon: 'fa-shield-halved', title: 'Respaldo', body: 'Seguro con cobertura completa y auto de reemplazo (según disponibilidad).' },
       { icon: 'fa-rocket', title: 'Simpleza', body: 'Del registro a la entrega en días, 100% online y sin trámites engorrosos.' },
     ],
   },
@@ -1278,13 +1270,13 @@ export const about = {
 export const comoFunciona = {
   header: {
     eyebrow: 'Cómo funciona',
-    title: 'De la postulación a la calle en 5 días',
+    title: 'De la postulación a la calle en 4 días',
     subtitle:
       'Un proceso simple, online y sin costos de entrada. Te acompañamos en cada paso hasta que recibes tu vehículo y empiezas a generar.',
   },
   // Hero de la página (foto de conductor + streaks).
   hero: {
-    title: '¿Porqué MOVECAR.PRO es tu mejor opción?',
+    title: '¿Por qué Movecar.pro es tu mejor opción?',
     subtitle:
       'Movecar.pro combina tecnología, soporte humano y una flota preparada para que puedas enfocarte en tus ingresos.',
     ctaPrimary: 'Quiero postular',
@@ -1382,17 +1374,18 @@ export const pricing = {
           name: 'MoveElectric AM',
           badge: '100% Eléctrico',
           description:
-            'Maximiza tus ingresos con el menor costo operativo del mercado. Ideal para complementar ingresos o trabajar de forma eficiente durante el día.',
+            'Maximiza tus ingresos con bajo costo operativo del mercado. Ideal para complementar ingresos o trabajar de forma eficiente durante el día.',
           price: '2,5',
           period: 'UF/semanal',
           features: [
-            'Sólo ~$115 por km recorrido',
+            'Sólo 0,0028 UF por km recorrido (aprox. $115)',
+            'Pagas km solo hasta 1.100 km a la semana',
             'Turno: 06:00 a 18:00',
             'Bono $100.000 al mes para carga',
-            'Seguro Plus - 10 UF deducible',
+            'Seguro – 10 UF deducible por evento',
             'Auto de reemplazo según disponibilidad',
             'App Movecar.Pro, con monitoreo de ingresos, \nviajes, costos y ranking',
-            'Opción preferente de compra desde $500.000 CLP',
+            'Opción de compra desde las 208 semanas; a $100 desde las 260',
           ],
           cta: 'Contratar',
         },
@@ -1401,17 +1394,18 @@ export const pricing = {
           name: 'MoveElectric PM',
           badge: '100% Eléctrico',
           description:
-            'La mejor opción para conductores full-time. Más cobertura, menor costo energético y mayor potencial de ingresos.\n\n',
+            'Turno vespertino y nocturno en auto eléctrico (18:00 a 06:00): menor costo energético en los horarios de mayor demanda.',
           price: '3,9',
           period: 'UF/semanal',
           features: [
-            'Sólo ~$119 por km recorrido',
+            'Sólo 0,0029 UF por km recorrido (aprox. $119)',
+            'Pagas km solo hasta 1.200 km a la semana',
             'Turno: 18:00 a 06:00',
             'Bono $100.000 al mes para carga',
-            'Seguro Plus - 10 UF deducible',
+            'Seguro – 10 UF deducible por evento',
             'Auto de reemplazo según disponibilidad',
             'App MoveCar.Pro, con monitoreo de ingresos, \nviajes, costos y ranking',
-            'Opción preferente de compra a $100 CLP',
+            'Opción de compra desde las 208 semanas; a $100 desde las 260',
           ],
           cta: 'Contratar',
         },
@@ -1430,13 +1424,15 @@ export const pricing = {
           price: '1,9',
           period: 'UF/semanal',
           features: [
-            'Sólo ~$80 por km recorrido',
+            'Sólo 0,0028 UF por km recorrido (aprox. $115)',
+            'Pagas km solo hasta 1.100 km a la semana',
             'Turno: 06:00 a 18:00',
-            'Seguro Plus - 10 UF deducible',
+            'Bono $100.000 al mes para bencina',
+            'Seguro – 10 UF deducible por evento',
             'Auto de reemplazo según disponibilidad',
             'App MoveCar.Pro, con monitoreo de ingresos, \nviajes, costos y ranking',
-            'Menor costo del mercado',
-            'Opción preferente de compra desde $500.000 CLP',
+            'Sin depender de carga eléctrica',
+            'Opción de compra desde las 208 semanas; a $100 desde las 260',
           ],
           cta: 'Contratar',
         },
@@ -1449,13 +1445,33 @@ export const pricing = {
           price: '2,9',
           period: 'UF/semanal',
           features: [
-            'Sólo ~$83 por km recorrido',
+            'Sólo 0,0029 UF por km recorrido (aprox. $119)',
+            'Pagas km solo hasta 1.200 km a la semana',
             'Turno: 18:00 a 06:00',
-            'Seguro Plus - 10 UF deducible',
+            'Bono $100.000 al mes para bencina',
+            'Seguro – 10 UF deducible por evento',
             'Auto de reemplazo según disponibilidad',
             'App MoveCar.Pro, con monitoreo de ingresos, \nviajes, costos y ranking',
             'Mayor potencial de ingresos',
-            'Opción preferente de compra a $100 CLP',
+            'Opción de compra desde las 208 semanas; a $100 desde las 260',
+          ],
+          cta: 'Contratar',
+        },
+        {
+          id: 'gas-full',
+          name: 'Full Gas',
+          badge: 'Bencinero',
+          description: 'Auto bencinero exclusivo, 24 horas.',
+          price: '4,9',
+          period: 'UF/semanal',
+          features: [
+            'Sólo 0,0033 UF por km recorrido (aprox. $135)',
+            'Pagas km solo hasta 1.400 km a la semana',
+            'Bono $100.000 al mes para bencina',
+            'Seguro – 10 UF deducible por evento',
+            'Auto de reemplazo según disponibilidad',
+            'App Movecar',
+            'Opción de compra desde las 208 semanas; a $100 desde las 260',
           ],
           cta: 'Contratar',
         },
@@ -1467,9 +1483,9 @@ export const pricing = {
     title: 'Rápido, Transparente y Seguro',
     body: 'Elige el plan que más te acomode. Te acompañamos desde el primer día.',
     items: [
-      { icon: 'fa-bolt', title: 'Rápido', body: 'Proceso 100% online y ágil: en pocos días estás generando.' },
+      { icon: 'fa-bolt', title: 'Rápido', body: 'Postulación 100% online y ágil: en pocos días estás generando.' },
       { icon: 'fa-receipt', title: 'Transparente', body: 'Cuentas claras, sin letra chica: todo en tu liquidación semanal.' },
-      { icon: 'fa-shield-halved', title: 'Seguro', body: 'Seguro full cobertura y soporte 24/7 en cada turno.' },
+      { icon: 'fa-shield-halved', title: 'Seguro', body: 'Seguro y soporte 24/7 en cada turno.' },
     ],
   },
   // Tabla comparativa: MoveCar vs. competencia. Cada columna lleva una imagen
@@ -1487,7 +1503,7 @@ export const pricing = {
       { name: 'Competidor 3', img: 'plan/plan3.png' },
     ],
     rows: [
-      { label: 'Planes AM / PM diferenciados', values: ['Full flexible', true, false, false] },
+      { label: 'Planes AM / PM diferenciados', values: ['Turnos AM y PM', true, false, false] },
       { label: 'Opción preferente de compra', values: ['Todos los planes', true, false, true] },
       {
         label: 'Cobertura eléctrica / gasolina',
@@ -1496,7 +1512,7 @@ export const pricing = {
       {
         label: 'Seguro + deducibles preferenciales',
         values: [
-          '9 UF máximo  / 10 UF pérdida total',
+          '10 UF máximo por evento',
           '10 UF daño menor / 30 UF pérdida total',
           '15 UF daño menor / 30 UF pérdida total',
           '15 UF daño menor / 30 UF pérdida total',
@@ -1504,11 +1520,11 @@ export const pricing = {
       },
       {
         label: 'Auto reemplazo / tiempos entrega',
-        values: ['Hasta 96hrs', 'Según disponibilidad', false, 'Según disponibilidad'],
+        values: ['Según disponibilidad, sin arriendo mientras esperas', 'Según disponibilidad', false, 'Según disponibilidad'],
       },
       { label: 'App ingresos y gastos', values: [true, 'Básica', false, false] },
       { label: 'App + IA maximización ingresos', values: ['App Movecar', false, true, false] },
-      { label: 'Flexibilidad en cuotas', values: ['Hasta 9 cuotas', 'Hasta 7 cuotas', false, false] },
+      { label: 'Flexibilidad en cuotas', values: ['Caso a caso', 'Hasta 7 cuotas', false, false] },
       { label: 'Soporte Operacional 24/7', values: [true, true, 'Solo técnico', true] },
       { label: 'Capacitación integrada App', values: ['Todos los modelos', false, false, false] },
       {

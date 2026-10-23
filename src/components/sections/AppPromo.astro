@@ -13,7 +13,6 @@
  *
  * 📎 Coloca el SVG en: public/assets/images/app/movecar-copilot.svg
  */
-import Button from '@components/primitives/Button.astro';
 import { appPromo } from '@lib/content';
 import { IMAGE_BASE } from '@lib/config';
 
@@ -39,9 +38,7 @@ const mediaSrc = `${IMAGE_BASE}/${appPromo.image.src}`;
           <div class="app__actions">
             <div class="app__col">
               <span class="app__label">{appPromo.downloadLabel}</span>
-              <Button variant="dark" icon="fa-solid fa-download" href="#descargar"
-                >{appPromo.cta}</Button
-              >
+              <p class="app__note">{appPromo.note}</p>
             </div>
             <div class="app__col">
               <span class="app__label">{appPromo.compatibleLabel}</span>
@@ -125,6 +122,14 @@ const mediaSrc = `${IMAGE_BASE}/${appPromo.image.src}`;
     font-family: var(--font-sans);
     font-weight: var(--fw-semibold);
     font-size: 14px;
+    color: var(--white);
+  }
+  .app__note {
+    margin: 0;
+    max-width: 320px;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.5;
     color: var(--white);
   }
   .app__stores {

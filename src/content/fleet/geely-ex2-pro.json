@@ -1,11 +1,11 @@
 {
   "order": 3,
   "name": "Geely EX2 Pro 2026",
-  "badge": "100% Eléctrico",
+  "badge": "Eléctrico",
   "fuel": "ev",
   "tags": [
-    "320 km",
-    "SUV"
+    "325 km",
+    "Hatchback"
   ],
   "image": "vehicles/geely-ex2-pro.webp",
   "detail": {

@@ -4,9 +4,10 @@
   "badge": "Bencina",
   "fuel": "gas",
   "tags": [
-    "Bencina",
+    "440 km en ciudad",
+    "10,4 km/l en ciudad",
     "SUV"
-  ],  
+  ],
   "image": "vehicles/jac-js3.webp",
   "detail": {
     "description": "SUV compacto y versátil, ideal para conductores que buscan economía, comodidad y practicidad.",

@@ -15,14 +15,7 @@ import { testimonios } from '@lib/content';
       <Eyebrow align="center" tone="dark">{testimonios.eyebrow}</Eyebrow>
       <h2 class="tst__title">{testimonios.title}</h2>
       <p class="tst__body">{testimonios.body}</p>
-      <p class="tst__star">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-      </p>
-      <p class="tst__star-text">{testimonios.startext}</p>
+      <p class="tst__label">{testimonios.label}</p>
     </div>
 
     <div data-gsap="fade-up">
@@ -54,7 +47,14 @@ import { testimonios } from '@lib/content';
     font-size: var(--fs-body-lg);
     color: var(--ink-700);
   }
-  .tst__star {
-    color: var(--color-orange-500);
+  .tst__label {
+    margin: 0;
+    align-self: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--amber-100, rgba(254, 147, 7, 0.14));
+    color: var(--ink-700);
+    font-size: var(--fs-small, 0.875rem);
+    font-weight: 600;
   }
 </style>

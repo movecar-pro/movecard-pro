@@ -1,11 +1,12 @@
 {
   "order": 8,
-  "name": "Chery Pro Max2",
+  "name": "Chery Tiggo 2 Pro Max",
   "badge": "Bencina",
   "fuel": "gas",
   "tags": [
-    "Bencina",
-    "Compacto"
+    "560 km en ciudad",
+    "11,6 km/l en ciudad",
+    "SUV"
   ],
   "image": "vehicles/chery-pro-front.webp",
   "detail": {
@@ -13,11 +14,11 @@
     "images": [
       {
         "src": "vehicles/chery-pro-front.webp",
-        "alt": "Chery Pro Max 2 vista frontal"
+        "alt": "Chery Tiggo 2 Pro Max vista frontal"
       },
       {
         "src": "vehicles/chery-pro-rear.webp",
-        "alt": "Chery Pro Max 2 vista trasera"
+        "alt": "Chery Tiggo 2 Pro Max vista trasera"
       }
     ],
     "groupsTop": [

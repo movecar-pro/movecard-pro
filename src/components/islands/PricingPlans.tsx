@@ -59,7 +59,10 @@ export default function PricingPlans({ groups }: { groups: Group[] }) {
           <h3 className="pp__group-label hidden md:block">{g.label}</h3>
 
           {/* DESKTOP: tarjetas */}
-          <div className="pp__cards">
+          <div
+            className="pp__cards"
+            style={{ gridTemplateColumns: `repeat(${g.plans.length}, minmax(0, 1fr))` }}
+          >
             {g.plans.map((p) => (
               <article className="pp__card" key={p.id}>
                 <h4 className="pp__name">{p.name}</h4>

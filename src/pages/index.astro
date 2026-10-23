@@ -4,8 +4,9 @@
  * HOME — MoveCar Pro (prueba de concepto con GSAP)
  * ------------------------------------------------------------
  * Compone las secciones en el orden del diseño de referencia:
- *   Hero → TrustStrip → Ventajas → Simulador → Flota → Pasos →
+ *   Hero → TrustStrip → Ventajas → Simulador → Pasos →
  *   Testimonios → Fortalezas → AppPromo → FinalCTA.
+ *   (Flota vive solo en /como-funciona; Ventajas solo aquí — QA 22-10-2026.)
  *
  * La coreografía de animación se inicializa al final, en un bloque de
  * script de cliente que importa lib/animations/choreography.ts. Astro bundlea
@@ -16,7 +17,6 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Hero from '@components/sections/Hero.astro';
 import TrustStrip from '@components/sections/TrustStrip.astro';
 import VentajasMovecar from '@components/sections/VentajasMovecar.astro';
-import Flota from '@components/sections/Flota.astro';
 import Pasos from '@components/sections/Pasos.astro';
 import Testimonios from '@components/sections/Testimonios.astro';
 import FortalezasModelo from '@components/sections/FortalezasModelo.astro';
@@ -30,7 +30,6 @@ import FinalCTA from '@components/sections/FinalCTA.astro';
     <TrustStrip />
     <VentajasMovecar />
     <!-- <Simulador /> -->
-    <Flota />
     <Pasos />
     <Testimonios />
     <FortalezasModelo />

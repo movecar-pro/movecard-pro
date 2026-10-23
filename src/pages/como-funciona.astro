@@ -5,14 +5,13 @@
  *   1. PorqueHero            → hero "¿Porqué MOVECAR es tu mejor opción?"
  *   2. ComoFuncionaSteps     → stepper horizontal "Cómo Funciona" (01–04)
  *   3. Pasos                 → "Inscríbete fácil" (StepTrail, reutilizado)
- *   4. VentajasMovecar       → 5 ventajas (carrusel en móvil)
- *   5. Flota                 → carrusel de modelos (1 por vista en móvil)
- *   6. FortalezasModelo      → auto en vista superior + features
+ *   4. Flota                 → carrusel de modelos (1 por vista en móvil)
+ *   5. FortalezasModelo      → auto en vista superior + features
+ * Ventajas vive solo en Inicio (QA 22-10-2026: sin secciones duplicadas).
  */
 import BaseLayout from '@layouts/BaseLayout.astro';
 import PorqueHero from '@components/sections/PorqueHero.astro';
 import Pasos from '@components/sections/Pasos.astro';
-import VentajasMovecar from '@components/sections/VentajasMovecar.astro';
 import Flota from '@components/sections/Flota.astro';
 import FortalezasModelo from '@components/sections/FortalezasModelo.astro';
 import { comoFunciona } from '@lib/content';
@@ -25,7 +24,6 @@ import { comoFunciona } from '@lib/content';
 >
   <main>
     <PorqueHero />
-    <VentajasMovecar />
     <Pasos />
     <Flota />
     <!-- s -->

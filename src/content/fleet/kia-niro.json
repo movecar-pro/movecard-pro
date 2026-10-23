@@ -1,11 +1,11 @@
 {
   "order": 7,
   "name": "Kia Niro",
-  "badge": "100% Eléctrico",
+  "badge": "Eléctrico",
   "fuel": "ev",
   "tags": [
-    "298 km",
-    "Compacto"
+    "460 km",
+    "SUV"
   ],
   "image": "vehicles/kia-niro-front.webp",
   "detail": {

@@ -1,11 +1,11 @@
 {
   "order": 1,
   "name": "Dongfeng Nammi 2026",
-  "badge": "100% Eléctrico",
+  "badge": "Eléctrico",
   "fuel": "ev",
   "tags": [
     "430 km",
-    "Urbano"
+    "Compacto"
   ],
   "image": "vehicles/dongfeng-nammi.webp",
   "detail": {

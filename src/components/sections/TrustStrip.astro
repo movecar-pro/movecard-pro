@@ -15,7 +15,7 @@ import { trustStats } from '@lib/content';
 
 <div class="trust mc-container">
   <Card radius="xl" pad="lg" elevation="lg">
-    <div class="trust__grid" data-gsap-group>
+    <div class="trust__grid" style={`--cols:${trustStats.length}`} data-gsap-group>
       {
         trustStats.map((s) => (
           <div class="trust__item" data-gsap-child>
@@ -35,7 +35,7 @@ import { trustStats } from '@lib/content';
   }
   .trust__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(var(--cols, 4), 1fr);
     align-items: center;
   }
   .trust__item {

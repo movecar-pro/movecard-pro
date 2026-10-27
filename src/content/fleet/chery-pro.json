@@ -44,7 +44,6 @@
         "icon": "fa-charging-station",
         "title": "Carga rápida",
         "items": [
-          "Carga rápida DC 30% a 80% en 30 minutos.",
           "Soporta potencias DC de hasta 87 kW.",
           "Carga AC completa cercana a 7 horas."
         ]

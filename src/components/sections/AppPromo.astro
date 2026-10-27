@@ -36,10 +36,10 @@ const mediaSrc = `${IMAGE_BASE}/${appPromo.image.src}`;
           <h2 class="app__title">{appPromo.title}</h2>
           <p class="app__body">{appPromo.body}</p>
           <div class="app__actions">
-            <div class="app__col">
+            <!-- <div class="app__col">
               <span class="app__label">{appPromo.downloadLabel}</span>
               <p class="app__note">{appPromo.note}</p>
-            </div>
+            </div> -->
             <div class="app__col">
               <span class="app__label">{appPromo.compatibleLabel}</span>
               <div class="app__stores">
@@ -120,9 +120,10 @@ const mediaSrc = `${IMAGE_BASE}/${appPromo.image.src}`;
   }
   .app__label {
     font-family: var(--font-sans);
-    font-weight: var(--fw-semibold);
+    /* font-weight: var(--fw-semibold); */
     font-size: 14px;
     color: var(--white);
+    white-space: pre-line;
   }
   .app__note {
     margin: 0;

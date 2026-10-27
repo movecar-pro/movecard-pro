@@ -257,7 +257,7 @@ export const appPromo = {
   downloadLabel: 'Descarga tu app segura',
   // Aún sin links de tienda: se informa en lugar del botón "Descargar APP".
   note: 'Te enviamos el link de descarga de la app Movecar en tu proceso de ingreso.',
-  compatibleLabel: 'Compatible con',
+  compatibleLabel: 'Próximamente \n(Descárgala con el link directo \nque te enviamos en tu proceso de ingreso)',
   stores: ['Apple', 'Android'],
   // Pantallas de la app: coloca en public/assets/images/app/app-earnings.webp
   image: { src: 'app/app-earnings.webp', alt: 'App Movecar — pantalla de ingresos' },
@@ -322,7 +322,7 @@ export const footer = {
 export const legalDocs = {
   terms: {
     title: 'Términos y Condiciones de Servicio',
-    updated: 'Versión 1.4 · MOVERENT SpA — Conductores',
+    updated: 'Versión 1.4 · vigente desde el 22.10.2026',
     sections: [
       {
         heading: 'Capítulo 1 — Arriendo de Vehículos Motorizados por Suscripción',
@@ -1004,7 +1004,7 @@ export const legalDocs = {
         ],
       },
       {
-        heading: 'Capítulo 31 — Matriz de Infracciones del Conductor',
+        heading: 'Capítulo 31 — Matriz de Infracciones del Mover',
         body: [
           { sub: '31.1 Objeto' },
           'Este Capítulo tipifica las conductas del Usuario que constituyen incumplimiento, las clasifica, fija la escalera de actuación aplicable a cada una y determina su punto final. Se aplica sin perjuicio de las multas de tránsito y de las responsabilidades legales que correspondan, y en todo lo no previsto se rige por el Contrato de Arrendamiento, que prevalece sobre estos Términos.',
@@ -1083,7 +1083,7 @@ export const legalDocs = {
   },
   privacy: {
     title: 'Política de Privacidad',
-    updated: '',
+    updated: 'Versión 1.0 · vigente desde el 20.08.2026',
     sections: [
       {
         heading: '1. Objetivo',
@@ -1393,7 +1393,7 @@ export const pricing = {
           name: 'MoveElectric AM',
           badge: '100% Eléctrico',
           description:
-            'Maximiza tus ingresos con bajo costo operativo del mercado. Ideal para complementar ingresos o trabajar de forma eficiente durante el día.',
+            'Maximiza tus ingresos con bajo costo operativo. Ideal para complementar ingresos o trabajar de forma eficiente durante el día.',
           price: '2,5',
           period: 'UF/semanal',
           features: [

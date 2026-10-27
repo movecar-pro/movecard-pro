@@ -179,7 +179,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿El kilometraje tiene límite?',
         a: [
-          'No. El valor por km se cobra solo hasta el tope semanal de tu plan: 1.100 km en turno AM y 1.200 km en turno PM; sobre ese tope no pagas variable. Por telemetría revisamos usos que superen en más de 30% el promedio de la flota.',
+          'Puedes recorrer los kilómetros que necesites. El valor por km se cobra solo hasta el tope semanal de tu plan (1.100 AM, 1.200 PM, 1.400 Full Gas). Solo se revisarán los casos que estén muy por sobre lo normal.',
         ],
       },
       {
@@ -222,7 +222,7 @@ export const faqCategories: FaqCategory[] = [
               'Canon de arriendo semanal',
               'Multas contractuales (velocidad u otras)',
               'Déficits de períodos anteriores',
-              'Comisión de administración MOVECOLLECT (1% de tu ingreso, neto de las comisiones de la plataforma)',
+              'Comisión de administración MOVECOLLECT (1% + IVA del ingreso, neto de las comisiones de la plataforma)',
               'Multas de tránsito',
               'TAG y peajes',
               'Deducibles de seguros u otros cargos asociados al uso del vehículo',

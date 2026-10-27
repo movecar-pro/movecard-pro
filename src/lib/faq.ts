@@ -47,12 +47,6 @@ export const faqCategories: FaqCategory[] = [
         ],
       },
       {
-        q: '¿Tengo que renovar mis documentos?',
-        a: [
-          'Sí. Tu certificado de antecedentes y tu hoja de vida del conductor deben estar vigentes durante todo el contrato. Cada 6 meses te pediremos actualizarlos desde la app. Si vencen, el auto se bloquea hasta que los actualices y el arriendo sigue corriendo.',
-        ],
-      },
-      {
         q: '¿Necesito tener experiencia previa en apps de transporte?',
         a: [
           'No es obligatorio, pero es un factor positivo en la evaluación. Si no tienes experiencia previa en Uber u otras apps (DiDi, Cabify, Bolt), igual puedes postular y pasarás por una entrevista de evaluación.',
@@ -74,6 +68,12 @@ export const faqCategories: FaqCategory[] = [
         q: '¿Qué pasa si tengo antecedentes penales?',
         a: [
           'Los antecedentes graves (delitos contra la propiedad, violencia, fraude, drogas o tráfico) son causa de rechazo automático. Los antecedentes leves o manejo en estado de ebriedad son evaluados caso a caso con revisión manual y entrevista.',
+        ],
+      },
+      {
+        q: '¿Tengo que renovar mis documentos?',
+        a: [
+          'Sí. Tu certificado de antecedentes y tu hoja de vida del conductor deben estar vigentes durante todo el contrato. Cada 6 meses te pediremos actualizarlos desde la app. Si vencen, el auto se bloquea hasta que los actualices y el arriendo sigue corriendo.',
         ],
       },
     ],

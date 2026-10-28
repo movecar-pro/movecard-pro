@@ -1,0 +1,219 @@
+---
+/**
+ * Política de Privacidad de la app Movecar.pro, en HTML, para la ficha de Play Store.
+ * Página independiente, sin navbar ni footer del sitio, con el mismo formato que
+ * /aplicacion/politicas/playstore_politica.
+ */
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidad — Movecar.pro</title>
+    <meta
+      name="description"
+      content="Qué datos personales trata la app Movecar.pro, para qué, con quién se comparten, cuánto tiempo se guardan y cómo ejercer tus derechos o eliminar tu cuenta."
+    />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <style>
+      :root { --ink: #1f1f1f; --muted: #6b6b6b; --line: #d4d4d4; --brand: #c2772e; --bg: #ffffff; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+      main { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.5rem 2.5rem; }
+      header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 0.9rem; border-bottom: 2px solid var(--ink); }
+      .brand { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.01em; }
+      .brand span { color: var(--brand); }
+      .label { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+      h1 { font-size: 1.6rem; line-height: 1.25; margin: 2rem 0 0.25rem; }
+      h2 { font-size: 1.2rem; margin: 2.25rem 0 0.75rem; }
+      h3 { font-size: 1.02rem; margin: 1.5rem 0 0.5rem; }
+      p { margin: 0 0 1.1rem; font-size: 1.02rem; }
+      .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.75rem; }
+      ul, ol { margin: 0 0 1.1rem; padding-left: 1.4rem; }
+      li { margin: 0.3rem 0; }
+      a { color: var(--brand); }
+      .tabla { overflow-x: auto; margin: 0 0 1.25rem; }
+      table { width: 100%; border-collapse: collapse; font-size: 0.9rem; line-height: 1.45; }
+      th, td { text-align: left; vertical-align: top; padding: 0.55rem 0.7rem; border: 1px solid var(--line); }
+      th { background: #f6f6f6; font-weight: 600; }
+      footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1rem; margin-top: 3rem; padding-top: 0.8rem; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="brand">Movecar<span>.pro</span></div>
+        <div class="label">Privacidad</div>
+      </header>
+
+      <h1>Política de Privacidad – Movecar.pro</h1>
+      <p class="meta">Última actualización: 21 de octubre de 2026</p>
+
+      <p>Esta política de privacidad explica qué datos personales trata la app Movecar.pro, para qué, con quién se comparten, cuánto tiempo se guardan y cómo puedes ejercer tus derechos o eliminar tu cuenta.</p>
+      <p><strong>Quiénes somos.</strong> Movecar.pro es el nombre comercial de Moverent SpA, RUT 78.467.487-8, empresa de arriendo de vehículos con domicilio en Eulogia Sánchez 065, Providencia, Santiago, Chile. Moverent SpA es la responsable del tratamiento de tus datos personales.</p>
+      <p><strong>Qué es la app.</strong> Es una herramienta exclusiva para clientes que han firmado un contrato de arriendo con nosotros. Arrendamos autos de nuestra flota por suscripción semanal, con mantención, seguro y asistencia en ruta incluidos. En la app el cliente ve su plan, su estado de cuenta semanal, los cargos por peajes y multas, paga su garantía, descarga sus facturas, consulta los documentos del vehículo y gestiona la entrega y recepción del auto.</p>
+      <p><strong>Qué no es la app.</strong> No es una aplicación de transporte de pasajeros. No conecta pasajeros con conductores, no asigna viajes, no fija tarifas y no procesa pagos de pasajeros. No estamos afiliados a ninguna plataforma de transporte. Nuestros clientes trabajan de forma independiente, donde ellos elijan.</p>
+
+      <h2>1. Alcance</h2>
+      <p>Esta política aplica a las personas que tienen un contrato de arriendo vigente o terminado con Moverent SpA y que usan la app Movecar.pro en Android o iOS, o su versión web.</p>
+      <ul>
+        <li><strong>Aplica a:</strong> clientes arrendatarios y, cuando corresponde, al cliente con quien se comparte un vehículo por turnos ("pareja de turno").</li>
+        <li><strong>No aplica a:</strong> personas que no son clientes (no pueden crear cuenta ni usar la app), sitios o servicios de terceros enlazados desde la app, ni a las plataformas de transporte que el cliente decida usar por su cuenta, que tienen sus propias políticas.</li>
+      </ul>
+      <p>Las cuentas no se crean libremente: las habilita Movecar.pro al firmar el contrato de arriendo.</p>
+
+      <h2>2. Datos que recopilamos</h2>
+      <p>Solo tratamos los datos necesarios para administrar tu contrato de arriendo y el uso del vehículo. Los marcados como opcionales no son necesarios para que la app funcione.</p>
+      <h3>2.1 Datos que tú nos entregas</h3>
+      <div class="tabla"><table>
+        <thead><tr><th>Categoría</th><th>Ejemplos</th><th>¿Obligatorio?</th></tr></thead>
+        <tbody>
+          <tr><td>Identificación y cuenta</td><td>Nombre, RUT, usuario y contraseña, correo, teléfono, dirección</td><td>Sí</td></tr>
+          <tr><td>Documentos</td><td>Cédula de identidad, licencia de conducir, otros documentos exigidos por el contrato</td><td>Sí</td></tr>
+          <tr><td>Datos de pago</td><td>Por ahora la app no procesa pagos en línea. Cuando se habilite, los datos de tarjeta los procesará un proveedor de pagos que informaremos en esta política antes de activarlo</td><td>Sí</td></tr>
+          <tr><td>Solicitudes</td><td>Cambios de plan, pausas, mantenciones, vehículo de reemplazo</td><td>Solo si las haces</td></tr>
+          <tr><td>Fotos y evidencia</td><td>Fotos del vehículo y nivel de energía o batería en la entrega del turno</td><td>Sí, al entregar el auto</td></tr>
+          <tr><td>Comunicaciones</td><td>Mensajes del chat, consultas a soporte y sus respuestas</td><td>Solo si nos escribes</td></tr>
+        </tbody>
+      </table></div>
+      <h3>2.2 Datos que se generan al usar la app</h3>
+      <div class="tabla"><table>
+        <thead><tr><th>Categoría</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr><td>Contrato y cuenta</td><td>Plan vigente, estado de cuenta semanal, liquidaciones, descuentos, facturas, garantía</td></tr>
+          <tr><td>Vehículo y custodia</td><td>Vehículo asignado, documentos del auto, inicio y fin de custodia, actas de entrega y recepción, estado (en curso, en traspaso, devuelto, etc.), horas conectado</td></tr>
+          <tr><td>Cargos asociados al vehículo</td><td>Peajes (TAG), multas e infracciones, sanciones del Centro de Sanciones</td></tr>
+          <tr><td>Actividad y desempeño</td><td>Viajes del día, ingresos brutos y netos, calificaciones recibidas, métricas de desempeño y posición en el ranking (provienen de la empresa de transporte a la que el cliente decidió asociarse; ver 2.3)</td></tr>
+          <tr><td>Ubicación</td><td>Ubicación aproximada o precisa del dispositivo, con tu permiso, solo mientras usas el mapa de electrolineras y al entregar o recibir el vehículo en un cambio de turno</td></tr>
+          <tr><td>Dispositivo y uso</td><td>Modelo, sistema operativo, versión de la app, dirección IP, token de notificaciones push, registros de errores y caché local</td></tr>
+        </tbody>
+      </table></div>
+      <h3>2.3 Datos de otras fuentes</h3>
+      <ul>
+        <li><strong>Autoridades y concesionarias:</strong> multas, partes e infracciones (municipalidades, Juzgados de Policía Local, Registro Nacional de Vehículos Motorizados) y cobros de autopistas.</li>
+        <li><strong>Aseguradoras y talleres:</strong> información de siniestros, mantenciones y asistencia en ruta del vehículo asignado.</li>
+        <li><strong>Proveedor de pagos:</strong> confirmación y estado de tus pagos, cuando los pagos en línea estén habilitados.</li>
+      </ul>
+      <p><strong>Empresa de transporte elegida por el cliente.</strong> Si el cliente decide asociarse con una empresa de transporte, recibimos de ella sus viajes, ingresos, descuentos y calificaciones recibidas, con su autorización. Usamos estos datos solo para mostrarle su actividad, calcular sus liquidaciones y métricas en la app. Esa empresa trata los datos según su propia política de privacidad; Movecar.pro no está afiliada a ella ni interviene en sus viajes o tarifas.</p>
+      <p>No recopilamos datos biométricos, contactos de tu teléfono, historial de navegación ni la lista de apps instaladas. No usamos identificadores publicitarios ni mostramos publicidad.</p>
+
+      <h2>3. Permisos del dispositivo</h2>
+      <p>La app pide cada permiso en el momento en que lo necesita, después de explicarte para qué sirve. Puedes negarlo o revocarlo en la configuración de tu teléfono; solo dejará de funcionar la función que lo usa.</p>
+      <div class="tabla"><table>
+        <thead><tr><th>Permiso</th><th>Para qué lo usamos</th><th>Cuándo</th></tr></thead>
+        <tbody>
+          <tr><td>Cámara</td><td>Escanear el código QR al recibir el vehículo, tomar fotos de evidencia en la entrega y fotografiar documentos</td><td>Solo mientras usas esas funciones</td></tr>
+          <tr><td>Ubicación</td><td>Mostrarte las electrolineras cercanas en el mapa EV y registrar el lugar donde se entrega y recibe el vehículo en el cambio de turno</td><td>Solo con la app abierta, al usar el mapa o al confirmar un cambio de turno; no se recopila en segundo plano</td></tr>
+          <tr><td>Notificaciones</td><td>Avisarte del cambio de turno, liquidaciones, cargos, mensajes y novedades del vehículo</td><td>Mientras tengas el permiso activo</td></tr>
+          <tr><td>Fotos y archivos</td><td>Adjuntar documentos o imágenes y guardar comprobantes PDF</td><td>Solo cuando eliges un archivo o descargas uno</td></tr>
+          <tr><td>Internet</td><td>Conectar con nuestros servidores y descargar actualizaciones de la app</td><td>Siempre que la app esté en uso</td></tr>
+        </tbody>
+      </table></div>
+      <p>La app se actualiza automáticamente (actualización "over the air"): descarga nuevas versiones de su contenido desde nuestros servidores, sin acceder a otros datos de tu teléfono.</p>
+
+      <h2>4. Para qué usamos tus datos y base legal</h2>
+      <p>Usamos tus datos solo para los fines que se indican abajo. No los vendemos ni los usamos para publicidad.</p>
+      <div class="tabla"><table>
+        <thead><tr><th>Finalidad</th><th>Datos usados</th><th>Base legal</th></tr></thead>
+        <tbody>
+          <tr><td>Crear y administrar tu cuenta, autenticarte y recuperar tu contraseña</td><td>Identificación, credenciales, dispositivo</td><td>Ejecución del contrato</td></tr>
+          <tr><td>Administrar el arriendo: plan, estado de cuenta, liquidaciones, pausas y cambios de plan</td><td>Contrato, pagos, solicitudes, actividad</td><td>Ejecución del contrato</td></tr>
+          <tr><td>Cobrar la garantía, emitir facturas y comprobantes</td><td>Identificación, datos de pago</td><td>Ejecución del contrato y obligación legal tributaria</td></tr>
+          <tr><td>Gestionar la custodia del vehículo, los turnos y las actas de entrega</td><td>Vehículo, custodia, fotos, horas conectado, ubicación del traspaso</td><td>Ejecución del contrato e interés legítimo en proteger nuestra flota</td></tr>
+          <tr><td>Traspasar peajes, multas y sanciones al cliente responsable</td><td>Cargos del vehículo, custodia, identificación</td><td>Ejecución del contrato y obligación legal</td></tr>
+          <tr><td>Mantención, seguros, siniestros y asistencia en ruta</td><td>Vehículo, identificación, contacto</td><td>Ejecución del contrato</td></tr>
+          <tr><td>Mostrar electrolineras cercanas</td><td>Ubicación del dispositivo</td><td>Consentimiento (permiso del dispositivo)</td></tr>
+          <tr><td>Enviar notificaciones de servicio</td><td>Token push, cuenta</td><td>Ejecución del contrato; puedes desactivarlas</td></tr>
+          <tr><td>Atención y soporte</td><td>Comunicaciones, cuenta</td><td>Ejecución del contrato</td></tr>
+          <tr><td>Seguridad, prevención de fraude y corrección de errores</td><td>Dispositivo, registros, uso</td><td>Interés legítimo</td></tr>
+          <tr><td>Cumplir requerimientos de autoridades y tribunales</td><td>Los que se soliciten</td><td>Obligación legal</td></tr>
+        </tbody>
+      </table></div>
+      <p>No tomamos decisiones que te afecten de forma significativa basadas únicamente en tratamientos automatizados. Las métricas de desempeño y el ranking son informativos.</p>
+
+      <h2>5. Con quién compartimos tus datos</h2>
+      <p>Compartimos datos solo cuando es necesario para prestar el servicio o cumplir la ley. Nuestros proveedores tratan los datos por encargo nuestro, bajo contrato y solo para el fin indicado.</p>
+      <div class="tabla"><table>
+        <thead><tr><th>Destinatario</th><th>Qué recibe</th><th>Para qué</th></tr></thead>
+        <tbody>
+          <tr><td>Google Firebase Cloud Messaging</td><td>Token del dispositivo y contenido de la notificación</td><td>Envío de notificaciones push</td></tr>
+          <tr><td>Respond.io</td><td>Nombre, contacto y mensajes de soporte</td><td>Chat de atención al cliente</td></tr>
+          <tr><td>Mapbox</td><td>Ubicación aproximada del dispositivo</td><td>Mostrar el mapa de electrolineras</td></tr>
+          <tr><td>Amazon Web Services (AWS)</td><td>Datos almacenados en nuestros servidores</td><td>Alojamiento de la plataforma</td></tr>
+          <tr><td>Aseguradoras, talleres y asistencia en ruta</td><td>Identificación, contacto, datos del vehículo y del siniestro</td><td>Seguros, mantención y asistencia</td></tr>
+          <tr><td>Autoridades, tribunales y concesionarias</td><td>Identificación del cliente que tenía el vehículo</td><td>Responder requerimientos y gestionar multas y peajes</td></tr>
+        </tbody>
+      </table></div>
+      <p><strong>Pareja de turno.</strong> Si compartes el vehículo con otro cliente, este verá la información mínima necesaria para el traspaso: tu nombre, el código o QR de entrega, las fotos de evidencia y el nivel de energía.</p>
+      <p><strong>Ranking.</strong> En el ranking de ganadores otros clientes pueden ver tu alias y tu posición. El cual no se puede ocultar.</p>
+      <p>También podemos transferir datos en caso de fusión, adquisición o venta de activos, informándote con anticipación. No vendemos datos personales.</p>
+
+      <h2>6. Transferencias internacionales</h2>
+      <p>Algunos proveedores (por ejemplo, Google Firebase, Respond.io, Mapbox y Amazon Web Services (AWS)) pueden almacenar o procesar datos en servidores fuera de Chile, incluido Estados Unidos. En esos casos exigimos por contrato un nivel de protección equivalente al de la ley chilena, usando cláusulas contractuales u otras garantías que la ley reconozca.</p>
+
+      <h2>7. Cuánto tiempo guardamos tus datos</h2>
+      <p>Guardamos los datos mientras tu cuenta y tu contrato estén vigentes. Al terminar, los eliminamos o anonimizamos, salvo los que la ley nos obliga a conservar o que necesitamos para defendernos ante un reclamo.</p>
+      <div class="tabla"><table>
+        <thead><tr><th>Datos</th><th>Plazo de conservación</th></tr></thead>
+        <tbody>
+          <tr><td>Cuenta, perfil y documentos de identidad</td><td>Mientras dure el contrato; luego se eliminan, salvo lo indicado abajo</td></tr>
+          <tr><td>Facturas, pagos y registros contables</td><td>6 años, por obligación tributaria</td></tr>
+          <tr><td>Contrato, actas de entrega, multas, peajes y siniestros</td><td>Hasta 5 años desde el término del contrato, para atender reclamos o cobros</td></tr>
+          <tr><td>Fotos de evidencia de traspaso</td><td>12 meses, o más si hay un daño o reclamo en curso</td></tr>
+          <tr><td>Mensajes y conversaciones de soporte</td><td>24 meses</td></tr>
+          <tr><td>Registros técnicos y de errores</td><td>90 días</td></tr>
+          <tr><td>Datos en caché en tu teléfono</td><td>Hasta que cierres sesión o desinstales la app</td></tr>
+        </tbody>
+      </table></div>
+      <p>Terminados estos plazos, los datos se eliminan de forma segura o se anonimizan de modo que ya no te identifiquen.</p>
+
+      <h2>8. Seguridad</h2>
+      <p>Protegemos tus datos con medidas técnicas y organizativas proporcionales al riesgo:</p>
+      <ul>
+        <li>Toda la comunicación entre la app y nuestros servidores viaja cifrada (HTTPS/TLS).</li>
+        <li>El acceso a la cuenta se gestiona con un sistema de identidad alojado en nuestros propios servidores; las contraseñas no se almacenan en texto plano.</li>
+        <li>Al primer ingreso te pedimos cambiar la contraseña inicial.</li>
+        <li>Solo el personal que lo necesita para su trabajo accede a tus datos, con permisos individuales y registro de accesos.</li>
+        <li>No mostramos públicamente datos financieros ni números de identificación como el RUT.</li>
+      </ul>
+      <p>Ningún sistema es completamente infalible. Si ocurre una vulneración de seguridad que afecte tus datos, te avisaremos y la informaremos a la autoridad en los casos y plazos que exige la ley.</p>
+
+      <h2>9. Tus derechos</h2>
+      <p>Como titular de tus datos, la Ley N° 19.628 y, desde el 1 de diciembre de 2026, la Ley N° 21.719 te reconocen estos derechos:</p>
+      <ul>
+        <li><strong>Acceso:</strong> saber si tratamos tus datos, cuáles y para qué.</li>
+        <li><strong>Rectificación:</strong> corregir datos inexactos o desactualizados.</li>
+        <li><strong>Supresión:</strong> pedir que eliminemos tus datos cuando ya no sean necesarios o no exista base legal para tratarlos.</li>
+        <li><strong>Oposición:</strong> oponerte a ciertos tratamientos, como los basados en interés legítimo.</li>
+        <li><strong>Portabilidad:</strong> recibir tus datos en un formato estructurado y de uso común.</li>
+        <li><strong>Bloqueo:</strong> pedir que suspendamos temporalmente el tratamiento mientras resolvemos una solicitud.</li>
+        <li><strong>Retirar tu consentimiento</strong> cuando el tratamiento se base en él (por ejemplo, la ubicación), sin afectar lo tratado antes.</li>
+      </ul>
+      <p>Puedes corregir buena parte de tus datos directamente en Perfil. Para ejercer cualquier otro derecho, escríbenos a <a href="mailto:privacidad@movecar.pro">privacidad@movecar.pro</a> desde el correo registrado en tu cuenta. Es gratuito y responderemos dentro del plazo legal. Podemos pedirte información adicional para verificar tu identidad.</p>
+
+      <h2 id="eliminar-cuenta">10. Eliminación de tu cuenta y tus datos</h2>
+      <p>Puedes pedir la eliminación de tu cuenta y de los datos asociados de dos formas:</p>
+      <ol>
+        <li>Desde la app: Perfil → Eliminar cuenta.</li>
+        <li>Desde la web, sin instalar la app: en <a href="https://movecar.pro/eliminar-cuenta">movecar.pro/eliminar-cuenta</a> o escribiendo a <a href="mailto:privacidad@movecar.pro">privacidad@movecar.pro</a>.</li>
+      </ol>
+      <p>Al confirmar la solicitud, eliminamos tu cuenta y tus datos personales en un plazo máximo de 30 días. No basta con desactivarla: los datos se borran.</p>
+      <p>Solo conservamos, por el tiempo indicado en la sección 7, los datos que la ley nos obliga a guardar (facturas y registros tributarios) o que necesitamos para cerrar obligaciones pendientes del contrato, como multas, peajes, daños o saldos impagos. Si tu contrato sigue vigente, la eliminación de la cuenta no termina el contrato; para eso debes seguir el procedimiento de término que este indica.</p>
+
+      <h2>11. Menores, cambios y contacto</h2>
+      <p><strong>Menores de edad.</strong> La app no está dirigida a menores de 18 años. Solo pueden ser clientes personas mayores de edad con licencia de conducir vigente, por lo que no recopilamos a sabiendas datos de menores.</p>
+      <p><strong>Cambios a esta política.</strong> Si la modificamos, publicaremos la nueva versión en la app y en <a href="https://www.movecar.pro/aplicacion/politicas/privacidad">movecar.pro/aplicacion/politicas/privacidad</a>, con su fecha de actualización. Si los cambios son importantes, te avisaremos por notificación o correo antes de que entren en vigor.</p>
+      <p><strong>Contacto.</strong> Moverent SpA (Movecar.pro), RUT 78.467.487-8, Eulogia Sánchez 065, Providencia, Santiago, Chile. Correo de privacidad: <a href="mailto:privacidad@movecar.pro">privacidad@movecar.pro</a>.</p>
+      <p><strong>Reclamos ante la autoridad.</strong> Si consideras que no respondimos adecuadamente, puedes acudir a la Agencia de Protección de Datos Personales de Chile, una vez que entre en funciones, o a los tribunales competentes según la ley vigente.</p>
+
+      <footer>
+        <span>Movecar.pro — Moverent SpA · RUT 78.467.487-8</span>
+        <span>Santiago, Chile</span>
+      </footer>
+    </main>
+  </body>
+</html>

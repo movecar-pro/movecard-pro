@@ -1,0 +1,266 @@
+---
+const paths = {
+  car: '<path d="m5 10 2-5h10l2 5M5 10h14v8H5zM7 18v2m10-2v2M7 14h1m8 0h1"/>',
+  shield: '<path d="m12 3 8 4v6c0 5-8 8-8 8s-8-3-8-8V7z"/><path d="m8 12 3 3 5-6"/>',
+  tool: '<path d="M14 6a5 5 0 0 0-6 6l-5 5a2 2 0 0 0 3 3l5-5a5 5 0 0 0 6-6l-3 3-3-3z"/>',
+  phone: '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="m9 13 2-3 2 2 2-4M11 18h2"/>',
+  whatsapp:
+    '<path d="M20 11.5a8 8 0 0 1-12 7L3 20l1.5-5A8 8 0 1 1 20 11.5Z"/><path d="M8 7c-2 4 3 9 7 7l1-2-3-1-1 1-2-2 1-1-1-2z"/>',
+};
+
+import { legalDocs } from '../lib/content';
+import { content } from '../lib/defensa-content.js';
+const message = '¡Hola! 😊 me interesa postular a Movecar.pro. Vengo de Defensa Deudores.';
+const whatsappUrl = `https://api.whatsapp.com/send?phone=56963228508&text=${encodeURIComponent(message)}`;
+---
+
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grupo Defensa × Movecar.pro | Agenda tu entrevista</title>
+    <meta
+      name="description"
+      content="Arrienda un auto por semana con Movecar.pro. Conoce los requisitos y agenda tu entrevista por WhatsApp."
+    />
+
+    <meta name="theme-color" content="#0e1424" />
+    <link rel="icon" href="/defensa-deudores/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/defensa-deudores/styles.css" />
+    <link rel="canonical" href="https://www.movecar.pro/defensa-deudores" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="brand-row container">
+        <img
+          class="gd-logo"
+          src="/defensa-deudores/assets/defensa-deudores.png"
+          width="400"
+          height="132"
+          alt="Defensa Deudores, de Grupo Defensa"
+        /><span class="brand-cross" aria-hidden="true">×</span><img
+          class="mc-logo"
+          src="/defensa-deudores/assets/movecar.png"
+          width="374"
+          height="46"
+          alt="Movecar.pro"
+        />
+      </div>
+    </header>
+    <main id="contenido">
+      <section class="hero">
+        <div class="hero-grid container">
+          <div class="hero-copy">
+            <p class="eyebrow"><span aria-hidden="true"></span>30% de descuento en tu primer mes</p>
+            <h1>Nos preocupamos de tus deudas <em>y de tus ingresos</em></h1>
+            <p class="lead">
+              En Defensa Deudores queremos acompañarte más allá de la asesoría. Por eso nos aliamos
+              con Movecar.pro: como cliente, puedes postular con condiciones preferentes.
+            </p>
+            <div class="hero-photo mobile-photo">
+              <img
+                src="/defensa-deudores/assets/mover-auto.png"
+                alt="Conductor al volante de un auto naranja Movecar.pro"
+                width="1050"
+                height="786"
+                fetchpriority="high"
+              />
+            </div>
+            <div class="contact-block">
+              <a class="cta" href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+                ><span class="icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    set:html={paths.whatsapp}
+                  /></span
+                ><span>Agenda tu entrevista</span></a
+              ><p class="caption">Sin costo ni compromiso.</p>
+            </div>
+          </div><div class="hero-photo desktop-photo">
+            <img
+              src="/defensa-deudores/assets/mover-auto.png"
+              alt="Conductor al volante de un auto naranja Movecar.pro"
+              width="1050"
+              height="786"
+              fetchpriority="high"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="steps-section section">
+        <div class="container">
+          <h2>Tu entrevista en 3 pasos</h2><ol class="steps">
+            {
+              content.steps.map(([title, description], i) => (
+                <li>
+                  <>
+                    <span class="step-number">{i + 1}</span>
+                    <div>
+                      <>
+                        <h3>{title}</h3>
+                        <p>{description}</p>
+                      </>
+                    </div>
+                  </>
+                </li>
+              ))
+            }
+          </ol>
+        </div>
+      </section>
+      <section class="included section">
+        <div class="container">
+          <h2>Qué incluye</h2><aside class="offer">
+            <p class="overline">Beneficio Defensa Deudores</p><h3 id="benefit-title">
+              30% de DESCUENTO en tu primer mes
+            </h3><p id="weekly-price">Planes semanales desde 1,9 UF.</p>
+          </aside><div class="benefits">
+            {
+              content.benefits.map(([name, title, description]) => (
+                <article class="benefit">
+                  <>
+                    <span class="icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        set:html={paths[name]}
+                      />
+                    </span>
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                  </>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+      <section class="requirements-section section">
+        <div class="requirements-grid container">
+          <div>
+            <h2>Ten a mano</h2><ul class="requirements">
+              {
+                content.requirements.map((value) => (
+                  <li>
+                    <>
+                      <span class="check" aria-hidden="true">
+                        ✓
+                      </span>
+                      <span>{value}</span>
+                    </>
+                  </li>
+                ))
+              }
+            </ul><p class="location">
+              <span aria-hidden="true">⌖</span><span
+                ><strong>Requisito:</strong> vivir en la Región Metropolitana.</span>
+            </p>
+          </div><aside class="last-cta">
+            <p class="overline">Da el siguiente paso</p><h2>¿Listo? Agenda<br />tu entrevista</h2><p
+            >
+              No necesitas llenar formularios: todo es por WhatsApp.
+            </p><div class="contact-block">
+              <a class="cta" href={whatsappUrl} target="_blank" rel="noopener noreferrer"
+                ><span class="icon" aria-hidden="true"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    set:html={paths.whatsapp}
+                  /></span
+                ><span>Agenda tu entrevista</span></a>
+            </div>
+          </aside>
+        </div>
+      </section>
+      <section class="faq-section section">
+        <div class="faq-container container">
+          <h2>Preguntas frecuentes</h2><div class="faqs">
+            {
+              content.faqs.map(([question, answer]) => (
+                <details>
+                  <>
+                    <summary>
+                      {question}
+                      <span class="faq-toggle" aria-hidden="true">
+                        +
+                      </span>
+                    </summary>
+                    <p>{answer}</p>
+                  </>
+                </details>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="brand-row">
+          <img
+            class="gd-logo"
+            src="/defensa-deudores/assets/defensa-deudores.png"
+            width="400"
+            height="132"
+            alt="Defensa Deudores, de Grupo Defensa"
+          /><span class="brand-cross" aria-hidden="true">×</span><img
+            class="mc-logo"
+            src="/defensa-deudores/assets/movecar.png"
+            width="374"
+            height="46"
+            alt="Movecar.pro"
+          />
+        </div><p>Una alianza Grupo Defensa × Movecar.pro</p><p>
+          Movecar.pro es una marca de Moverent SpA
+        </p><details class="privacy-document">
+          <summary>Política de Privacidad</summary><div class="privacy-copy">
+            <h2>{legalDocs.privacy.title}</h2><p>{legalDocs.privacy.updated}</p>{
+              legalDocs.privacy.sections.map((section) => (
+                <section>
+                  <h3>{section.heading}</h3>
+                  {section.body.map((block) =>
+                    typeof block === 'string' ? (
+                      <p>{block}</p>
+                    ) : 'list' in block ? (
+                      <ul>
+                        {block.list.map((item) => (
+                          <li>{item}</li>
+                        ))}
+                      </ul>
+                    ) : 'sub' in block ? (
+                      <h4>{block.sub}</h4>
+                    ) : (
+                      <table>
+                        {block.table.map((row) => (
+                          <tr>
+                            {row.map((cell) => (
+                              <td>{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </table>
+                    ),
+                  )}
+                </section>
+              ))
+            }
+          </div>
+        </details>
+      </div>
+    </footer>
+  </body>
+</html>

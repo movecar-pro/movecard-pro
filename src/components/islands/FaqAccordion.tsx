@@ -92,7 +92,8 @@ export default function FaqAccordion({ categories }: { categories: FaqCategory[]
         .faq__a p:last-child { margin-bottom: 0; }
         .faq__a ul { margin: 0 0 12px; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
         .faq__a ul:last-child { margin-bottom: 0; }
-        .faq__a li { line-height: 1.5; }
+        .faq__a ul { list-style: disc; }
+        .faq__a li { line-height: 1.5; display: list-item; }
       `}</style>
     </div>
   );

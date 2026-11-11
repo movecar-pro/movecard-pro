@@ -118,11 +118,12 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿Qué planes de arriendo ofrece MoveCar?',
         a: [
-          'MoveCar tiene cinco planes de arriendo, según el tipo de vehículo y el turno',
+          'MoveCar tiene seis planes de arriendo, según el tipo de vehículo y el turno',
           {
             list: [
-              'MoveElectric AM (eléctrico, turno diurno): horario 06:00 a 18:00 hrs — 2,5 UF/semana',
-              'MoveElectric PM (eléctrico, turno vespertino y nocturno): horario 18:00 a 06:00 hrs — 3,9 UF/semana',
+              'MoveElectric AM (eléctrico, turno diurno): horario 06:00 a 18:00 hrs — 2,79 UF/semana',
+              'MoveElectric PM (eléctrico, turno vespertino y nocturno): horario 18:00 a 06:00 hrs — 3,49 UF/semana',
+              'Full Electric (eléctrico, 24 horas) — 5,95 UF/semana',
               'MoveGas AM (bencinero, turno diurno): horario 06:00 a 18:00 hrs — 1,9 UF/semana',
               'MoveGas PM (bencinero, turno vespertino y nocturno): horario 18:00 a 06:00 hrs — 2,9 UF/semana',
               'Full Gas (bencinero, 24 horas) — 4,9 UF/semana',
@@ -179,7 +180,7 @@ export const faqCategories: FaqCategory[] = [
       {
         q: '¿El kilometraje tiene límite?',
         a: [
-          'Puedes recorrer los kilómetros que necesites. El valor por km se cobra solo hasta el tope semanal de tu plan (1.100 AM, 1.200 PM, 1.400 Full Gas). Solo se revisarán los casos que estén muy por sobre lo normal.',
+          'Puedes recorrer los kilómetros que necesites. El valor por km se cobra solo hasta el tope semanal de tu plan (1.100 AM y MoveElectric PM, 1.200 MoveGas PM, 1.400 Full Gas, 1.500 Full Electric). Solo se revisarán los casos que estén muy por sobre lo normal.',
         ],
       },
       {

@@ -1382,7 +1382,7 @@ export const pricing = {
     subtitle:
       'Una experiencia 360° pensada para maximizar tus ingresos: flota, tecnología, cobertura, beneficios y acompañamiento real para que solo te preocupes de manejar.',
   },
-  // 4 planes en 2 grupos. En desktop son tarjetas; en móvil, acordeones.
+  // Planes en 2 grupos. En desktop son tarjetas; en móvil, acordeones.
   groups: [
     {
       label: 'Planes MoveElectric',
@@ -1394,10 +1394,10 @@ export const pricing = {
           badge: '100% Eléctrico',
           description:
             'Maximiza tus ingresos con bajo costo operativo. Ideal para complementar ingresos o trabajar de forma eficiente durante el día.',
-          price: '2,5',
+          price: '2,79',
           period: 'UF/semanal',
           features: [
-            'Sólo 0,0028 UF por km recorrido (aprox. $115)',
+            'Sólo 0,0029 UF por km recorrido (aprox. $120)',
             'Pagas km solo hasta 1.100 km a la semana',
             'Turno: 06:00 a 18:00',
             'Bono $100.000 al mes para carga',
@@ -1414,12 +1414,32 @@ export const pricing = {
           badge: '100% Eléctrico',
           description:
             'Turno vespertino y nocturno en auto eléctrico (18:00 a 06:00): menor costo energético en los horarios de mayor demanda.',
-          price: '3,9',
+          price: '3,49',
           period: 'UF/semanal',
           features: [
-            'Sólo 0,0029 UF por km recorrido (aprox. $119)',
-            'Pagas km solo hasta 1.200 km a la semana',
+            'Sólo 0,00309 UF por km recorrido (aprox. $128)',
+            'Pagas km solo hasta 1.100 km a la semana',
             'Turno: 18:00 a 06:00',
+            'Bono $100.000 al mes para carga',
+            'Seguro – 10 UF deducible por evento',
+            'Auto de reemplazo según disponibilidad',
+            'App MoveCar.Pro, con monitoreo de ingresos, \nviajes, costos y ranking',
+            'Opción de compra desde las 208 semanas; a $100 desde las 260',
+          ],
+          cta: 'Contratar',
+        },
+        {
+          id: 'electric-full',
+          name: 'Full Electric',
+          badge: '100% Eléctrico',
+          description:
+            'Auto eléctrico exclusivo, disponible las 24 horas. La máxima libertad para trabajar a tu ritmo, sin turnos y con todo el potencial de ingresos.',
+          price: '5,95',
+          period: 'UF/semanal',
+          features: [
+            'Sólo 0,00389 UF por km recorrido (aprox. $161)',
+            'Pagas km solo hasta 1.500 km a la semana',
+            'Uso exclusivo del auto, 24 horas, sin turnos',
             'Bono $100.000 al mes para carga',
             'Seguro – 10 UF deducible por evento',
             'Auto de reemplazo según disponibilidad',

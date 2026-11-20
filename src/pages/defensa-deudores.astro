@@ -10,15 +10,15 @@ const paths = {
 
 import { legalDocs } from '../lib/content';
 import { content } from '../lib/defensa-content.js';
-const message = '¡Hola! 😊 me interesa postular a Movecar.pro. Vengo de Defensa Deudores.';
-const whatsappUrl = `https://api.whatsapp.com/send?phone=56963228508&text=${encodeURIComponent(message)}`;
+const message = '¡Hola! Quiero postular a Movecar.pro. Vengo de Defensa Deudores. Código: GD-DEU.';
+const whatsappUrl = `https://api.whatsapp.com/send?phone=56988660473&text=${encodeURIComponent(message)}`;
 ---
 
 <!doctype html>
 <html lang="es-CL">
   <head>
     <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Grupo Defensa × Movecar.pro | Agenda tu entrevista</title>
+    <title>Defensa Deudores × Movecar.pro | Agenda tu entrevista</title>
     <meta
       name="description"
       content="Arrienda un auto por semana con Movecar.pro. Conoce los requisitos y agenda tu entrevista por WhatsApp."
@@ -53,7 +53,7 @@ const whatsappUrl = `https://api.whatsapp.com/send?phone=56963228508&text=${enco
         <div class="hero-grid container">
           <div class="hero-copy">
             <p class="eyebrow"><span aria-hidden="true"></span>30% de descuento en tu primer mes</p>
-            <h1>Nos preocupamos de tus deudas <em>y de tus ingresos</em></h1>
+            <h1>Genera ingresos manejando, <em>sin comprar auto</em></h1>
             <p class="lead">
               En Defensa Deudores queremos acompañarte más allá de la asesoría. Por eso nos aliamos
               con Movecar.pro: como cliente, puedes postular con condiciones preferentes.
@@ -120,7 +120,16 @@ const whatsappUrl = `https://api.whatsapp.com/send?phone=56963228508&text=${enco
             <p class="overline">Beneficio Defensa Deudores</p><h3 id="benefit-title">
               30% de DESCUENTO en tu primer mes
             </h3><p id="weekly-price">Planes semanales desde 1,9 UF.</p>
-          </aside><div class="benefits">
+          </aside><div class="cost-panel" aria-label="Detalle de costos">
+  <h3>Costos del arriendo</h3>
+  <dl class="cost-grid">
+    <div><dt>Arriendo semanal</dt><dd>desde 1,9 UF</dd></div>
+    <div><dt>Costo mensual aprox.</dt><dd>desde 8,2 UF</dd></div>
+    <div><dt>Primer mes con 30% dcto.</dt><dd>desde 5,8 UF</dd></div>
+    <div><dt>Garantía</dt><dd>$350.000 CLP</dd></div>
+  </dl>
+  <p>Valores referenciales. Las condiciones definitivas se confirman durante la entrevista.</p>
+</div><div class="benefits">
             {
               content.benefits.map(([name, title, description]) => (
                 <article class="benefit">

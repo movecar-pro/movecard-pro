@@ -4,3 +4,18 @@
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
 .included .offer{margin-top:0;margin-bottom:24px}.privacy-document{margin-top:24px}.privacy-document summary{cursor:pointer;text-decoration:underline}.privacy-copy{background:white;color:var(--ink);text-align:left;padding:24px;border-radius:12px;margin-top:16px;overflow-wrap:anywhere}.privacy-copy table{display:block;overflow-x:auto}.privacy-copy li{margin-bottom:8px}
+
+/* Rediseño Figma GD-DEU / GD-LAB — bloque de desglose y tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Titillium+Web:wght@400;600;700;900&display=swap');
+body { font-family:'Barlow',Arial,sans-serif; background:#f5f6f9; }
+h1,h2,h3,.cta,.eyebrow,.overline { font-family:'Titillium Web',Arial,sans-serif; }
+:root { --orange:#fe9307; --blue:#2f5fd0; --soft:#f5f6f9; }
+.hero h1 { letter-spacing:-.01em; }
+.cost-panel { background:#f5f6f9; border:1px solid #e2e5ec; border-radius:14px; padding:20px; margin:0 0 24px; }
+.cost-panel h3 { font-size:19px; margin-bottom:12px; }
+.cost-grid { margin:0; }
+.cost-grid>div { display:flex; justify-content:space-between; align-items:center; gap:14px; padding:12px 0; border-bottom:1px solid #e2e5ec; }
+.cost-grid dt { color:#121a2c; font-size:14px; }
+.cost-grid dd { margin:0; font-size:14px; font-weight:700; text-align:right; white-space:nowrap; }
+.cost-panel>p { margin:12px 0 0; color:#5a6378; font-size:12px; }
+@media(max-width:760px) { .cost-panel{padding:16px;margin-bottom:12px;} .cost-grid>div{gap:8px;} .cost-grid dt,.cost-grid dd{font-size:13px;} .gd-logo[src$="grupo-defensa.svg"]{width:114px;} .site-footer .gd-logo[src$="grupo-defensa.svg"]{width:91px;} }

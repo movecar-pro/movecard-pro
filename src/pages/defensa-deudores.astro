@@ -9,7 +9,8 @@ const paths = {
 import { legalDocs } from '../lib/content';
 import { content } from '../lib/defensa-content.js';
 const message = '¡Hola! Quiero postular a Movecar.pro. Vengo de Defensa Deudores. Código: GD-DEU.';
-const gtmId = import.meta.env.PUBLIC_GTM_ID || '';
+// Contenedor exclusivo para landing pages de campañas. No modificar GTM global de Movecar.
+const gtmId = 'GTM-59QTJ9H3';
 const whatsappUrl = `https://api.whatsapp.com/send?phone=56988660473&text=${encodeURIComponent(message)}`;
 ---
 

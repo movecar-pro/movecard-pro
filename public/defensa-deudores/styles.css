@@ -43,34 +43,31 @@ h2 { line-height:1.2; }
   .hero-photo img[src$="mover-auto.png"] { object-position:58% center; }
 }
 
-/* UX: fotografía laboral panorámica, sin recortes ni zoom excesivo. */
-.desktop-photo:has(img[src$="grupo-defensa-hero.svg"]) {
-  height:auto;
-  aspect-ratio: 16 / 9;
+.cta .icon svg { display:block; width:22px; height:22px; flex:0 0 22px; color:#1a1206; }
+
+/* Ambos hero visuales comparten geometría a cualquier ancho de pantalla. */
+.hero-grid { align-items:center; }
+.desktop-photo,
+.desktop-photo:has(img[src$="grupo-defensa-clean.svg"]) {
+  width:100%;
+  height:480px;
+  aspect-ratio:auto;
 }
-.hero-photo img[src$="grupo-defensa-hero.svg"] {
-  object-fit:contain;
-  object-position:center;
+.hero-photo img,
+.hero-photo img[src$="grupo-defensa-clean.svg"] {
+  display:block;
   width:100%;
   height:100%;
+  object-fit:cover;
+  object-position:center center;
 }
-.cta .icon svg {
-  display:block;
-  width:22px;
-  height:22px;
-  flex:0 0 22px;
-  color:#1a1206;
-}
+.hero-photo img[src$="grupo-defensa-clean.svg"] { object-position:50% 50%; }
 @media(max-width:760px) {
-  .mobile-photo:has(img[src$="grupo-defensa-hero.svg"]) {
-    height:auto;
-    aspect-ratio:16 / 9;
+  .mobile-photo,
+  .mobile-photo:has(img[src$="grupo-defensa-clean.svg"]) {
+    width:100%;
+    height:266px;
+    aspect-ratio:auto;
   }
-}
-
-/* Nueva imagen original de Figma sin montaje defectuoso */
-.hero-photo img[src$="grupo-defensa-clean.svg"] { width:100%;height:100%;object-fit:cover;object-position:center center;image-rendering:auto; }
-.desktop-photo:has(img[src$="grupo-defensa-clean.svg"]) { aspect-ratio:16 / 9;height:auto; }
-@media(max-width:760px) {
-.mobile-photo:has(img[src$="grupo-defensa-clean.svg"]) { aspect-ratio:16 / 9;height:auto; }
+  .hero-photo img[src$="grupo-defensa-clean.svg"] { object-position:50% 50%; }
 }

@@ -95,3 +95,11 @@ h2 { line-height:1.2; }
     overflow:hidden;
   }
 }
+
+/* Consentimiento analítico: no bloquea navegación ni WhatsApp. */
+.mc-analytics-consent{position:fixed;z-index:1000;left:clamp(12px,3vw,32px);right:clamp(12px,3vw,32px);bottom:16px;max-width:650px;padding:16px 20px;border-radius:14px;background:#fff;color:#121a2c;box-shadow:0 8px 38px #0004;border:1px solid #dce1eb;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.mc-analytics-consent p{font:400 14px/1.5 Arial,sans-serif;margin:0;flex:1 1 290px}
+.mc-analytics-consent>div{display:flex;gap:8px;flex-wrap:wrap}
+.mc-analytics-consent button{border:1px solid #2f5fd0;border-radius:9px;padding:9px 13px;background:white;color:#183c92;cursor:pointer;font:600 13px Arial,sans-serif}
+.mc-analytics-consent button:last-child{background:#2f5fd0;color:white}
+.mc-analytics-consent button:focus-visible{outline:3px solid #fe9307;outline-offset:2px}

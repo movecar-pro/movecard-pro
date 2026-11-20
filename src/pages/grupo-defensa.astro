@@ -9,6 +9,7 @@ const paths = {
 import { legalDocs } from '../lib/content';
 import { content } from '../lib/defensa-content.js';
 const message = '¡Hola! Quiero postular a Movecar.pro. Vengo de Grupo Defensa. Código: GD-LAB.';
+const gtmId = import.meta.env.PUBLIC_GTM_ID || '';
 const whatsappUrl = `https://api.whatsapp.com/send?phone=56988660473&text=${encodeURIComponent(message)}`;
 ---
 
@@ -257,5 +258,6 @@ const whatsappUrl = `https://api.whatsapp.com/send?phone=56988660473&text=${enco
         </details>
       </div>
     </footer>
+    <script is:inline src="/defensa-deudores/analytics.js" data-gtm-id={gtmId} data-campaign="GD-LAB" defer></script>
   </body>
 </html>

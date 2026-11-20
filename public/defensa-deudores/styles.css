@@ -71,3 +71,27 @@ h2 { line-height:1.2; }
   }
   .hero-photo img[src$="grupo-defensa-clean.svg"] { object-position:50% 50%; }
 }
+
+/* Fotografías tomadas de las composiciones A/B del Figma aprobado.
+   Ambos encuadres y proporciones son idénticos. */
+.desktop-photo:has(img[src$="-figma-2x.svg"]) {
+  width:100%;
+  height:480px;
+  aspect-ratio:auto;
+  overflow:hidden;
+}
+.hero-photo img[src$="-figma-2x.svg"] {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 50%;
+  image-rendering:auto;
+}
+@media(max-width:760px) {
+  .mobile-photo:has(img[src$="-figma-2x.svg"]) {
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 3;
+    overflow:hidden;
+  }
+}

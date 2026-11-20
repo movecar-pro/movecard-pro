@@ -4,7 +4,7 @@ export const content = {
     ['Abre el WhatsApp', 'Toca “Agenda tu entrevista” y escríbenos.'],
     [
       'Adjunta tus documentos',
-      'El asistente te pide fotos de tu licencia y cédula. Es automático.',
+      'El asistente te pide fotos de los 4 documentos de «Ten a mano». Es automático.',
     ],
     ['Elige tu horario', 'Agendas tu entrevista y te confirmamos en menos de 24 horas hábiles.'],
   ],
@@ -19,7 +19,6 @@ export const content = {
     'Cédula de identidad',
     'Hoja de vida del conductor',
     'Certificado de antecedentes',
-    'Comprobante de domicilio',
   ],
   faqs: [
     [
@@ -28,11 +27,11 @@ export const content = {
     ],
     [
       '¿Cuánto puedo generar?',
-      'Depende de tus horas y tu plan. En la entrevista te mostramos una proyección para tu caso.',
+      'Como referencia, en un turno de 12 horas nuestros conductores generan en promedio $300.000 líquidos a la semana. Es un ejemplo, no un monto garantizado: depende de tus horas, tu turno y tu plan.',
     ],
     [
       '¿Qué pasa con mis datos?',
-      'Defensa Deudores no comparte tus datos. Solo los recibe Movecar.pro si tú le escribes. Todo con tu consentimiento.',
+      'La entidad que te invitó no comparte tus datos. Solo los recibe Movecar.pro si tú le escribes. Todo con tu consentimiento.',
     ],
     ['¿Tiene costo agendar?', 'No. Agendar tu entrevista es gratis y sin compromiso.'],
   ],

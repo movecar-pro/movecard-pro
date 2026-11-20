@@ -20,3 +20,78 @@ h1,h2,h3,.cta,.eyebrow,.overline { font-family:'Titillium Web',Arial,sans-serif;
 .cost-grid dd { margin:0; font-size:14px; font-weight:700; text-align:right; white-space:nowrap; }
 .cost-panel>p { margin:12px 0 0; color:#5a6378; font-size:12px; }
 @media(max-width:760px) { .cost-panel{padding:16px;margin-bottom:12px;} .cost-grid>div{gap:8px;} .cost-grid dt,.cost-grid dd{font-size:13px;} .gd-logo[src$="grupo-defensa.svg"]{width:114px;} .site-footer .gd-logo[src$="grupo-defensa.svg"]{width:91px;} }
+
+/* Ajuste visual tras revisión de capturas: legibilidad, CTA e imagen */
+.hero h1,.last-cta h2 { font-family:'Barlow',Arial,sans-serif; font-weight:700; letter-spacing:-0.035em; line-height:1.11; text-wrap:balance; }
+.hero h1 { font-size:clamp(38px,4.15vw,58px); max-width:610px; }
+.hero h1 em { font-weight:700; }
+h2,h3,.steps h3,.faqs summary { font-family:'Barlow',Arial,sans-serif; font-weight:700; letter-spacing:-0.02em; }
+h2 { line-height:1.2; }
+.cta { font-family:'Barlow',Arial,sans-serif; font-size:16px; font-weight:700; line-height:1.3; letter-spacing:0; box-shadow:0 9px 22px rgba(254,147,7,.24); }
+.cta .icon { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; flex:0 0 22px; }
+.cta .icon img { display:block; width:22px; height:22px; object-fit:contain; }
+.hero-photo img { object-fit:cover; object-position:center center; image-rendering:auto; }
+.hero-photo { isolation:isolate; }
+.hero-photo img[src$="grupo-defensa-hero.svg"] { object-position:50% 48%; }
+.hero-photo img[src$="mover-auto.png"] { object-position:55% 50%; }
+.hero .lead { font-weight:400; line-height:1.65; }
+@media(max-width:760px) {
+  .hero h1 { font-size:clamp(33px,9vw,40px); line-height:1.1; letter-spacing:-.028em; }
+  .last-cta h2 { font-size:29px; line-height:1.15; }
+  .cta { font-size:16px; }
+  .hero-photo img[src$="grupo-defensa-hero.svg"] { object-position:50% center; }
+  .hero-photo img[src$="mover-auto.png"] { object-position:58% center; }
+}
+
+.cta .icon svg { display:block; width:22px; height:22px; flex:0 0 22px; color:#1a1206; }
+
+/* Ambos hero visuales comparten geometría a cualquier ancho de pantalla. */
+.hero-grid { align-items:center; }
+.desktop-photo,
+.desktop-photo:has(img[src$="grupo-defensa-clean.svg"]) {
+  width:100%;
+  height:480px;
+  aspect-ratio:auto;
+}
+.hero-photo img,
+.hero-photo img[src$="grupo-defensa-clean.svg"] {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+}
+.hero-photo img[src$="grupo-defensa-clean.svg"] { object-position:50% 50%; }
+@media(max-width:760px) {
+  .mobile-photo,
+  .mobile-photo:has(img[src$="grupo-defensa-clean.svg"]) {
+    width:100%;
+    height:266px;
+    aspect-ratio:auto;
+  }
+  .hero-photo img[src$="grupo-defensa-clean.svg"] { object-position:50% 50%; }
+}
+
+/* Fotografías tomadas de las composiciones A/B del Figma aprobado.
+   Ambos encuadres y proporciones son idénticos. */
+.desktop-photo:has(img[src$="-figma-2x.svg"]) {
+  width:100%;
+  height:480px;
+  aspect-ratio:auto;
+  overflow:hidden;
+}
+.hero-photo img[src$="-figma-2x.svg"] {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:50% 50%;
+  image-rendering:auto;
+}
+@media(max-width:760px) {
+  .mobile-photo:has(img[src$="-figma-2x.svg"]) {
+    width:100%;
+    height:auto;
+    aspect-ratio:4 / 3;
+    overflow:hidden;
+  }
+}
